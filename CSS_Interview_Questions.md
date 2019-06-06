@@ -8,7 +8,7 @@
 <br/>
 
 > - Display : none;<br/>
-> –> It doesn't show up but removes the element from the layout flow and allow other elements to fill in. (It **CAUSE** DOM reflow)
+> –> It doesn't show up and removes the element from the layout flow, it allows other elements to fill in. (It **CAUSES** DOM reflow)
 <br/>  
 
 1.1 Aditional : Please Explain The Difference Between Visibility : Hidden And Opacity : 0?
@@ -23,8 +23,8 @@ Example : https://jsfiddle.net/yschen25/289xv1ba/1/
 
 2. When Should You Use Visibility and When Should You Use Display?
 
-> - When you want the element to hold its space even when it’s not seen. -> Visibility : hidden;<br/>
-> - When you want the element to give back its space allowing the other elements on your page to collapse around it. -> Display : none;
+> - When you want the element to hold its space even when it’s not seen. => Visibility : hidden;<br/>
+> - When you don't want the element to take space in the layout or You want to allowe the other elements on your page to collapse around it. => Display : none;
       
 Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
@@ -50,10 +50,23 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > - Inline-Block<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
 > -> Height, width, margin, padding properties have effect.
-<br/>
+> -> To make this element horizongally center is add margin : auto<br/>
 <br/>
 
 4. Please Explain What Is Sprite? When Would You Use It?
 
-> (1) sprite is a technique to combine all/ some of them in one image. To display the img you set height, width and background position.<br/>
-> (2)When you have multiple images/ icons, browser makes separate call to the server for each one of them. sprite is a technique.
+> (1) sprite is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
+
+> (2) Using image sprites will reduce the number of server requests when you have multiple images/icons.
+<p align="center">
+<img src="img/google.png" alt="sprite_image" title="sprite_image" width="">
+</p>
+<br/>
+
+5. What Is CSS Reset? 6. What Is The Difference Between CSS Reset And CSS Normalize?
+
+> (1) Every browser has its own default 'user agent' stylesheet, CSS Reset is use to make it look consistent across browsers.
+<br/>
+
+> (2) CSS Reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS Normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
+<br/>
