@@ -63,7 +63,7 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 </p>
 <br/>
 
-5. What Is CSS Reset? 6. What Is The Difference Between CSS Reset And CSS Normalize?
+5. What Is CSS Reset? What Is The Difference Between CSS Reset And CSS Normalize?
 
 > (1) Every browser has its own default 'user agent' stylesheet, CSS Reset is use to make it look consistent across browsers.
 <br/>
