@@ -85,5 +85,8 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 
 > Clear is the properity to clear the float.<br/>
 > There are clear : left, right, both.<br/>
-> I.g., (1)empty https://jsfiddle.net/yschen25/yc1aqhbw/6/ (2)overflow (3)after https://jsfiddle.net/yschen25/ug9m514r/2/ <br/>
+> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
+(1)empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
+(2)overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
+(3)CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/><br/>
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
