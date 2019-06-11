@@ -70,3 +70,20 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 
 > (2) CSS Reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS Normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
+
+6. What Is Box Model?
+<br/>
+
+7. What Is Float?
+
+> Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
+> There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
+> I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
+<br/>
+
+8. How To Clear Float?
+
+> Clear is the properity to clear the float.<br/>
+> There are clear : left, right, both.<br/>
+> I.g., (1)empty https://jsfiddle.net/yschen25/yc1aqhbw/6/ (2)overflow (3)after https://jsfiddle.net/yschen25/ug9m514r/2/ <br/>
+Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
