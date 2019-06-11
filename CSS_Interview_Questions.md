@@ -59,7 +59,7 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 
 > (2) Using image sprites will reduce the number of server requests when you have multiple images/icons.
 <p align="center">
-<img src="img/google.png" alt="sprite_image" title="sprite_image" width="">
+<img src="img/google.png" alt="sprite_image" title="sprite_image">
 </p>
 <br/>
 
@@ -98,9 +98,18 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/>
 
 10. What Is Box Model?
+
+<p align="center">
+<img src="img/boxModel.png" alt="box_model" title="box_model">
+</p>
+
 <br/>
 
 11. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+
+<p align="center">
+<img src="img/compareModels.png" alt="compare_models" title="compare_models">
+</p>
 
 > -> The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : border-box just including width.<br/>
 Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/>
