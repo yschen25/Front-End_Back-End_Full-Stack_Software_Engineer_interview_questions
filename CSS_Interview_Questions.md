@@ -1,7 +1,7 @@
 ## CSS Interview Questions
 
-      This document is provided to who want to review css concepts so doesn't explain the concepts deeply, 
-      if you need more details about the question please google it. 
+      This document is provided to who wants to prepare front-end interview so it doesn't explain the concepts deeply, 
+      if you need more details please google it. 
 <br/>
 
 1. Please Explain The Difference Between Visibility : Hidden And Display : None?
@@ -20,7 +20,7 @@
 > -> It doesn't show up but also takes space in the layout flow.<br/>
 > -> The difference is you can click on the elements behind it but you **CAN'T** click on the elements which style is visibility : hidden.
 
-Example : https://jsfiddle.net/yschen25/289xv1ba/1/
+Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
 <br/>
 
@@ -88,7 +88,8 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > -> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
 ① empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
 ② overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
-③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/><br/>
+③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
+
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/>
 
@@ -118,7 +119,10 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 
 Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/>
 
-11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/><br/>
+11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
+
+> -> You can't just set the width, you need to caculate the padding, border.<br/>
+
 Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 
 Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
