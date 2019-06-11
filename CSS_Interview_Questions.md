@@ -71,22 +71,42 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > (2) CSS Reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS Normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
 
-6. What Is Box Model?
+6. What Is Float?
+
+> -> Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
+> -> There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
+> -> I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
-7. What Is Float?
+7. How To Clear Float?
 
-> Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
-> There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
-> I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
-<br/>
-
-8. How To Clear Float?
-
-> Clear is the properity to clear the float.<br/>
-> There are clear : left, right, both.<br/>
-> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
-(1)empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
-(2)overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
-(3)CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/><br/>
+> -> Clear is the properity to clear the float.<br/>
+> -> There are clear : left, right, both.<br/>
+> -> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
+① empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
+② overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
+③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/><br/>
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
+<br/>
+
+8. What Is The Difference Between Em and Rem?
+
+> -> Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT.**
+<br/>
+
+9. What Is The Position?
+<br/>
+
+10. What Is Box Model?
+<br/>
+
+11. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+
+> -> The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : border-box just including width.<br/>
+Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/>
+
+11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
+Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
+
+Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
+<br/>
