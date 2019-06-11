@@ -1,7 +1,7 @@
 ## CSS Interview Questions
 
       This document is provided to who want to review css concepts so doesn't explain the concepts deeply, 
-      if you need more details about the question please google it . 
+      if you need more details about the question please google it. 
 <br/>
 
 1. Please Explain The Difference Between Visibility : Hidden And Display : None?
