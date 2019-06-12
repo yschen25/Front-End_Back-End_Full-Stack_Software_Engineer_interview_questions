@@ -86,12 +86,12 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > -> Clear is the properity to clear the float.<br/>
 > -> There are clear : left, right, both.<br/>
 > -> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
-① empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
-② overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
+① Empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
+② Overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
 ③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
 
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
-<br/>
+<br/><br/>
 
 8. What Is The Difference Between Em and Rem?
 
@@ -107,7 +107,13 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <img src="img/boxModel.png" alt="box_model" title="box_model">
 </p>
 
-<br/>
+> -> Box model consists of : margins, borders, padding, and the actual content.<br/>
+
+① Content : The content of the box, where text and images appear.<br/>
+② Padding : Clears an area around the content. The padding is transparent.<br/>
+③ Border : A border that goes around the padding and content.<br/>
+④ Margin - Clears an area outside the border. The margin is transparent.
+<br/><br/>
 
 11. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
 
@@ -115,9 +121,9 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <img src="img/compareModels.png" alt="compare_models" title="compare_models">
 </p>
 
-> -> The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : border-box just including width.<br/>
+> -> The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : content-box just including content, you just set the width and height of the content area.<br/>
 
-Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/>
+Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
 11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
