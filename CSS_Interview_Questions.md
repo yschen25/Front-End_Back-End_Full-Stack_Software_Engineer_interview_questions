@@ -98,7 +98,13 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 > -> Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT.**
 <br/>
 
-9. What Is The Position?
+9. What Is The Position : Relative, Absolute, Fixed? <br/>
+
+① Position : relative is positioned relative to its normal position. <br/>
+② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
+③ Position : fixed is positioned relative to the browser window.
+
+Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
 
 10. What Is Box Model?
@@ -110,9 +116,9 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 > -> Box model consists of : margins, borders, padding, and the actual content.<br/>
 
 ① Content : The content of the box, where text and images appear.<br/>
-② Padding : Clears an area around the content. The padding is transparent.<br/>
+② Padding : Clears an area around the content, The padding is transparent.<br/>
 ③ Border : A border that goes around the padding and content.<br/>
-④ Margin - Clears an area outside the border. The margin is transparent.
+④ Margin - Clears an area outside the border, The margin is transparent.
 <br/><br/>
 
 11. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
@@ -133,3 +139,7 @@ Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 
 Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/>
+
+12. What is Difference Between CSS2 And CSS3?
+
+</br>
