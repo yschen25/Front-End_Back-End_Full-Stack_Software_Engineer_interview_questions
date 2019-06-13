@@ -13,3 +13,11 @@
 | Storing Location | storing on server-side   | storing on client-side and server-side | storing on client-side | storing on client-side |
 | Request |   | The data is sent back to the server for every HTTP request | The data is **NOT** sent back to the server for every HTTP request | The data is **NOT** sent back to the server for every HTTP request |
 <br/>
+
+2. How To Speed Up The Website?
+
+> - Use sprite images. <br/>
+> - Compress Js, CSS, images. <br/>
+> - Use CDN. <br/>
+> - Reduce the request. 
+<br/>
