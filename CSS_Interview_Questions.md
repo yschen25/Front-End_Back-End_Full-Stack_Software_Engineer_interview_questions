@@ -100,9 +100,9 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 
 9. What Is The Position : Relative, Absolute, Fixed? <br/>
 
-① Position : relative is positioned relative to its normal position. <br/>
-② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
-③ Position : fixed is positioned relative to the browser window.
+> ① Position : relative is positioned relative to its normal position. <br/>
+> ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
+> ③ Position : fixed is positioned relative to the browser window.
 
 Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
@@ -114,7 +114,6 @@ Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 </p>
 
 > -> Box model consists of : margins, borders, padding, and the actual content.<br/>
-
 ① Content : The content of the box, where text and images appear.<br/>
 ② Padding : Clears an area around the content, The padding is transparent.<br/>
 ③ Border : A border that goes around the padding and content.<br/>
