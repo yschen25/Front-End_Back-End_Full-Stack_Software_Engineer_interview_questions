@@ -76,16 +76,16 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 
 6. What Is Float?
 
-> -> Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
-> -> There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
-> -> I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
+> - Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
+> - There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
+> - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
 7. How To Clear Float?
 
-> -> Clear is the properity to clear the float.<br/>
-> -> There are clear : left, right, both.<br/>
-> -> I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
+> - Clear is the properity to clear the float.<br/>
+> - There are clear : left, right, both.<br/>
+> - I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
 ① Empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
 ② Overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
 ③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
@@ -95,7 +95,7 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 
 8. What Is The Difference Between Em and Rem?
 
-> -> Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT.**
+> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT.**
 <br/>
 
 9. What Is The Position : Relative, Absolute, Fixed? <br/>
@@ -113,7 +113,7 @@ Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <img src="img/boxModel.png" alt="box_model" title="box_model">
 </p>
 
-> -> Box model consists of : margins, borders, padding, and the actual content.<br/>
+> - Box model consists of : margins, borders, padding, and the actual content.<br/>
 ① Content : The content of the box, where text and images appear.<br/>
 ② Padding : Clears an area around the content, The padding is transparent.<br/>
 ③ Border : A border that goes around the padding and content.<br/>
@@ -126,13 +126,13 @@ Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <img src="img/compareModels.png" alt="compare_models" title="compare_models">
 </p>
 
-> -> The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : content-box just including content, you just set the width and height of the content area.<br/>
+> - The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : content-box just including content, you just set the width and height of the content area.<br/>
 
 Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
 11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
-> -> You can't just set the width, you need to caculate the padding, border.<br/>
+> - You can't just set the width, you need to caculate the padding, border.<br/>
 
 Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 
@@ -141,7 +141,7 @@ Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2
 
 12. How To Center An Element Horizontally And Vertically? <br/>
 
-> -> See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically)
+> - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically)
 </br>
 
 13. What is Difference Between CSS2 And CSS3?
