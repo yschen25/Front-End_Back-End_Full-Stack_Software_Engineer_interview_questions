@@ -16,8 +16,19 @@
 
 2. How To Speed Up The Website?
 
+> - Reduce the HTTP request. <br/>
 > - Use sprite images. <br/>
-> - Compress Js, CSS, images. <br/>
+> - Properly image size.
+> - Minify Js, CSS, images. <br/>
 > - Use CDN. <br/>
-> - Reduce the request. 
+> - Delete unused code. <br/>
+> - Use gzip.
 <br/>
+
+3. Explain The Meaning Of 200, 400, 403, 404, 500. 
+
+> - 200 : Request success. <br/>
+> - 400 : Syntax error. <br/>
+> - 403 : Not allow to visit. <br/>
+> - 404 : Page not found. <br/>
+> - 500 : Server error.
