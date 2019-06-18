@@ -25,10 +25,10 @@
 > - Use gzip.
 <br/>
 
-3. Explain The Meaning Of 200, 400, 403, 404, 500. 
+3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500. 
 
-> - 200 : Request success. <br/>
-> - 400 : Syntax error. <br/>
-> - 403 : Not allow to visit. <br/>
-> - 404 : Page not found. <br/>
-> - 500 : Server error.
+> ① 200 : Request success. <br/>
+> ② 400 : Syntax error. <br/>
+> ③ 403 : Not allow to visit. <br/>
+> ④ 404 : Page not found. <br/>
+> ⑤ 500 : Server error.
