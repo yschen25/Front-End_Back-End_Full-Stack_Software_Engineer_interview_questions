@@ -19,3 +19,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 2. Explain What Is Promise?
 
 <br/>
+
+3. What Is The Difference Between ES5 And ES6?
+
+<br/>
