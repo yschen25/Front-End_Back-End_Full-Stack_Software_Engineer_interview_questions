@@ -15,4 +15,8 @@
 
 3. What Is The Difference Between Post And Get?
 
+| Methods |  Get |  Post | 
+|---|---|---|
+|  | Carries request parameter appended in URL string | Carries request parameter in message body | 
+|  | Should not be used when sending sensitive information | Used when sending sensitive information | 
 <br/>
