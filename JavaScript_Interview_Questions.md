@@ -41,3 +41,4 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 |  | (optional, optional) | (required, optional, optional)|
 |  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed, The new item(s) to be added to the array) |
 | | Starting at the given start argument, and ends at, but does not include | | |
+| | **NOT** changes the original array | changes the original array |
