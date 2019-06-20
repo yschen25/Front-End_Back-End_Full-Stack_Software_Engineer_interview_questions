@@ -29,3 +29,11 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 | Methods |  push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
 |  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
+<br/>
+
+5. Explain What Is The Difference Between slice(), splice(), splite()?
+
+| Methods |  slice(start, end) | splice(index, howmany, item1, ....., itemX) | split(separator, limit) | 
+|---|---|---|---|
+|  | (optional, optional) | (required, optional, optional)| (optional, optional) |
+|  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed, The new item(s) to be added to the array) | (Specifies the character, or the regular expression, to use for splitting the string;  Specifies the number of splits)|
