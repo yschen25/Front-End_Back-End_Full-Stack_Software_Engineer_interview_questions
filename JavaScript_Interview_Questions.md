@@ -29,7 +29,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 | Methods |  push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
 |  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
-| Return | New length | The removed item | The removed item | New length |
+| Return | New length | The removed item | New length | The removed item |
 
 Example : https://jsfiddle.net/yschen25/bcuto13q/
 <br/><br/>
@@ -39,6 +39,6 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 | Methods |  slice(start index, end index ) | splice(index, howmany, item1, ....., itemX) 
 |---|---|---|
 |  | (optional, optional) | (required, optional, optional)|
-|  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed, The new item(s) to be added to the array) |
+|  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed; The new item(s) to be added to the array) |
 | | Starting at the given start argument, and ends at, but does not include | | |
-| | **NOT** changes the original array | changes the original array |
+| | **NOT** changes the original array | **CHANGES** the original array |
