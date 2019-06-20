@@ -29,7 +29,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 | Methods |  push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
 |  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
-| Return | New length | The element | The removed item | New length |
+| Return | New length | The removed item | The removed item | New length |
 
 Example : https://jsfiddle.net/yschen25/bcuto13q/
 <br/><br/>
