@@ -31,9 +31,9 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 |  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
 
 Example : https://jsfiddle.net/yschen25/bcuto13q/
-<br/>
+<br/><br/>
 
-5. Explain What Is The Difference Between slice(), splice(), splite()?
+5. Explain What Is The Difference Between slice(), splice()?
 
 | Methods |  slice(start index, end index ) | splice(index, howmany, item1, ....., itemX) 
 |---|---|---|
