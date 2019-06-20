@@ -20,6 +20,12 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 
 <br/>
 
-3. What Is The Difference Between ES5 And ES6?
+3. Explain What Is The Difference Between ES5 And ES6?
 
 <br/>
+
+4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
+
+| Methods |  push() | pop() | unshift() | shift() | 
+|---|---|---|---|---|
+|  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
