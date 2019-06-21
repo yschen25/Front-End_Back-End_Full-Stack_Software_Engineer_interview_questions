@@ -26,7 +26,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 
 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
-| Methods |  push() | pop() | unshift() | shift() | 
+| Methods | push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
 |  | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
 | Return | New length | The removed item | New length | The removed item |
@@ -42,3 +42,14 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 |  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed; The new item(s) to be added to the array) |
 | | Starting at the given start argument, and ends at, but does not include | The end doesn't include |
 | | **NOT** changes the original array | **CHANGES** the original array |
+
+Example : https://jsfiddle.net/yschen25/vxmp7z3t/
+<br/><br/>
+
+5. Explain What Is The Difference Between map(), forEach()?
+
+| Methods | map() | foEach() |
+|---|---|---|
+| Return | Returns a new array | **DOES NOT** return a new array, returns undefined |
+| | **DOES NOT** change the original array | |
+| |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
