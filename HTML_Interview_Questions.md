@@ -14,7 +14,8 @@
 
 > - Simplified doctype string : <!DOCTYPE html>
 > - data-* attributes
-> - Add new tags : <canvas>, <header>, <footer>, <nav>, etc
+> - Add new elements : <canvas>, <header>, <footer>, <nav>, geolocation API, audio, vised, web storage DOM API, etc
+> - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)
 <br/>
 
 3. What Is The Difference Between Post And Get?
