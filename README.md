@@ -8,3 +8,7 @@
 :rose: [JavaScript_Interview_Questions](JavaScript_Interview_Questions.md)
 
 :hibiscus: [Web_Interview_Questions](Web_Interview_Questions.md)
+</br>
+
+## Author
+* **:octocat: Writer : [Me](https://github.com/yschen25)**
