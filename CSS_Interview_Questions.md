@@ -46,14 +46,14 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > - Block<br/>
 > -> It starts on a new line.<br/>
 > -> Height, width, margin, padding properties have effect.<br/>
-> -> To make this element horizongally center is add margin : auto<br/>
-> -> I.g., \<div/>, \<p>, \<h1>, \<ol>, \<ul>, \<li>
+> -> To make this element horizongally center is add margin : auto.<br/>
+> -> I.g., \<div/>, \<p>, \<h1>, \<ol>, \<ul>, \<li>.
 <br/>
 
 > - Inline-Block<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
 > -> Height, width, margin, padding properties have effect.
-> -> To make this element horizongally center is add margin : auto<br/>
+> -> To make this element horizongally center is add margin : auto.<br/>
 <br/>
 
 4. Please Explain What Is Sprite? When Would You Use It?
@@ -95,7 +95,7 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 
 8. What Is The Difference Between Em and Rem?
 
-> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT.**
+> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT**.
 <br/>
 
 9. What Is The Position : Relative, Absolute, Fixed? <br/>
@@ -141,10 +141,10 @@ Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2
 
 12. How To Center An Element Horizontally And Vertically? <br/>
 
-> - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically)
+> - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
 13. What is New Features In CSS3?
 
-> - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)
+> - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
