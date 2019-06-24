@@ -11,6 +11,10 @@
 <br/>
 
 2. What Is The New Features in HTML5?
+
+> - Simplified doctype string : <!DOCTYPE html>
+> - data-* attributes
+> - Add new tags : <canvas>, <header>, <footer>, <nav>, etc
 <br/>
 
 3. What Is The Difference Between Post And Get?
