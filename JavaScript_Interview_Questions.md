@@ -68,3 +68,9 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 10. Explan What Is "this"?
 <br/>
+
+11. Explan What Is Shallow Copy and Deep Copy?
+<br/>
+
+12. Explan What Is Call By Reference and Call By Value?
+<br/>
