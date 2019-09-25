@@ -53,3 +53,18 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 | Return | Returns a new array | **DOES NOT** return a new array, returns undefined |
 | | **DOES NOT** change the original array | |
 | |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
+
+6. Explan What Is Promise?
+<br/>
+
+7. Explan What Is Callbacks?
+<br/>
+
+8. Explan What Is Async/Await?
+<br/>
+
+9. Explan What Is Hoisting?
+<br/>
+
+10. Explan What Is "this"?
+<br/>
