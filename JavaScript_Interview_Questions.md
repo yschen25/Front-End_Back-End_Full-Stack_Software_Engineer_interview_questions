@@ -54,23 +54,32 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 | | **DOES NOT** change the original array | |
 | |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
 
-6. Explan What Is Promise?
+6. Explan What Is Callbacks?
 <br/>
 
-7. Explan What Is Callbacks?
+7. Explan What Is Async/Await?
 <br/>
 
-8. Explan What Is Async/Await?
+8. Explan What Is Hoisting?
 <br/>
 
-9. Explan What Is Hoisting?
+9. Explan What Is "this"?
 <br/>
 
-10. Explan What Is "this"?
+10. Explan What Is Shallow Copy And Deep Copy?
 <br/>
 
-11. Explan What Is Shallow Copy and Deep Copy?
-<br/>
+11. Explan What Is Call By Value And Call By Reference 
 
-12. Explan What Is Call By Reference and Call By Value?
+Call By Value : 
+
+When you declare a primitive type (string, number, boolean, null, undefined, symbol) for example variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
+Example : 
+
+Call By Reference : 
+
+Example : When you declare variable a as an object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
+
+
+Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
 <br/>
