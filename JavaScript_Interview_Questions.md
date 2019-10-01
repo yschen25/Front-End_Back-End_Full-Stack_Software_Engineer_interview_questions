@@ -67,19 +67,33 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/>
 
 10. Explan What Is Shallow Copy And Deep Copy?
+
+Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/)
 <br/>
 
 11. Explan What Is Call By Value And Call By Reference 
 
 Call By Value : 
 
+<p align="center">
+<img src="img/callByValue.png" alt="callByValue" title="callByValue" width="60%">
+</p>
+
 When you declare a primitive type (string, number, boolean, null, undefined, symbol) for example variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
+
 Example : 
+<br/><br/>
 
 Call By Reference : 
 
-Example : When you declare variable a as an object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
+<p align="center">
+<img src="img/callByReference.png" alt="callByReference" title="callByReference" width="60%">
+</p>
 
+When you declare variable a as an object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
+
+Example :
+<br/>
 
 Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
 <br/>
