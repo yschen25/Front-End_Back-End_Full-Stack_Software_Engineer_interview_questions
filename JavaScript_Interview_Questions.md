@@ -66,12 +66,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 9. Explan What Is "this"?
 <br/>
 
-10. Explan What Is Shallow Copy And Deep Copy?
-
-Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/)
-<br/>
-
-11. Explan What Is Call By Value And Call By Reference 
+10. Explan What Is Call By Value, Call By Reference And Call By Sharing?
 
 Call By Value : 
 
@@ -95,5 +90,15 @@ When you declare variable a as an object or function, it will has own memory loc
 Example :
 <br/>
 
+Call By Sharing : 
+// array literals, object literals
+
 Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
+[你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
+<br/>
+
+
+11. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
+
+Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/)
 <br/>
