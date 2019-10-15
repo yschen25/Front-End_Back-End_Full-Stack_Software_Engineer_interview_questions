@@ -63,6 +63,11 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 8. Explan What Is Hoisting?
 <br/>
 
+// let, const
+
+Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
+<br/>
+
 9. Explan What Is "this"?
 <br/>
 
@@ -76,7 +81,7 @@ Call By Value :
 
 When you declare a primitive type (string, number, boolean, null, undefined, symbol) for example variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
 
-Example : 
+Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
 
 Call By Reference : 
@@ -96,7 +101,7 @@ Call By Sharing :
 Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/>
-
+<br/>
 
 11. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
 
