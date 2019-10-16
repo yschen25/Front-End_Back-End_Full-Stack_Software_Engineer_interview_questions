@@ -92,16 +92,17 @@ Call By Reference :
 
 When you declare variable a as an object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
 
-Example :
-<br/>
+Example : https://jsfiddle.net/yschen25/ov3rq5me
+<br/><br/>
 
-Call By Sharing : 
-// array literals, object literals
+Call By Sharing : If assign value again it will Only change own value. (e.g., use array literals, object literals assign value again)
+
+Example : https://jsfiddle.net/yschen25/7djyawve
+<br/>
 
 Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
-<br/>
-<br/>
+<br/><br/>
 
 11. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
 
