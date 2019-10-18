@@ -23,8 +23,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 3. Explain What Is The New Feature In ES6?
 
 Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
-
-<br/><br/>
+<br/>
 
 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
@@ -63,7 +62,6 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
 9. Explan What Is Hoisting?
-<br/><br/>
 
 Please see the related reference below, it's very clear.<br/>
 You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have TDZ(Temporal Dead Zone).
