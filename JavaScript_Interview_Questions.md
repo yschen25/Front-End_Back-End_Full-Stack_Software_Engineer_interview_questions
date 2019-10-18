@@ -100,11 +100,21 @@ Call By Sharing : If assign value again it will Only change own value. (e.g., us
 Example : https://jsfiddle.net/yschen25/7djyawve
 <br/>
 
-Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html)
+Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html), 
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/><br/>
 
 11. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
+ 
+<p align="center">
+<img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
+</p>
 
-Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/)
-<br/>
+Shallow Copy : Duplicates as little as possible. If b is a shallow copy of a, b points to a's location in memory, b ```WILL CHANGE``` it's value when change a. 
+Metgod => Spread Operator, object.assign
+
+Deep Copy : Duplicates everything. If b is a deep copy of a, a and b has it's own memory location, b ```WILL NOT CHANGE``` it's value when change a. 
+Metgod => JSON.parse(JSON.stringify(object)), jQuery's $.extend, lodash's _.cloneDeep
+
+Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
+<br/><br/>
