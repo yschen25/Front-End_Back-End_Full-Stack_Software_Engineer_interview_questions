@@ -73,6 +73,8 @@ Related Reference : [我知道你懂 hoisting，可是你了解到多深？](htt
 <br/><br/>
 
 11. Following The Previous Question, explan What Is TDZ?
+
+Let/const has hoisting indeed, TDZ is if you try to access a variable after hoisting and before assigning value, browser will throw the error notification.
 <br/><br/>
 
 12. Explan What Is "this"?
