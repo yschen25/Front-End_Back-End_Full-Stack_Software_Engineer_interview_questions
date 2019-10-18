@@ -108,6 +108,7 @@ Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要�
  
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
+<img src="img/shallow_deep_copy2.png" alt="shallow_deep_copy" title="shallow_deep_copy">
 </p>
 
 Shallow Copy : Duplicates as little as possible. If b is a shallow copy of a, b points to a's location in memory, b ```WILL CHANGE``` it's value when change a. 
