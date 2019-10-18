@@ -18,6 +18,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 
 2. Explain What Is Promise?
 
+https://ithelp.ithome.com.tw/articles/10197529
 <br/><br/>
 
 3. Explain What Is The New Feature In ES6?
