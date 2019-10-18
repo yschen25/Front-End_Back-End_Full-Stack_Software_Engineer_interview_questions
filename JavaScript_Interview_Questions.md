@@ -14,15 +14,17 @@ we can have private variable through closure w/o environment interference, A fun
 > - Even use the same function, variables don't disturb each other cuz the excute environment is different [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
 
 Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
-<br/>
+<br/><br/>
 
 2. Explain What Is Promise?
 
-<br/>
+<br/><br/>
 
-3. Explain What Is The Difference Between ES5 And ES6?
+3. Explain What Is The New Feature In ES6?
 
-<br/>
+Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
+
+<br/><br/>
 
 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
@@ -46,7 +48,7 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
-5. Explain What Is The Difference Between map(), forEach()?
+6. Explain What Is The Difference Between map(), forEach()?
 
 | Methods | map() | foEach() |
 |---|---|---|
@@ -54,24 +56,31 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 | | **DOES NOT** change the original array | |
 | |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
 
-6. Explan What Is Callbacks?
-<br/>
+7. Explan What Is Callbacks?
+<br/><br/>
 
-7. Explan What Is Async/Await?
-<br/>
+8. Explan What Is Async/Await?
+<br/><br/>
 
-8. Explan What Is Hoisting?
-<br/>
+9. Explan What Is Hoisting?
+<br/><br/>
 
-// let, const
+Please see the related reference below, it's very clear.<br/>
+You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have TDZ(Temporal Dead Zone).
 
 Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
-<br/>
+<br/><br/>
 
-9. Explan What Is "this"?
-<br/>
+10. Following The Previous Question, explan What Is Let/Const?
+<br/><br/>
 
-10. Explan What Is Call By Value, Call By Reference And Call By Sharing?
+11. Following The Previous Question, explan What Is TDZ?
+<br/><br/>
+
+12. Explan What Is "this"?
+<br/><br/>
+
+13. Explan What Is Call By Value, Call By Reference And Call By Sharing?
 
 Call By Value : 
 
@@ -104,7 +113,7 @@ Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要�
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/><br/>
 
-11. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
+14. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
  
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
