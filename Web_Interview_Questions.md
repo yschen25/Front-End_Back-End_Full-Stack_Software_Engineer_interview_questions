@@ -45,3 +45,7 @@
 5. What Is RESTful Api?
 
 <br/>
+
+6. What Is SPA?
+
+<br/>
