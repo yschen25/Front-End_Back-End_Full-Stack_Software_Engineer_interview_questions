@@ -60,4 +60,9 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 <br/>
 
 Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
-<br/>
+<br/><br/>
+
+7. What Is CSRF?
+
+Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
+<br/><br/>
