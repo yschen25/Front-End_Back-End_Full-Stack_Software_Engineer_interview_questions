@@ -130,4 +130,18 @@ Metgod => JSON.parse(JSON.stringify(object)), jQuery's $.extend, lodash's _.clon
 Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-15. What Is The Different between Null and Undifined?
+15. What Is The Difference between Null and Undifined?
+
+Undefined means a variable has been declared but has not yet been assigned a value.
+let a;
+console.log(a);        // undefined
+console.log(typeof a); // undefined
+
+Null is an assignment value. It can be assigned to a variable as a representation of no value.
+let a = null;
+console.log(a);        // null
+console.log(typeof a); // object
+
+null == undefined  // true
+null === undefined // false
+<br/><br/>
