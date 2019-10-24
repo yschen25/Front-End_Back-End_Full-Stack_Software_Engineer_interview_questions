@@ -40,14 +40,14 @@ NPM is short for Node Package Manager, it is an online repository for the publis
 you can do package installation, version management, and dependency management via NPM.
 
 Related Reference : [從零開始: 使用NPM套件](https://medium.com/html-test/從零開始-使用npm套件-317beefdf182)
-<br/>
+<br/><br/>
 
 5. What Is Webpack?
 
 There are many preprocessors, e.g., JSX, SASS, SCSS, we can use Babel to compile JavaScript, use the SASS command to compile SASS to CSS, is there a way compile and bundle all of these to a file then upload to the server? It'a NPM.
 
 Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d)
-<br/>
+<br/><br/>
 
 5. What Is RESTful Api?
 
@@ -57,5 +57,7 @@ Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是we
 
 SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
+<br/>
+
 Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/>
