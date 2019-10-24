@@ -132,16 +132,16 @@ Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.
 
 15. What Is The Difference between Null and Undifined?
 
-Undefined means a variable has been declared but has not yet been assigned a value.
-let a;
-console.log(a);        // undefined
-console.log(typeof a); // undefined
+Undefined means a variable has been declared but has not yet been assigned a value.<br/>
+let a;<br/>
+console.log(a);         // undefined<br/>
+console.log(typeof a);  // undefined<br/>
 
-Null is an assignment value. It can be assigned to a variable as a representation of no value.
-let a = null;
-console.log(a);        // null
-console.log(typeof a); // object
+Null is an assignment value. It can be assigned to a variable as a representation of no value.<br/>
+let a = null;<br/>
+console.log(a);         // null<br/>
+console.log(typeof a);  // object<br/>
 
-null == undefined  // true
-null === undefined // false
+null == undefined   // true<br/>
+null === undefined  // false
 <br/><br/>
