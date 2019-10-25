@@ -60,6 +60,9 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
 8. Explan What Is Async/Await?
+
+Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html
+)
 <br/><br/>
 
 9. Explan What Is Hoisting?
