@@ -86,7 +86,7 @@ Let/const has hoisting indeed, TDZ is if you try to access a variable after hois
 
 13. Explan What Is Call By Value, Call By Reference And Call By Sharing?
 
-Call By Value : 
+**Call By Value** : 
 
 <p align="center">
 <img src="img/callByValue.png" alt="callByValue" title="callByValue" width="60%">
@@ -97,7 +97,7 @@ When you declare a primitive type (string, number, boolean, null, undefined, sym
 Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
 
-Call By Reference : 
+**Call By Reference** : 
 
 <p align="center">
 <img src="img/callByReference.png" alt="callByReference" title="callByReference" width="60%">
@@ -108,7 +108,7 @@ When you declare variable a as an object or function, it will has own memory loc
 Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
-Call By Sharing : If assign value again it will Only change own value. (e.g., use array literals, object literals assign value again)
+**Call By Sharing** : If there are an array1 equal to [1,2,3], assign array2 equal to array1, array1 = [1,2,3], then reassign array1 to [4,5,6], it ```WILL NOT``` change array2's value. But if assign arry1[0] = 4, it will change array2 to [4,2,3] (e.g., use array literals, object literals assign value again)
 
 Example : https://jsfiddle.net/yschen25/7djyawve
 <br/>
