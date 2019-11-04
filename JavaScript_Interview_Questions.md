@@ -160,6 +160,9 @@ null === undefined  // false
 <br/><br/>
 
 16. What Is Event Bubbling And How To Stop IT?
+
+(1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
+(2)Using event.stopPropagation()
 <br/><br/>
 
 17. What Is IIFE(Immediately Invoked Function Expression)?
