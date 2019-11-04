@@ -24,7 +24,7 @@ https://ithelp.ithome.com.tw/articles/10197529
 3. Explain What Is The New Feature In ES6?
 
 Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
-<br/>
+<br/><br/>
 
 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
@@ -56,7 +56,11 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 | | **DOES NOT** change the original array | |
 | |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
 
+<br/><br/>
+
 7. Explan What Is Callbacks?
+
+Take another function as another function's parameter, called by another function. 
 <br/><br/>
 
 8. Explan What Is Async/Await?
@@ -73,7 +77,13 @@ You can use "let/const" instead of var to avoid hoisting, actually let/const has
 Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
-10. Following The Previous Question, explan What Is Let/Const?
+10. Following The Previous Question, Explan What Is Let/Const?
+
+Let and Const is block scope, Var is function scope,<br/>
+Let is for variable,<br/>
+Const is for const variable, can't reassignment.<br/>
+
+Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142)
 <br/><br/>
 
 11. Following The Previous Question, explan What Is TDZ?
@@ -150,3 +160,7 @@ null === undefined  // false
 <br/><br/>
 
 16. What Is Event Bubbling And How To Stop IT?
+<br/><br/>
+
+17. What Is IIFE(Immediately Invoked Function Expression)?
+<br/><br/>
