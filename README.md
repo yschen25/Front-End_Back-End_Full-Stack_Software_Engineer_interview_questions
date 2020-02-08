@@ -11,6 +11,8 @@
 
 :four_leaf_clover: React_And_Redux_Interview_Questions
 
+:fallen_leaf: Others
+
 </br>
 
 ## Author
