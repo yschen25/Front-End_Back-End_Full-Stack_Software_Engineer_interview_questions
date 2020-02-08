@@ -11,7 +11,7 @@
 
 :four_leaf_clover: React_And_Redux_Interview_Questions
 
-:fallen_leaf: Other_Questions
+:fallen_leaf: [Other_Questions](Other_Questions.md)
 
 </br>
 
