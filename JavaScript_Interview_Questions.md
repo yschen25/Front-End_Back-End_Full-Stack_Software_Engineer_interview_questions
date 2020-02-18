@@ -167,3 +167,5 @@ null === undefined  // false
 
 17. What Is IIFE(Immediately Invoked Function Expression)?
 <br/><br/>
+
+18. What Is Prototype?
