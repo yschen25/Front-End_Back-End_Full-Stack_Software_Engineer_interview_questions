@@ -173,3 +173,6 @@ null === undefined  // false
 
 19. What Is Event Loop?
 <br/><br/>
+
+20. What Is Functional Programming?
+
