@@ -1,10 +1,8 @@
 ## Other Interview Questions
 
-      This document is provided to who wants to prepare front-end interview
-      so it doesn't explain the concepts deeply, if you need more details please google it. 
-<br/>
-
-1. What Is Git Key?
+1. What Is Git SSH Key?
+> - Let github knows we authorize the specific computer has permission to push code by gening and setting ssh key, one computer only need to authorize for one time.
+> - Please see [Git 版本控制筆記 - 使用 github 及 ssh 金鑰設定](https://blog.jaycetyle.com/2018/02/github-ssh/) to see how to gen key.
 
 <br/>
 
