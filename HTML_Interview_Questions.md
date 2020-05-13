@@ -25,6 +25,6 @@
 
 | Methods |  Get |  Post | 
 |---|---|---|
-|  | Carries request parameter appended in URL string | Carries request parameter in message body | 
+|  | Carries request parameter appended in URL string (Query string) | Carries request parameter in message body | 
 |  | Should not be used when sending sensitive information | Used when sending sensitive information | 
 <br/>
