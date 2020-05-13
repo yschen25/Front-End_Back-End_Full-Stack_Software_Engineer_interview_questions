@@ -21,10 +21,11 @@
 > - Please see [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236) for more details.
 <br/>
 
-4. What Is The Difference Between Post And Get?
+4. What Is The Difference Between Http Method Get And Post?
 
 | Methods |  Get |  Post | 
 |---|---|---|
 |  | Carries request parameter appended in URL string (Query string) | Carries request parameter in message body | 
 |  | Should not be used when sending sensitive information | Used when sending sensitive information | 
+> - Please see [http Post 和 Get 差異](https://medium.com/@totoroLiu/http-post-%E5%92%8C-get-%E5%B7%AE%E7%95%B0-928829d29914) for more details.
 <br/>
