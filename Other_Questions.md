@@ -6,6 +6,8 @@
 
 <br/>
 
-2. What Is The Differences Between Git SSH And HTTP?
-
+2. What Is The Differences Between Git SSH And HTTPS?
+> - SSH : When you want to push/pull code that you **DON'T** need to enter the id and password due to set up the SSH key already.
+> - HTTPS : When you want to push/pull code that you need to enter the id and password.
+> - Please see [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988) for more details.
 <br/>
