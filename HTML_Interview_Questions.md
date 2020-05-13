@@ -25,7 +25,7 @@
 
 | Methods |  Get |  Post | 
 |---|---|---|
-|  | Carries request parameter appended in URL(Uniform Resource Locator) string ->Query string | Carries request parameter in message body | 
+|  | Carries request parameter appended in URL (Uniform Resource Locator) string ->Query string | Carries request parameter in message body | 
 |  | Should not be used when sending sensitive information | Used when sending sensitive information | 
 > - Please see [http Post 和 Get 差異](https://medium.com/@totoroLiu/http-post-%E5%92%8C-get-%E5%B7%AE%E7%95%B0-928829d29914) for more details.
 <br/>
