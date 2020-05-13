@@ -15,8 +15,9 @@
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
-> - Web storage.
-> - Add new elements : \<canvas>, \<header>, \<footer>, \<nav>, geolocation API, audio, vised, web storage DOM API, etc.
+> - Web storage : localStorage, sessionStorage.
+> - Drag and drop.
+> - Add new elements : \<canvas>, \<header>, \<footer>, \<nav>, geolocation API, audio, video...etc.
 > - Please see [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236) for more details.
 <br/>
 
