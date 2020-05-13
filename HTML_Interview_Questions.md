@@ -8,7 +8,7 @@
 
 2. Why Use Semantic Elements?
 
-> - Improving SEO and Making maintain easily
+> - Improving SEO and making maintain easily
 <br/>
 
 3. What Is The New Features in HTML5?
