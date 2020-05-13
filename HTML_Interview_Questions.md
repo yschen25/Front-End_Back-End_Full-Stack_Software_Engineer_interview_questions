@@ -6,7 +6,12 @@
 > - I.g., \<header>, \<footer>, \<nav>, etc.
 <br/>
 
-2. What Is The New Features in HTML5?
+2. Why Use Semantic Elements?
+
+> - Improving SEO and Making maintain easily
+<br/>
+
+3. What Is The New Features in HTML5?
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
@@ -15,7 +20,7 @@
 > - Please see [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236) for more details.
 <br/>
 
-3. What Is The Difference Between Post And Get?
+4. What Is The Difference Between Post And Get?
 
 | Methods |  Get |  Post | 
 |---|---|---|
