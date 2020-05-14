@@ -77,10 +77,12 @@ Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](h
 
 11. What Is Defferience Between SPA And SSR?
 
+[淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 <br/>
 
 12. What Is Gateway, API Gateway and API?
 
+[Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
 13. What Is RESTful API? Strength And Weakness?
