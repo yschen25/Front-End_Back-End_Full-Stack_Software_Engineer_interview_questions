@@ -1,9 +1,5 @@
 ## Web Interview Questions
 
-      This document is provided to who wants to prepare front-end interview
-      so it doesn't explain the concepts deeply, if you need more details please google it. 
-<br/>
-
 1. What Is The Difference Between Session, Cookie, Sessionstorage, Localstorage?
 
 | Type |  Session |  Cookie |  Sessionstorage |  Localstorage | 
@@ -25,13 +21,13 @@
 > - Use gzip.
 <br/>
 
-3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500. 
+3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502. 
 
 > ① 200 : Request success. <br/>
-> ② 400 : Syntax error. <br/>
+> ② 400 : Syntax error -> The reason usually is programming error. <br/>
 > ③ 403 : Not allow to visit. <br/>
 > ④ 404 : Page not found. <br/>
-> ⑤ 500 : Server error.
+> ⑤ 500 : Server error. <br/>
 > ⑥ 502 : Bad gateway.
 <br/>
 
