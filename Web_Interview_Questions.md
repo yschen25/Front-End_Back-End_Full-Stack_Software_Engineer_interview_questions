@@ -32,6 +32,7 @@
 > ③ 403 : Not allow to visit. <br/>
 > ④ 404 : Page not found. <br/>
 > ⑤ 500 : Server error.
+> ⑥ 502 : Bad gateway.
 <br/>
 
 4. What Is NPM?
@@ -72,3 +73,6 @@ Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02
 **Progressive Enhancement** : Building the website to keep all functions work properly for all the browsers, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
 
 **Graceful Degradation** : Building the website so it provides a good level of user experience in modern browsers first, then fix the problem for other browsers 
+<br/><br/>
+
+9. How The Browser Renders A Web Page? 
