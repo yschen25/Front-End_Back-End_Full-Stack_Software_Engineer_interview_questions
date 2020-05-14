@@ -1,17 +1,17 @@
 ## HTML Interview Questions
 
-1. What Is Semantic Elements?
+:white_check_mark: 1. What Is Semantic Elements?
 
 > - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer. <br/>
 > - I.g., \<header>, \<footer>, \<nav>, etc.
 <br/>
 
-2. Why Use Semantic Elements?
+:white_check_mark: 2. Why Use Semantic Elements?
 
 > - Improving SEO and making maintain easily
 <br/>
 
-3. What Is The New Features in HTML5?
+:white_check_mark: 3. What Is The New Features in HTML5?
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
@@ -21,7 +21,7 @@
 > - Please see [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236) for more details.
 <br/>
 
-4. What Is The Difference Between Http Method Get And Post?
+:white_check_mark: 4. What Is The Difference Between Http Method Get And Post?
 
 | Methods |  Get |  Post | 
 |---|---|---|
