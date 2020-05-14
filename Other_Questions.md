@@ -11,6 +11,3 @@
 > - HTTPS : When you want to push/pull code that you need to enter the id and password.
 > - Please see [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988) for more details.
 <br/>
-
-3. What Is Gateway And Api Gateway?
-<br/>
