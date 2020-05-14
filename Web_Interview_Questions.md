@@ -46,7 +46,23 @@ There are many preprocessors, e.g., JSX, SASS, SCSS, we can use Babel to compile
 Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d)
 <br/><br/>
 
-6. What Is SPA?
+6. What Is CSRF?
+
+Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
+<br/><br/>
+
+7. What Is Progressive Enhancement And Graceful Degradation?
+
+**Progressive Enhancement** : Building the website to keep all functions work properly for all the browsers, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+
+**Graceful Degradation** : Building the website so it provides a good level of user experience in modern browsers first, then fix the problem for other browsers 
+<br/><br/>
+
+8. How The Browser Renders A Web Page? 
+
+<br/>
+
+9. What Is SPA? Strength And Weakness?
 
 SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
@@ -55,35 +71,31 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-7. What Is CSRF?
-
-Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
-<br/><br/>
-
-8. What Is Progressive Enhancement And Graceful Degradation?
-
-**Progressive Enhancement** : Building the website to keep all functions work properly for all the browsers, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
-
-**Graceful Degradation** : Building the website so it provides a good level of user experience in modern browsers first, then fix the problem for other browsers 
-<br/><br/>
-
-9. How The Browser Renders A Web Page? 
+10. How To Solve The problem 9(SEO)?
 
 <br/>
 
-10. What Is Gateway, API Gateway and API?
+11. What Is Defferience Between SPA And SSR?
 
 <br/>
 
-11. What Is RESTful API?
+12. What Is Gateway, API Gateway and API?
 
 <br/>
 
-12. What Is Defferience Between REST API And HTTP API?
+13. What Is RESTful API? Strength And Weakness?
 
 <br/>
 
-13. What Is AWS, GCP...?
+14. How To Solve The problem 11?
+
+<br/>
+
+15. What Is Defferience Between REST API And HTTP API?
+
+<br/>
+
+16. What Is AWS, GCP...? Why Use It?
 
 <br/>
 
