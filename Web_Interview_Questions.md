@@ -28,7 +28,7 @@
 > ③ 403 : Not allow to visit. <br/>
 > ④ 404 : Page not found. <br/>
 > ⑤ 500 : Server error -> There are lots of possibilities : .htaccess document seeting error, database setting error...etc <br/>
-> ⑥ 502 : Bad gateway -> Find mis.
+> :question: ⑥ 502 : Bad gateway -> Find mis.
 <br/>
 
 4. What Is NPM?
@@ -46,7 +46,7 @@ There are many preprocessors, e.g., JSX, SASS, SCSS, we can use Babel to compile
 Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d)
 <br/><br/>
 
-6. What Is Gateway, API Gateway and Api?
+:question: 6. What Is Gateway, API Gateway and Api?
 
 <br/>
 
