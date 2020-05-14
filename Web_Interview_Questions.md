@@ -27,8 +27,8 @@
 > ② 400 : Syntax error -> The reason usually is programming error. <br/>
 > ③ 403 : Not allow to visit. <br/>
 > ④ 404 : Page not found. <br/>
-> ⑤ 500 : Server error. <br/>
-> ⑥ 502 : Bad gateway.
+> ⑤ 500 : Server error -> There are lots of possibilities : .htaccess document seeting error, database setting error...etc <br/>
+> ⑥ 502 : Bad gateway -> Find mis.
 <br/>
 
 4. What Is NPM?
@@ -46,11 +46,15 @@ There are many preprocessors, e.g., JSX, SASS, SCSS, we can use Babel to compile
 Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d)
 <br/><br/>
 
-5. What Is RESTful Api?
+6. What Is Gateway, API Gateway and Api?
 
 <br/>
 
-6. What Is SPA?
+7. What Is RESTful Api?
+
+<br/>
+
+8. What Is SPA?
 
 SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
@@ -59,16 +63,16 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-7. What Is CSRF?
+9. What Is CSRF?
 
 Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
 <br/><br/>
 
-8. What Is Progressive Enhancement And Graceful Degradation?
+10. What Is Progressive Enhancement And Graceful Degradation?
 
 **Progressive Enhancement** : Building the website to keep all functions work properly for all the browsers, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
 
 **Graceful Degradation** : Building the website so it provides a good level of user experience in modern browsers first, then fix the problem for other browsers 
 <br/><br/>
 
-9. How The Browser Renders A Web Page? 
+11. How The Browser Renders A Web Page? 
