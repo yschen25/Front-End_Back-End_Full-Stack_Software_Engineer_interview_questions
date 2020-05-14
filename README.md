@@ -1,15 +1,15 @@
-# Front_End_Interview_Qusestion
+# Web_Qusestions_Collection
 
 
-:herb: [HTML_Questions](HTML_Interview_Questions.md)
+:herb: [HTML_Questions](HTML_Questions.md)
 
-:cherry_blossom: [CSS_Questions](CSS_Interview_Questions.md)
+:cherry_blossom: [CSS_Questions](CSS_Questions.md)
 
-:rose: [JavaScript_Questions](JavaScript_Interview_Questions.md)
+:rose: [JavaScript_Questions](JavaScript_Questions.md)
 
-:hibiscus: [Web_Questions](Web_Interview_Questions.md)
+:hibiscus: [Web_Questions](Web_Questions.md)
 
-:four_leaf_clover: React_And_Redux_Questions
+:four_leaf_clover: [React_Questions](React_Questions.md)
 
 :fallen_leaf: [Other_Questions](Other_Questions.md)
 
