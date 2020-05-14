@@ -1,7 +1,4 @@
-## JavaScript Interview Questions
-
-      This document is provided to who wants to prepare front-end interview
-      so it doesn't explain the concepts deeply, if you need more details please google it. 
+## JavaScript Questions
 <br/>
 
 1. Explan What Is Closure?
