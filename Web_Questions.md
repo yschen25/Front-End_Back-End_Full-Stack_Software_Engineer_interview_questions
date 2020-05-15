@@ -17,9 +17,13 @@
 > - Use sprite images. <br/>
 > - Properly image size.
 > - Minify Js, CSS, images. <br/>
+> - Combine files. <br/>
 > - Use CDN. <br/>
-> - Delete unused code. <br/>
-> - Use gzip.
+> - Reduce redirects <br/>
+> - Delete unused code including removing spaces, commas, and other unnecessary characters. <br/>
+> - Use gzip : software application for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
+
+> - Related Reference : [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/)
 <br/>
 
 :white_check_mark: 3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502. 
