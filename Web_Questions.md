@@ -15,10 +15,10 @@
 
 > - Reduce the HTTP request : use sprite images, Combine files. <br/>
 > - Use CDN. <br/>
-> - Minify Js, CSS, images. <br/>
-> - Reduce redirects <br/>
-> - Use asynchronous loading for CSS and JavaScript files : If it gets to a CSS or JavaScript file that is not asynchronous, it will stop loading until it has fully loaded that particular file. If that same file were asynchronous, the browser could continue loading other elements on the page at the same time. <br/>
-> - Defer JavaScript loading : If you defer larger files, like JavaScript, you ensure that the rest of your content can load without a delay. <br/>
+> - Minify JS, CSS, images. <br/>
+> - Reduce redirects. <br/>
+> - Use asynchronous loading for CSS and JS files : If it gets to a CSS or JavaScript file that is not asynchronous, it will stop loading until it has fully loaded that particular file. If that same file were asynchronous, the browser could continue loading other elements on the page at the same time. <br/>
+> - Defer JS loading : If you defer larger files, like JavaScript, you ensure that the rest of your content can load without a delay. <br/>
 > - Delete unused code including removing spaces, commas, and other unnecessary characters. <br/>
 > - Use gzip : software application for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
 
