@@ -46,9 +46,9 @@ we can manage packages via NPM.
 
 5. What Is Webpack?
 
-There are many preprocessors, e.g., JSX, SASS, SCSS, we can use Babel to compile JavaScript, use the SASS command to compile SASS to CSS, is there a way compile and bundle all of these to a file then upload to the server? It'a NPM.
+> - There are lots of prepressors and frameworks, We may need to use Babel to compile ES6 and JSX, compile SASS, SCSS to CSS, webpack can help us compile preprocessors to browser which can understand then bundle it, we can also use webpack to minify or optimize code...etc., use webpack to work efficiently.
 
-Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d)
+> - Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d) [關於 Webpack](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/) [Webpack 初學者教學課程](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/)
 <br/><br/>
 
 6. What Is CSRF?
