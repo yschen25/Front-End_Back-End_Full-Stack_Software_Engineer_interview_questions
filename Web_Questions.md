@@ -22,14 +22,14 @@
 > - Use gzip.
 <br/>
 
-3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502. 
+:white_check_mark: 3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502. 
 
 > ① 200 : Request success. <br/>
 > ② 400 : Syntax error -> The reason usually is programming error. <br/>
 > ③ 403 : Not allow to visit. <br/>
 > ④ 404 : Page not found. <br/>
-> ⑤ 500 : Server error -> There are lots of possibilities : .htaccess document seeting error, database setting error...etc <br/>
-> ⑥ 502 : Bad gateway -> Find mis.
+> ⑤ 500 : Server error -> There are lots of possibilities : .htaccess document setting error, database setting error...etc <br/>
+> ⑥ 502 : Bad gateway -> Wait and reload or find mis.
 <br/>
 
 4. What Is NPM?
