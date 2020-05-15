@@ -5,14 +5,13 @@
 
 > - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer. <br/>
 > - I.g., \<header>, \<footer>, \<nav>, etc.
-<br/>
 
-:white_check_mark: 2. Why Use Semantic Elements?
+1.2 Why Use Semantic Elements?
 
 > - Improving SEO and making maintain easily
 <br/>
 
-:white_check_mark: 3. What Is The New Features in HTML5?
+:white_check_mark: 2. What Is The New Features in HTML5?
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
@@ -22,7 +21,7 @@
 > - Please see [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236) for more details.
 <br/>
 
-:white_check_mark: 4. What Is The Difference Between Http Method Get And Post?
+:white_check_mark: 3. What Is The Difference Between Http Method Get And Post?
 
 | Methods |  Get |  Post | 
 |---|---|---|
