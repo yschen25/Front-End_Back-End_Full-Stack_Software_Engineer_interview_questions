@@ -5,8 +5,9 @@
 
 > - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer. <br/>
 > - I.g., \<header>, \<footer>, \<nav>, etc.
+<br/>
 
-1.2 Why Use Semantic Elements?
+:white_check_mark: 1.2 Why Use Semantic Elements?
 
 > - Improving SEO and making maintain easily
 <br/>
