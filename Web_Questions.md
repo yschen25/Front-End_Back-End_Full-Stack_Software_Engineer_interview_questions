@@ -13,7 +13,7 @@
 
 2. How To Speed Up The Website?
 
-> - Reduce the HTTP request : use sprite images, Combine files. <br/>
+> - Reduce the HTTP request : use sprite images, combine files...etc. <br/>
 > - Use CDN. <br/>
 > - Minify JS, CSS, images. <br/>
 > - Reduce redirects. <br/>
