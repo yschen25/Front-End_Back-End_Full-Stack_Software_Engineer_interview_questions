@@ -41,7 +41,7 @@ we can manage packages via NPM.
 :white_check_mark: 4.1 Why Use NPM?
 > - For example if we want to use jQuery, we used to download jQuery or include jQuery CDN url before, but how about we need to use a lots of packages? NPM is a tool to solve this time-consuming things.
 
-Related Reference : [從零開始: 使用NPM套件](https://medium.com/html-test/從零開始-使用npm套件-317beefdf182)
+> - Related Reference : [從零開始: 使用NPM套件](https://medium.com/html-test/從零開始-使用npm套件-317beefdf182)
 <br/><br/>
 
 5. What Is Webpack?
