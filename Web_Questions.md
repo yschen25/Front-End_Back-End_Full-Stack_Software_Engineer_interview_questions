@@ -17,7 +17,7 @@
 > - Use CDN. <br/>
 > - Reduce redirects. <br/>
 > - Delete unused code : remove spaces, commas, and other unnecessary characters. <br/>
-> - Minify JS, CSS, images : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
+> - Minify files : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
 > - Defer JS loading : If you defer larger files, like JavaScript, you ensure that the rest of your content can load without a delay. <br/>
 > - Use asynchronous loading for CSS and JS files : If it gets to a CSS or JavaScript file that is not asynchronous, it will stop loading until it has fully loaded that particular file. If that same file were asynchronous, the browser could continue loading other elements on the page at the same time. <br/>
 
