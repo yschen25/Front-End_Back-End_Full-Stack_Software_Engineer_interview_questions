@@ -34,8 +34,12 @@
 
 4. What Is NPM?
 
-NPM is short for Node Package Manager, it is an online repository for the publishing of open-source Node.js projects,
-you can do package installation, version management, and dependency management via NPM.
+NPM is short for Node Package Manager, it is an online library for download open-source javaScript projects,
+we can manage packages via NPM.
+
+4.1 Why Use NPM?
+For example if we want to use jQuery, we will download jQuery or include jQuery CDN url before, but how about we need to use a lots of packages? NPM is a tool to solve this time-consuming things.
+
 
 Related Reference : [從零開始: 使用NPM套件](https://medium.com/html-test/從零開始-使用npm套件-317beefdf182)
 <br/><br/>
