@@ -5,10 +5,15 @@
 
 | Type |  Session |  Cookie |  Sessionstorage |  Localstorage | 
 |---|---|---|---|---|
-| Expired Time  | It can set the expire time | Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side  | The data clear automatically when the browser is closed | The data **WILL NOT** be deleted when the browser is closed until user clear through JavaScript, browser cache / locally stored data |
-| Storage  | 1024KB |  4KB | 5MB | 5MB  |
-| Storing Location | storing on server-side   | storing on client-side and server-side | storing on client-side | storing on client-side |
-| Request |   | The data is sent back to the server for every HTTP request | The data is **NOT** sent back to the server for every HTTP request | The data is **NOT** sent back to the server for every HTTP request |
+| Storing Location | server-side | client-side | client-side | client-side |
+| Maximum data size | 1024KB | * 4K for one cookie <br/> * Max 20 cookies for a website  | 5MB | 5MB  |
+| Expired Time | If user doesn’t active for a long time which over expire time, the server-side will delete the session to save the space |  * user can set expiration time for each cookies <br/> * It will expire after closing browser if it set on client-side
+The data clear automatically when the browser is closed |The data **WILL NOT** be deleted when the browser is closed until user clear through JavaScript, browser cache / locally stored data |
+| Scope | No | Changes made are saved and available for all same-origin page | Changes made are saved and available for the current page | Changes made are saved and available for all same-origin page |
+| Security | High | Low | Low | Low |
+| Usability | Easily to use | The api is difficult to use | Has method setItem, getItem, removeItem, clear that easily to use   |
+| HTTP request |  | The data is sent back to the server for every HTTP request which cause performance problems | The data is **NOT** sent back to the server for every HTTP request |
+| Application | login | login, shopping cart, game scores | form | shopping cart |
 <br/>
 
 2. How To Speed Up The Website?
