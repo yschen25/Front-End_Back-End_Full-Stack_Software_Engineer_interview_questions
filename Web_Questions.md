@@ -3,17 +3,74 @@
 
 1. What Is The Difference Between Session, Cookie, Sessionstorage, Localstorage?
 
-| Type |  Session |  Cookie |  Sessionstorage |  Localstorage | 
-|---|---|---|---|---|
-| Storing Location | server-side | client-side | client-side | client-side |
-| Maximum data size | 1024KB | * 4K for one cookie <br/> * Max 20 cookies for a website  | 5MB | 5MB  |
-| Expired Time | If user doesn’t active for a long time which over expire time, the server-side will delete the session to save the space |  * user can set expiration time for each cookies <br/> * It will expire after closing browser if it set on client-side
-The data clear automatically when the browser is closed |The data **WILL NOT** be deleted when the browser is closed until user clear through JavaScript, browser cache / locally stored data |
-| Scope | No | Changes made are saved and available for all same-origin page | Changes made are saved and available for the current page | Changes made are saved and available for all same-origin page |
-| Security | High | Low | Low | Low |
-| Usability | Easily to use | The api is difficult to use | Has method setItem, getItem, removeItem, clear that easily to use   |
-| HTTP request |  | The data is sent back to the server for every HTTP request which cause performance problems | The data is **NOT** sent back to the server for every HTTP request |
-| Application | login | login, shopping cart, game scores | form | shopping cart |
+<table>
+    <tr>
+        <th>Type</th>
+        <th>session</th>
+        <th>cookie</th>
+        <th>sessionStorage</th>
+        <th>localStorage</th>
+    </tr>
+    <tr>
+        <td>Storage location</td>
+        <td>server-side</td>
+        <td>client-side</td>
+        <td>client-side</td>
+        <td>client-side</td>
+    </tr>
+    <tr>
+        <td>Maximum data size</td>
+        <td>1024KB</td>
+        <td>4K for one cookieMax 20 cookies for a website</td>
+        <td>5M</td>
+        <td>5M</td>
+    </tr>
+    <tr>
+        <td>Expired Time</td>
+        <td>If user doesn’t active for a long time which over expire time, the server-side will delete the session to
+            save the space
+        </td>
+        <td>user can set expiration time for each cookies. It will expire after closing browser if it set on client-side
+        </td>
+        <td>The data clear automatically when the browser is closed</td>
+        <td>The data WILL NOT be deleted when the browser is closed until user clear through JavaScript, browser cache /
+            locally stored data
+        </td>
+    </tr>
+    <tr>
+        <td>Scope</td>
+        <td>No</td>
+        <td>Changes made are saved and available for all same-origin page</td>
+        <td>Changes made are saved and available for the current page</td>
+        <td>Changes made are saved and available for all same-origin page</td>
+    </tr>
+    <tr>
+        <td>Security</td>
+        <td>High</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <td>Usability</td>
+        <td>Easily to use</td>
+        <td>The api is difficult to use</td>
+        <td colspan="2">Has method setItem, getItem, removeItem, clear that easily to use</td>
+    </tr>
+    <tr>
+        <td>HTTP Request</td>
+        <td></td>
+        <td>The data is sent back to the server for every HTTP request which cause performance problems</td>
+        <td colspan="2">The data is NOT sent back to the server for every HTTP request</td>
+    </tr>
+    <tr>
+        <td>Application</td>
+        <td>login</td>
+        <td>login, shopping cart, game scores</td>
+        <td>form</td>
+        <td>shopping cart</td>
+    </tr>
+</table>
 <br/>
 
 2. How To Speed Up The Website?
