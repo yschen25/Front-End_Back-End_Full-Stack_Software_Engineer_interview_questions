@@ -21,7 +21,7 @@
     <tr>
         <td>Maximum data size</td>
         <td>1024KB</td>
-        <td>4K for one cookieMax 20 cookies for a website</td>
+        <td>4K for one cookie, max 20 cookies for a website</td>
         <td>5M</td>
         <td>5M</td>
     </tr>
@@ -30,10 +30,10 @@
         <td>If user doesn’t active for a long time which over expire time, the server-side will delete the session to
             save the space
         </td>
-        <td>user can set expiration time for each cookies. It will expire after closing browser if it set on client-side
-        </td>
+        <td><li>user can set expiration time for each cookies.</li> <li>It will expire after closing browser if it set on client-side
+        </li></td>
         <td>The data clear automatically when the browser is closed</td>
-        <td>The data WILL NOT be deleted when the browser is closed until user clear through JavaScript, browser cache /
+        <td>The data <b>WILL NOT</b> be deleted when the browser is closed until user clear through JavaScript, browser cache /
             locally stored data
         </td>
     </tr>
@@ -61,7 +61,7 @@
         <td>HTTP Request</td>
         <td></td>
         <td>The data is sent back to the server for every HTTP request which cause performance problems</td>
-        <td colspan="2">The data is NOT sent back to the server for every HTTP request</td>
+        <td colspan="2">The data is <b>NOT</b> sent back to the server for every HTTP request</td>
     </tr>
     <tr>
         <td>Application</td>
