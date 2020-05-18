@@ -115,12 +115,7 @@ we can manage packages via NPM.
 > - Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d) [關於 Webpack](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/) [Webpack 初學者教學課程](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/)
 <br/><br/>
 
-6. What Is CSRF?
-
-Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
-<br/><br/>
-
-:white_check_mark: 7. What Is Progressive Enhancement And Graceful Degradation?
+:white_check_mark: 6. What Is Progressive Enhancement And Graceful Degradation?
 
 > - **Graceful Degradation** : Building the website so it provides a good level of user experience in **modern browsers first**, then fix the problem for other browsers 
 
@@ -131,11 +126,11 @@ Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02
 > - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
 
-8. How The Browser Renders A Web Page? 
+7. How The Browser Renders A Web Page? 
 
 <br/>
 
-9. What Is SPA? Strength And Weakness?
+8. What Is SPA? Strength And Weakness?
 
 SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
@@ -144,36 +139,32 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-10. How To Solve The problem 9(SEO)?
+9. How To Solve The problem 9(SEO)?
 
 <br/>
 
-11. What Is Defferience Between SPA And SSR?
+10. What Is Defferience Between SPA And SSR?
 
 [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 <br/>
 
-12. What Is Gateway, API Gateway and API?
+11. What Is Gateway, API Gateway and API?
 
 [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-13. What Is RESTful API? Strength And Weakness?
+12. What Is RESTful API? Strength And Weakness?
 
 <br/>
 
-14. How To Solve The problem 11?
+13. How To Solve The problem 11?
 
 <br/>
 
-15. What Is Dfferience Between REST API And HTTP API?
+14. What Is Dfferience Between REST API And HTTP API?
 
 <br/>
 
-16. What Is AWS, GCP...? Why Use It?
-
-<br/>
-
-17. What Is Token?
+15. What Is Token?
 
 <br/>
