@@ -126,7 +126,7 @@ Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02
 
 > - **Progressive Enhancement** : Building the website to keep all functions work properly for **all the browsers**, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
 
-> - Use progressive enhancement will cost more time and manpower in the begging, but easily to maintain, use graceful degradation can make website online quickly, depends on the requirements.
+> - Use progressive enhancement will cost more time and manpower in the begging, but easily to maintain. Use graceful degradation can make website online quickly. Choose which to use it depends on the requirements.
 
 > - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
