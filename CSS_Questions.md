@@ -21,7 +21,7 @@
 > - Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
 
-2. Please Explain The Difference Between Inline, Block, Inline-Block?
+2. Please Explain The Difference Between Inline, Block And Inline-Block?
 
 > - Inline<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
@@ -35,12 +35,12 @@
 > -> It starts on a new line.<br/>
 > -> Height, width, margin, padding properties have effect.<br/>
 > -> To make this element horizongally center is add margin : auto.<br/>
-> -> I.g., \<div/>, \<p>, \<h1>, \<ol>, \<ul>, \<li>.
+> -> I.g., \<div>, \<p>, \<h1>, \<ol>, \<ul>, \<li>.
 <br/>
 
 > - Inline-Block<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
-> -> Height, width, margin, padding properties have effect.
+> -> Height, width, margin, padding properties have effect.<br/>
 > -> To make this element horizongally center is add margin : auto.<br/>
 <br/>
 
