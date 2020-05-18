@@ -29,20 +29,19 @@
 > -> It can have left & right margin and padding, but not top and bottom.<br/>
 > -> To make the element horizontally center is add text-align : center on it's parent element.<br/>
 > -> I.g., \<a>, \<span>, \<img>  
-<br/>
 
 > - Block<br/>
 > -> It starts on a new line.<br/>
 > -> Height, width, margin, padding properties have effect.<br/>
 > -> To make this element horizongally center is add margin : auto.<br/>
 > -> I.g., \<div>, \<p>, \<h1>, \<ol>, \<ul>, \<li>.
-<br/>
+
 
 > - Inline-Block<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
 > -> Height, width, margin, padding properties have effect.<br/>
-> -> To make this element horizongally center is add margin : auto.<br/>
-<br/>
+> -> To make this element horizongally center is add margin : auto.
+
 
 :white_check_mark: 3. Please Explain What Is Sprite Image?
 
