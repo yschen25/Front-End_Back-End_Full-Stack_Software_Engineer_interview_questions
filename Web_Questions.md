@@ -73,7 +73,7 @@
 </table>
 <br/>
 
-2. How To Speed Up The Website?
+:white_check_mark: 2. How To Speed Up The Website?
 
 > - Reduce the HTTP request : use sprite images, combine files...etc. <br/>
 > - Use CDN. <br/>
