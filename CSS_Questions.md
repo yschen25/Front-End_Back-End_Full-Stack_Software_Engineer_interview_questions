@@ -12,6 +12,7 @@
 
 > - Example : https://jsfiddle.net/yschen25/289xv1ba/
 
+
 2. When Should You Use Visibility and When Should You Use Display?
 
 > - When you want the element to hold its space even when it’s not seen. => Visibility : hidden;<br/>
