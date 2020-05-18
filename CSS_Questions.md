@@ -21,7 +21,7 @@
 > - Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
 
-2. Please Explain The Difference Between Inline, Block And Inline-Block?
+:white_check_mark: 2. Please Explain The Difference Between Inline, Block And Inline-Block?
 
 > - Inline<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
@@ -44,11 +44,11 @@
 > -> To make this element horizongally center is add margin : auto.<br/>
 <br/>
 
-3. Please Explain What Is Sprite Image?
+:white_check_mark: 3. Please Explain What Is Sprite Image?
 
-> - sprite is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
+> - Sprite image is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
 
-3.1 When Can Use It?
+:white_check_mark: 3.1 When Can Use It?
 > - Use sprite image will reduce the number of server requests when you have multiple images/icons.
 <p align="center">
 <img src="img/google.png" alt="sprite_image" title="sprite_image">
