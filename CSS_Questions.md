@@ -36,12 +36,11 @@
 > -> To make this element horizongally center is add margin : auto.<br/>
 > -> I.g., \<div>, \<p>, \<h1>, \<ol>, \<ul>, \<li>.
 
-
 > - Inline-Block<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
 > -> Height, width, margin, padding properties have effect.<br/>
 > -> To make this element horizongally center is add margin : auto.
-
+<br/>
 
 :white_check_mark: 3. Please Explain What Is Sprite Image?
 
