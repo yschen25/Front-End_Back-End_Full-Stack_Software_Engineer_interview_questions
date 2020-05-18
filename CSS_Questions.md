@@ -1,23 +1,17 @@
 ## CSS Questions
 <br/>
 
-1. Please Explain The Difference Between Visibility : Hidden And Display : None?
+1. Please Explain The Difference Between Visibility : Hidden And Display : None, Opacity : 0?
 
-> - Visibility : hidden;<br/>
-> –> It doesn't show up but takes space in the layout flow. (It **DOESN'T** cause DOM reflow)
+|   |  Visibility : hidden | Display : none | Opacity : 0 |
+|---|---|---|---|
+|   | Doesn't show up | Doesn't show up  | Doesn't show up  |   
+|   | Takes space  | Doesn't take space| Takes space|   
+|   |  Unclickable | Unclickable  | Clickable  |  
+|   |  Doesn't cause DOM reflow | Causes DOM reflow  |   |  
+
+> -> Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
-
-> - Display : none;<br/>
-> –> It doesn't show up and removes the element from the layout flow, it allows other elements to fill in. (It **CAUSES** DOM reflow)
-<br/>  
-
-1.1 Aditional : Please Explain The Difference Between Visibility : Hidden And Opacity : 0?
-
-> - Opacity : 0;<br/>
-> -> It doesn't show up but also takes space in the layout flow.<br/>
-> -> The difference is you can click on the elements behind it but you **CAN'T** click on the elements which style is visibility : hidden.
-
-Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
 <br/>
 
