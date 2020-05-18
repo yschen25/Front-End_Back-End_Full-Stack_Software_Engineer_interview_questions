@@ -132,39 +132,39 @@ we can manage packages via NPM.
 
 8. What Is SPA? Strength And Weakness?
 
-SPA is short for single page application. 
+> - SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
 <br/>
 
-Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
+> - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-9. How To Solve The problem 9(SEO)?
+8.1 How To Solve The SEO problem For SPA?
 
 <br/>
 
-10. What Is Defferience Between SPA And SSR?
+8.2. What Is Defferience Between SPA And SSR?
 
-[淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
+> - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 <br/>
 
-11. What Is Gateway, API Gateway and API?
+9. What Is Gateway, API Gateway and API?
 
 [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-12. What Is RESTful API? Strength And Weakness?
+10. What Is REST API? Strength And Weakness?
 
 <br/>
 
-13. How To Solve The problem 11?
+10.1 How To Solve The problem 11?
 
 <br/>
 
-14. What Is Dfferience Between REST API And HTTP API?
+10.2 What Is Dfferience Between REST API And HTTP API?
 
 <br/>
 
-15. What Is Token?
+11. What Is Token?
 
 <br/>
