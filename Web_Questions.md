@@ -150,7 +150,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 9. What Is Gateway, API Gateway and API?
 
-[Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
+> - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
 10. What Is REST API? Strength And Weakness?
