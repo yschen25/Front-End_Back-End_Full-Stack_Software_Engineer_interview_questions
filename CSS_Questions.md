@@ -13,10 +13,10 @@
 > - Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
 
-1.1 When Should You Use Visibility Ａnd When Should You Use Display?
+:white_check_mark: 1.1 When Should You Use Visibility And When Should You Use Display?
 
 > - When you want the element to hold its space even when it’s not seen. => Visibility : hidden;<br/>
-> - When you don't want the element to take space in the layout or You want to allow the other elements on your page to collapse around it. => Display : none;
+> - When you don't want the element take space or You want to allow the other elements collapse around it. => Display : none;
       
 > - Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
