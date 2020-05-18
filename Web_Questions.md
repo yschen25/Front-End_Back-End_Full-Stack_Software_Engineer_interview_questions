@@ -115,7 +115,7 @@ we can manage packages via NPM.
 > - Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d) [關於 Webpack](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/) [Webpack 初學者教學課程](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/)
 <br/><br/>
 
-:white_check_mark: 6. What Is Progressive Enhancement And Graceful Degradation?
+:white_check_mark: 6. What Is Graceful Degradation And Progressive Enhancement?
 
 > - **Graceful Degradation** : Building the website so it provides a good level of user experience in **modern browsers first**, then fix the problem for other browsers 
 
