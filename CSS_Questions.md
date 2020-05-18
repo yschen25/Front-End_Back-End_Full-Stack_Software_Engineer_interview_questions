@@ -140,4 +140,4 @@ Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2
 
 !important > Inline styles > ID Selectors > Class selectors > Element
 
-> - Please see [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
+> - Please see [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454) [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
