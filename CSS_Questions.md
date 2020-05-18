@@ -11,7 +11,7 @@
 |   |  Doesn't cause DOM reflow | Causes DOM reflow  |   |  
 
 > - Example : https://jsfiddle.net/yschen25/289xv1ba/
-
+<br/>
 
 2. When Should You Use Visibility and When Should You Use Display?
 
@@ -20,7 +20,7 @@
       
 Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
-<br/>
+
 
 3. Please Explain The Difference Between Inline, Block, Inline-Block?
 
