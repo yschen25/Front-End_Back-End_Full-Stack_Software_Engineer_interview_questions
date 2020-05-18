@@ -80,9 +80,9 @@
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/><br/>
 
-7. What Is The Difference Between Em and Rem?
+:white_check_mark: 7. What Is The Difference Between Em and Rem?
 
-> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT**.
+> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the children with rem **WILL NOT BE AFFECTED**.
 <br/>
 
 8. What Is The Position : Relative, Absolute, Fixed? <br/>
