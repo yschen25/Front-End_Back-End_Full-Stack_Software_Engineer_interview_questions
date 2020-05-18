@@ -120,11 +120,13 @@ we can manage packages via NPM.
 Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
 <br/><br/>
 
-7. What Is Progressive Enhancement And Graceful Degradation?
+:white_check_mark: 7. What Is Progressive Enhancement And Graceful Degradation?
 
-**Graceful Degradation** : Building the website so it provides a good level of user experience in **modern browsers first**, then fix the problem for other browsers 
+> - **Graceful Degradation** : Building the website so it provides a good level of user experience in **modern browsers first**, then fix the problem for other browsers 
 
-**Progressive Enhancement** : Building the website to keep all functions work properly for **all the browsers**, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+> - **Progressive Enhancement** : Building the website to keep all functions work properly for **all the browsers**, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+
+> - Use progressive enhancement will cost more time and manpower in the begging, but easily to maintain, use graceful degradation can make website online quickly, depends on the requirements.
 
 > - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
