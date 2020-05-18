@@ -122,9 +122,11 @@ Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02
 
 7. What Is Progressive Enhancement And Graceful Degradation?
 
-**Progressive Enhancement** : Building the website to keep all functions work properly for all the browsers, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+**Graceful Degradation** : Building the website so it provides a good level of user experience in **modern browsers first**, then fix the problem for other browsers 
 
-**Graceful Degradation** : Building the website so it provides a good level of user experience in modern browsers first, then fix the problem for other browsers 
+**Progressive Enhancement** : Building the website to keep all functions work properly for **all the browsers**, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+
+> - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
 
 8. How The Browser Renders A Web Page? 
