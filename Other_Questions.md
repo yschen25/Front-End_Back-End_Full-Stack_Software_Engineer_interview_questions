@@ -12,3 +12,16 @@
 > - HTTPS : When you want to push/pull code that you need to enter the id and password.
 > - Related Reference : [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988)
 <br/>
+
+3. What Is CSRF?
+
+Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
+<br/>
+
+4. What Is XSS?
+
+<br/>
+
+5. What Is AWS, GCP...? Why Use It?
+
+<br/>
