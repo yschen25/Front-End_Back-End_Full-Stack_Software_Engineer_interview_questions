@@ -10,10 +10,7 @@
 |   |  Unclickable | Unclickable  | Clickable  |  
 |   |  Doesn't cause DOM reflow | Causes DOM reflow  |   |  
 
-> -> Example : https://jsfiddle.net/yschen25/289xv1ba/
-<br/>
-<br/>
-<br/>
+> - Example : https://jsfiddle.net/yschen25/289xv1ba/
 
 2. When Should You Use Visibility and When Should You Use Display?
 
