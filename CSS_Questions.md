@@ -54,12 +54,12 @@
 </p>
 <br/>
 
-4. What Is CSS Reset? What Is The Difference Between CSS Reset And CSS Normalize?
+4. What Is CSS Reset And CSS Normalize?
 
-> (1) Every browser has its own default 'user agent' stylesheet, CSS Reset is use to make it look consistent across browsers.
-<br/>
+> - Every browser has its own default 'user agent' stylesheet, CSS reset and CSS normalize is use to make it look consistent across browsers.
 
-> (2) CSS Reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS Normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
+4. What Is The Difference Between CSS Reset And CSS Normalize?
+> - CSS reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
 
 5. What Is Float?
