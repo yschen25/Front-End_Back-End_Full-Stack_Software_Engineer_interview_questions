@@ -60,6 +60,7 @@
 
 4. What Is The Difference Between CSS Reset And CSS Normalize?
 > - CSS reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
+<br/>
 
 5. What Is Float?
 
