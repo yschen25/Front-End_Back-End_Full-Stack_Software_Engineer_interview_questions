@@ -44,11 +44,12 @@
 > -> To make this element horizongally center is add margin : auto.<br/>
 <br/>
 
-3. Please Explain What Is Sprite? When Would You Use It?
+3. Please Explain What Is Sprite Image?
 
-> (1) sprite is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
+> - sprite is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
 
-> (2) Using image sprites will reduce the number of server requests when you have multiple images/icons.
+3.1 When Can Use It?
+> - Use sprite image will reduce the number of server requests when you have multiple images/icons.
 <p align="center">
 <img src="img/google.png" alt="sprite_image" title="sprite_image">
 </p>
