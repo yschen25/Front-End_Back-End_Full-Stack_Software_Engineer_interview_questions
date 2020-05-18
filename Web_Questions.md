@@ -13,10 +13,10 @@
     </tr>
     <tr>
         <td>Storage location</td>
-        <td>server-side</td>
-        <td>client-side</td>
-        <td>client-side</td>
-        <td>client-side</td>
+        <td>Server-side</td>
+        <td>Client-side</td>
+        <td>Client-side</td>
+        <td>Client-side</td>
     </tr>
     <tr>
         <td>Maximum data size</td>
@@ -65,10 +65,10 @@
     </tr>
     <tr>
         <td>Application</td>
-        <td>login</td>
-        <td>login, shopping cart, game scores</td>
-        <td>form</td>
-        <td>shopping cart</td>
+        <td>Login</td>
+        <td>Login, shopping cart, game scores</td>
+        <td>Form</td>
+        <td>Shopping cart</td>
     </tr>
 </table>
 <br/>
