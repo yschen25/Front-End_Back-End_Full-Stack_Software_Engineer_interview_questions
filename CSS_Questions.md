@@ -1,7 +1,7 @@
 ## CSS Questions
 <br/>
 
-1. Please Explain The Difference Between Visibility : Hidden And Display : None, Opacity : 0?
+:white_check_mark: 1. Please Explain The Difference Between Visibility : Hidden, Display : None And Opacity : 0?
 
 |   |  Visibility : hidden | Display : none | Opacity : 0 |
 |---|---|---|---|
@@ -13,16 +13,15 @@
 > - Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
 
-2. When Should You Use Visibility and When Should You Use Display?
+1.1 When Should You Use Visibility and When Should You Use Display?
 
 > - When you want the element to hold its space even when it’s not seen. => Visibility : hidden;<br/>
 > - When you don't want the element to take space in the layout or You want to allowe the other elements on your page to collapse around it. => Display : none;
       
-Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
+> - Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
 
-
-3. Please Explain The Difference Between Inline, Block, Inline-Block?
+2. Please Explain The Difference Between Inline, Block, Inline-Block?
 
 > - Inline<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
@@ -45,7 +44,7 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > -> To make this element horizongally center is add margin : auto.<br/>
 <br/>
 
-4. Please Explain What Is Sprite? When Would You Use It?
+3. Please Explain What Is Sprite? When Would You Use It?
 
 > (1) sprite is a collection of images put into a single image. To display the image you can set height, width and background position.<br/>
 
@@ -55,7 +54,7 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 </p>
 <br/>
 
-5. What Is CSS Reset? What Is The Difference Between CSS Reset And CSS Normalize?
+4. What Is CSS Reset? What Is The Difference Between CSS Reset And CSS Normalize?
 
 > (1) Every browser has its own default 'user agent' stylesheet, CSS Reset is use to make it look consistent across browsers.
 <br/>
@@ -63,14 +62,14 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 > (2) CSS Reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS Normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
 
-6. What Is Float?
+5. What Is Float?
 
 > - Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
 > - There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
 > - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
-7. How To Clear Float?
+6. How To Clear Float?
 
 > - Clear is the properity to clear the float.<br/>
 > - There are clear : left, right, both.<br/>
@@ -82,12 +81,12 @@ Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/v
 Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/><br/>
 
-8. What Is The Difference Between Em and Rem?
+7. What Is The Difference Between Em and Rem?
 
 > - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the using rem **WILL NOT**.
 <br/>
 
-9. What Is The Position : Relative, Absolute, Fixed? <br/>
+8. What Is The Position : Relative, Absolute, Fixed? <br/>
 
 > ① Position : relative is positioned relative to its normal position. <br/>
 > ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
@@ -96,7 +95,7 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
 
-10. What Is Box Model?
+9. What Is Box Model?
 
 <p align="center">
 <img src="img/boxModel.png" alt="box_model" title="box_model">
@@ -109,7 +108,7 @@ Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 ④ Margin - Clears an area outside the border, The margin is transparent.
 <br/><br/>
 
-11. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+10. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
 
 <p align="center">
 <img src="img/compareModels.png" alt="compare_models" title="compare_models">
@@ -119,7 +118,7 @@ Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 
 Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
-11.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
+10.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
 > - You can't just set the width, you need to caculate the padding, border.<br/>
 
@@ -128,17 +127,17 @@ Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/><br/>
 
-12. How To Center An Element Horizontally And Vertically? <br/>
+11. How To Center An Element Horizontally And Vertically? <br/>
 
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
-13. What is New Features In CSS3?
+12. What is New Features In CSS3?
 
 > - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
-14. Introduction The CSS Selectors
+13. Introduction The CSS Selectors
 
 !important > Inline styles > ID Selectors > Class selectors > Element
 
