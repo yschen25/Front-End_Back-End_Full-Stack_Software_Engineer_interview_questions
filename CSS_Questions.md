@@ -115,13 +115,13 @@
 
 > - The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : content-box just including content, you just set the width and height of the content area.<br/>
 
-Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
+> - Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
 :white_check_mark: 9.2 How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
 > - You can't just set the width, you need to caculate the padding, border.<br/>
 
-> -Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
+> - Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 
 > - Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/><br/>
