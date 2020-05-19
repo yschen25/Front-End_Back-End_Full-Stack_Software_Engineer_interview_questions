@@ -131,12 +131,14 @@
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
-11. What is New Features In CSS3?
+:white_check_mark: 11. What is New Features In CSS3? 
 
+> - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox,etc.
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
+</br>
 
-12. Introduction The CSS Selectors
+:white_check_mark: 12. Introduction The CSS Selectors
 
 > - !important > Inline styles > ID Selectors > Class selectors > Element
 
