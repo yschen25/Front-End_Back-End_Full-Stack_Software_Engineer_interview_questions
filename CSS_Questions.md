@@ -133,11 +133,11 @@
 
 11. What is New Features In CSS3?
 
-> - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
+> - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
 12. Introduction The CSS Selectors
 
-!important > Inline styles > ID Selectors > Class selectors > Element
+> - !important > Inline styles > ID Selectors > Class selectors > Element
 
-> - Please see [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454) [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
+> - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454) [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
