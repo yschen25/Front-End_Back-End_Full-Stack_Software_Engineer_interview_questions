@@ -61,14 +61,14 @@
 > - CSS reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
 
-5. What Is Float?
+:white_check_mark: 5. What Is Float?
 
 > - Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
 > - There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
 > - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
-6. How To Clear Float?
+:white_check_mark: 5.1 How To Clear Float?
 
 > - Clear is the properity to clear the float.<br/>
 > - There are clear : left, right, both.<br/>
@@ -80,12 +80,12 @@
 > - Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/><br/>
 
-:white_check_mark: 7. What Is The Difference Between Em and Rem?
+:white_check_mark: 6. What Is The Difference Between Em and Rem?
 
 > - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the children with rem **WILL NOT BE AFFECTED**.
 <br/>
 
-:white_check_mark: 8. What Is The Position : Relative, Absolute, Fixed? <br/>
+:white_check_mark: 7. What Is The Position : Relative, Absolute, Fixed? <br/>
 
 > ① Position : relative is positioned relative to its normal position. <br/>
 > ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
@@ -94,7 +94,7 @@
 > - Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
 
-:white_check_mark: 9. What Is Box Model?
+:white_check_mark: 8. What Is Box Model?
 
 <p align="center">
 <img src="img/boxModel.png" alt="box_model" title="box_model">
@@ -107,7 +107,7 @@
 ④ Margin - Clears an area outside the border, The margin is transparent.
 <br/><br/>
 
-:white_check_mark: 9.1 What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+:white_check_mark: 8.1 What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
 
 <p align="center">
 <img src="img/compareModels.png" alt="compare_models" title="compare_models">
@@ -117,7 +117,7 @@
 
 > - Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
-:white_check_mark: 9.2 How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
+:white_check_mark: 8.2 How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
 > - You can't just set the width, you need to caculate the padding, border.<br/>
 
@@ -126,24 +126,24 @@
 > - Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/><br/>
 
-10. How To Center An Element Horizontally And Vertically? <br/>
+:white_check_mark: 9. How To Center An Element Horizontally And Vertically? <br/>
 
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
-:white_check_mark: 11. What is New Features In CSS3? 
+:white_check_mark: 10. What is New Features In CSS3? 
 
 > - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox, etc.
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
-:white_check_mark: 12. Introduction The CSS Selectors
+:white_check_mark: 11. Introduction The CSS Selectors
 
 > - !important > Inline styles > ID Selectors > Class selectors > Element > *
 
 > - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454) [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
 </br>
 
-13. What Is Flex Box?
+:white_check_mark: 12. What Is Flex Box?
 
 > - Related Reference :  [深入解析 CSS Flexbox](https://www.oxxostudio.tw/articles/201501/css-flexbox.html)
