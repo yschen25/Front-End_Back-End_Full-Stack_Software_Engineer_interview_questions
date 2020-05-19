@@ -83,7 +83,7 @@
 > - Defer lag file loading : ensure that the rest of your content can load without a delay. <br/>
 > - Use asynchronous loading : the browser could continue loading other elements on the page at the same time. <br/>
 
-> - Related Reference : [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/)
+> - Related Reference : [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/), [讓你的網頁加載時間降低到1s 內](https://www.jianshu.com/p/d857c3ff78d6)
 <br/>
 
 :white_check_mark: 3. Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502. 
