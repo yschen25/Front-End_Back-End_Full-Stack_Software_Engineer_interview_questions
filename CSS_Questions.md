@@ -133,7 +133,7 @@
 
 :white_check_mark: 11. What is New Features In CSS3? 
 
-> - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox,etc.
+> - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox, etc.
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
