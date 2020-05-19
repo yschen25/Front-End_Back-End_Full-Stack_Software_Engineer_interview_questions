@@ -153,11 +153,17 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-10. What Is REST API? Strength And Weakness?
+10. What Is REST API? 
+
+> - Related Reference : [休息(REST)式架構](https://progressbar.tw/posts/53), [API 是什麼? RESTful API 又是什麼?](https://medium.com/itsems-frontend/api-%E6%98%AF%E4%BB%80%E9%BA%BC-restful-api-%E5%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-a001a85ab638),
+[Building RESTful API ](https://medium.com/@brianwu291/learn-basic-node-part2-building-restful-api-by-using-express-d9fefbeefa41), [RESTful Web API 設計指南](https://www.footmark.info/programming-language/design/restful-webapi-design-guide/), [簡明RESTful API設計要點](https://tw.twincl.com/programming/*641y)
+<br/>
+
+10.1 What Is Strength And Weakness?
 
 <br/>
 
-10.1 How To Solve The problem 11?
+10.2 How To Solve The problem 11?
 
 <br/>
 
