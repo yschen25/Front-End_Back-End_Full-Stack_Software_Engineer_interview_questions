@@ -141,7 +141,7 @@
 
 > - !important > Inline styles > ID Selectors > Class selectors > Element > *
 
-> - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454) [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
+> - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454), [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
 </br>
 
 :white_check_mark: 12. What Is Flex Box?
