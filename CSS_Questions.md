@@ -136,7 +136,6 @@
 > - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox,etc.
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
-</br>
 
 :white_check_mark: 12. Introduction The CSS Selectors
 
