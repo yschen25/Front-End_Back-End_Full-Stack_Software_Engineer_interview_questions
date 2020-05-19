@@ -77,7 +77,7 @@
 ② Overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
 ③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
 
-Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
+> - Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 <br/><br/>
 
 :white_check_mark: 7. What Is The Difference Between Em and Rem?
@@ -85,13 +85,13 @@ Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
 > - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the children with rem **WILL NOT BE AFFECTED**.
 <br/>
 
-8. What Is The Position : Relative, Absolute, Fixed? <br/>
+:white_check_mark: 8. What Is The Position : Relative, Absolute, Fixed? <br/>
 
 > ① Position : relative is positioned relative to its normal position. <br/>
 > ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
 > ③ Position : fixed is positioned relative to the browser window.
 
-Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
+> - Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
 
 9. What Is Box Model?
