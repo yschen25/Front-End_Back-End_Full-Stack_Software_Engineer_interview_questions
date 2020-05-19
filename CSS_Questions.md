@@ -94,7 +94,7 @@
 > - Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
 <br/>
 
-9. What Is Box Model?
+:white_check_mark: 9. What Is Box Model?
 
 <p align="center">
 <img src="img/boxModel.png" alt="box_model" title="box_model">
@@ -107,7 +107,7 @@
 ④ Margin - Clears an area outside the border, The margin is transparent.
 <br/><br/>
 
-10. What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+:white_check_mark: 9.1 What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
 
 <p align="center">
 <img src="img/compareModels.png" alt="compare_models" title="compare_models">
@@ -117,26 +117,26 @@
 
 Example : https://jsfiddle.net/yschen25/sk7xqa89/ <br/><br/>
 
-10.1 Aditional : How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
+:white_check_mark: 9.2 How To Revise The Example To Make The Apperence Of Box-Sizing : Content-Box Same As Box-Sizing : Border-Box?<br/>
 
 > - You can't just set the width, you need to caculate the padding, border.<br/>
 
-Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
+> -Example : https://jsfiddle.net/yschen25/4pns9ah5/ <br/>
 
-Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
+> - Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/><br/>
 
-11. How To Center An Element Horizontally And Vertically? <br/>
+10. How To Center An Element Horizontally And Vertically? <br/>
 
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
-12. What is New Features In CSS3?
+11. What is New Features In CSS3?
 
 > - Please see [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
-13. Introduction The CSS Selectors
+12. Introduction The CSS Selectors
 
 !important > Inline styles > ID Selectors > Class selectors > Element
 
