@@ -155,7 +155,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 :white_check_mark: 10. What Is Rest API? 
 
-> - Rest API also call Restful API, it'a designing specification, isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
+> - Rest API also call Restful API, it's a designing specification and isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
 
 ```
 https://localhost:8080/myweb/getDogs --> GET /rest/api/dogs get dogs 
@@ -175,7 +175,31 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 
 10.2 How To Solve The problem 11?
 
-> - GraphQL??
+> - GraphQL allow using one entry point to get all data, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
+
+```
+Serach：
+
+{
+    user(uid:1) {
+        uid
+        name
+    }
+}
+```
+
+```
+Get：
+
+{
+  "data": {
+    "user": {
+      "uid": "1",
+      "name": "xxx"
+    }
+  }
+}
+```
 <br/>
 
 10.2 What Is Dfferience Between REST API And HTTP API?
