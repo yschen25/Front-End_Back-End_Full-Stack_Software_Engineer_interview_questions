@@ -155,7 +155,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 :white_check_mark: 10. What Is Rest API? 
 
-> - Rest API also call Restful API, it'a designing specification, there is no limitation to use it. The purpose is make api easily to maintain and develop. 
+> - Rest API also call Restful API, it'a designing specification, isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
 
 ```
 https://localhost:8080/myweb/getDogs --> GET /rest/api/dogs get dogs 
