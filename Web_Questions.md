@@ -200,6 +200,7 @@ Get：
   }
 }
 ```
+> - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
 <br/>
 
 10.2 What Is Dfferience Between REST API And HTTP API?
