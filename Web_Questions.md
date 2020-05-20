@@ -173,7 +173,7 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 > - Weakness : need to create multiple requests to get complex data 
 <br/>
 
-10.2 How To Solve The problem 11?
+:white_check_mark: 10.2 How To Solve The problem 11?
 
 > - GraphQL allow using one entry point to get all data, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
@@ -201,10 +201,6 @@ Get：
 }
 ```
 > - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
-<br/>
-
-10.2 What Is Dfferience Between REST API And HTTP API?
-
 <br/>
 
 11. What Is Token?
