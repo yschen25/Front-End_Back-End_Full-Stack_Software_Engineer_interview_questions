@@ -207,11 +207,10 @@ Get：
 
 <br/>
 
-12. What Is Web Accessibility?
+:white_check_mark: 12. What Is Web Accessibility?
+
+> - To ensure everyone includes disables can use the website's function working normally.
+> - Use semantic element, properly tag, provide equivalent alternatives to image, audio and video, don't just use color to pass the information, consider about keyboard-only user.
 
 > - Related Reference : [我們都應該了解的無障礙網頁概念](https://designtongue.me/website-accessibility/)
-<br/>
-
-12.1 How To Make It?
-
 <br/>
