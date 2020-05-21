@@ -150,6 +150,9 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 9. What Is Gateway, API Gateway and API?
 
+> - Gateway : a interface to receive and handle the request.
+> - API Gateway : a service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
+> - API : a Application Programming Interface to let user manipulate to achieve what they want.
 > - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
