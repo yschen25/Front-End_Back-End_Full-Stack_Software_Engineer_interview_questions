@@ -152,7 +152,11 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - PWA is short of Progressive Web App, the purpose is to keep adventage of website and native app to make sure the user have best experience.
 <br/>
 
-10. What Is Gateway, API Gateway and API?
+10. What Is Webview?
+
+<br/>
+
+11. What Is Gateway, API Gateway and API?
 
 > - Gateway : a interface to receive and handle the request.
 > - API Gateway : a service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
@@ -160,7 +164,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-:white_check_mark: 11. What Is Rest API? 
+:white_check_mark: 12. What Is Rest API? 
 
 > - Rest API also call Restful API, it's a  and isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
 
@@ -174,13 +178,13 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 > - Related Reference : [REST與RESTful](https://www.twblogs.net/a/5d404cf0bd9eee517423039c), [休息(REST)式架構](https://progressbar.tw/posts/53), [API 是什麼? RESTful API 又是什麼?](https://medium.com/itsems-frontend/api-%E6%98%AF%E4%BB%80%E9%BA%BC-restful-api-%E5%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-a001a85ab638), [RESTful Web API 設計指南](https://www.footmark.info/programming-language/design/restful-webapi-design-guide/), [簡明RESTful API設計要點](https://tw.twincl.com/programming/*641y)
 <br/>
 
-:white_check_mark: 11.1 What Is Strength And Weakness?
+:white_check_mark: 12.1 What Is Strength And Weakness?
 
 > - Strength : simple and uniform Interface, cachable
 > - Weakness : need to create multiple requests to get complex data 
 <br/>
 
-:white_check_mark: 11.2 How To Solve The problem 11?
+:white_check_mark: 12.2 How To Solve The problem 11?
 
 > - GraphQL allow using one entry point to get all data, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
@@ -210,7 +214,7 @@ Get：
 > - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
 <br/>
 
-:white_check_mark: 12. What Is Token?
+:white_check_mark: 13. What Is Token?
 
 > - Token likes a passport, after user enter the id and password, sever-side will generate a token for this user,
 then the user will have permission to view or manipulate corresponding informations. There are a lots of way to generate token, such use Mac, sessionId, etc.
@@ -219,7 +223,7 @@ then the user will have permission to view or manipulate corresponding informati
 
 <br/>
 
-:white_check_mark: 13. What Is Web Accessibility?
+:white_check_mark: 14. What Is Web Accessibility?
 
 > - To ensure everyone includes disables can use the website's function working normally.
 > - Use semantic element, properly tag, provide equivalent alternatives to image, audio and video, don't just use color to pass the information, consider about keyboard-only user.
