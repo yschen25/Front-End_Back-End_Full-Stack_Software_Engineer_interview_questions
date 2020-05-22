@@ -14,7 +14,6 @@ If you have to build a huge website which includes complicated events and status
 <br/><br/>
 
 3. Explain The Life Cycle Of React.js (componentdidmount)
-
 <br/><br/>
 
 4. Redux
