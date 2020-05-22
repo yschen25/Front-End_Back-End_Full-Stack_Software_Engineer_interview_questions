@@ -149,6 +149,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 <br/>
 
 9. What Is PWA?
+<br/>
 
 10. What Is Gateway, API Gateway and API?
 
