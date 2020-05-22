@@ -130,7 +130,7 @@ we can manage packages via NPM.
 
 <br/>
 
-8. What Is SPA? Strength And Weakness?
+8. What Is SPA?
 
 > - SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
@@ -139,16 +139,17 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-8.1 How To Solve The SEO problem For SPA?
+8.1 What Is SPA's Strength And Weakness?
 
-<br/>
-
-8.2. What Is Defferience Between SPA And SSR?
+8.2 How To Solve The Problem?
 
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
+
 <br/>
 
 9. What Is PWA?
+
+> - PWA is short of Progressive Web App, the purpose is to keep adventage of website and native app to make sure the user have best experience.
 <br/>
 
 10. What Is Gateway, API Gateway and API?
