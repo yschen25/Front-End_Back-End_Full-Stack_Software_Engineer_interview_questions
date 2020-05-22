@@ -17,4 +17,19 @@ If you have to build a huge website which includes complicated events and status
 
 <br/><br/>
 
+4. Redux
+<br/><br/>
+
+5. Axios
+<br/><br/>
+
+6. Styled Component
+<br/><br/>
+
+7. Hook
+<br/><br/>
+
+8. Jest
+<br/><br/>
+
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
