@@ -206,7 +206,7 @@ Get：
 > - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
 <br/>
 
-11. What Is Token?
+:white_check_mark: 11. What Is Token?
 
 > - Token likes a passport, after user enter the id and password, sever-side will generate a token for this user,
 then the user will have permission to view or manipulate corresponding informations. There are a lots of way to generate token, such use Mac, sessionId, etc.
