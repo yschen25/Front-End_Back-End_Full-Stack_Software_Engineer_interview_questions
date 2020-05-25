@@ -147,18 +147,18 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 <br/>
 
-9. What Is PWA?
+:white_check_mark: 9. What Is PWA?
 
 > - PWA is short of Progressive Web App, the purpose is to keep adventage of website and native app to make sure the user have best experience.
 <br/>
 
-10. What Is Webview?
+:white_check_mark: 10. What Is Webview?
 
 > -  Webview is hybrid(Native + Web) app or in-app browser, open a website in native app.
 > - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47), [用 Line、FB 手機 APP 開啟網頁對前端工程師的困擾﹍JS 辨識內建瀏覽器(webview)的方法](https://www.wfublog.com/2018/06/mobile-detect-webview-fb-line-in-app.html)
 <br/>
 
-11. What Is Gateway, API Gateway and API?
+:white_check_mark: 11. What Is Gateway, API Gateway and API?
 
 > - Gateway : a interface to receive and handle the request.
 > - API Gateway : a service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
