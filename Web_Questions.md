@@ -250,6 +250,8 @@ then the user will have permission to view or manipulate corresponding informati
 <br/>
 
 15. What Is The Async And Defer In Script Tag? 
-
+> - Async :
+> - Defer : 
+> - Async + Defer : 
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
