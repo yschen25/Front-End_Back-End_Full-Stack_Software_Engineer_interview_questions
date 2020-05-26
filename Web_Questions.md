@@ -247,6 +247,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Reflow : it will reflow when change such as position, text, structure, etc, change width → Reflow → Repaint.
 > - Repaint : it will repaint when change style of element, change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
+<br/>
 
 15.1 How To Optimize Render Web Page?
 > - Combine multiple operations to one time.
