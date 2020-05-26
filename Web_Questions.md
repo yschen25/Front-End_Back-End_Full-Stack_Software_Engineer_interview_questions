@@ -237,15 +237,16 @@ then the user will have permission to view or manipulate corresponding informati
 </p>
 
 > - 1. Start parsing HTML to DOM(Document Object Model) Tree and parding CSS to CSSOM(CSS Object Model) Tree
-> - 2. Combine DOM and CSSOM to calucate html and style then render tree
-> - 3. Determine every element's layout
-> - 4. Paint the result on the screen 
+> - 2. Combine DOM and CSSOM to calucate html and style then generate render tree
+> - 3. Determine every element's layout (Reflow)
+> - 4. Paint the result on the screen (Repaint)
 > - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
 15. What Is Reflow And Repaint? 
-
-> - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427)
+> - Reflow : It will reflow when change such as position, text, structure, etc, change width → Reflow → Repaint.
+> - Repaint : It will repaint when change style of element, change color → Repaint.
+> - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
 15. What Is The Async And Defer In Script Tag? 
