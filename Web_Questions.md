@@ -244,14 +244,14 @@ then the user will have permission to view or manipulate corresponding informati
 <br/>
 
 15. What Is Reflow And Repaint? 
-> - Reflow : it will reflow when change such as position, text, structure, etc, change width → Reflow → Repaint.
-> - Repaint : it will repaint when change style of element, change color → Repaint.
+> - Reflow : it will reflow when change such as manipulate DOM (add, change, delete, etc.), CSS(width, position, etc.), change size of browser, etc. Change width → Reflow → Repaint.
+> - Repaint : it will repaint when change style of element. Change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
 15.1 How To Optimize Render Web Page?
 > - Combine multiple operations to one time.
-> - Use class name insted of using modified for each element when use js to change style.
+> - Use class name insted of modifying each element when use js to change style.
 > - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape the document flow to prevent affect other elements. 
 > - ...
 <br/>
