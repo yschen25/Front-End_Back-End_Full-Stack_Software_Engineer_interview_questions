@@ -244,14 +244,16 @@ then the user will have permission to view or manipulate corresponding informati
 <br/>
 
 15. What Is Reflow And Repaint? 
-> - Reflow : It will reflow when change such as position, text, structure, etc, change width → Reflow → Repaint.
-> - Repaint : It will repaint when change style of element, change color → Repaint.
+> - Reflow : it will reflow when change such as position, text, structure, etc, change width → Reflow → Repaint.
+> - Repaint : it will repaint when change style of element, change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
+
+15.1 How To Optimize Render Web Page?
 <br/>
 
-15. What Is The Async And Defer In Script Tag? 
-> - Async :
-> - Defer : 
-> - Async + Defer : 
+16. What Is The Async And Defer In Script Tag? 
+> - Async : continue loading other documents when loading script.
+> - Defer : load script after loading other documents.
+> - Async + Defer : load script asynchronous after loading other documents.
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
