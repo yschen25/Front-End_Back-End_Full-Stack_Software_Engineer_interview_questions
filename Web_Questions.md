@@ -231,7 +231,7 @@ then the user will have permission to view or manipulate corresponding informati
 
 14. How The Browser Renders A Web Page? 
 
-> - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f)
+> - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
 15. What Is Reflow And Repaint? 
