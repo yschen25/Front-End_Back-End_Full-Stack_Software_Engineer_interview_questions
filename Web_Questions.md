@@ -231,6 +231,11 @@ then the user will have permission to view or manipulate corresponding informati
 
 14. How The Browser Renders A Web Page? 
 
+<p align="center">
+<img src="img/website_rendering_01.jpg" alt="website_rendering" title="website_rendering" width="70%">
+<img src="img/website_rendering_02.jpg" alt="website_rendering" title="website_rendering" width="70%">
+</p>
+
 > - 1. Start parsing HTML to DOM(Document Object Model) Tree and parding CSS to CSSOM(CSS Object Model) Tree
 > - 2. Combine DOM and CSSOM to calucate html and style then render tree
 > - 3. Determine every element's layout
