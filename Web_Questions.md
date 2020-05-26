@@ -126,11 +126,7 @@ we can manage packages via NPM.
 > - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
 
-7. How The Browser Renders A Web Page? 
-
-<br/>
-
-8. What Is SPA?
+7. What Is SPA?
 
 > - SPA is short for single page application. 
 One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
@@ -139,26 +135,26 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-8.1 What Is SPA's Strength And Weakness?
+7.1 What Is SPA's Strength And Weakness?
 
-8.2 How To Solve The Problem?
+7.2 How To Solve The Problem?
 
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
 
-:white_check_mark: 9. What Is PWA?
+:white_check_mark: 8. What Is PWA?
 
 > - PWA is short of Progressive Web App, the purpose is to keep adventage of website and native app to make sure the user have best experience.
 <br/>
 
-:white_check_mark: 10. What Is Webview?
+:white_check_mark: 9. What Is Webview?
 
 > -  Webview is hybrid(Native + Web) app or in-app browser, open a website in native app.
 > - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47), [用 Line、FB 手機 APP 開啟網頁對前端工程師的困擾﹍JS 辨識內建瀏覽器(webview)的方法](https://www.wfublog.com/2018/06/mobile-detect-webview-fb-line-in-app.html)
 <br/>
 
-:white_check_mark: 11. What Is Gateway, API Gateway and API?
+:white_check_mark: 10. What Is Gateway, API Gateway and API?
 
 > - Gateway : a interface to receive and handle the request.
 > - API Gateway : a service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
@@ -166,7 +162,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-:white_check_mark: 12. What Is Rest API? 
+:white_check_mark: 11. What Is Rest API? 
 
 > - Rest API also call Restful API, it's a  and isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
 
@@ -180,13 +176,13 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 > - Related Reference : [REST與RESTful](https://www.twblogs.net/a/5d404cf0bd9eee517423039c), [休息(REST)式架構](https://progressbar.tw/posts/53), [API 是什麼? RESTful API 又是什麼?](https://medium.com/itsems-frontend/api-%E6%98%AF%E4%BB%80%E9%BA%BC-restful-api-%E5%8F%88%E6%98%AF%E4%BB%80%E9%BA%BC-a001a85ab638), [RESTful Web API 設計指南](https://www.footmark.info/programming-language/design/restful-webapi-design-guide/), [簡明RESTful API設計要點](https://tw.twincl.com/programming/*641y)
 <br/>
 
-:white_check_mark: 12.1 What Is Strength And Weakness?
+:white_check_mark: 11.1 What Is Strength And Weakness?
 
 > - Strength : simple and uniform Interface, cachable
 > - Weakness : need to create multiple requests to get complex data 
 <br/>
 
-:white_check_mark: 12.2 How To Solve The problem 11?
+:white_check_mark: 11.2 How To Solve The problem 11?
 
 > - GraphQL allow using one entry point to get all data, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
@@ -216,7 +212,7 @@ Get：
 > - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
 <br/>
 
-:white_check_mark: 13. What Is Token?
+:white_check_mark: 12. What Is Token?
 
 > - Token likes a passport, after user enter the id and password, sever-side will generate a token for this user,
 then the user will have permission to view or manipulate corresponding informations. There are a lots of way to generate token, such use Mac, sessionId, etc.
@@ -225,10 +221,25 @@ then the user will have permission to view or manipulate corresponding informati
 
 <br/>
 
-:white_check_mark: 14. What Is Web Accessibility?
+:white_check_mark: 13. What Is Web Accessibility?
 
 > - To ensure everyone includes disables can use the website's function working normally.
 > - Use semantic element, properly tag, provide equivalent alternatives to image, audio and video, don't just use color to pass the information, consider about keyboard-only user.
 
 > - Related Reference : [我們都應該了解的無障礙網頁概念](https://designtongue.me/website-accessibility/)
+<br/>
+
+14. How The Browser Renders A Web Page? 
+
+> - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f)
+<br/>
+
+15. What Is Reflow And Repaint? 
+
+> - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427)
+<br/>
+
+15. What Is The Async And Defer In Script Tag? 
+
+> - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858)
 <br/>
