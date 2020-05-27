@@ -251,7 +251,7 @@ then the user will have permission to view or manipulate corresponding informati
 
 15.1 How To Optimize Render Web Page?
 > - Combine multiple operations to one time.
-> - Use class name insted of modifying each element when use js to change style.
+> - Use class name insted of modifying each element's style by javaScript.
 > - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape the document flow to prevent affect other elements. 
 > - ...
 <br/>
