@@ -257,8 +257,8 @@ then the user will have permission to view or manipulate corresponding informati
 <br/>
 
 16. What Is The Async And Defer In Script Tag? 
-> - Async : continue loading other documents when loading script, recommended use in every scripts.
-> - Defer : load script after loading other documents, recommended use in single independent scripts such as ga, advertisement, etc.
+> - Async : continue loading other documents when loading script, recommended use in single independent scripts such as ga, advertisement, etc.
+> - Defer : load script after loading other documents, recommended use in every scripts.
 > - Async + Defer : load script asynchronous after loading other documents.
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
