@@ -262,3 +262,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Async + Defer : load script asynchronous after loading other documents.
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
+
+17. What Is CORS?
+
+<br/>
