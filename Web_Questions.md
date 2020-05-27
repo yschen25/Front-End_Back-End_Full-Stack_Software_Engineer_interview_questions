@@ -244,7 +244,7 @@ then the user will have permission to view or manipulate corresponding informati
 <br/>
 
 15. What Is Reflow And Repaint? 
-> - Reflow : it will reflow when manipulate DOM (add, change, delete, etc.), CSS(width, position, etc.), change size of browser, etc. Change width → Reflow → Repaint.
+> - Reflow : it will reflow when manipulate DOM (add, change, delete, etc.), change CSS(width, position, etc.), change size of browser, etc. Change width → Reflow → Repaint.
 > - Repaint : it will repaint when change style of element. Change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
