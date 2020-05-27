@@ -229,7 +229,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Related Reference : [我們都應該了解的無障礙網頁概念](https://designtongue.me/website-accessibility/)
 <br/>
 
-14. How The Browser Renders A Web Page? 
+:white_check_mark: 14. How The Browser Renders A Web Page? 
 
 <p align="center">
 <img src="img/website_rendering_01.jpg" alt="website_rendering" title="website_rendering" width="70%">
@@ -243,7 +243,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
-15. What Is Reflow And Repaint? 
+:white_check_mark: 15. What Is Reflow And Repaint? 
 > - Reflow : it will reflow when manipulate DOM (add, change, delete, etc.), change CSS(width, position, etc.), change size of browser, etc. Change width → Reflow → Repaint.
 > - Repaint : it will repaint when change style of element. Change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
@@ -251,8 +251,8 @@ then the user will have permission to view or manipulate corresponding informati
 
 15.1 How To Optimize Render Web Page?
 > - Combine multiple operations to one time.
-> - Use class name insted of modifying each element's style by javaScript.
-> - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape the document flow to prevent affect other elements. 
+> - Modify element's style by change class name is better than change the style by css-in-js.
+> - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape from document flow to prevent affect other elements. 
 > - ...
 <br/>
 
