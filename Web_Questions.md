@@ -249,7 +249,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
-:white_check_mark: 15.1 How To Optimize Render Web Page?
+:white_check_mark: 15.1 How To Optimize Render Web Page? (ref : 2)
 > - Combine multiple operations to one time.
 > - Modify element's style by change class name instead of changeing the style by css-in-js.
 > - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape from document flow to prevent affect other elements. 
@@ -265,7 +265,7 @@ then the user will have permission to view or manipulate corresponding informati
 
 17. What Is CORS?
 
-> -Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
+> - Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
 
 > - Related Reference : [實作 CORS](https://blog.toright.com/posts/3205/%E5%AF%A6%E4%BD%9C-cross-origin-resource-sharing-cros-%E8%A7%A3%E6%B1%BA-ajax-%E7%99%BC%E9%80%81%E8%B7%A8%E7%B6%B2%E5%9F%9F%E5%AD%98%E5%8F%96-request.html), [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CROS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
