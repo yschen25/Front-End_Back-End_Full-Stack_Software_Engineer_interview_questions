@@ -240,7 +240,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - 2. Combine DOM and CSSOM to calucate html and style then generate render tree
 > - 3. Determine every element's layout (Reflow)
 > - 4. Paint the result on the screen (Repaint)
-> - Related Reference : [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
+> - Related Reference : [瀏覽器渲染過程與性能優化](https://sylvanassun.github.io/2017/10/03/2017-10-03-BrowserCriticalRenderingPath/), [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
 :white_check_mark: 15. What Is Reflow And Repaint? 
@@ -265,4 +265,7 @@ then the user will have permission to view or manipulate corresponding informati
 
 17. What Is CORS?
 
+> -Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
+
+> - Related Reference : [實作 CORS](https://blog.toright.com/posts/3205/%E5%AF%A6%E4%BD%9C-cross-origin-resource-sharing-cros-%E8%A7%A3%E6%B1%BA-ajax-%E7%99%BC%E9%80%81%E8%B7%A8%E7%B6%B2%E5%9F%9F%E5%AD%98%E5%8F%96-request.html), [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CROS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
