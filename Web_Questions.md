@@ -265,15 +265,16 @@ then the user will have permission to view or manipulate corresponding informati
 
 17. What Is CORS?
 
-> - For the security, usually fobidden Cross Domain Access to prevent CSRF. Cross Origin Resource Sharing is a mechanism that allows : 1)Get data from other domain outside our own domain 2)To be requested from another domain outside our own domain. There are three way to implement Form Submit, JSONP and W3C - CORS
+> -  A request from the orgin domain is different form the target domain which violate the Same-Origin Policy, for the security, usually fobidden Cross Domain Access to prevent CSRF.
+> - Cross Origin Resource Sharing is a mechanism that allows : Get data from other domain outside our own domainTo be requested from another domain outside our own domain. There are three way to implement Form Submit, JSONP and W3C - CORS
 
 ```
-<?php
+<? php
  
 // Cross-Origin Resource Sharing Header
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
  
 ?>
 ```
