@@ -120,7 +120,7 @@ we can manage packages via NPM.
 > - Minimize the search scope.
 > - Use tool such as happypack, thread-loader, etc multiple threads to save building time,  because webpack only use single thread to run.
 > - Set cacheDirectory to babel-loader
-> - Related Reference : [使用 happypack 提升 Webpack 项目构建速度](https://juejin.im/post/5c6e0c3a518825621f2a6f45), [提升構建速度的方法](https://zhuanlan.zhihu.com/p/59328293)
+> - Related Reference : [使用 happypack 提升 Webpack 项目构建速度](https://juejin.im/post/5c6e0c3a518825621f2a6f45), [提升構建速度的方法](https://zhuanlan.zhihu.com/p/59328293), [使用webpack4提升180%編譯速度](http://louiszhai.github.io/2019/01/04/webpack4/)
 <br/>
 
 :white_check_mark: 6. What Is Graceful Degradation And Progressive Enhancement?
