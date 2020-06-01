@@ -273,8 +273,8 @@ then the user will have permission to view or manipulate corresponding informati
 
 17. What Is CORS?
 
-> -  A request from the orgin domain is different form the target domain which violate the Same-Origin Policy, for the security, usually fobidden Cross Domain Access to prevent CSRF.
-> - Cross Origin Resource Sharing is a mechanism that allows : Get data from other domain outside our own domainTo be requested from another domain outside our own domain. There are three way to implement Form Submit, JSONP and W3C - CORS
+> -  A request from the orgin domain is different from the target domain which violate the Same-Origin Policy, for the security, usually fobidden Cross Domain Access to prevent CSRF.
+> - Cross Origin Resource Sharing is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
 
 ```
 <? php
