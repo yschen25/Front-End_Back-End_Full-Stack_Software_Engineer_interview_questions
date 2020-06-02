@@ -158,8 +158,13 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 :white_check_mark: 9. What Is Webview?
 
-> -  Webview is hybrid(Native + Web) app or in-app browser, open a website in native app.
+> - Webview is hybrid(Native + Web) app or in-app browser, open a website in native app.
 > - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47), [用 Line、FB 手機 APP 開啟網頁對前端工程師的困擾﹍JS 辨識內建瀏覽器(webview)的方法](https://www.wfublog.com/2018/06/mobile-detect-webview-fb-line-in-app.html)
+<br/>
+
+9.1 What Is WebAPP?
+> - A website app which doesn't need to download, you can open it with browser. PWA (ref:8) is also a webApp.
+> - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47)
 <br/>
 
 :white_check_mark: 10. What Is Gateway, API Gateway and API?
