@@ -115,7 +115,7 @@ we can manage packages via NPM.
 > - Related Reference : [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d), [關於 Webpack](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/), [Webpack 初學者教學課程](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/)
 <br/><br/>
 
-5.1 How To Reduce Build Time?
+:white_check_mark: 5.1 How To Reduce Build Time?
 > - Use the latest webpack version.
 > - Minimize the search scope.
 > - Use tool such as happypack, thread-loader, etc multiple threads to save building time,  because webpack only use single thread to run.
@@ -163,7 +163,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 > - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47), [用 Line、FB 手機 APP 開啟網頁對前端工程師的困擾﹍JS 辨識內建瀏覽器(webview)的方法](https://www.wfublog.com/2018/06/mobile-detect-webview-fb-line-in-app.html)
 <br/>
 
-9.1 What Is WebAPP?
+:white_check_mark: 9.1 What Is WebAPP?
 > - A website app which doesn't need to download, you can open it with browser. PWA (ref:8) is also a webApp.
 > - Related Reference : [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47)
 <br/>
@@ -277,7 +277,7 @@ then the user will have permission to view or manipulate corresponding informati
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
 
-17. What Is CORS?
+:white_check_mark: 17. What Is CORS?
 
 > -  A request from the orgin domain is different from the target domain which violate the Same-Origin Policy, for the security, usually fobidden Cross Domain Access to prevent CSRF.
 > - Cross Origin Resource Sharing is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
