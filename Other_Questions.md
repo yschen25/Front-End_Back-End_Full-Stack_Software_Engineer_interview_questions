@@ -43,6 +43,10 @@
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html)
 <br/>
 
-6. What Is AWS, GCP...? Why Use It?
+6 What Is Cloud Computing?
+
+<br/>
+
+6.1 What Is AWS, GCP...?
 
 <br/>
