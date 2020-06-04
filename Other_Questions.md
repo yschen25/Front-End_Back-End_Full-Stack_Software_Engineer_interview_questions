@@ -37,9 +37,10 @@
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 <br/>
 
-
 5. What Is XSS?
-
+> - Cross-site scripting (XSS) use the website vulnerability by script to attack website.
+> - Related Reference : [常見攻擊：XSS、SQL Injection
+SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html)
 <br/>
 
 6. What Is AWS, GCP...? Why Use It?
