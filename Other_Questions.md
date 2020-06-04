@@ -28,8 +28,11 @@
 <br/>
 
 4. What Is CSRF?
-
+<p align="center">
+  <img src="img/csrf.png" alt="csrf" title="csrf">
+</p>
 > - Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated.
+> - If you login website A then visit a dangerous website B, and click the btn on website B, send a request to website A however website A's session or cookie doesn't expired, website A will take the request from user then execute it.
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/)
 <br/>
 
