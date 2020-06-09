@@ -136,8 +136,8 @@ we can manage packages via NPM.
 
 7. What Is SPA?
 
-> - SPA is short for single page application. 
-One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one time request, to manipulate DOM don't need to refresh browser just JavaScript.
+> - SPA is short for Single Page Application. 
+One SPA is one web application, what it will load what you need (HTML, CSS, JS) in first time, only reload the different part when you manipulate the action or enter the new page.
 <br/>
 
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
@@ -145,8 +145,14 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 7.1 What Is SPA's Strength And Weakness?
 
+> - Strength : Loading fast.
+> - Weakness : It will cost time on first reload, bad at SEO.
+
+<br/>
+
 7.2 How To Solve The Problem?
 
+> - SSR, Server Side Rendering, load the fist page with SSR, the others with SPA.
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
