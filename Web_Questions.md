@@ -138,8 +138,6 @@ we can manage packages via NPM.
 
 > - SPA is short for Single Page Application. 
 One SPA is one web application, what it will load what you need (HTML, CSS, JS) in first time, only reload the different part when you manipulate the action or enter the new page.
-<br/>
-
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
