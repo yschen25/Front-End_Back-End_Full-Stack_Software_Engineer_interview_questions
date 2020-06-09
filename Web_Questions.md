@@ -153,7 +153,7 @@ One SPA is one web application, what it needs will loaded (HTML, CSS, JS) in one
 
 :white_check_mark: 8. What Is PWA?
 
-> - PWA is short of Progressive Web App, the purpose is to keep adventage of website and native app to make sure the user have best experience.
+> - PWA is short of Progressive Web Application, the purpose is to keep adventage of website and native app to make sure the user has best experience.
 > - Related Reference : [PWA 初體驗](https://hsiangfeng.github.io/pwa/20191017/2186080947/)
 <br/>
 
