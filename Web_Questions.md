@@ -229,7 +229,7 @@ Get：
 :white_check_mark: 12. What Is Token?
 
 > - Token likes a passport, after user enter the id and password, sever-side will generate a token for this user,
-then the user will have permission to view or manipulate corresponding informations. There are a lots of way to generate token, such use Mac, sessionId, etc.
+then the user will have permission to view or manipulate corresponding informations by the token. There are a lots of way to generate token, such use Mac, sessionId, etc.
 
 > - Related Reference : [Token令牌入門學習](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/35304/#outline__1_0_1), [簡單理解token機制](http://www.woshipm.com/pd/877760.html)
 
