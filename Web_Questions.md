@@ -152,7 +152,7 @@ One SPA is one web application, what it will load what you need (HTML, CSS, JS) 
 
 7.2 How To Solve The Problem?
 
-> - SSR, Server Side Rendering, load the fist page with SSR, the others with SPA.
+> - SSR, Server Side Rendering, render the fist page with server side, the others with client side.
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
