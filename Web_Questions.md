@@ -134,21 +134,21 @@ we can manage packages via NPM.
 > - Related Reference : [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 <br/><br/>
 
-7. What Is SPA?
+:white_check_mark: 7. What Is SPA?
 
 > - SPA is short for Single Page Application. 
-One SPA is one web application, it will load all you need (HTML, CSS, JS) in first time, then  when you manipulate the action or enter the new page only reload the different part.
+One SPA is one web application, it will load all you need (HTML, CSS, JS) at first time, only reload the different part when you manipulate the page.
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
-7.1 What Is SPA's Strength And Weakness?
+:white_check_mark: 7.1 What Is SPA's Strength And Weakness?
 
 > - Strength : Loading fast.
 > - Weakness : It will cost time on first reload, bad at SEO.
 
 <br/>
 
-7.2 How To Solve The Problem?
+:white_check_mark: 7.2 How To Solve The Problem?
 
 > - SSR, Server Side Rendering, render the fist page with server side, the others with client side.
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
