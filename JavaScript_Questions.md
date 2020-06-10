@@ -18,7 +18,7 @@ Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://
 https://ithelp.ithome.com.tw/articles/10197529
 <br/><br/>
 
-3. Explain What Is The New Feature In ES6?
+:white_check_mark: 3. Explain What Is The New Feature In ES6?
 
 Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
 <br/><br/>
