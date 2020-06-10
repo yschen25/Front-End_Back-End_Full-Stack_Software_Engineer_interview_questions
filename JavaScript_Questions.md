@@ -23,7 +23,7 @@ https://ithelp.ithome.com.tw/articles/10197529
 > - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
 <br/><br/>
 
-4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
+:white_check_mark: 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
 | Methods | push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
@@ -35,7 +35,7 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 
 5. Explain What Is The Difference Between slice(), splice()?
 
-| Methods |  slice(start index, end index ) | splice(index, howmany, item1, ....., itemX) 
+| Methods |  slice(start index, end index) | splice(index, howmany, item1, ....., itemX) 
 |---|---|---|
 |  | (optional, optional) | (required, optional, optional)|
 |  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed; The new item(s) to be added to the array) |
@@ -74,7 +74,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 > -Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
-10. Following The Previous Question, Explan What Is Let/Const?
+10. What Is Let And Const?
 
 > - Let and Const is block scope, Var is function scope,<br/>
 > - Let is for variable,<br/>
@@ -120,7 +120,7 @@ Example : https://jsfiddle.net/yschen25/ov3rq5me
 Example : https://jsfiddle.net/yschen25/7djyawve
 <br/>
 
-Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html), 
+> - Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html), 
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/><br/>
 
@@ -137,7 +137,7 @@ Metgod => Spread Operator, object.assign
 > - Deep Copy : Duplicates everything. If b is a deep copy of a, a and b has it's own memory location, b ```WILL NOT CHANGE``` it's value when change a. 
 Metgod => JSON.parse(JSON.stringify(object)), jQuery's $.extend, lodash's _.cloneDeep
 
-Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
+> - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
 15. What Is The Difference between Null and Undifined?
