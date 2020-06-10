@@ -11,17 +11,17 @@ we can have private variable through closure w/o environment interference, A fun
 > - Even use the same function, variables don't disturb each other cuz the excute environment is different [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
 
 Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
-<br/><br/>
+<br/>
 
 2. Explain What Is Promise?
 
 https://ithelp.ithome.com.tw/articles/10197529
-<br/><br/>
+<br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
 
-Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
-<br/><br/>
+> - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
+<br/>
 
 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
@@ -31,7 +31,7 @@ Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template 
 | Return | New length | The removed item | New length | The removed item |
 
 Example : https://jsfiddle.net/yschen25/bcuto13q/
-<br/><br/>
+<br/>
 
 5. Explain What Is The Difference Between slice(), splice()?
 
