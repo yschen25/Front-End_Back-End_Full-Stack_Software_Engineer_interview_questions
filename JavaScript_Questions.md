@@ -152,7 +152,7 @@ let a = null;<br/>
 console.log(a);         // null<br/>
 console.log(typeof a);  // object<br/>
 
-null == undefined   // true<br/>
+> - null == undefined   // true<br/>
 null === undefined  // false
 <br/><br/>
 
