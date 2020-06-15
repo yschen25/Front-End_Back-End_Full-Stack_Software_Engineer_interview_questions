@@ -3,7 +3,7 @@
 
 1. Explan What Is Closure?
 
-> - If we use the global variables in the wrong way, may cause some problems like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), closure uses outer function returns the inner function to let us have private variable without affected by environment, see the [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
+> - If we use the global variables in the wrong way, may cause some problems like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), closure uses outer function returns the inner function (which we really want to execute) to let us have private variable without affected by environment, see the [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
 > - Even use the same outer function, variables don't disturb each other cause the excute environment is different, see the  [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
 > - Improve code [Use Anonymous And Arrow Function](https://jsfiddle.net/yschen25/rjefc2sg/). <br/>
 > - Use the new feature "Let" in ES6 can solve the problem.
