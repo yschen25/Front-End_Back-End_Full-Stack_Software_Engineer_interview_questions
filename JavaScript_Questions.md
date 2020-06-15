@@ -53,9 +53,10 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 <br/>
 
-7. Explan What Is Callbacks?
+:white_check_mark: 7. Explan What Is Callbacks?
 
-> - Take another function as another function's parameter, called by another function. 
+> - Take a function as another function's parameter, called by another function. 
+> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
 8. Explan What Is Async/Await?
@@ -161,6 +162,7 @@ null === undefined  // false
 <br/><br/>
 
 17. What Is IIFE(Immediately Invoked Function Expression)?
+> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
 18. What Is Prototype?
