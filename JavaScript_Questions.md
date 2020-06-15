@@ -4,9 +4,9 @@
 1. Explan What Is Closure?
 
 > - If we use the global variables in the wrong way, may cause the problem like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), closure gives us an ability let inner function gain access to a variable declared in some other function scope, so we can have private variable without environment interference, then the outer function returns the inner function which we really need [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
-
+> - Even use the same outer function, variables don't disturb each other cause the excute environment is different, see the  [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
 > - More improvement [Use Anonymous And Arrow Function](https://jsfiddle.net/yschen25/rjefc2sg/). <br/>
-> - Even use the same function, variables don't disturb each other cuz the excute environment is different [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
+
 
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
