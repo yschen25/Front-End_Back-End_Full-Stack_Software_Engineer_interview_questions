@@ -3,10 +3,8 @@
 
 1. Explan What Is Closure?
 
-> - Closure gives an ability let inner function gain access to a variable declared in some other function scope, 
-we can have private variable through closure w/o environment interference, A function returns another function. <br/>
-> - [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/). <br/>
-> - [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
+> - If we use the global variables in the wrong way, may cause the problem like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), closure gives us an ability let inner function gain access to a variable declared in some other function scope, so we can have private variable without environment interference, then the outer function returns the inner function which we really need [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
+
 > - More improvement [Use Anonymous And Arrow Function](https://jsfiddle.net/yschen25/rjefc2sg/). <br/>
 > - Even use the same function, variables don't disturb each other cuz the excute environment is different [Use The Same Function](https://jsfiddle.net/yschen25/q5ohxarL/). <br/>
 
