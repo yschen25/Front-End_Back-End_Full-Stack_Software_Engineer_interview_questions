@@ -31,7 +31,7 @@ https://ithelp.ithome.com.tw/articles/10197529
 Example : https://jsfiddle.net/yschen25/bcuto13q/
 <br/><br/>
 
-5. Explain What Is The Difference Between slice(), splice()?
+:small_red_triangle: 5. Explain What Is The Difference Between slice(), splice()?
 
 | Methods |  slice(start index, end index) | splice(index, howmany, item1, ....., itemX) 
 |---|---|---|
@@ -43,7 +43,7 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
-6. Explain What Is The Difference Between map(), forEach()?
+:small_red_triangle: 6. Explain What Is The Difference Between map(), forEach()?
 
 | Methods | map() | foEach() |
 |---|---|---|
