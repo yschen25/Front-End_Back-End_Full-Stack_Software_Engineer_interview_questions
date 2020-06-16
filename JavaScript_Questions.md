@@ -90,9 +90,9 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 12. Explan What Is "this"?
 <br/><br/>
 
-13. Explan What Is Call By Value, Call By Reference And Call By Sharing?
+:white_check_mark: 13. Explan What Is Call By Value, Call By Reference And Call By Sharing?
 
-**Call By Value** : 
+> - **Call By Value** : 
 
 <p align="center">
 <img src="img/callByValue.png" alt="callByValue" title="callByValue" width="60%">
@@ -103,18 +103,18 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
 
-**Call By Reference** : 
+> - **Call By Reference** : 
 
 <p align="center">
 <img src="img/callByReference.png" alt="callByReference" title="callByReference" width="60%">
 </p>
 
-> - When you declare variable a as an object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
+> - When you declare variable a as an array, object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
 
 Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
-**Call By Sharing** : If there are an array1 equal to [1,2,3], assign array2 equal to array1, array1 = [1,2,3], then reassign array1 to [4,5,6], it ```WILL NOT``` change array2's value. But if assign arry1[0] = 4, it will change array2 to [4,2,3] (e.g., use array literals, object literals assign value again)
+> - **Call By Sharing** : When you declare variable a as an array, object or function a, assign b equal to a, but use ```Array Literals``` or ```Object Literals``` to reassign a's value, b's value ```WILL NOT CHANGE``` when a's value changes. 
 
 Example : https://jsfiddle.net/yschen25/7djyawve
 <br/>
