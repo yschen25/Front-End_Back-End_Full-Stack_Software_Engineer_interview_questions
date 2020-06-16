@@ -90,7 +90,13 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 12. Explan What Is "this"?
 <br/><br/>
 
-:white_check_mark: 13. Explan What Is Call By Value, Call By Reference And Call By Sharing?
+:white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
+<p align="center">
+<img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
+</p>
+<br/><br/>
+
+:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing?
 
 > - **Call By Value** : 
 
@@ -98,7 +104,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <img src="img/callByValue.png" alt="callByValue" title="callByValue" width="60%">
 </p>
 
-> - When you declare a primitive type (string, number, boolean, null, undefined, symbol) for example variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
+> - When you declare a primitive type (string, number, boolean, null, undefined, symbol) variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
 
 > - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
@@ -109,7 +115,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <img src="img/callByReference.png" alt="callByReference" title="callByReference" width="60%">
 </p>
 
-> - When you declare variable a as an array, object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
+> - When you declare a non-primitive(objects) type(array, object, function, date, regx) variable a, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
 
 > - Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
@@ -122,7 +128,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/><br/>
 
-14. Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
+14.1 Following The Previous Question, Explan What Is Shallow Copy And Deep Copy?
  
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
