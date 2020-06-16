@@ -120,7 +120,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 > - Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
-> - **Call By Sharing** : When you declare variable a as an array, object or function a, assign b equal to a, but use ```Array Literals``` or ```Object Literals``` to reassign a's value, b's value ```WILL NOT CHANGE``` when a's value changes. 
+> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a, assign b equal to a, but use ```Array Literals``` or ```Object Literals``` to reassign a's value, b's value ```WILL NOT CHANGE``` when a's value changes. 
 
 > - Example : https://jsfiddle.net/yschen25/7djyawve
 
