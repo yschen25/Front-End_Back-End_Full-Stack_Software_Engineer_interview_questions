@@ -100,7 +100,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 > - When you declare a primitive type (string, number, boolean, null, undefined, symbol) for example variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  
 
-Example : https://jsfiddle.net/yschen25/9v0t2fx6/
+> - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
 
 > - **Call By Reference** : 
@@ -111,13 +111,12 @@ Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 
 > - When you declare variable a as an array, object or function, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes. 
 
-Example : https://jsfiddle.net/yschen25/ov3rq5me
+> - Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
 > - **Call By Sharing** : When you declare variable a as an array, object or function a, assign b equal to a, but use ```Array Literals``` or ```Object Literals``` to reassign a's value, b's value ```WILL NOT CHANGE``` when a's value changes. 
 
-Example : https://jsfiddle.net/yschen25/7djyawve
-<br/>
+> - Example : https://jsfiddle.net/yschen25/7djyawve
 
 > - Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html), 
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
