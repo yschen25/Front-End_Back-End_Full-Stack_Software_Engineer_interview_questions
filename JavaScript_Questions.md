@@ -147,7 +147,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-15. What Is The Difference between Null and Undifined?
+15. What Is The Difference between Null and Undefined?
 
 > - Undefined means a variable has been declared but has not yet been assigned a value.<br/>
 let a;<br/>
