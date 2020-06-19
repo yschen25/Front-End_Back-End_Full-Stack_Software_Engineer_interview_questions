@@ -55,7 +55,10 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 :white_check_mark: 7. Explan What Is Callbacks?
 
-> - Take a function as another function's parameter, called by another function. 
+> - Take a function as another function's parameter, called by another function.
+```
+window.setTimeout( function(){ ... }, 1000);
+```
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
@@ -70,7 +73,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 > - Please see the related reference below, it's very clear.<br/>
 > - You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have TDZ(Temporal Dead Zone).
 
-> -Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
+> - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
 10. What Is Let And Const?
