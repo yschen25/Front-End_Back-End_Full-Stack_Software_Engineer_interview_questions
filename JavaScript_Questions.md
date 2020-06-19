@@ -149,13 +149,19 @@ window.setTimeout( function(){ ... }, 1000);
 
 15. What Is The Difference between Null and Undefined?
 
-> - Undefined means a variable has been declared but has not yet been assigned a value.<br/>
+> - Primitive type
+> - Undefined means a variable has been declared but has not yet been assigned a value. <br/>
+> - Boolean(undefined) = false <br/>
+> - Type of undefined = undefined <br/>
 let a;<br/>
 console.log(a);         // undefined<br/>
 console.log(typeof a);  // undefined<br/>
 
-> - Null is an assignment value. It can be assigned to a variable as a representation of no value.<br/>
-let a = null;<br/>
+> - Primitive type
+> - Null is an assignment value. It can be assigned to a variable as a representation of no value. <br/>
+> - Boolean(null) = false <br/>
+> - Type of null = object <br/>
+let a = null; <br/>
 console.log(a);         // null<br/>
 console.log(typeof a);  // object<br/>
 
