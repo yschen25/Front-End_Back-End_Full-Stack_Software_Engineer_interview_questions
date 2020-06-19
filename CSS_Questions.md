@@ -68,7 +68,7 @@
 > - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
-:white_check_mark: 5.1 How To Clear Float?
+:small_red_triangle: 5.1 How To Clear Float?
 
 > - Clear is the properity to clear the float.<br/>
 > - There are clear : left, right, both.<br/>
