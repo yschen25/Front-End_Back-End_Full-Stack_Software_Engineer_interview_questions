@@ -171,10 +171,12 @@ null === undefined  // false
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 <br/><br/>
 
-16. What Is Event Bubbling And How To Stop IT?
+:white_check_mark: 16. What Is Event Bubbling And How To Stop IT?
 
 > - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
 > - (2)Using event.stopPropagation()
+
+> - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
 17. What Is IIFE(Immediately Invoked Function Expression)?
