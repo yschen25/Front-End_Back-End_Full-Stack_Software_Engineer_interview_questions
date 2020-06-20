@@ -79,6 +79,11 @@ console.log(a); // undefined
 var a; 
 ```
 ```
+var v = 5;
+var v;
+console.log(v); //5
+```
+```
 function test(v){
   console.log(v) // 10
   var v = 3
