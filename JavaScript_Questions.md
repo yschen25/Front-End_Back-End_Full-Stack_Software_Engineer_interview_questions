@@ -190,6 +190,7 @@ null === undefined  // false
 <br/><br/>
 
 20. What Is Functional Programming?
+> - Related Reference : [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
 <br/><br/>
 
 21. What Is Function Statements And Function Expressions?
