@@ -167,6 +167,8 @@ console.log(typeof a);  // object<br/>
 
 > - null == undefined   // true<br/>
 null === undefined  // false
+
+> - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 <br/><br/>
 
 16. What Is Event Bubbling And How To Stop IT?
