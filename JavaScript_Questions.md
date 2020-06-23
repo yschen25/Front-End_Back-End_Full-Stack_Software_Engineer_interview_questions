@@ -68,7 +68,7 @@ window.setTimeout( function(){ ... }, 1000);
 )
 <br/><br/>
 
-9. Explan What Is Hoisting?
+:white_check_mark: 9. Explan What Is Hoisting?
 
 > - Hoisting is JavaScript's default behavior of moving declarations to the top. <br/>
 ```
@@ -81,7 +81,7 @@ var a;
 ```
 var v = 5;
 var v;
-console.log(v); //5
+console.log(v); // 5
 ```
 ```
 function test(v){
@@ -121,9 +121,9 @@ test()
 
 10. What Is Let And Const?
 
-> - Let and Const is block scope, Var is function scope,<br/>
-> - Let is for variable,<br/>
-> - Const is for const variable, can't reassignment.<br/>
+> - Let and Const is block scope, Var is function scope. <br/>
+> - Let is for variable. <br/>
+> - Const is for const variable, can't reassignment. <br/>
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142)
 <br/><br/>
