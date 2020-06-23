@@ -70,7 +70,7 @@ window.setTimeout( function(){ ... }, 1000);
 
 9. Explan What Is Hoisting?
 
-> - Hoisting is JavaScript's default behavior of moving declarations(variable, function) to the top. <br/>
+> - Hoisting is JavaScript's default behavior of moving declarations to the top. <br/>
 ```
 console.log(a); // Uncaught ReferenceError: a is not defined
 ```
