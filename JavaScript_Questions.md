@@ -111,7 +111,7 @@ function a(){}
 
 > - ```let``` and ```const``` is block scope, ```var``` is function scope. <br/>
 ```
-function varMing () {
+function varFunction () {
   var ming = 'May';
   if (true) {
     var ming = 'Joe';  
@@ -119,15 +119,15 @@ function varMing () {
   console.log(ming);  // Joe
 }
 
-function letMing () {
+function letFunction () {
   let ming = 'May';
   if (true) {
     let ming = 'Joe';  
   }
   console.log(ming);  // May
 }
-varMing(); 
-letMing();
+varFunction(); 
+letFunction();
 ```
 > - Let is for variable. <br/>
 > - Const is for const variable, need initialize in declaration, can't reassignment. <br/>
