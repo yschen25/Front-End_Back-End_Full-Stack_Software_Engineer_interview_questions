@@ -110,8 +110,23 @@ function a(){}
 10. What Is Let And Const?
 
 > - ```let``` and ```const``` is block scope, ```var``` is function scope. <br/>
+```
+if(true){
+  var a = 20 // 20
+}
+console.log(a) 
+
+if(true){
+  let b = 20
+}
+console.log(b) //  Uncaught ReferenceError: b is not defined
+```
 > - Let is for variable. <br/>
 > - Const is for const variable, can't reassignment. <br/>
+```
+const a = 10
+a = 20  // TypeError: Assignment to constant variable.
+```
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142)
 <br/><br/>
