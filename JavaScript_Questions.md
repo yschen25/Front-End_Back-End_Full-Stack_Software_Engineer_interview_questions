@@ -84,7 +84,7 @@ var v;
 console.log(v); // 5
 ```
 ```
-function test(v){
+function test(v) {
   console.log(v) // 10
   var v = 3
 }
@@ -95,7 +95,7 @@ test(10)
 console.log(a); // undefined
 var a = 5;
 ```
-> - Not only hoist variable, also hoist function, and the function's priority is higher than variable (???).
+> - Not only hoist variable, also hoist function, and the function's priority is higher than variable.
 ```
 console.log(a) // function a(){}
 var a
