@@ -95,7 +95,7 @@ test(10)
 console.log(a); // undefined
 var a = 5;
 ```
-> - ??? Not only hoist variable, also hoist function, and the function's priority is higher than variable.
+> - Not only hoist variable, also hoist function, and the function's priority is higher than variable (???).
 ```
 console.log(a) // function a(){}
 var a
@@ -103,7 +103,18 @@ function a(){}
 ```
 > - JavaScript in strict mode(use strict) does not allow variables to be used if they are not declared. <br/>
 > - You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have TDZ(Temporal Dead Zone).
-
+```
+function test() {
+    var a = 1; // Start C's TDZ
+    var b = 2;
+    console.log(c) // Uncaught ReferenceError: Cannot access 'c' before initialization
+    if (a > 1) {
+      console.log(a)
+    }
+    let c = 10 // End C's TDZ
+}
+test()
+```
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
@@ -119,7 +130,7 @@ function a(){}
 
 11. Following The Previous Question, explan What Is TDZ?
 
-> - Let/const has hoisting indeed, TDZ is if you try to access a variable after hoisting and before assigning value, browser will throw the error notification.
+> - TDZ is short of Temporal Dead Zone, let/const has hoisting indeed, TDZ is if you try to access a variable after hoisting and before assigning value, browser will throw the error notification.
 <br/><br/>
 
 12. Explan What Is "this"?
