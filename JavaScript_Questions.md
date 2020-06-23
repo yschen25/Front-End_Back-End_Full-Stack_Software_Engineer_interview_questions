@@ -97,7 +97,7 @@ var a = 5;
 ```
 > - ??? Not only hoist variable, also hoist function, and the function's priority is higher than variable.
 ```
-console.log(a) //[Function: a]
+console.log(a) // function a(){}
 var a
 function a(){}
 ```
