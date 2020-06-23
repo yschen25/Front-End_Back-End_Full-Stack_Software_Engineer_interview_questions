@@ -136,7 +136,7 @@ const a = 10
 a = 20  // TypeError: Assignment to constant variable.
 ```
 
-> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), (ES6 開始的新生活 let, const)[https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/]
+> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/><br/>
 
 :white_check_mark: 11. Explan What Is TDZ?
