@@ -111,24 +111,32 @@ function a(){}
 
 > - ```let``` and ```const``` is block scope, ```var``` is function scope. <br/>
 ```
-if(true){
-  var a = 20 // 20
+function varMing () {
+  var ming = 'May';
+  if (true) {
+    var ming = 'Joe';  
+  }
+  console.log(ming);  // Joe
 }
-console.log(a) 
 
-if(true){
-  let b = 20
+function letMing () {
+  let ming = 'May';
+  if (true) {
+    let ming = 'Joe';  
+  }
+  console.log(ming);  // May
 }
-console.log(b) //  Uncaught ReferenceError: b is not defined
+varMing(); 
+letMing();
 ```
 > - Let is for variable. <br/>
-> - Const is for const variable, can't reassignment. <br/>
+> - Const is for const variable, need initialize in declaration, can't reassignment. <br/>
 ```
 const a = 10
 a = 20  // TypeError: Assignment to constant variable.
 ```
 
-> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142)
+> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), (ES6 開始的新生活 let, const)[https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/]
 <br/><br/>
 
 :white_check_mark: 11. Explan What Is TDZ?
