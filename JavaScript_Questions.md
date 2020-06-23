@@ -116,9 +116,9 @@ function a(){}
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142)
 <br/><br/>
 
-11. Following The Previous Question, explan What Is TDZ?
+:white_check_mark: 11. Explan What Is TDZ?
 
-> - TDZ is short of Temporal Dead Zone, let/const has hoisting indeed, TDZ is if you try to access a variable after hoisting and before assigning value, browser will throw the error notification.
+> - TDZ is short of Temporal Dead Zone. You will get error notification if you try to access a variable after hoisting and before initialization.
 ```
 function test() {
     var a = 1; // Start C's TDZ
