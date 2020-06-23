@@ -102,14 +102,14 @@ var a
 function a(){}
 ```
 > - JavaScript in strict mode(use strict) does not allow variables to be used if they are not declared. <br/>
-> - You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have TDZ(Temporal Dead Zone).
+> - You can use "let/const" instead of var to avoid hoisting, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
 10. What Is Let And Const?
 
-> - Let and Const is block scope, Var is function scope. <br/>
+> - ```let``` and ```const``` is block scope, ```var``` is function scope. <br/>
 > - Let is for variable. <br/>
 > - Const is for const variable, can't reassignment. <br/>
 
@@ -131,7 +131,7 @@ function test() {
 }
 test()
 ```
-<br/><br/>
+<br/>
 
 12. Explan What Is "this"?
 <br/><br/>
