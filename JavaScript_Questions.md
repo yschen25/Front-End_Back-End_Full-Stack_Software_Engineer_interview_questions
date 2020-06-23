@@ -130,6 +130,7 @@ function letFunction () {
 varFunction(); 
 letFunction();
 ```
+> - Compare var and let in loop https://jsfiddle.net/yschen25/7qwp480z/1/.
 > - Let is for declare variable. <br/>
 > - Const is for declare const variable, need initialize in declaration, can't reassignment. <br/>
 ```
