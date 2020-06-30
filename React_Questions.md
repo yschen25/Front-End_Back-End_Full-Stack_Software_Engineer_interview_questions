@@ -17,25 +17,30 @@
 
 <br/><br/>
 
-2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+2. What Is PropTypes And DefaultProps ?
+> - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
+> - You can define default values for props by assigning defaultProps.
 <br/><br/>
 
-3. Explain The Life Cycle Of React.js (componentdidmount)
+3. What Is The Differences Between Vue.js, Angular.js and React.js ?
 <br/><br/>
 
-4. Redux
+4. Explain The Life Cycle Of React.js (componentdidmount)
 <br/><br/>
 
-5. Axios
+5. Redux
 <br/><br/>
 
-6. Styled Component
+6. Axios
 <br/><br/>
 
-7. Hook
+7. Styled Component
 <br/><br/>
 
-8. Jest
+8. Hook
+<br/><br/>
+
+9. Jest
 <br/><br/>
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
