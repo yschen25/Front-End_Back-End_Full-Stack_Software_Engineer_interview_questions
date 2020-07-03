@@ -46,6 +46,9 @@
 10. Explain The Difference Between Class Components And Function Components (Stateless Component).
 <br/><br/>
 
+10.1 When Use Class Components And Function Components (Stateless Component) ?
+<br/><br/>
+
 11. When Should We Bind The Function?
 <br/><br/>
 
