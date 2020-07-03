@@ -43,4 +43,13 @@
 9. Jest
 <br/><br/>
 
+10. Explain The Difference Between Class Components And Function Components.
+<br/><br/>
+
+11. When Should We Bind The Function?
+<br/><br/>
+
+12. How To Use Arrow Function In The Class Components?
+<br/><br/>
+
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
