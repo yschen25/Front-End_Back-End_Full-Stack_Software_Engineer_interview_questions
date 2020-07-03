@@ -43,7 +43,7 @@
 9. Jest
 <br/><br/>
 
-10. Explain The Difference Between Class Components And Function Components.
+10. Explain The Difference Between Class Components And Function Components (Stateless Component).
 <br/><br/>
 
 11. When Should We Bind The Function?
