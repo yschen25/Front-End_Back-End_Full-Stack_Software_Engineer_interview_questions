@@ -37,7 +37,9 @@
 7. Styled Component
 <br/><br/>
 
-8. Hook
+8. Explain What Is Hook And How To Use It (State Hook, Effect Hook, Customized Hook) ?
+> - Related Reference : [](https://zh-hant.reactjs.org/docs/hooks-state.html), [Hook 概觀](https://zh-hant.reactjs.org/docs/hooks-overview.html), [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45)
+
 <br/><br/>
 
 9. Jest
@@ -50,9 +52,11 @@
 <br/><br/>
 
 11. When Should We Bind The Function?
+> - Related Reference : [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941)
 <br/><br/>
 
 12. How To Use Arrow Function In The Class Components?
+> - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
