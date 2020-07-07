@@ -45,6 +45,12 @@
 9. Jest
 <br/><br/>
 
+9.1 Enzyme
+<br/><br/>
+
+9.2 React-testing-library
+<br/><br/>
+
 10. Explain The Difference Between Class Components And Function Components (Stateless Component).
 <br/><br/>
 
