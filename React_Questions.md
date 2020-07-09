@@ -27,14 +27,14 @@
 
 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
 
-|   |  |  |
-|---|---|---|
-| |  |  |
-| |  |  |
-| |  |  |
-| |  |  |
-| |  |  |
-| |  |  |
+| TOPIC | React | Vue | Angular |
+|---|---|---|---|
+| ARCHITECTURE | Only the View of MVC |  | Complete MVC |
+| RENDERING | Server-side rendering |  | Client-side rendering |
+| DOM | Uses virtual DOM |  | Uses real DOM |
+| DATA BINDING | One-way data binding |  | Two-way data binding |
+| DEBUGGING | Compile time debugging	 |  | Runtime debugging |
+| AUTHOR | Facebook |  | Google |
 
 <br/><br/>
 
