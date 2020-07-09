@@ -23,11 +23,16 @@
 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
 <br/><br/>
 
-3. What Is PropTypes And DefaultProps ?
+3. What Is Props ?
+<br/><br/>
+
+3.1 What Is Strength And Weakness Of Props ?
+<br/><br/>
+
+3.2 What Is PropTypes And DefaultProps ?
 > - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
 > - You can define default values for props by assigning defaultProps.
 <br/><br/>
-
 
 4. Explain The Life Cycle Of React.js (componentdidmount)
 <br/><br/>
@@ -59,6 +64,23 @@
 <br/><br/>
 
 10.1 What Is Strength And Weakness Of Function Components And Class Components?
+
+> - **Function Components** : 
+> - **Strength** 
+> - Easy to develop, read and test
+> - Better performance
+
+> - **Weakness** 
+
+<br/>
+
+> - **Class Components** : 
+> - **Strength** 
+
+
+> - **Weakness** 
+
+
 <br/><br/>
 
 10.2 What Is The Difference Between Function Components And Class Components ?
@@ -66,15 +88,17 @@
 
 10. When Use Function Components And Class Components ?
 
-> - **Function Components**
+> - **Function Components** : 
 > - Don't need to use lifecycle
 > - Don't need to use state
 > - Create reusable components
+<br/>
 
-> - **Class Components**
+> - **Class Components** :
 > - Need to use lifecycle
 > - Need to use state
 > - Have to receive data form user
+> - Create interactive objects
 
 <br/><br/>
 
@@ -84,6 +108,24 @@
 
 12. How To Use Arrow Function In The Class Components?
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
+<br/><br/>
+
+13. What Is State ?
+<br/><br/>
+
+13.1 When Use State ?
+<br/><br/>
+
+13.2 How To Change State ?
+<br/><br/>
+
+14. Refs
+<br/><br/>
+
+15. Flux
+<br/><br/>
+
+16. Hook + Function Components.
 <br/><br/>
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
