@@ -92,6 +92,14 @@
 
 5.3 What Is The Difference Between Props And Status ?
 
+|  Conditions | State | Props |
+|---|---|---|
+| Receive initial value from parent component | Yes | Yes |
+| Parent component can change value | No | Yes |
+| Set default values inside component | Yes | Yes |
+| Changes inside component | Yes | No |
+| Set initial value for child components | Yes | Yes |
+| Changes inside child components | No | Yes |
 <br/><br/>
 
 6. When Should We Bind The Function?
