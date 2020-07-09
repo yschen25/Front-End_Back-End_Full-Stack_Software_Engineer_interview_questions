@@ -1,29 +1,32 @@
 ## React Questions
 <br/>
 
-1. Why Choose React.js ? What Is The Strength Of React.js ?
+1. Why Choose React.js ?
 
-> - If you have to build a huge website which includes complicated events and status changes instead of buliding a simple web.<br /><br/>
-(1) Virtual DOM : Only repaint the changes by comparing the original DOM, reduces the DOM manipulating and enrich the rendering performance of web</br>
-(2) Components : Everythings in React is DOM, this enhences the readability and reausability, make website developing more effectively and time-saving</br>
-(3) SEO : More friendly to SEO
-<br/><br/>
+> - Use React.js to build a huge website which includes complicated events and status change instead of buliding a simple web.<br /><br/>
 
 1.2 What Is The Strength And Weakness Of React.js ?
 
-<br/><br/>
+> - Strength : 
+> - Virtual DOM : Only repaint the changes by comparing the original DOM and virtual DOM, reduces manipulating DOM and enhance the website rendering performance.</br>
+> - Components : Everythings in React is components, components enhence the readability and reausability, make website developing more effectively and time-saving.</br>
+> - SEO : More friendly to SEO.
+<br/>
+
+> - Weakness : 
 
 1.3 How To Solve It ?
 
 <br/><br/>
 
-2. What Is PropTypes And DefaultProps ?
+2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+<br/><br/>
+
+3. What Is PropTypes And DefaultProps ?
 > - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
 > - You can define default values for props by assigning defaultProps.
 <br/><br/>
 
-3. What Is The Differences Between Vue.js, Angular.js and React.js ?
-<br/><br/>
 
 4. Explain The Life Cycle Of React.js (componentdidmount)
 <br/><br/>
