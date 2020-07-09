@@ -26,6 +26,16 @@
 <br/><br/>
 
 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+
+|   |  |  |
+|---|---|---|
+| |  |  |
+| |  |  |
+| |  |  |
+| |  |  |
+| |  |  |
+| |  |  |
+
 <br/><br/>
 
 3. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
@@ -50,6 +60,14 @@
 <br/><br/>
 
 3.2 What Is The Difference Between Function Components And Class Components ?
+
+|  Function Components | Class Components |
+|---|---|
+| Calculates the internal state of the components | Stores info about component’s state change in memory |
+| Do not have the authority to change state | Have authority to change state |
+| Contains no knowledge of past, current and possible future state changes | Contains the knowledge of past, current and possible future changes in state |
+| They receive the props from the Stateful components and treat them as callback functions | Stateless components notify them about the requirement of the state change, then they send down the props to them |
+
 <br/><br/>
 
 3.3 When Use Function Components And Class Components ?
@@ -100,6 +118,7 @@
 | Changes inside component | Yes | No |
 | Set initial value for child components | Yes | Yes |
 | Changes inside child components | No | Yes |
+
 <br/><br/>
 
 6. When Should We Bind The Function?
