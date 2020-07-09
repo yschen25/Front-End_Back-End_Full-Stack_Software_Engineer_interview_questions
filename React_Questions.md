@@ -7,13 +7,14 @@
 
 1.2 What Is The Strength And Weakness Of React.js ?
 
-> - Strength : 
+> - **Strength** : 
 > - Virtual DOM : Only repaint the changes by comparing the original DOM and virtual DOM, reduces manipulating DOM and enhance the website rendering performance.</br>
 > - Components : Everythings in React is components, components enhence the readability and reausability, make website developing more effectively and time-saving.</br>
 > - SEO : More friendly to SEO.
 <br/>
 
-> - Weakness : 
+> - **Weakness** : 
+<br/><br/>
 
 1.3 How To Solve It ?
 
@@ -41,7 +42,7 @@
 <br/><br/>
 
 8. Explain What Is Hook And How To Use It (State Hook, Effect Hook, Customized Hook) ?
-> - Related Reference : [](https://zh-hant.reactjs.org/docs/hooks-state.html), [Hook 概觀](https://zh-hant.reactjs.org/docs/hooks-overview.html), [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45)
+> - Related Reference : [使用 State Hook](https://zh-hant.reactjs.org/docs/hooks-state.html), [Hook 概觀](https://zh-hant.reactjs.org/docs/hooks-overview.html), [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45)
 
 <br/><br/>
 
@@ -54,10 +55,27 @@
 9.2 React-testing-library
 <br/><br/>
 
-10. Explain The Difference Between Class Components And Function Components (Stateless Component).
+10. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
 <br/><br/>
 
-10.1 When Use Class Components And Function Components (Stateless Component) ?
+10.1 What Is Strength And Weakness Of Function Components And Class Components?
+<br/><br/>
+
+10.2 What Is The Difference Between Function Components And Class Components ?
+<br/><br/>
+
+10. When Use Function Components And Class Components ?
+
+> - **Function Components**
+> - Don't need to use lifecycle
+> - Don't need to use state
+> - Create reusable components
+
+> - **Class Components**
+> - Need to use lifecycle
+> - Need to use state
+> - Have to receive data form user
+
 <br/><br/>
 
 11. When Should We Bind The Function?
