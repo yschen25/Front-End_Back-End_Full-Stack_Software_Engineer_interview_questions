@@ -2,23 +2,25 @@
 <br/>
 
 1. What Is React.js ?
-> - React is a front-end JavaScript library developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
-> - It follows the component based approach which helps in building reusable UI components.
+> - React is a front-end JavaScript library for building user interfaces which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - Build a huge website which includes complicated events and status change instead of buliding a simple web.<br /><br/>
 
-1.2 What Is The Strength And Weakness Of React.js ?
-
-> - **Strength** : 
-> - Virtual DOM : Only repaint the changes by comparing the original DOM and virtual DOM, reduces manipulating DOM and enhance the website rendering performance.</br>
-> - Components : Everythings in React is components, components enhence the readability and reausability, make website developing more effectively and time-saving.</br>
-> - SEO : More friendly to SEO.
+1.2 What Is Strength And Weakness Of React.js ?
+> - Only the View of MVC.
+> - Virtual DOM : Virtual DOM compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.
+> - Components based : It follows the component based approach which helps in building reusable UI components.
 > - Server-side rendering.
-> - Uni-directional data flow or data binding.
+> - Uni-directional data flow or data binding : It becomes easier to debug errors and know where a problem occurs in an application at the moment in question.
+> - More friendly to SEO.
+> - Can be used for the development of both web and mobile apps
+
 <br/>
 
 > - **Weakness** : 
 > - React is just a library, not a full-blown framework.
 > - Coding gets complex as it uses inline templating and JSX.
+
+> - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/><br/>
 
 1.3 How To Solve It ?
@@ -40,7 +42,18 @@
 
 <br/><br/>
 
+3. What Is JSX
+> - JSX stands for JavaScript XML.
+> - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript
+<br/><br/>
+
 3. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
+
+> - **Function Components** :
+> - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
+
+> - **Class Components** :
+> - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
 <br/><br/>
 
 3.1 What Is Strength And Weakness Of Function Components And Class Components?
@@ -89,7 +102,8 @@
 <br/><br/>
 
 4. What Is Props ?
-> - Props is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
+> - Props is the shorthand for Properties. They are read-only components which must be kept pure i.e. immutable which stores the value of a tag’s attributes and works similar to the HTML attributes. 
+> - They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
 <br/><br/>
 
 4.1 What Is Strength And Weakness Of Props ?
@@ -101,6 +115,7 @@
 <br/><br/>
 
 5. What Is State ?
+> - The state is a built-in React object that is used to contain data or information about the component. A component’s state can change over time; whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes determine the behavior of the component and how it will render.  
 <br/><br/>
 
 5.1 When Use State ?
