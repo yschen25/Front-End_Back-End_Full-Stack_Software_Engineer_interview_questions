@@ -7,7 +7,7 @@
 
 1.2 What Is Strength And Weakness Of React.js ?
 > - Only the View of MVC.
-> - Virtual DOM : Virtual DOM compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.
+> - Virtual DOM : Virtual DOM compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again. 
 > - Components based : It follows the component based approach which helps in building reusable UI components.
 > - Server-side rendering.
 > - Uni-directional data flow or data binding : It becomes easier to debug errors and know where a problem occurs in an application at the moment in question.
@@ -42,9 +42,14 @@
 
 <br/><br/>
 
-3. What Is JSX
+3. What Is JSX ?
 > - JSX stands for JavaScript XML.
 > - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript
+<br/><br/>
+
+4. What Is Virtual DOM ?
+> - If you’re not using React JS (and JSX), your website will use HTML to update its DOM (the process that makes things “change” on screen without a user having to manually refresh a page). This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem (since the entire DOM needs to reload every time the user clicks a feature calling for a page refresh).
+> - If a developer uses JSX to manipulate and update its DOM, React JS creates something called a Virtual DOM. The Virtual DOM is a copy of the site’s DOM, and React JS uses this copy to see what parts of the actual DOM need to change when an event happens.
 <br/><br/>
 
 3. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
