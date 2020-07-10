@@ -56,6 +56,10 @@
 > - Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript, then Babel will transform these expressions into actual JavaScript code. 
 <br/><br/>
 
+3.1 Why Can’t Browsers Read JSX?
+> - Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
+<br/><br/>
+
 4. What Is Virtual DOM ?
 
 <p align="center">
@@ -66,7 +70,7 @@
 > - If a developer uses JSX to manipulate and update its DOM, React JS creates something called a Virtual DOM. The Virtual DOM is a copy of the site’s DOM, and React JS uses this copy to see what parts of the actual DOM need to change when an event happens.
 <br/><br/>
 
-3. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
+5. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
 
 > - **Function Components** :
 > - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
@@ -75,7 +79,7 @@
 > - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
 <br/><br/>
 
-3.1 What Is Strength And Weakness Of Function Components And Class Components?
+5.1 What Is Strength And Weakness Of Function Components And Class Components?
 
 > - **Function Components** : 
 > - **Strength** 
@@ -93,7 +97,7 @@
 
 <br/><br/>
 
-3.2 What Is The Difference Between Function Components And Class Components ?
+5.2 What Is The Difference Between Function Components And Class Components ?
 
 |  Function Components | Class Components |
 |---|---|
@@ -104,7 +108,7 @@
 
 <br/><br/>
 
-3.3 When Use Function Components And Class Components ?
+5.3 When Use Function Components And Class Components ?
 
 > - **Function Components** : 
 > - Don't need to use lifecycle
@@ -120,17 +124,20 @@
 
 <br/><br/>
 
-4. What Is Props ?
+6. What Is Props ?
 > - Props is the shorthand for Properties. They are read-only components which must be kept pure i.e. immutable which stores the value of a tag’s attributes and works similar to the HTML attributes. 
 > - They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
+> - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
 <br/><br/>
 
-4.1 What Is Strength And Weakness Of Props ?
-<br/><br/>
-
-4.2 What Is PropTypes And DefaultProps ?
+6.1 What Is PropTypes And DefaultProps ?
 > - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
 > - You can define default values for props by assigning defaultProps.
+<br/><br/>
+
+6.2 How To Solve Props Hell (Wrapper Hell) ?
+> - Function components + hook. 
+
 <br/><br/>
 
 5. What Is State ?
@@ -186,7 +193,6 @@
 > - Action – It’s an object that describes what happened.
 > - Reducer –  It is a place to determine how the state will change.
 > - Store – State/ Object tree of the entire application is saved in the Store.
-> - View – Simply displays the data provided by the Store.
 <br/><br/>
 
 10.3 Show How The Data Flows Through Redux ?
