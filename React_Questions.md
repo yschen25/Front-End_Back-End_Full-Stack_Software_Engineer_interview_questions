@@ -20,20 +20,17 @@
 > - Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again. 
 > - React.js ensures that codes are reusable when these two technologies HTML and JavaScript are combined. 
 > - It follows the component based approach which helps in building reusable UI components.
-> - Uni-directional data flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents. 
+> - Uni-directional data flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.
 > - SEO friendly, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.
 > - Can be used for the development of both web and mobile apps
-> - Server-side rendering.
+> - Server-side rendering accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites.
 > - Useful developer toolset.
 > - Strong community support.
 <br/>
 
 > - **Weakness** : 
-> - React is just a library, not a full-blown framework.
+> - React focus on view, lacking of route, ajax, async promise, etc.
 > - Coding gets complex as it uses inline templating and JSX.
-<br/>
-
-1.4 How To Solve It ?
 
 <br/><br/>
 
@@ -230,6 +227,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 17. What are Pure Components ? 
+<br/><br/>
+
+18. What Is The Difference Between React Snd React Native ?
+> - While ReactJS uses Virtual DOM to render browser code, React Native uses native APIs as a bridge to render components on mobile. For example, for Android components, it uses Java APIs and it invokes Objective-C API to render to iOS.
 <br/><br/>
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
