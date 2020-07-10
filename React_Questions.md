@@ -5,6 +5,7 @@
 > - React is a front-end JavaScript library for building user interfaces which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - Build a huge website which includes complicated events and status change instead of buliding a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
+<br/>
 
 1.2 What Is Features Of React.js ?
 > - Only the View of MVC.
@@ -12,10 +13,10 @@
 > - Virtual DOM.
 > - Uni-directional data flow.
 > - Components based.
-
 <br/>
 
 1.3 What Is Strength And Weakness Of React.js ?
+> - **Strength** : 
 > - Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again. 
 > - React.js ensures that codes are reusable when these two technologies HTML and JavaScript are combined. React.js also makes use of only downward data flow. So, even small changes made to the child structures will not affect their parents. 
 > - It follows the component based approach which helps in building reusable UI components.
@@ -25,13 +26,11 @@
 > - Server-side rendering.
 > - Useful developer toolset.
 > - Strong community support.
-
 <br/>
 
 > - **Weakness** : 
 > - React is just a library, not a full-blown framework.
 > - Coding gets complex as it uses inline templating and JSX.
-
 <br/>
 
 1.4 How To Solve It ?
