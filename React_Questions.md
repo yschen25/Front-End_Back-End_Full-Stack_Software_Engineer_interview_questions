@@ -51,7 +51,9 @@
 
 3. What Is JSX ?
 > - JSX stands for JavaScript XML.
-> - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript
+> - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript.
+> - JSX as a syntax sugar for calling React.createElement().
+> - Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript, then Babel will transform these expressions into actual JavaScript code. 
 <br/><br/>
 
 4. What Is Virtual DOM ?
