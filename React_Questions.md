@@ -29,12 +29,12 @@
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
-| ARCHITECTURE | Only the View of MVC |  | Complete MVC |
-| RENDERING | Server-side rendering |  | Client-side rendering |
-| DOM | Uses virtual DOM |  | Uses real DOM |
-| DATA BINDING | One-way data binding |  | Two-way data binding |
-| DEBUGGING | Compile time debugging	 |  | Runtime debugging |
-| AUTHOR | Facebook |  | Google |
+| Architecture | Only the View of MVC |  | Complete MVC |
+| Rendering | Server-side rendering |  | Client-side rendering |
+| DOM | virtual DOM | virtual DOM | Uses real DOM |
+| Data Binding | One-way data binding |  | Two-way data binding |
+| Author | Facebook | Former google employee | Google |
+| When Use | | |  |
 
 <br/><br/>
 
