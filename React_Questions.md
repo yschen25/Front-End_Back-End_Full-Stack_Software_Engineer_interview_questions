@@ -205,10 +205,13 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 14. What Is Jest?
 > - A delightful JavaScript Testing Framework which acts as a test runner, assertion library, and mocking library.
+
 <br/><br/>
 
 14.1 What Is Enzyme?
 > - Enzyme adds some great additional utility methods for rendering a component (or multiple components), finding elements, and interacting with elements.
+> - Not support function components + hook so far.
+> - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 <br/><br/>
 
 14.2 Jest And Enzyme.
@@ -220,6 +223,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 14.3 React-testing-library
 > - React Testing Library is not an alternative to Jest, because they need each other and every one of them has a clear task, but it's a alternative to Enzyme.
+> - Install @testing-library/react-hooks to test hooks.
 <br/><br/>
 
 ❗ 15. Refs
