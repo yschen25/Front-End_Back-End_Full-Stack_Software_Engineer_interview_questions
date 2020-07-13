@@ -97,7 +97,7 @@
 :white_check_mark: 8. What Is Box Model?
 
 <p align="center">
-<img src="img/boxModel.png" alt="box_model" title="box_model">
+<img src="img/box_model.png" alt="box_model" title="box_model">
 </p>
 
 > - Box model consists of : margins, borders, padding, and the actual content.<br/>
@@ -110,7 +110,7 @@
 :white_check_mark: 8.1 What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
 
 <p align="center">
-<img src="img/compareModels.png" alt="compare_models" title="compare_models">
+<img src="img/compare_models.png" alt="compare_models" title="compare_models">
 </p>
 
 > - The width of box-sizing : border-box including content, padding, border, but the width of box-sizing : content-box just including content, you just set the width and height of the content area.<br/>
