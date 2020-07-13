@@ -62,8 +62,8 @@
 4. What Is Virtual DOM ?
 
 <p align="center">
-<img src="img/virtual_DOM2.png" alt="virtual DOM" title="virtual DOM" width="65%">
-<img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="60%">
+<img src="img/virtual_DOM2.jpg" alt="virtual DOM" title="virtual DOM" width="70%">
+<img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="55%">
 </p>
 
 > - If a developer uses JSX to manipulate and update its DOM, React JS creates something called a Virtual DOM. The Virtual DOM is a copy of the site’s DOM, and React JS uses this copy to see what parts of the actual DOM need to change when an event happens.
