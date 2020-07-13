@@ -131,7 +131,8 @@
 > - The state is a built-in React object that is used to contain data or information about the component. A component’s state can change over time; whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes determine the behavior of the component and how it will render.  
 <br/>
 
-❗ 7.1 When Use State ?
+7.1 When Use State ?
+> - When variable is a constant.
 <br/><br/>
 
 7.2 How To Change State ?
