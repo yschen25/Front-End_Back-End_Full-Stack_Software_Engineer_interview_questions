@@ -242,7 +242,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Refs is the short hand for References in React. It is an attribute which helps to store a reference to a particular React element or component, which will be returned by the components render configuration function. It is used to return references to a particular element or component returned by render(). They come in handy when we need DOM measurements or to add methods to the components.
 <br/><br/>
 
-❗ 16. How To Use Arrow Function In The Class Components?
+16. How To Use Arrow Function In The Class Components? (ref : 8)
+> - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
