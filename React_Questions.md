@@ -62,8 +62,8 @@
 4. What Is Virtual DOM ?
 
 <p align="center">
-<img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="50%">
-<img src="img/virtual_DOM2.png" alt="virtual DOM" title="virtual DOM" width="50%">
+<img src="img/virtual_DOM2.png" alt="virtual DOM" title="virtual DOM" width="65%">
+<img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="65%">
 </p>
 
 > - If a developer uses JSX to manipulate and update its DOM, React JS creates something called a Virtual DOM. The Virtual DOM is a copy of the site’s DOM, and React JS uses this copy to see what parts of the actual DOM need to change when an event happens.
@@ -81,23 +81,6 @@
 > - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
 <br/><br/>
 
-❗ 5.1 What Is Strength And Weakness Of Function Components And Class Components?
-
-> - **Function Components** : 
-> - **Strength** 
-> - Easy to develop, read and test
-> - Better performance
-
-> - **Weakness** 
-
-<br/>
-
-> - **Class Components** : 
-> - **Strength** 
-
-> - **Weakness** 
-
-<br/>
 
 5.2 What Is The Difference Between Function Components And Class Components ?
 
@@ -123,6 +106,7 @@
 > - Need to use state
 > - Have to receive data form user
 > - Create interactive objects
+> - Render after change state
 
 <br/>
 
