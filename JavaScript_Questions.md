@@ -172,7 +172,7 @@ test()
 > - **Call By Value** : 
 
 <p align="center">
-<img src="img/callByValue.png" alt="callByValue" title="callByValue" width="60%">
+<img src="img/call_by_value.png" alt="call_by_value" title="call_by_value" width="60%">
 </p>
 
 > - When you declare a primitive type (string, number, boolean, null, undefined, symbol) variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref : Deep copy)
@@ -183,7 +183,7 @@ test()
 > - **Call By Reference** : 
 
 <p align="center">
-<img src="img/callByReference.png" alt="callByReference" title="callByReference" width="60%">
+<img src="img/call_by_reference.png" alt="call_by_reference" title="call_by_reference" width="60%">
 </p>
 
 > - When you declare a non-primitive(objects) type(array, object, function, date, regx) variable a, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes.  (Ref : Shallow copy)
