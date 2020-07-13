@@ -219,13 +219,23 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 ❗ 13. Styled Component
 <br/><br/>
 
-❗ 14. Jest
+14. What Is Jest?
+> - A delightful JavaScript Testing Framework which acts as a test runner, assertion library, and mocking library.
 <br/><br/>
 
-❗ 14.1 Enzyme
+14.1 What Is Enzyme?
+> - Enzyme adds some great additional utility methods for rendering a component (or multiple components), finding elements, and interacting with elements.
 <br/><br/>
 
-❗ 14.2 React-testing-library
+14.2 Jest And Enzyme.
+> - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
+> - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
+> - Enzyme can be used without Jest, however Enzyme must be paired with another test runner if Jest is not used.
+> - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
+<br/><br/>
+
+14.3 React-testing-library
+> - React Testing Library is not an alternative to Jest, because they need each other and every one of them has a clear task, but it's a alternative to Enzyme.
 <br/><br/>
 
 ❗ 15. Refs
