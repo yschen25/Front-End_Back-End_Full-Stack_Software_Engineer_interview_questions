@@ -201,7 +201,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/><br/>
 
-❗ 13. Styled Component
+13. What Is Styled Component ?
+> - Styled Components is a CSS-in-JS library that enables you to create React components with a given style very easily.
+> - It also allows you to use React.js props that we can pass to components in styled-components to create dynamic styling for our app.
+> - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 <br/><br/>
 
 14. What Is Jest?
