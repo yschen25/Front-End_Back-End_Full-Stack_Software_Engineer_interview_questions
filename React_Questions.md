@@ -246,8 +246,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 ❗ 19. What are Pure Components ? 
 <br/><br/>
 
-❗ 20. What Is The Difference Between React And React Native ?
-> - While ReactJS uses Virtual DOM to render browser code, React Native uses native APIs as a bridge to render components on mobile. For example, for Android components, it uses Java APIs and it invokes Objective-C API to render to iOS.
+20. What Is The Difference Between React And React Native ?
+> - ReactJS is a JavaScript library, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
+> - React Native is a mobile framework that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
+> - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
