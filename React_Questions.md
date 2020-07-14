@@ -143,12 +143,12 @@
 
 |  Conditions | State | Props |
 |---|---|---|
-| Receive initial value from parent component | Yes | Yes |
-| Parent component can change value | No | Yes |
-| Set default values inside component | Yes | Yes |
-| Changes inside component | Yes | No |
-| Set initial value for child components | Yes | Yes |
-| Changes inside child components | No | Yes |
+| | Internal | External |
+| | Mutable | Immutable |
+| | Can be modified using setState() method | Can't not be modified |
+| | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
+| (ref:8)| Can only be used with Class Components | Can be used with both Class as well as Function Components |
+
 
 <br/>
 
