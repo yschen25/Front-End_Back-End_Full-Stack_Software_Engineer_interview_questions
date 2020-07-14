@@ -207,7 +207,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 14. What Is Jest?
 > - A delightful JavaScript Testing Framework which acts as a test runner, assertion library, and mocking library.
 
-<br/><br/>
+<br/>
 
 14.1 What Is Enzyme?
 > - Enzyme adds some great additional utility methods for rendering a component (or multiple components), finding elements, and interacting with elements.
