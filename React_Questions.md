@@ -116,12 +116,16 @@
 > - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
 <br/><br/>
 
-6.1 What Is PropTypes And DefaultProps ?
+6.1 When Use Props ?
+> - To pass data & event handlers down to your child components.
+<br/><br/>
+
+6.2 What Is PropTypes And DefaultProps ?
 > - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
 > - You can define default values for props by assigning defaultProps.
 <br/><br/>
 
-6.2 How To Solve Props Hell (Wrapper Hell) ?
+6.3 How To Solve Props Hell (Wrapper Hell) ?
 > - Redux.
 > - Function components + hook. 
 
@@ -132,7 +136,7 @@
 <br/>
 
 7.1 When Use State ?
-> - When variable is a constant.
+> - To store the data your current page needs in your controller-view.
 <br/><br/>
 
 7.2 How To Change State ?
