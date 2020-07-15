@@ -299,4 +299,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
+21. Uncontrolled Components And Controlled Components
+<br/><br/>
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
