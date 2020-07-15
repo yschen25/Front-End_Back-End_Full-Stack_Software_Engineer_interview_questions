@@ -218,6 +218,9 @@ handleClick = () => {
 <br/><br/>
 
 ❗ 12.3 Show How The Data Flows Through Redux ?
+<p align="center">
+<img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
+</p>
 <br/><br/>
 
 ❗ 12.4 What Are The advantages of Redux?
@@ -232,6 +235,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 ❗ 12.5 What is Redux Different From Flux?
 
+| Flux | Redux |
+|---|---|
+| The Store contains state and change logic	| Store and change logic are separate |
+| There are multiple stores | There is only one store |
+| All the stores are disconnected and flat | Single store with hierarchical reducers |
+| Has singleton dispatcher | No concept of dispatcher |
+| React components subscribe to the store | Container components utilize connect |
+| State is mutable | State is immutable |
 <br/><br/>
 
 13. What Is Styled Component ?
