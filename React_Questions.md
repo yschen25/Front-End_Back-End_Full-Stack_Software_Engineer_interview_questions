@@ -153,11 +153,40 @@
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
 | (ref:8)| Can only be used with Class Components | Can be used with both Class as well as Function Components |
 
-
 <br/>
 
-❗ 8. When Should We Bind The Function?
-> - Related Reference : [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941)
+8. When And Why Should We Bind The Function ?
+> - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. In JavaScript, class methods are not bound by default. If you forget to bind this.someEventHandler and pass it to onChange, this will be undefined when the function is actually called.
+> - This is a way of saving the current value of this, which is in scope during the call to the constructor, so that it can be used later when the function is called.
+> - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
+> - When you need to access props, state or other members on the class, then you would need to bind it.
+> - Related Reference : [why do you need to bind a function in a constructor
+](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941)
+<br/><br/>
+
+8.1 Why We Don't Need Bind Arrow Function ?
+
+```
+Example : Using function (Bind is required)
+
+this.handleClick = this.handleClick.bind(this);
+
+handleClick() {
+  this.setState({
+    isToggleOn: !this.state.isToggleOn
+  });
+};
+```
+```
+Example : Using arrow function (No bind in required)
+
+handleClick = () => {
+  this.setState({
+    isToggleOn: !this.state.isToggleOn
+  });
+```
+> - Arrow function does not have the following in its context : this, arguments, super and new.target. So when you reference this inside an arrow function it treat this as any other variable and look for its declaration in its scope first and it can not find it so it search the upper scope which is the this referring to the react component class which what is required so we do not need to bind the this to the class.
+> - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
 ❗ 9. Explain The Life Cycle Of React.js (componentdidmount)
