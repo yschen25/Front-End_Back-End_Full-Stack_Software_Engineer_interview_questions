@@ -201,7 +201,7 @@ handleClick = () => {
 
 ❗ 12. Redux
 > - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
-> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/)
+> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b)
 <br/><br/>
 
 ❗ 12.1 What Are The Three Principles That Redux Follows?
