@@ -56,6 +56,7 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 :white_check_mark: 7. Explan What Is Callbacks?
 
 > - Take a function as another function's parameter, called by another function.
+> - Control the sequence of function execute.
 ```
 window.setTimeout( function(){ ... }, 1000);
 ```
@@ -262,3 +263,7 @@ null === undefined  // false
 <br/><br/>
 
 21. What Is Function Statements And Function Expressions?
+<br/><br/>
+
+22. What Is First Class Function?
+<br/><br/>
