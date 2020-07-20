@@ -167,7 +167,7 @@
 | | Mutable | Immutable |
 | | Can be modified using setState() method | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
-| (ref:8)| Can only be used with Class Components | Can be used with both Class as well as Function Components |
+| (ref:8)| Can only be used with Class Components | Can be used with both Class as well as Functional Components |
 
 <br/>
 
@@ -183,7 +183,7 @@
 8.1 Why We Don't Need Bind Arrow Function ?
 
 ```
-Example : Using function (Bind is required)
+Example : Using class function (Bind is required)
 
 this.handleClick = this.handleClick.bind(this);
 
