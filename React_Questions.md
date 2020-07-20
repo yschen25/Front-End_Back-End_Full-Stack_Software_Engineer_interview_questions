@@ -53,6 +53,13 @@
 > - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript.
 > - JSX as a syntax sugar for calling React.createElement().
 > - Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript, then Babel will transform these expressions into actual JavaScript code. 
+> - Examples : 
+ 1) Return one element https://jsfiddle.net/yschen25/29xrnmtw/ <br/>
+ 2) Self-closing tags https://jsfiddle.net/yschen25/8g0w7thy/ <br/>
+ 3) Comments https://jsfiddle.net/yschen25/c9uwgox1/ <br/>
+ 4) Js in JSX https://jsfiddle.net/yschen25/knrg7ydm/ <br/>
+ 5) Ternary operator https://jsfiddle.net/yschen25/L9o6ymcg/ <br/>
+ 6) CamelCase https://jsfiddle.net/yschen25/x2n3oc8y/11/ <br/>
 <br/><br/>
 
 3.1 Why Can’t Browsers Read JSX?
