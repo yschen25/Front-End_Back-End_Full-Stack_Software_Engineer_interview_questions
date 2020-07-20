@@ -79,9 +79,9 @@
 
 <br/>
 
-5. What Is Function Components(Stateless Component) And Class Components (Stateful Components) ?
+5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ?
 
-> - **Function Components** :
+> - **Functional Components** :
 > - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
 > - Example : https://jsfiddle.net/yschen25/dmacrpjq/
 <br/>
@@ -93,9 +93,9 @@
 <br/><br/>
 
 
-5.2 What Is The Difference Between Function Components And Class Components ?
+5.2 What Is The Difference Between Functional Components And Class Components ?
 
-|  Function Components | Class Components |
+|  Functional Components | Class Components |
 |---|---|
 | Calculates the internal state of the components | Stores info about component’s state change in memory |
 | Do not have the authority to change state | Have authority to change state |
@@ -104,9 +104,9 @@
 
 <br/>
 
-5.3 When Use Function Components And Class Components ?
+5.3 When Use Functional Components And Class Components ?
 
-> - **Function Components** : 
+> - **Functional Components** : 
 > - Don't need to use lifecycle
 > - Don't need to use state
 > - Create reusable components
@@ -127,6 +127,9 @@
 > - They are always passed down from the parent to the child components in a uni-directional flow, a child component can never send a prop back to the parent component.
 > - Props form the parent to the child components will cause child components re-render.
 > - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
+> - Examples :
+    1) Pass props via Functional Component (notice : use props.data) https://jsfiddle.net/yschen25/0e5udb1x/ <br/>
+    2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
 <br/><br/>
 
 6.1 When Use Props ?
@@ -134,13 +137,13 @@
 <br/><br/>
 
 6.2 What Is PropTypes And DefaultProps ?
-> - A typechecking tool to make sure the data is valid, propTypes is only checked in development mode.
-> - You can define default values for props by assigning defaultProps.
+> - PropTypes : A typechecking tool to make sure the data is valid, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
+> - DefaultProps : You can define default values for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
 
 6.3 How To Solve Props Hell (Wrapper Hell) ?
 > - Redux.
-> - Function components + hook. 
+> - Functional components + hook. 
 
 <br/>
 
