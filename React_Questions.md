@@ -123,8 +123,9 @@
 <br/>
 
 6. What Is Props ?
-> - Props is the shorthand for Properties. They are read-only components which must be kept pure i.e. immutable which stores the value of a tag’s attributes and works similar to the HTML attributes. 
-> - They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
+> - Props is the shorthand for Properties. props data is read-only, which means that data coming from the parent should not be changed by child components.
+> - They are always passed down from the parent to the child components in a uni-directional flow, a child component can never send a prop back to the parent component.
+> - Props form the parent to the child components will cause child components re-render.
 > - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
 <br/><br/>
 
