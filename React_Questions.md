@@ -83,9 +83,12 @@
 
 > - **Function Components** :
 > - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
+> - Example : https://jsfiddle.net/yschen25/dmacrpjq/
 
 > - **Class Components** :
 > - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
+> - Constructor is optional, add the constructor when you need to use state or binfd function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/
+> - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
 
@@ -106,6 +109,7 @@
 > - Don't need to use lifecycle
 > - Don't need to use state
 > - Create reusable components
+> - Only render UI
 <br/>
 
 > - **Class Components** :
