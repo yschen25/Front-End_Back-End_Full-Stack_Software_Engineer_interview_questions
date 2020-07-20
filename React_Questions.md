@@ -53,13 +53,13 @@
 > - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript.
 > - JSX as a syntax sugar for calling React.createElement().
 > - Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript, then Babel will transform these expressions into actual JavaScript code. 
-> - Examples : 
- 1) Return one element https://jsfiddle.net/yschen25/29xrnmtw/ <br/>
- 2) Self-closing tags https://jsfiddle.net/yschen25/8g0w7thy/ <br/>
- 3) Comments https://jsfiddle.net/yschen25/c9uwgox1/ <br/>
- 4) Js in JSX https://jsfiddle.net/yschen25/knrg7ydm/ <br/>
- 5) Ternary operator https://jsfiddle.net/yschen25/L9o6ymcg/ <br/>
- 6) CamelCase https://jsfiddle.net/yschen25/x2n3oc8y/11/ <br/>
+> - Examples : <br/>
+ (1) Return one element https://jsfiddle.net/yschen25/29xrnmtw/ <br/>
+ (2) Self-closing tags https://jsfiddle.net/yschen25/8g0w7thy/ <br/>
+ (3) Comments https://jsfiddle.net/yschen25/c9uwgox1/ <br/>
+ (4) Js in JSX https://jsfiddle.net/yschen25/knrg7ydm/ <br/>
+ (5) Ternary operator https://jsfiddle.net/yschen25/L9o6ymcg/ <br/>
+ (6) CamelCase https://jsfiddle.net/yschen25/x2n3oc8y/11/ <br/>
 <br/><br/>
 
 3.1 Why Can’t Browsers Read JSX?
@@ -127,9 +127,9 @@
 > - They are always passed down from the parent to the child components in a uni-directional flow, a child component can never send a prop back to the parent component.
 > - Props form the parent to the child components will cause child components re-render.
 > - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
-> - Examples :
-    1) Pass props via Functional Component (notice : use props.data) https://jsfiddle.net/yschen25/0e5udb1x/ <br/>
-    2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
+> - Examples : <br/>
+    (1) Pass props via Functional Component (notice : use props.data) https://jsfiddle.net/yschen25/0e5udb1x/ <br/>
+    (2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
 <br/><br/>
 
 6.1 When Use Props ?
