@@ -84,6 +84,7 @@
 > - **Function Components** :
 > - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
 > - Example : https://jsfiddle.net/yschen25/dmacrpjq/
+<br/>
 
 > - **Class Components** :
 > - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
