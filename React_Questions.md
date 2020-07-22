@@ -206,17 +206,17 @@ addCount() {
 Example : Using bind in render (bind in required)
 
 addCount() {
-  this.setState({
-      count : this.state.count + 1
-  });
-};
-  
-  render() {
-    		return(
-        		<div>
-        		  <button onClick={this.addCount.bind(this)}>Click Me!</button>
-              <h1>{this.state.count}</h1>
-        		</div>
+        this.setState({
+            count: this.state.count + 1
+        });
+    };
+
+    render() {
+        return (
+            <div>
+                <button onClick={this.addCount.bind(this)}>Click Me!</button>
+                <h1>{this.state.count}</h1>
+            </div>
         )
     }
 ```
