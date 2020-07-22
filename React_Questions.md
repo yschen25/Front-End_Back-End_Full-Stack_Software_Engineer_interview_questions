@@ -177,9 +177,13 @@
 
 8. When And Why Should We Bind The Function ?
 ```
-Example : Using class function (bind is required)
+Example : Using class function (bind is required in constructor)
 
-this.addCount = this.addCount.bind(this);
+constructor(props) {
+    		super(props);
+      this.state = {count : 0};
+      this.addCount = this.addCount.bind(this);
+}
 
 addCount() {
   this.setState({
@@ -191,12 +195,12 @@ addCount() {
 > - This is a way of saving the current value of this, which is in scope during the call to the constructor, so that it can be used later when the function is called.
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you need to access props, state or other members on the class, then you would need to bind it.
-> - There are several way to handel ```this``` : Bind in Constructor, Bind in Render, Arrow Function
+> - There are another way to handel ```this``` : Bind in Render (ref : 8.1), Arrow Function (ref : 8.2)
 > - Related Reference : [why do you need to bind a function in a constructor
 ](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling `this`](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
 <br/><br/>
 
-8.1 When And Why Should We Bind In Render ?
+8.1 Why Should We Bind The Function In Render ?
 
 ```
 Example : Using bind in render (bind in required)
@@ -216,11 +220,10 @@ addCount() {
         )
     }
 ```
+<br/>
 
-<br/><br/>
 
-
-8.1 Why We Don't Need Bind Arrow Function ?
+8.2 Why We Don't Need Bind Arrow Function ?
 
 ```
 Example : Using arrow function (No bind in required)
@@ -233,7 +236,6 @@ addCount = () => {
 > - Arrow function does not have the following in its context : this, arguments, super and new.target. So when you reference this inside an arrow function it treat this as any other variable and look for its declaration in its scope first and it can not find it so it search the upper scope which is the this referring to the react component class which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
-
 
 
 ❗ 9. Explain The Life Cycle Of React.js (componentdidmount)
