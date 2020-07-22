@@ -229,7 +229,9 @@ addCount() {
 Example : Using arrow function (No bind in required)
 
 addCount = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ 
+        count: this.state.count + 1 
+    });
 ```
 > - Arrow function does not have the following in its context : this, arguments, super and new.target. So when you reference this inside an arrow function it treat this as any other variable and look for its declaration in its scope first and it can not find it so it search the upper scope which is the this referring to the react component class which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
