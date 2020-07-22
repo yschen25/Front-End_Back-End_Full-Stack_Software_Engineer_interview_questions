@@ -323,8 +323,28 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 22. Why Do I Need Keys In React Lists ?
+> - Keys help React identify which items have changed, are added, or are removed.
+> - React recommends that you do not use indexes as keys, since it could impact performance negatively and could lead to some unstable component behaviour.
+> - React does not automatically pass they key like a prop. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
+```
+const content = posts.map((post) =>
+  <Post
+    key={post.id}
+    id={post.id}
+    title={post.title} />
+);
+```
 > - Related Reference : [Why do I need Keys in React Lists?
-](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb)
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 <br/><br/>
+
+22.1 What are some exceptions where it is safe to use index as key?
+> - If your list is static (no additions/re-ordering/removal to the list).
+> - The list will never be re-ordered.
+> - The list will not be filtered (adding/removing items from the list).
+> - There are no ids for the items in the list.
+<br/><br/>
+
+
 
 https://www.edureka.co/blog/interview-questions/react-interview-questions/
