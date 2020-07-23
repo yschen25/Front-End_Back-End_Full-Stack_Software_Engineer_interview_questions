@@ -357,6 +357,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 21. Uncontrolled Components And Controlled Components
 > - Controlled Components : In most cases, we recommend using controlled components to implement forms. The form data is handled by the state within the component.
 > - Uncontrolled Components : Uncontrolled components act more like traditional HTML form elements. The data for each input element is stored in the DOM, not in the component. Instead of writing an event handler for all of your state updates, you use a ref to retrieve values from the DOM.
+> - Related Reference : [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
 22. Why Do I Need Keys In React Lists ?
