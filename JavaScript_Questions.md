@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-2. Explain What Is Promise?
+❗ 2. Explain What Is Promise?
 
 https://ithelp.ithome.com.tw/articles/10197529
 <br/><br/>
@@ -63,7 +63,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-8. Explan What Is Async/Await?
+❗ 8. Explan What Is Async/Await?
 
 > - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html
 )
@@ -159,7 +159,7 @@ test()
 ```
 <br/>
 
-12. Explan What Is "this"?
+❗ 12. Explan What Is "this"?
 <br/><br/>
 
 :white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
@@ -248,21 +248,21 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-17. What Is IIFE(Immediately Invoked Function Expression)?
+❗ 17. What Is IIFE(Immediately Invoked Function Expression)?
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-18. What Is Prototype?
+❗ 18. What Is Prototype?
 <br/><br/>
 
-19. What Is Event Loop?
+❗ 19. What Is Event Loop?
 <br/><br/>
 
-20. What Is Functional Programming?
+❗ 20. What Is Functional Programming?
 > - Related Reference : [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
 <br/><br/>
 
-21. What Is Function Statements And Function Expressions?
+❗ 21. What Is Function Statements And Function Expressions?
 <br/><br/>
 
 22. What Is First Class Function?
