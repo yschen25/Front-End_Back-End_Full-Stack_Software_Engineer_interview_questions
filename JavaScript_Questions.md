@@ -263,6 +263,7 @@ null === undefined  // false
 <br/><br/>
 
 ❗ 21. What Is Function Statements And Function Expressions?
+> - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 <br/><br/>
 
 22. What Is First Class Function?
