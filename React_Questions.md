@@ -238,7 +238,6 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-
 ❗ 9. Explain The Life Cycle Of React.js (componentdidmount)
 <br/><br/>
 
@@ -325,7 +324,11 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 ❗ 15. Refs
-> - Refs is the short hand for References in React. It is an attribute which helps to store a reference to a particular React element or component, which will be returned by the components render configuration function. It is used to return references to a particular element or component returned by render(). They come in handy when we need DOM measurements or to add methods to the components.
+> - Refs is the short hand for References in React. The ref is used to return a reference to the element. 
+> - Use state and props to manage components instead using refs.
+> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
+> - Refs can't use in functional components, only for class components.
+> - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
 16. How To Use Arrow Function In The Class Components? (ref : 8)
