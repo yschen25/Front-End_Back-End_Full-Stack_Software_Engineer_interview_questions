@@ -323,11 +323,12 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Install @testing-library/react-hooks to test hooks.
 <br/><br/>
 
-❗ 15. Refs
+15. Refs
 > - Refs is the short hand for References in React. The ref is used to return a reference to the element. 
 > - Use state and props to manage components instead using refs.
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
 > - Refs can't use in functional components, only for class components.
+> - Example : https://jsfiddle.net/yschen25/ewdtvn5b/9/
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
