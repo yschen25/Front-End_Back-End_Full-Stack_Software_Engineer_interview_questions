@@ -266,4 +266,6 @@ null === undefined  // false
 <br/><br/>
 
 22. What Is First Class Function?
+> - In JavaScript, functions are first-class objects, which means they can be : passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+> - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 <br/><br/>
