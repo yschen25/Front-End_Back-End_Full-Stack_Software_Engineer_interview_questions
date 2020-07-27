@@ -273,9 +273,9 @@ addCount = () => {
 <br/>
 
 > - **Flux interactive with users**： <br/>
-(1) User interactive with web and fire the event, Action Creator sends actions to Dispatcher.  <br/>
-(2) Dispatcher sends action to store, action type 判斷合適的處理方式.  <br/>
-(3) Data updates fire the listener which Controller Views register to Store then get the new data from Store.  <br/>
+(1) User interactive with web and triggers the event, Action Creator sends actions to Dispatcher.  <br/>
+(2) Dispatcher sends action to store, action type determines the proper method to execute.  <br/>
+(3) Trigger the listener which Controller Views register to Store when data updates then get the new data from the Store. <br/>
 (4) View re-render according to the new data from Controller Views.
 <br/>
 
