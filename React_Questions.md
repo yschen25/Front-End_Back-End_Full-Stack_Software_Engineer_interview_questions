@@ -261,6 +261,7 @@ addCount = () => {
 > - Store : Containers for application state & logic that have callbacks registered to the ``Dispatcher``.
 > - View : this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself.
 
+> - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 <br/><br/>
 
 ❗ 11.1 What Are The Strengths And Weaknesses Of Flux?
