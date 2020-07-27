@@ -361,7 +361,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - The value can't not control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it need to add onChange handler to listen to the input value then show on the screen (https://jsfiddle.net/yschen25/gzx43por/).
 
 | Elements | Attributes | Method | Callback value |
-|---|---|---|---|---|
+|---|---|---|---|
 | <input type="text" /> | value="string" | onChange | event.target.value | 
 | <input type="checkbox" /> | checked={boolean}| onChange | event.target.checked | 
 | <input type="radio" /> | checked={boolean} | onChange | event.target.checked | 
