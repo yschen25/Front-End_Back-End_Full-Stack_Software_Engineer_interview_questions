@@ -357,7 +357,9 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (6) Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
-> - **Weaknesses** :
+> - **Weaknesses** : <br/>
+(1) No encapsulation. Any component can access the data which can cause security issues. <br/>
+(2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
 12.3 What is Redux Different From Flux?
@@ -371,7 +373,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 | React components subscribe to the store | Container components utilize connect |
 | State is mutable | State is immutable |
 
-<br/><br/>
+<br/>
 
 13. What Is Styled Component ?
 > - Styled Components is a CSS-in-JS library that enables you to create React components with a given style very easily.
@@ -456,13 +458,13 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 21.1 When Use Controlled Components Or Uncontrolled Components ?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
-| One time submit | Ｏ | Ｏ |
-| Submit validation | Ｏ | Ｏ |
-| Instant validation | Ｏ | Ｘ |
-| Fobidden buttons| Ｏ | Ｘ |
-| Formatted Input Value  | Ｏ | Ｘ |
-| Merge mutiple input value | Ｏ | Ｘ |
-| Dynamic input value | Ｏ | Ｘ |
+| One time submit | O  | O  |
+| Submit validation | O  | O  |
+| Instant validation | O  | X |
+| Fobidden buttons| O | X |
+| Formatted Input Value  | O | X |
+| Merge mutiple input value | O  | X |
+| Dynamic input value | O  | X |
 
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
