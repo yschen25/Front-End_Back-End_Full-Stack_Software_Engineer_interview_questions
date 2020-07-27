@@ -258,7 +258,9 @@ addCount = () => {
 
 > - The relationship between components gets complicated. It becomes hard to scale the application. To solve this issue FB architected a Single directional data flow.
 > - Flux uses a unidirectional data flow pattern to solve state management complexity.
-> - There are three distinct roles for dealing with data in the flux methodology :
+<br/>
+
+> - **There are three distinct roles for dealing with data in the flux methodology** :
 > - Action Creators & Action : Action Creators are collections of methods that are called within views to send ``Actions`` to the ``Dispatcher``. Actions are the actual payloads that are delivered via the dispatcher. The action can be something like add a post, delete a post, or any other user interaction. 
 > - Dispatcher : The manager of this entire process, the central hub for the application. It dispatches the payload from ``Actions`` to ``Store``. 
 > - Store : Containers for application state & logic that have callbacks registered to the ``Dispatcher``.
@@ -301,16 +303,20 @@ addCount = () => {
 <br/><br/>
 
 > - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
-> - Redux follows three principles : 
+<br/>
+
+> - **Redux follows three principles** : 
 > - Single source of truth: The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
  > - State is read-only: The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. 
  > - Changes are made with pure functions: In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
+<br/>
 
+> - **List Down The Components Of Redux** : 
 > - Action – It’s an object that describes what happened.
-> - Reducer –  It is a place to determine how the state will change.
+> - Reducer – It is a place to determine how the state will change.
 > - Store – State/ Object tree of the entire application is saved in the Store.
 
-> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b)
+> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store)
 <br/><br/>
 
 ❗ 12.1 What Are The Strengths And Weaknesses Of Redux?
