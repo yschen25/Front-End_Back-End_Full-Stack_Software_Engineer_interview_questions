@@ -267,16 +267,16 @@ addCount = () => {
 
 > - **Flux pattern pre-processing**： <br/>
 (1) Stores register callback to Dispatcher，notify Stores when data changes. <br/>
-(2) Controller Views get inital data from Stores. <br/>
-(3) Controller Views gives data to Views to render UI. <br/>
-(4) Controller Views register listener to Store, notify Controller Views when data changes.
+(2) Views get inital data from Stores. <br/>
+(3) Views gives data to Views to render UI. <br/>
+(4) Views register listener to Store, notify Controller Views when data changes.
 <br/>
 
 > - **Flux interactive with users**： <br/>
 (1) User interactive with web and triggers the event, Action Creator sends actions to Dispatcher.  <br/>
 (2) Dispatcher sends action to store, action type determines the proper method to execute.  <br/>
 (3) Trigger the listener which Controller Views register to Store when data updates then get the new data from the Store. <br/>
-(4) View re-render according to the new data from Controller Views.
+(4) View re-render according to the new data.
 <br/>
 
 > - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
