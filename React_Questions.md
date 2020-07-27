@@ -357,8 +357,9 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (6) Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
-> - **Weaknesses** : <br/>
- 
+> - **Weaknesses** :
+<br/><br/>
+
 12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
@@ -369,6 +370,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 | Has singleton dispatcher | No concept of dispatcher |
 | React components subscribe to the store | Container components utilize connect |
 | State is mutable | State is immutable |
+
 <br/><br/>
 
 13. What Is Styled Component ?
