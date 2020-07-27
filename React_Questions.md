@@ -16,20 +16,20 @@
 <br/>
 
 1.3 What Is Strength And Weakness Of React.js ?
-> - **Strength** : 
-> - Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again. 
-> - It follows the component based approach which helps in building reusable UI components.
-> - Uni-directional data flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.
-> - SEO friendly, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.
-> - Can be used for the development of both web and mobile apps
-> - Server-side rendering accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites.
-> - Useful developer toolset.
-> - Strong community support.
+> - **Strength** :  <br/>
+(1) Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
+(2) It follows the component based approach which helps in building reusable UI components.  <br/>
+(3) Uni-directional data flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
+(4) SEO friendly, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.  <br/>
+(5) Can be used for the development of both web and mobile apps.   <br/>
+(6) Server-side rendering accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites.  <br/>
+(7) Useful developer toolset.  <br/>
+(8) Strong community support.
 <br/>
 
-> - **Weakness** : 
-> - React focus on view, lacking of route, ajax, async promise, etc.
-> - Coding gets complex as it uses inline templating and JSX.
+> - **Weakness** : <br/>
+(1) React focus on view, lacking of route, ajax, async promise, etc. <br/>
+(2) Coding gets complex as it uses inline templating and JSX.
 
 <br/>
 
@@ -107,19 +107,19 @@
 
 5.3 When Use Functional Components And Class Components ?
 
-> - **Functional Components** : 
-> - Don't need to use lifecycle
-> - Don't need to use state
-> - Create reusable components
-> - Only render UI
+> - **Functional Components** :  <br/>
+(1) Don't need to use lifecycle  <br/>
+(2) Don't need to use state  <br/>
+(3) Create reusable components  <br/>
+(4) Only render UI
 <br/>
 
-> - **Class Components** :
-> - Need to use lifecycle
-> - Need to use state
-> - Have to receive data form user
-> - Create interactive objects
-> - Render after change state
+> - **Class Components** :  <br/>
+(1) Need to use lifecycle  <br/>
+(2) Need to use state  <br/>
+(3) Have to receive data form user  <br/>
+(4) Create interactive objects  <br/>
+(5) Render after change state
 
 <br/>
 
@@ -247,29 +247,36 @@ addCount = () => {
 <br/><br/>
 
 ❗11. What Is Flux And When Should We Use It ?
+
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
-</p>
-> - The relationship between components gets complicated. It becomes hard to scale the application. To solve this issue FB architected a Single directional data flow.
-> - Flux uses a unidirectional data flow pattern to solve state management complexity.
-<p align="center">
 <img src="img/flux_data_flow2.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
 </p>
+
+> - The relationship between components gets complicated. It becomes hard to scale the application. To solve this issue FB architected a Single directional data flow.
+> - Flux uses a unidirectional data flow pattern to solve state management complexity.
 > - There are three distinct roles for dealing with data in the flux methodology :
 > - Action Creators & Action : Action Creators are collections of methods that are called within views to send ``Actions`` to the ``Dispatcher``. Actions are the actual payloads that are delivered via the dispatcher. The action can be something like add a post, delete a post, or any other user interaction. 
 > - Dispatcher : The manager of this entire process, the central hub for the application. It dispatches the payload from ``Actions`` to ``Store``. 
 > - Store : Containers for application state & logic that have callbacks registered to the ``Dispatcher``.
 > - View : this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself.
+<br/>
+
+> - Flux pattern pre-processing： <br/>
+(1) Stores register callback to Dispatcher，notify Stores when data changes. <br/>
+(2) Controller Views get inital data from Stores. <br/>
+(3) Controller Views gives data to Views to render UI. <br/>
+(4) Controller Views register listener to Store, notify Controller Views when data changes.
 
 > - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 <br/><br/>
 
 ❗ 11.1 What Are The Strengths And Weaknesses Of Flux?
-> - Strengths : 
-> - The code becomes quite clear and easy to understand.
-> - Easily testable using Unit Test.
-> - Scalable apps can be built.
-> - Predictable data flow.
+> - Strengths :  <br/>
+(1) The code becomes quite clear and easy to understand. <br/>
+(2) Easily testable using Unit Test. <br/>
+(3) Scalable apps can be built. <br/>
+(4) Predictable data flow.
 <br/>
 
 > - Weaknesses
@@ -375,10 +382,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 21. Explain The Controlled Components And Uncontrolled Components.
-> - Controlled Components : 
-> - In most cases, we recommend using controlled components to implement forms. 
-> - Controls the values of input elements in a form using setState().
-> - The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
+> - **Controlled Components** : <br/> 
+(1) In most cases, we recommend using controlled components to implement forms.  <br/> 
+(2) Controls the values of input elements in a form using setState(). <br/> 
+(3) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
@@ -389,10 +396,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 | ``<select />`` | value="option value" | onChange | event.target.value | 
 <br/>
 
-> - Uncontrolled Components : 
-> - Doesn't control by status or props, use ref to control DOM (https://jsfiddle.net/yschen25/o237p9Ld/).
-> - Allow set up the value by defaultValue.
-> - Easy to use with third party library. 
+> - **Uncontrolled Components** :   <br/> 
+(1) Doesn't control by status or props, use ref to control DOM (https://jsfiddle.net/yschen25/o237p9Ld/).  <br/> 
+(2) Allow set up the value by defaultValue.  <br/> 
+(3) Easy to use with third party library. 
 <br/><br/>
 
 21.1 When Use Controlled Components Or Uncontrolled Components ?
@@ -431,7 +438,3 @@ const content = posts.map((post) =>
 > - The list will not be filtered (adding/removing items from the list).
 > - There are no ids for the items in the list.
 <br/><br/>
-
-
-
-https://www.edureka.co/blog/interview-questions/react-interview-questions/
