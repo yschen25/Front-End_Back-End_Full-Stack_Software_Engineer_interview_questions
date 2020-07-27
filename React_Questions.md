@@ -247,16 +247,31 @@ addCount = () => {
 <br/><br/>
 
 ❗11. What Is Flux And When Should We Use It ?
+<p align="center">
+<img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
+</p>
 > - The relationship between components gets complicated. It becomes hard to scale the application. To solve this issue FB architected a Single directional data flow.
 > - Flux uses a unidirectional data flow pattern to solve state management complexity.
+<p align="center">
+<img src="img/flux_data_flow2.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
+</p>
 > - There are three distinct roles for dealing with data in the flux methodology :
-> - View: this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself. For example, if a user clicks the Add button.
-> - Action: this handles all the events. These events are passed by the view component. This layer is generally used to make API calls. Once the action is done it is dispatched using the Dispatcher. The action can be something like add a post, delete a post, or any other user interaction.
-> - Dispatcher: this is the central hub and singleton registry. It dispatches the payload from Actions to Store. Also makes sure that there are no cascading effects when an action is dispatched to the store. It ensures that no other action happens before the data layer has completed processing and storing operations.
-> - Store: this holds the app state and is a data layer of this pattern. Do not consider it as a model from MVC. An application can have one or many app stores. Stores get updated because they have a callback that is registered using the dispatcher.
+> - Action Creators & Action : Action Creators are collections of methods that are called within views to send ``Actions`` to the ``Dispatcher``. Actions are the actual payloads that are delivered via the dispatcher. The action can be something like add a post, delete a post, or any other user interaction. 
+> - Dispatcher : The manager of this entire process, the central hub for the application. It dispatches the payload from ``Actions`` to ``Store``. 
+> - Store : Containers for application state & logic that have callbacks registered to the ``Dispatcher``.
+> - View : this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself.
+
 <br/><br/>
 
 ❗ 11.1 What Are The Strengths And Weaknesses Of Flux?
+> - Strengths : 
+> - The code becomes quite clear and easy to understand.
+> - Easily testable using Unit Test.
+> - Scalable apps can be built.
+> - Predictable data flow.
+<br/>
+
+> - Weaknesses
 <br/><br/>
 
 ❗ 12. Redux
