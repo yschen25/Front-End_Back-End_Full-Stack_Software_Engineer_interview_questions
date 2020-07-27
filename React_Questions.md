@@ -43,21 +43,9 @@
 | DOM | virtual DOM | virtual DOM | Uses real DOM |
 | Data Binding | One-way data binding | Two-way data binding | Two-way data binding |
 | Author | Facebook | Former google employee | Google |
-| When Use |
-• Your project can accept reusable components.  <br/> 
-• Your project’s front-end is not too complex.  <br/> 
-• The performance and scalability are critical.  <br/> 
-• You have tight deadlines.  <br/> 
-|
-• Your project scope is on the small side.  <br/> 
-• You need high performance.  <br/> 
-• You have no skilled front-end developers but have team members with JavaScript knowledge.  <br/> 
-• You do not have much time to learn a new technology.  <br/> 
-| 
-• You are about to develop a very large and complex project. <br/> 
-• You need easy and reliable scalability. <br/> 
-• You have Angular developers on your team. <br/>   
-• You can afford some time for learning TypeScript before the project starts |
+| When Use |• Your project can accept reusable components.  <br/> • Your project’s front-end is not too complex.  <br/> • The performance and scalability are critical.  <br/> • You have tight deadlines.  <br/> 
+|• Your project scope is on the small side.  <br/> • You need high performance.  <br/> • You have no skilled front-end developers but have team members with JavaScript knowledge.  <br/> • You do not have much time to learn a new technology.  <br/> 
+| • You are about to develop a very large and complex project. <br/> • You need easy and reliable scalability. <br/> • You have Angular developers on your team. <br/>   • You can afford some time for learning TypeScript before the project starts |
 
 > - Related Reference : [Angular vs React vs Vue: Which Framework to Choose in 2020](https://www.codeinwp.com/blog/angular-vs-vue-vs-react/), [Angular vs React vs Vue](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e), [Angular vs. React vs. Vue.js – choosing a JavaScript framework for your project](https://relevant.software/blog/angular-vs-react-vs-vue-js-choosing-a-javascript-framework-for-your-project/)
 
