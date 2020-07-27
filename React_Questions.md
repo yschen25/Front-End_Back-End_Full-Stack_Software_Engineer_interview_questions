@@ -240,7 +240,33 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-❗ 9. Explain The Life Cycle Of React.js (componentdidmount)
+❗ 9. Explain The Life Cycle Of React.js ? <br/>
+> - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
+ (1) Mounting :  Means putting elements into the DOM. <br/>
+ (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
+ (3) Unmounting : When a component is removed from the DOM. <br/>
+ (4) (Error Handling) : Occors javaScript errors. <br/>
+<br />
+
+- > **Mounting** :  <br/>
+(1) constructor() : It called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values. <br/>
+(2) getDerivedStateFromProps() : The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM. This is the natural place to set the state object based on the initial props. <br/>
+(3) render() : The render() method is required, and is the method that actual outputs HTML to the DOM according to the state or props. <br/>
+(4) componentDidMount() : Is called after the component is rendered. his is where you run statements that requires that the component is already placed in the DOM such as send ajax, fetch. <br/>
+
+- > **Updating** :  <br/>
+(1) getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props.  <br/>
+(2) shouldComponentUpdate() : In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not. The default value is true.  <br/>
+(3) render() : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
+(4) getSnapshotBeforeUpdate() : In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. <br/>
+(5) componentDidUpdate() : The componentDidUpdate method is called after the component is updated in the DOM.  <br/>
+
+- > **Unmounting** :  <br/>
+(1) componentWillUnmount() : Is called when the component is about to be removed from the DOM, such as clear event listener.  <br/>
+
+- > **Error Handling** :  <br/>
+(1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. <br/>
+(2) componentDidCatch() : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods. 
 <br/><br/>
 
 ❗ 10. Axios
