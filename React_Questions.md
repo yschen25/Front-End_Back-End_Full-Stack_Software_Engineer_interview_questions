@@ -378,13 +378,13 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 21.1 When Use Controlled Components Or Uncontrolled Components ?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
-| | Ｏ | Ｏ |
-| | Ｏ | Ｏ |
-| | Ｘ | Ｏ |
-| | Ｘ | Ｏ |
-| | Ｘ | Ｏ |
-| | Ｘ | Ｏ |
-| | Ｘ | Ｏ |
+| One time submit | Ｏ | Ｏ |
+| Submit validation | Ｏ | Ｏ |
+| Instant validation | Ｏ | Ｘ |
+| Fobidden buttons| Ｏ | Ｘ |
+| Formatted Input Value  | Ｏ | Ｘ |
+| Merge mutiple input value | Ｏ | Ｘ |
+| Dynamic input value | Ｏ | Ｘ |
 
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
