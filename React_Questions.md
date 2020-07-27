@@ -267,6 +267,9 @@ addCount = () => {
 - > **Error Handling** :  <br/>
 (1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. <br/>
 (2) componentDidCatch() : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods. 
+<br/>
+
+> - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 <br/><br/>
 
 ❗ 10. Axios
