@@ -249,20 +249,20 @@ addCount = () => {
 <br />
 
 - > **Mounting** :  <br/>
-(1) constructor() : It called before anything else, when the component is initiated, and it is the natural place to set up the initial state and other initial values. <br/>
+(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise ‘props’ will be undefined in the component. <br/>
 (2) getDerivedStateFromProps() : The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM. This is the natural place to set the state object based on the initial props. <br/>
 (3) render() : The render() method is required, and is the method that actual outputs HTML to the DOM according to the state or props. <br/>
-(4) componentDidMount() : Is called after the component is rendered. his is where you run statements that requires that the component is already placed in the DOM such as send ajax, fetch. <br/>
+(4) componentDidMount() : When your component is loaded in the DOM, this method is executed. Therefore, it makes this an ideal place to perform any API calls or make changes to the DOM. After executing once, it is not triggered again for the duration of the component’s life. <br/>
 
 - > **Updating** :  <br/>
 (1) getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props.  <br/>
-(2) shouldComponentUpdate() : In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not. The default value is true.  <br/>
+(2) shouldComponentUpdate() : This method is designed to increase performance in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React should update the component or not.  <br/>
 (3) render() : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
-(4) getSnapshotBeforeUpdate() : In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. <br/>
+(4) getSnapshotBeforeUpdate() : In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
 (5) componentDidUpdate() : The componentDidUpdate method is called after the component is updated in the DOM.  <br/>
 
 - > **Unmounting** :  <br/>
-(1) componentWillUnmount() : Is called when the component is about to be removed from the DOM, such as clear event listener.  <br/>
+(1) componentWillUnmount() : This method is called right before the component is unmounted from the DOM. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.  <br/>
 
 - > **Error Handling** :  <br/>
 (1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. <br/>
