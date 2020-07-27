@@ -246,10 +246,13 @@ addCount = () => {
 ❗ 10. Axios
 <br/><br/>
 
-❗11. What Is Flux And When Should We Use It ?
+11. What Is Flux And When Should We Use It ?
 
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
+ 
+<br/>
+
 <img src="img/flux_data_flow2.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
 </p>
 
@@ -259,27 +262,36 @@ addCount = () => {
 > - Action Creators & Action : Action Creators are collections of methods that are called within views to send ``Actions`` to the ``Dispatcher``. Actions are the actual payloads that are delivered via the dispatcher. The action can be something like add a post, delete a post, or any other user interaction. 
 > - Dispatcher : The manager of this entire process, the central hub for the application. It dispatches the payload from ``Actions`` to ``Store``. 
 > - Store : Containers for application state & logic that have callbacks registered to the ``Dispatcher``.
-> - View : this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself.
+> - View : This component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself.
 <br/>
 
-> - Flux pattern pre-processing： <br/>
+> - **Flux pattern pre-processing**： <br/>
 (1) Stores register callback to Dispatcher，notify Stores when data changes. <br/>
 (2) Controller Views get inital data from Stores. <br/>
 (3) Controller Views gives data to Views to render UI. <br/>
 (4) Controller Views register listener to Store, notify Controller Views when data changes.
+<br/>
+
+> - **Flux interactive with users**： <br/>
+(1) User interactive with web and fire the event, Action Creator sends actions to Dispatcher.  <br/>
+(2) Dispatcher sends action to store, action type 判斷合適的處理方式.  <br/>
+(3) Data updates fire the listener which Controller Views register to Store then get the new data from Store.  <br/>
+(4) View re-render according to the new data from Controller Views.
+<br/>
 
 > - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 <br/><br/>
 
-❗ 11.1 What Are The Strengths And Weaknesses Of Flux?
-> - Strengths :  <br/>
+11.1 What Are The Strengths And Weaknesses Of Flux?
+> - **Strengths** :  <br/>
 (1) The code becomes quite clear and easy to understand. <br/>
 (2) Easily testable using Unit Test. <br/>
 (3) Scalable apps can be built. <br/>
 (4) Predictable data flow.
 <br/>
 
-> - Weaknesses
+> - **Weaknesses**  <br/>
+(1) Too complicated to small application.
 <br/><br/>
 
 ❗ 12. Redux
