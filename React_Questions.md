@@ -246,7 +246,7 @@ addCount = () => {
 ❗ 10. Axios
 <br/><br/>
 
-11. What Is Flux And When Should We Use It ?
+11. What Is Flux ?
 
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
@@ -296,7 +296,7 @@ addCount = () => {
 (1) Too complicated to small application.
 <br/><br/>
 
-12. Redux
+12. What Is Redux ?
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
@@ -305,21 +305,47 @@ addCount = () => {
 > - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
 <br/>
 
-> - **Redux follows three principles** : 
-> - Single source of truth: The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
- > - State is read-only: The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. 
- > - Changes are made with pure functions: In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
+> - **Redux interactive with users**： <br/>
+(1) User click. <br/>
+(2) Action Creator send Action to Store. <br/>
+(3) Store call Reducer with state and action to get the new state. <br/>
+(4) View Re-render when state changes.
+<br/>
+
+> - **Redux follows three principles** : <br/>
+(1) Single source of truth : The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
+(2) State is read-only : The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
+(2) Changes are made with pure functions : In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
 <br/>
 
 > - **List Down The Components Of Redux** : 
 > - Action – It’s an object that describes what happened.
 > - Reducer – It is a place to determine how the state will change.
 > - Store – State/ Object tree of the entire application is saved in the Store.
-
-> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store)
 <br/><br/>
 
-12.1 What Are The Strengths And Weaknesses Of Redux?
+12.2 How To Use Redux ?
+
+> - **Store Methods** <br/>
+(1) getState() : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
+(2) dispatch(action) : Dispatches an action. This is the only way to trigger a state change. <br/>
+(3) subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed.
+<br/>
+
+> - **Combine with React-Redux**
+> - Provider : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>.
+> - Connect : The connect() function connects a React component to a Redux store.
+```
+function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
+```
+> - mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.
+> - mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
+<br/>
+
+> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
+<br/><br/>
+
+12.2 What Are The Strengths And Weaknesses Of Redux?
 
 > - **Strengths** : <br/>
 (1) Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
@@ -333,7 +359,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 > - **Weaknesses** : <br/>
  
-12.2 What is Redux Different From Flux?
+12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
