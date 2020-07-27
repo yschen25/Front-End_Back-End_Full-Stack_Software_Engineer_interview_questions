@@ -355,9 +355,28 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 21. Uncontrolled Components And Controlled Components
-> - Controlled Components : In most cases, we recommend using controlled components to implement forms. The form data is handled by the state within the component.
-> - Uncontrolled Components : Uncontrolled components act more like traditional HTML form elements. The data for each input element is stored in the DOM, not in the component. Instead of writing an event handler for all of your state updates, you use a ref to retrieve values from the DOM.
-> - Related Reference : [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618), [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
+> - Controlled Components : 
+> - In most cases, we recommend using controlled components to implement forms. 
+> - Controls the values of input elements in a form using setState().
+> - The value can't not control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it need to add onChange handler to listen to the input value then show on the screen (https://jsfiddle.net/yschen25/gzx43por/).
+
+| Elements | Attributes | Method | Callback value |
+|---|---|---|---|---|
+| <input type="text" /> | value="string" | onChange | event.target.value | 
+| <input type="checkbox" /> | checked={boolean}| onChange | event.target.checked | 
+| <input type="radio" /> | checked={boolean} | onChange | event.target.checked | 
+| <textarea /> | value="string" | onChange | event.target.value | 
+| <select /> | value="option value" | onChange | event.target.value | 
+
+<br/>
+
+> - Uncontrolled Components : 
+> - Doesn't control by status or props, use ref to control DOM.
+> - Set up the value by defaultValue.
+> - Easy to use with third party library. 
+
+
+> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
 22. Why Do I Need Keys In React Lists ?
