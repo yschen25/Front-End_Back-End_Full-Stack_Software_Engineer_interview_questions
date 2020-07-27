@@ -354,27 +354,37 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
-21. Uncontrolled Components And Controlled Components
+21. Explain The Controlled Components And Uncontrolled Components.
 > - Controlled Components : 
 > - In most cases, we recommend using controlled components to implement forms. 
 > - Controls the values of input elements in a form using setState().
-> - The value can't not control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it need to add onChange handler to listen to the input value then show on the screen (https://jsfiddle.net/yschen25/gzx43por/).
+> - The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
-| <input type="text" /> | value="string" | onChange | event.target.value | 
-| <input type="checkbox" /> | checked={boolean}| onChange | event.target.checked | 
-| <input type="radio" /> | checked={boolean} | onChange | event.target.checked | 
-| <textarea /> | value="string" | onChange | event.target.value | 
-| <select /> | value="option value" | onChange | event.target.value | 
-
+| ``<input type="text" />`` | value="string" | onChange | event.target.value | 
+| ``<input type="checkbox" />`` | checked={boolean}| onChange | event.target.checked | 
+| ``<input type="radio" />`` | checked={boolean} | onChange | event.target.checked | 
+| ``<textarea />`` | value="string" | onChange | event.target.value | 
+| ``<select />`` | value="option value" | onChange | event.target.value | 
 <br/>
 
 > - Uncontrolled Components : 
-> - Doesn't control by status or props, use ref to control DOM.
-> - Set up the value by defaultValue.
+> - Doesn't control by status or props, use ref to control DOM (https://jsfiddle.net/yschen25/o237p9Ld/).
+> - Allow set up the value by defaultValue.
 > - Easy to use with third party library. 
+<br/><br/>
 
+21.1 When Use Controlled Components Or Uncontrolled Components ?
+| Functions | Controlled Components | Uncontrolled Components |
+|---|---|---|
+| | Ｏ | Ｏ |
+| | Ｏ | Ｏ |
+| | Ｘ | Ｏ |
+| | Ｘ | Ｏ |
+| | Ｘ | Ｏ |
+| | Ｘ | Ｏ |
+| | Ｘ | Ｏ |
 
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
