@@ -82,15 +82,15 @@
 
 5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ?
 
-> - **Functional Components** :
-> - These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
-> - Example : https://jsfiddle.net/yschen25/dmacrpjq/
+> - **Functional Components** : <br/>
+(1) These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties). <br/>
+(2) Example : https://jsfiddle.net/yschen25/dmacrpjq/
 <br/>
 
-> - **Class Components** :
-> - These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
-> - Constructor is optional, add the constructor when you need to use state or binfd function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/
-> - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
+> - **Class Components** : <br/>
+(1) These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state. <br/>
+(2) Constructor is optional, add the constructor when you need to use state or binfd function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
 
@@ -296,7 +296,7 @@ addCount = () => {
 (1) Too complicated to small application.
 <br/><br/>
 
-❗ 12. Redux
+12. Redux
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
@@ -319,16 +319,21 @@ addCount = () => {
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store)
 <br/><br/>
 
-❗ 12.1 What Are The Strengths And Weaknesses Of Redux?
-> - Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application.
-> - Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure.
-> - Server-side rendering – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance.
-> - Developer tools – From actions to state changes, developers can track everything going on in the application in real time.
-Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it.
-> - Ease of testing – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent.
-> - Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+12.1 What Are The Strengths And Weaknesses Of Redux?
 
-❗ 12.2 What is Redux Different From Flux?
+> - **Strengths** : <br/>
+(1) Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
+(2) Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
+(3) Server-side rendering – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
+(4) Developer tools – From actions to state changes, developers can track everything going on in the application in real time. <br/>
+Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it. <br/>
+(5) Ease of testing – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
+(6) Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+<br/>
+
+> - **Weaknesses** : <br/>
+ 
+12.2 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
