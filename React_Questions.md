@@ -246,36 +246,39 @@ addCount = () => {
 ❗ 10. Axios
 <br/><br/>
 
-❗ 11. Flux
-> - Flux is an architectural pattern which enforces the uni-directional data flow. It controls derived data and enables communication between multiple components using a central Store which has authority for all data. Any update in data throughout the application must occur here only. Flux provides stability to the application and reduces run-time errors.
+❗11. What Is Flux And When Should We Use It ?
+> - The relationship between components gets complicated. It becomes hard to scale the application. To solve this issue FB architected a Single directional data flow.
+> - Flux uses a unidirectional data flow pattern to solve state management complexity.
+> - There are three distinct roles for dealing with data in the flux methodology :
+> - View: this component renders the UI. Whenever any user interaction occurs on it (like an event) then it fires off the action. Also when the Store informs the View that some change has occurred, it re-renders itself. For example, if a user clicks the Add button.
+> - Action: this handles all the events. These events are passed by the view component. This layer is generally used to make API calls. Once the action is done it is dispatched using the Dispatcher. The action can be something like add a post, delete a post, or any other user interaction.
+> - Dispatcher: this is the central hub and singleton registry. It dispatches the payload from Actions to Store. Also makes sure that there are no cascading effects when an action is dispatched to the store. It ensures that no other action happens before the data layer has completed processing and storing operations.
+> - Store: this holds the app state and is a data layer of this pattern. Do not consider it as a model from MVC. An application can have one or many app stores. Stores get updated because they have a callback that is registered using the dispatcher.
+<br/><br/>
+
+❗ 11.1 What Are The Strengths And Weaknesses Of Flux?
 <br/><br/>
 
 ❗ 12. Redux
-> - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
-> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b)
-<br/><br/>
-
-❗ 12.1 What Are The Three Principles That Redux Follows?
-> - Single source of truth: The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
- > - State is read-only: The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. 
- > - Changes are made with pure functions: In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
-<br/><br/>
-
-❗ 12.2 List Down The Components Of Redux.
-
-> - Action – It’s an object that describes what happened.
-> - Reducer –  It is a place to determine how the state will change.
-> - Store – State/ Object tree of the entire application is saved in the Store.
-<br/><br/>
-
-❗ 12.3 Show How The Data Flows Through Redux ?
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
 <br/><br/>
 
-❗ 12.4 What Are The advantages of Redux?
+> - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
+> - Redux follows three principles : 
+> - Single source of truth: The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
+ > - State is read-only: The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. 
+ > - Changes are made with pure functions: In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
 
+> - Action – It’s an object that describes what happened.
+> - Reducer –  It is a place to determine how the state will change.
+> - Store – State/ Object tree of the entire application is saved in the Store.
+
+> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b)
+<br/><br/>
+
+❗ 12.1 What Are The Strengths And Weaknesses Of Redux?
 > - Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application.
 > - Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure.
 > - Server-side rendering – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance.
@@ -284,7 +287,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Ease of testing – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent.
 > - Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 
-❗ 12.5 What is Redux Different From Flux?
+❗ 12.2 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
