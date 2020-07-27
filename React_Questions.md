@@ -33,7 +33,7 @@
 
 <br/>
 
-❗ 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+2. What Is The Differences Between Vue.js, Angular.js and React.js ?
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
