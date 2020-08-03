@@ -15,13 +15,14 @@
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
+
 > - Promise is guarantee to something after execute 
 > - There are 3 states of the Promise object : <br/>
-(1) Resolved: Completed Promise <br/>
-(2) Rejected: Failed Promise <br/>
-(3) Pending: Initial State, before the Promise succeeds or fails <br/>
+(1) Resolved: Completed Promise. <br/>
+(2) Rejected: Failed Promise. <br/>
+(3) Pending: Initial State, before the Promise succeeds or fails. <br/>
 
-> - How to deal with states : 
+> - How to deal with states :  <br/>
 (1) Use then( ) for resolved Promises : If the Promise gets resolved (success case), then something will happen next (depends on what we do with the successful Promise). <br/>
 (2) Use catch( ) for rejected Promises : if the promise gets rejected, it will jump to the catch( ) method 
 
