@@ -15,13 +15,18 @@
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
+> - Promise is guarantee to something after execute 
 > - There are 3 states of the Promise object : <br/>
-(1) Pending: Initial State, before the Promise succeeds or fails <br/>
-(2) Resolved: Completed Promise <br/>
-(3) Rejected: Failed Promise <br/>
+(1) Resolved: Completed Promise <br/>
+(2) Rejected: Failed Promise <br/>
+(3) Pending: Initial State, before the Promise succeeds or fails <br/>
+
+> - How to deal with states : 
+(1) Use then( ) for resolved Promises : If the Promise gets resolved (success case), then something will happen next (depends on what we do with the successful Promise). <br/>
+(2) Use catch( ) for rejected Promises : if the promise gets rejected, it will jump to the catch( ) method 
 
 
-> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529)
+> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/)
 <br/><br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
