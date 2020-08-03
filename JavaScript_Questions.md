@@ -12,8 +12,16 @@
 <br/><br/>
 
 ❗ 2. Explain What Is Promise?
+<p align="center">
+<img src="img/promise.png" alt="promise" title="promise" width="60%">
+</p>
+> - There are 3 states of the Promise object : <br/>
+(1) Pending: Initial State, before the Promise succeeds or fails <br/>
+(2) Resolved: Completed Promise <br/>
+(3) Rejected: Failed Promise <br/>
 
-https://ithelp.ithome.com.tw/articles/10197529
+
+> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529)
 <br/><br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
