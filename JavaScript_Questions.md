@@ -16,8 +16,7 @@
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
 
-> - Promise is guarantee to do something after executing the sepcific function, one of the ways we can deal with asynchronous operations.
-> -I t takes two parameters, one for success (resolve) and one for fail (reject) :
+> - Promise is guarantee to do specfic things after resolved or rejected, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
 
 ```
 const myPromise = new Promise((resolve, reject) => {  
@@ -25,9 +24,9 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-> - There are 3 states of the Promise object : <br/>
-(1) Resolved: Completed Promise. <br/>
-(2) Rejected: Failed Promise. <br/>
+> - A promise starts in the pending state which indicates that the promise hasn’t completed, it ends with either fulfilled (successful) or rejected (failed) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
+(1) Resolved: The state of a promise representing a successful operation. <br/>
+(2) Rejected: The state of a promise representing a failed operation. <br/>
 (3) Pending: Initial State, before the Promise succeeds or fails. <br/>
 
 ```
@@ -43,8 +42,11 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - How to deal with states :  <br/>
-(1) Use then( ) for `Resolved` Promises : If the Promise gets resolved, the then( ) method is called after the Promise is resolved, then we can decide what to do with the resolved Promise. <br/>
-(2) Use catch( ) for `Rejected` Promises : If the promise gets rejected, it will jump to the catch( ) method.
+(1) then( )  : If the Promise gets `resolved`, the then( ) method is called after the Promise is resolved, then we can decide what to do with the resolved Promise. <br/>
+(2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method.
+(3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`.
+(4) all() : Creates a new Promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned Promise will be rejected immediately and will provide the value of the Promise that was rejected. 
+(5) Keep waiting wen during pending.  
 ```
 myPromise.then((message) => { 
     console.log(message);
@@ -53,7 +55,7 @@ myPromise.then((message) => {
 });
 ```
 
-> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/)
+> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/)
 <br/><br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
