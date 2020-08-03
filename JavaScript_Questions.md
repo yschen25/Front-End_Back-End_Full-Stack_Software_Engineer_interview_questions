@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-❗ 2. Explain What Is Promise?
+2. Explain What Is Promise?
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -42,7 +42,7 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - How to deal with states :  <br/>
-(1) then( )  : If the Promise gets `resolved`, the then( ) method is called after the Promise is resolved, then we can decide what to do with the resolved Promise. <br/>
+(1) then( )  : If the Promise gets `resolved`, the then( ) method is called after the Promise is resolved, then we can decide what to do with the resolved Promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
 (2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method.
 (3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`.
 (4) all() : Creates a new Promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned Promise will be rejected immediately and will provide the value of the Promise that was rejected. 
@@ -55,7 +55,7 @@ myPromise.then((message) => {
 });
 ```
 
-> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/)
+> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
 <br/><br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
@@ -105,10 +105,15 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-❗ 8. Explan What Is Async/Await?
-
-> - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html
-)
+8. Explan What Is Async/Await?
+> - Async and await is syntactics Sugar for promises in javaScript
+> - A JavaScript async function can contain statements preceded by an await operator. 
+> - The async functions return a promise.
+> - At an await expression, the execution of the async function is paused and waits for the operand promise to resolve. 
+> - The await operator returns the promise’s resolved value. 
+> - An await operand can only be used inside an async function.
+> - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
+](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
 <br/><br/>
 
 :white_check_mark: 9. Explan What Is Hoisting?
