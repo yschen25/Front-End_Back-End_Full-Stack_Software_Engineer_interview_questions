@@ -206,6 +206,49 @@ test()
 <br/>
 
 ❗ 12. Explan What Is "this"?
+> - In an object method, this refers to the "owner" of the method.
+```
+var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                console.log(this.firstName + " " + this.lastName); // John Doe
+            }
+        };
+        
+person.fullName()
+```
+
+> - When used alone, the owner is the Global object, so this refers to the Global object.
+```
+var x = this;
+console.log(x) // [object Window]
+```
+> - In a JavaScript function(default), the owner of the function is the default binding for this.
+```
+function myFunction() {
+  return this;
+}
+
+myFunction() // [object Window]
+```
+
+> - In a JavaScript function(strict), strict mode does not allow default binding, So in strict mode is undefined.
+```
+"use strict";
+function myFunction() {
+  return this;
+}
+myFunction() // undifined
+```
+
+> - In HTML event handlers, this refers to the HTML element that received the event.
+```
+<button onclick="this.style.display='none'">Click to Remove Me!</button>
+// The button will disappear when click the button
+```
+
 <br/><br/>
 
 :white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
