@@ -205,7 +205,7 @@ test()
 ```
 <br/>
 
-❗ 12. Explan What Is "this"?
+12. Explan What Is "this"?
 > - In an `object method`, this refers to the "owner" of the method.
 ```
 function callName() {
@@ -310,7 +310,7 @@ func.bind(obj)();  // 123
 ```
 <br/>
 
-> - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/)
+> - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
 
 :white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
