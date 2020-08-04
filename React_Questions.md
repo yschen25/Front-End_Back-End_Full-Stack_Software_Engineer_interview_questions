@@ -248,8 +248,7 @@ addCount = () => {
  (4) (Error Handling) : Occors javaScript errors. <br/>
 <br />
 
-**Mounting** :  <br/>
-
+**Mounting** : 
 (1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise ‘props’ will be undefined in the component. <br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway, to avoid unexpected behavior. If you’re using arrow functions in your component, then you don’t need to bind ‘this’ to the functions as it is already implicitly passed.
 ```
@@ -284,7 +283,7 @@ render() {
 (4) componentDidMount() : When your component is loaded in the DOM, this method is executed. Therefore, it makes this an ideal place to perform any API calls or make changes to the DOM. After executing once, it is not triggered again for the duration of the component’s life. <br/>
 You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/>
 
-**Updating** :  <br/>
+**Updating** :
 The modification phase can be triggered using three methods :  <br/>
 (1) Receiving new props  <br/>
 (2) Calling setState() and updating the state  <br/>
@@ -314,8 +313,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 ```
 <br/>
 
-**Unmounting** :  <br/>
-
+**Unmounting** : 
 (1) componentWillUnmount() : This method is called right before the component is unmounted from the DOM. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.
 ```
  componentWillUnmount(){
@@ -324,7 +322,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
  ```
  <br/>
 
-**Error Handling** :  <br/>
+**Error Handling** :
 (1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
