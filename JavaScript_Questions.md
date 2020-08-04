@@ -422,8 +422,6 @@ console.log(superSecret);
 17.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result ?
 > - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around. With the function hanging out, oh-so readily available, it could accidentally be invoked again. Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
 
-<br/>
-
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 <br/><br/>
 
