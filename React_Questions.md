@@ -240,7 +240,7 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-❗ 9. Explain The Life Cycle Of React.js ? <br/>
+9. Explain The Life Cycle Of React.js ? <br/>
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
  (1) Mounting : Means putting elements into the DOM. <br/>
  (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
