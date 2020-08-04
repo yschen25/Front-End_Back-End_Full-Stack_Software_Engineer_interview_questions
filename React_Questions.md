@@ -248,7 +248,7 @@ addCount = () => {
  (4) (Error Handling) : Occors javaScript errors. <br/>
 <br />
 
-- > **Mounting** :  <br/>
+**Mounting** :  <br/>
 
 (1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise ‘props’ will be undefined in the component. <br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway, to avoid unexpected behavior. If you’re using arrow functions in your component, then you don’t need to bind ‘this’ to the functions as it is already implicitly passed.
@@ -261,6 +261,7 @@ constructor(props){
         this.updateName = this.updateName.bind(this);
     }
 ```
+<br/>
 
 (2) getDerivedStateFromProps() : The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM, and is executed every time the component updates, including the initial render. It is usually used to set the initial state depending on the props passed to the component.
 ```
@@ -270,6 +271,7 @@ constructor(props){
         }
     }
 ```
+<br/>
 
 (3) render() : The render method is the only required method in a component. It is responsible for rendering the JSX into the DOM. If using conditional rendering, some simple logic can be applied inside this method, such as a ternary operator or pure functions.
 ```
@@ -277,11 +279,12 @@ render() {
     return <div>My Component</div>;
   }
 ```
+<br/>
 
 (4) componentDidMount() : When your component is loaded in the DOM, this method is executed. Therefore, it makes this an ideal place to perform any API calls or make changes to the DOM. After executing once, it is not triggered again for the duration of the component’s life. <br/>
 You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/>
 
-- > **Updating** :  <br/>
+**Updating** :  <br/>
 The modification phase can be triggered using three methods :  <br/>
 (1) Receiving new props  <br/>
 (2) Calling setState() and updating the state  <br/>
@@ -295,6 +298,7 @@ shouldComponentUpdate(nextProps, nextState){
     if(this.state.name === nextState.name) { return false; }
   }
 ```
+<br/>
 
 (3) render() : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/><br/>
 
@@ -308,8 +312,9 @@ componentDidUpdate(prevProps, prevState, snapshot) {
       }
   }
 ```
+<br/>
 
-- > **Unmounting** :  <br/>
+**Unmounting** :  <br/>
 
 (1) componentWillUnmount() : This method is called right before the component is unmounted from the DOM. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.
 ```
@@ -317,14 +322,16 @@ componentDidUpdate(prevProps, prevState, snapshot) {
       this.clearInterval(this.timer);
   }
  ```
+ <br/>
 
-- > **Error Handling** :  <br/>
+**Error Handling** :  <br/>
 (1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
     return { error: error.message };
   }
 ```
+<br/>
 
 (2) componentDidCatch() : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
 ```
@@ -332,6 +339,7 @@ componentDidCatch(error, info) {
     this.logError(error, info);
   }
 ```
+<br/>
 
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 <br/><br/>
