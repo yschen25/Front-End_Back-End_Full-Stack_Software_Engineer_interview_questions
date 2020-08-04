@@ -206,26 +206,32 @@ test()
 <br/>
 
 ❗ 12. Explan What Is "this"?
-> - In an object method, this refers to the "owner" of the method.
+> - In an `object method`, this refers to the "owner" of the method.
 ```
-var person = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-            fullName: function () {
-                console.log(this.firstName + " " + this.lastName); // John Doe
-            }
-        };
-        
-person.fullName()
-```
+function callName() {
+  console.log(this.name);
+}
 
-> - When used alone, the owner is the Global object, so this refers to the Global object.
+var name = 'Joe';
+var girl = {
+  name: 'Amy',
+  callName: callName  
+}
+
+callName()      // Joe
+girl.callName() // Amy
+
+```
+<br/>
+
+> - When `used alone`, the owner is the Global object, so this refers to the Global object.
 ```
 var x = this;
 console.log(x) // [object Window]
 ```
-> - In a JavaScript function(default), the owner of the function is the default binding for this.
+<br/>
+
+> - In a JavaScript `function(default)`, the owner of the function is the default binding for this.
 ```
 function myFunction() {
   return this;
@@ -233,8 +239,9 @@ function myFunction() {
 
 myFunction() // [object Window]
 ```
+<br/>
 
-> - In a JavaScript function(strict), strict mode does not allow default binding, So in strict mode is undefined.
+> - In a JavaScript `function(strict)`, strict mode does not allow default binding, So in strict mode is undefined.
 ```
 "use strict";
 function myFunction() {
@@ -242,13 +249,68 @@ function myFunction() {
 }
 myFunction() // undifined
 ```
+<br/>
 
-> - In HTML event handlers, this refers to the HTML element that received the event.
+> - In HTML `event handlers`, this refers to the HTML element that received the event.
 ```
 <button onclick="this.style.display='none'">Click to Remove Me!</button>
 // The button will disappear when click the button
 ```
+<br/>
 
+> - Use `another variable` to temp save this.
+```
+el.addEventListener("click", function(event) {
+  var that = this;
+  console.log( this.textContent );
+
+  $ajax('[URL]', function(res) {
+    // this.textContent => undefined
+    console.log(that.textContent, res);
+  });
+
+}, false);
+```
+<br/>
+
+> - Use `call()` to execute the function.
+```
+var person = {
+  name: "Kuro",
+  hello: function(thing, whom) {
+    console.log(this.name + " says " + thing + " to " + whom);
+  }
+}
+
+var person2 = {
+  name: "Jack"
+};
+
+person.hello("love you", "Amy");                 // Kuro says love you to Amy
+person.hello.call(person, 'love you', 'Amy')     // Kuro says love you to Amy
+person.hello.apply(person, ["love you", "Amy"]); // Kuro says love you to Amy
+
+person.hello.call(person2, "miss you", "Amy");    // Jack says miss you to Amy
+person.hello.apply(person2, ["miss you", "Amy"]); // Jack says miss you to Amy
+```
+<br/>
+
+> - Use `bind()` to creates a new function that will force the this inside the function to be the parameter passed to bind().
+```
+var obj = {
+  x: 123
+};
+
+var func = function () {
+  console.log(this.x);
+};
+
+func();            // undefined
+func.bind(obj)();  // 123
+```
+<br/>
+
+> - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/)
 <br/><br/>
 
 :white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
