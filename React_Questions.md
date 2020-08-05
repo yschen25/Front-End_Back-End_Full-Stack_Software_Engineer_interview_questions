@@ -204,9 +204,11 @@ constructor(props) {
         });
     }
 ```
+<br/>
+
 > - Bind in render : https://jsfiddle.net/yschen25/otd36q24/
 ```
-Example : Using bind in render (bind in required)
+Example : Using class function (bind is required in render)
 
 addCount() {
         this.setState({
@@ -223,6 +225,7 @@ addCount() {
         )
     }
 ```
+<br/>
 
 > - Use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
 ```
@@ -533,7 +536,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/>
 (1) useState() : Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
 Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
-Example : Befer hook https://jsfiddle.net/yschen25/8tp16wcy/, After hook https://codesandbox.io/s/reacthookfunctionalcomponent-u65hn?file=/src/App.js
+Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)
 <br/><br/>
 
 (2) useEffect() :  <br/>
