@@ -231,9 +231,9 @@ addCount = () => {
     });
 ```
 <br/>
-> - ??? Functional component + hook
+> - ❗  Functional component + hook
 
-<br>
+<br/><br/><br/>
 
 8.2 Why We Don't Need Bind Arrow Function ?
 > - Arrow function does not have the following in its context : this, arguments, super and new.target. So when you reference this inside an arrow function it treat this as any other variable and look for its declaration in its scope first and it can not find it so it search the upper scope which is the this referring to the react component class which what is required so we do not need to bind the this to the class.
