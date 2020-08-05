@@ -526,8 +526,23 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-❗ 17. Explain What Is Hook And How To Use It (State Hook, Effect Hook, Customized Hook) ?
-> - Related Reference : [使用 State Hook](https://zh-hant.reactjs.org/docs/hooks-state.html), [Hook 概觀](https://zh-hant.reactjs.org/docs/hooks-overview.html), [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React 16.7 的 Hooks 為何讓人眼睛一亮](https://blog.yoctol.com/react-16-7-%E7%9A%84-hooks-%E7%82%BA%E4%BD%95%E8%AE%93%E4%BA%BA%E7%9C%BC%E7%9D%9B%E4%B8%80%E4%BA%AE-17796bd4e63d)
+❗ 17. Explain What Is Hook And How To Use It ?
+> - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
+> - If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component.
+> - Hooks don’t work inside classes.
+> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/>
+(1) useState() : Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
+Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
+Example : Befer hook https://jsfiddle.net/yschen25/8tp16wcy/, After hook https://codesandbox.io/s/reacthookfunctionalcomponent-u65hn?file=/src/App.js
+<br/><br/>
+
+(2) useEffect() :  <br/>
+(3) useContext() :  <br/>
+(4) useReducer() :  <br/>
+> - Custom React Hooks
+
+
+> - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45)
 <br/><br/>
 
 ❗ 18. What Are Higher Order Components(HOC) ?
