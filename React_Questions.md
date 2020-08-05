@@ -533,7 +533,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
 > - If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component.
 > - Hooks don’t work inside classes.
-> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/>
+> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
 (1) useState() : Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
 Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
 Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)
@@ -545,7 +545,7 @@ Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (http
 > - Custom React Hooks
 
 
-> - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45)
+> - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [Getting Started With The React Hooks API](https://www.smashingmagazine.com/2020/04/react-hooks-api-guide/)
 <br/><br/>
 
 ❗ 18. What Are Higher Order Components(HOC) ?
