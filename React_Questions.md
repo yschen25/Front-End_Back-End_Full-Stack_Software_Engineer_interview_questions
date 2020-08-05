@@ -187,11 +187,9 @@
 <br/><br/>
 
 8.1 How To Bind The Function ?
-> - Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
+> - Class component : Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
 
 ```
-Example : Using class function (bind is required in constructor)
-
 constructor(props) {
         super(props);
         this.state = {count: 0};
@@ -206,10 +204,8 @@ constructor(props) {
 ```
 <br/>
 
-> - Bind in render : https://jsfiddle.net/yschen25/otd36q24/
+> -  Class component : Bind in render : https://jsfiddle.net/yschen25/otd36q24/
 ```
-Example : Using class function (bind is required in render)
-
 addCount() {
         this.setState({
             count: this.state.count + 1
@@ -227,16 +223,17 @@ addCount() {
 ```
 <br/>
 
-> - Use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
+> -  Class component : use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
 ```
-Example : Using arrow function (No bind in required)
-
 addCount = () => {
     this.setState({ 
         count: this.state.count + 1 
     });
 ```
 <br/>
+> - ??? Functional component + hook
+
+<br>
 
 8.2 Why We Don't Need Bind Arrow Function ?
 > - Arrow function does not have the following in its context : this, arguments, super and new.target. So when you reference this inside an arrow function it treat this as any other variable and look for its declaration in its scope first and it can not find it so it search the upper scope which is the this referring to the react component class which what is required so we do not need to bind the this to the class.
