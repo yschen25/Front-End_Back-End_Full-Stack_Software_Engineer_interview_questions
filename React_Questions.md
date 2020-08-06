@@ -533,19 +533,19 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 17.1 What Is Side Effects ?
-> -we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
+> - we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
 <br/><br/>
 
 17.2 And How To Use Hook ?
 > - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
 <br/><br/>
 
-1. useState() : 
+1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
 (3) Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)<br/>
 
-2. useEffect() : 
+2. useEffect() : <br/>
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 (2) There are two arguments that are passed to useEffect(), useEffect(callback, array)
 
