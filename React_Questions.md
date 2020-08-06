@@ -536,10 +536,45 @@ Receives an initial state as an argument and then returns, by making use of arra
 Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)
 <br/><br/>
 
-(2) useEffect() :  <br/>
+(2) useEffect() : Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+
+There are two arguments that are passed to useEffect(), useEffect(callback, array)
+
+① An anonymous callback function that houses your useEffect logic. This logic is executed based upon how you set up useEffect() to run.
+```
+useEffect(() => {
+    console.log('This is like componentDidMount')
+    
+    return () => {
+      console.log('This is like componentWillUnmount') // clear something
+    };
+  });
+```
+
+② The second is an array that takes in comma-delimited variables called the dependency list. This is how you change the way useEffect() operates.
+
+ - Running an effect once (componentDidMount) : The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. The key to running an effect once is to pass in an empty array. <br/>
+```
+useEffect(() => {
+	console.log('This only runs once');
+}, []);
+```
+
+ - Using effects when things change (componentDidUpdate) : 
+```
+useEffect(() => {
+	console.log('This is like componentDidUpdate, I will be triger whenever count state change')
+ }, [count]);
+```
+
 (3) useContext() :  <br/>
 (4) useReducer() :  <br/>
 > - Custom React Hooks
+
+
+
+❗ 17.1 What Is Side Effects ?
+> -we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
 
 
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [Getting Started With The React Hooks API](https://www.smashingmagazine.com/2020/04/react-hooks-api-guide/)
