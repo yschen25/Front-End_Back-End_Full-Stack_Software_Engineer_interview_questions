@@ -538,7 +538,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 17.2 And How To Use Hook ?
 > - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
-<br/><br/>
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
@@ -559,7 +558,8 @@ useEffect(() => {
     };
   });
 ```
-
+<br/>
+ 
 ② The second is an array that takes in comma-delimited variables called the dependency list. This is how you change the way useEffect() operates.
 
  - Running an effect once (componentDidMount) : The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. The key to running an effect once is to pass in an empty array. <br/>
@@ -568,6 +568,7 @@ useEffect(() => {
 	console.log('This only runs once');
 }, []);
 ```
+<br/>
 
  - Using effects when things change (componentDidUpdate) : 
 ```
@@ -575,7 +576,8 @@ useEffect(() => {
 	console.log('This is like componentDidUpdate, I will be triger whenever count state change')
  }, [count]);
 ```
-
+<br/>
+ 
 3. useContext() :  <br/>
 4. useReducer() :  <br/>
 5. Custom React Hooks  <br/>
