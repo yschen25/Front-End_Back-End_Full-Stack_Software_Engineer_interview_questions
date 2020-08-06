@@ -577,7 +577,9 @@ useEffect(() => {
  }, [count]);
 ```
 <br/>
- 
+
+(3) Example : https://tinyurl.com/y6yb643h <br/>
+
 3. useContext() :  <br/>
 4. useReducer() :  <br/>
 5. Custom React Hooks  <br/>
