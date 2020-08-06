@@ -526,19 +526,28 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-❗ 17. Explain What Is Hook And How To Use It ?
+17. Explain What Is Hook ?
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
 > - If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component.
 > - Hooks don’t work inside classes.
-> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
-(1) useState() : Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
-Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
-Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)
+<br/>
+
+17.1 What Is Side Effects ?
+> -we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
 <br/><br/>
 
-(2) useEffect() : Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+17.2 And How To Use Hook ?
+> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
+<br/><br/>
 
-There are two arguments that are passed to useEffect(), useEffect(callback, array)
+1. useState() : 
+(1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
+(2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
+(3) Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)<br/>
+
+2. useEffect() : 
+(1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+(2) There are two arguments that are passed to useEffect(), useEffect(callback, array)
 
 ① An anonymous callback function that houses your useEffect logic. This logic is executed based upon how you set up useEffect() to run.
 ```
@@ -567,18 +576,14 @@ useEffect(() => {
  }, [count]);
 ```
 
-(3) useContext() :  <br/>
-(4) useReducer() :  <br/>
-> - Custom React Hooks
-
-
-
-❗ 17.1 What Is Side Effects ?
-> -we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
+3. useContext() :  <br/>
+4. useReducer() :  <br/>
+5. Custom React Hooks  <br/>
 
 
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [Getting Started With The React Hooks API](https://www.smashingmagazine.com/2020/04/react-hooks-api-guide/)
 <br/><br/>
+
 
 ❗ 18. What Are Higher Order Components(HOC) ?
 <br/><br/>
