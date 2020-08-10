@@ -537,7 +537,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 17.2 And How To Use Hook ?
-> - These are the 4 basic hooks that are commonly used : useState(), useEffect(), useContext(), useReducer() <br/><br/>
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
@@ -582,6 +581,7 @@ useEffect(() => {
 
 3. useContext() :  <br/>
 (1) The React Context API is a simple, easy-to-understand alternative to “prop-drilling” up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
+(2) React’s Context API, it’s a way to pass data deeply throughout your app without having to manually pass props down through multiple levels. It can be a good alternative to tools like Redux, now we have useContext. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4
 
 4. Custom React Hooks : <br/>
 (1) These are normal javascript functions which can use other hooks inside of it and contain a common stateful logic that can be reused within multiple components, these functions are prefixed with the word use.
