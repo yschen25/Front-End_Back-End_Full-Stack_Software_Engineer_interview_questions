@@ -399,9 +399,9 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-17. What Is IIFE(Immediately Invoked Function Expression)?
+:white_check_mark: 17. What Is IIFE(Immediately Invoked Function Expression)?
 > -  (pronounced 'iffy') Is a function defined as an expression and executed immediately after creation.
-> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. See the example : We can’t access the superSecret variable outside of the IIFE. All of the code within our IIFE stays within the private scope of our function.
+> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
 ```
 (function(){
     //...
@@ -409,7 +409,7 @@ null === undefined  // false
 ```
 <br/>
 
-> - Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
+> - See the example : We can’t access the superSecret variable outside of the IIFE. All of the code within our IIFE stays within the private scope of our function. Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
 ```
 (function(){
   var superSecret = 195;
@@ -419,7 +419,7 @@ console.log(superSecret);
 ```
 <br/>
 
-17.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result ?
+:white_check_mark: 17.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result ?
 > - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around. With the function hanging out, oh-so readily available, it could accidentally be invoked again. Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
 
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
@@ -436,9 +436,9 @@ console.log(superSecret);
 ](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
 <br/><br/>
 
-21. What Is Function Statements(Declaration) And Function Expressions?
+:white_check_mark: 21. What Is Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
-(1) A function created with a names. 
+(1) A function created with a name. 
 ```
 function statement(item) {
     console.log('Function statement example'+ item);
