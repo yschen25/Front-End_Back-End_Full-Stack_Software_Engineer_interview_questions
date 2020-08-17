@@ -27,7 +27,7 @@ const myPromise = new Promise((resolve, reject) => {
 > - A promise starts in the pending state which indicates that the promise hasn’t completed, it ends with either fulfilled (successful) or rejected (failed) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
 (1) Resolved: The state of a promise representing a successful operation. <br/>
 (2) Rejected: The state of a promise representing a failed operation. <br/>
-(3) Pending: Initial State, before the Promise succeeds or fails. <br/>
+(3) Pending: Initial state, before the promise succeeds or fails. <br/>
 
 ```
 const myPromise = new Promise((resolve, reject) => {  
