@@ -106,7 +106,7 @@ window.setTimeout( function(){ ... }, 1000);
 <br/><br/>
 
 8. Explan What Is Async/Await? (ref:2)
-> - Async and await is syntactics Sugar for promises in javaScript.
+> - Async and await is syntactic sugar for promises in javaScript.
 > - The async functions return a promise.
 > - At an await expression, the execution of the async function is paused and waits for the operand promise to resolve. 
 > - The await operator returns the promise’s resolved value. 
