@@ -437,19 +437,45 @@ console.log(superSecret);
 <br/><br/>
 
 21. What Is Function Statements(Declaration) And Function Expressions?
-> - **Function Statement** : A function created with a function declaration is a Function object and has all the properties, methods and behavior of Function objects. 
+> - **Function Statement** : <br/>
+(1) A function created with a names. 
 ```
-function statement(item){
+function statement(item) {
     console.log('Function statement example'+ item);
   }
 ```
 <br/>
 
-> - **Function Expression** : A function expression is similar to function statement except that function name can be omitted to create anonymous functions.
+(2) Function declarations are hoisted.
 ```
-var expression = function (item){
+callTest(); // 123
+
+function callTest(){
+	console.log(123);
+}
+
+callTest(); // 123
+```
+<br/>
+
+> - **Function Expression** :  <br/>
+(1) The name may be omitted in function expressions, making that function anonymous. <br/>
+```
+var expression = function(item) {
     console.log('Function expression example'+ item);
   }
+```
+<br/>
+
+(2) Function declarations are `not` hoisted.
+```
+callTest(); // callTest is not a function
+
+var callTest = function(){
+	console.log(123);
+}
+
+callTest(); // 123
 ```
 <br/>
 
