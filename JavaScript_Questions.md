@@ -42,11 +42,11 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - How to deal with states :  <br/>
-(1) then( )  : If the Promise gets `resolved`, the then( ) method is called after the Promise is resolved, then we can decide what to do with the resolved Promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
-(2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method.
-(3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`.
-(4) all() : Creates a new Promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned Promise will be rejected immediately and will provide the value of the Promise that was rejected. 
-(5) Keep waiting wen during pending.  
+(1) then( )  : If the promise gets `resolved`, the then( ) method is called after the promise is resolved, then we can decide what to do with the resolved promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
+(2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method. <br/>
+(3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`. <br/>
+(4) all() : Creates a new Promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned Promise will be rejected immediately and will provide the value of the Promise that was rejected.  <br/>
+(5) Keep waiting : During pending.  
 ```
 myPromise.then((message) => { 
     console.log(message);
