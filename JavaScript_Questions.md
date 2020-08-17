@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-2. Explain What Is Promise? (ref:8)
+:white_check_mark: 2. Explain What Is Promise? (ref:8)
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -45,7 +45,7 @@ const myPromise = new Promise((resolve, reject) => {
 (1) then( )  : If the promise gets `resolved`, the then( ) method is called after the promise is resolved, then we can decide what to do with the resolved promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
 (2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method. <br/>
 (3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`. <br/>
-(4) all() : Creates a new Promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned Promise will be rejected immediately and will provide the value of the Promise that was rejected.  <br/>
+(4) all() : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected.  <br/>
 (5) Keep waiting : During pending.  
 ```
 myPromise.then((message) => { 
@@ -105,7 +105,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-8. Explan What Is Async/Await? (ref:2)
+:white_check_mark: 8. Explan What Is Async/Await? (ref:2)
 > - Async and await is syntactic sugar for promises in javaScript.
 > - The async functions return a promise.
 > - At an await expression, the execution of the async function is paused and waits for the operand promise to resolve. 
