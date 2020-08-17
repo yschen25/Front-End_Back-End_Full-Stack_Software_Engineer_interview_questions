@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-2. Explain What Is Promise?
+2. Explain What Is Promise? (ref:8)
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -105,7 +105,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-8. Explan What Is Async/Await?
+8. Explan What Is Async/Await? (ref:2)
 > - Async and await is syntactics Sugar for promises in javaScript.
 > - The async functions return a promise.
 > - At an await expression, the execution of the async function is paused and waits for the operand promise to resolve. 
@@ -399,7 +399,7 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-:white_check_mark: 17. What Is IIFE(Immediately Invoked Function Expression)?
+:white_check_mark: 17. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
 > -  (pronounced 'iffy') Is a function defined as an expression and executed immediately after creation.
 > - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
 ```
