@@ -205,8 +205,8 @@ test()
 ```
 <br/>
 
-12. Explan What Is "this"?
-> - In an `object method`, this refers to the "owner" of the method.
+:white_check_mark: 12. Explan What Is "this"?
+> - In an `object method`, this refers to the `owner` of the method.
 ```
 function callName() {
   console.log(this.name);
@@ -224,14 +224,14 @@ girl.callName() // Amy
 ```
 <br/>
 
-> - When `used alone`, the owner is the Global object, so this refers to the Global object.
+> - When `used alone`, the owner is the `global object`, so this refers to the `global object`.
 ```
 var x = this;
 console.log(x) // [object Window]
 ```
 <br/>
 
-> - In a JavaScript `function(default)`, the owner of the function is the default binding for this.
+> - In a JavaScript `function(default)`, the owner of the function is the `default binding for this`.
 ```
 function myFunction() {
   return this;
@@ -260,14 +260,18 @@ myFunction() // undifined
 
 > - Use `another variable` to temp save this.
 ```
+let el = document.getElementById('app');
+
 el.addEventListener("click", function(event) {
   var that = this;
-  console.log( this.textContent );
+  console.log(this.textContent); // show the textcontent
 
-  $ajax('[URL]', function(res) {
-    // this.textContent => undefined
-    console.log(that.textContent, res);
-  });
+  innerFunc();
+
+  function innerFunc() {
+    console.log(this.textContent); // undefined
+    console.log(that.textContent); // show the textcontent
+  };
 
 }, false);
 ```
