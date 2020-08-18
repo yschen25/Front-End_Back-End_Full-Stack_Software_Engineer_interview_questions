@@ -429,18 +429,7 @@ console.log(superSecret);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 <br/><br/>
 
-❗ 18. What Is Prototype?
-<br/><br/>
-
-❗ 19. What Is Event Loop?
-<br/><br/>
-
-❗ 20. What Is Functional Programming?
-> - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
-](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
-<br/><br/>
-
-:white_check_mark: 21. What Is Function Statements(Declaration) And Function Expressions?
+:white_check_mark: 18. What Is Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
 (1) A function created with a name. 
 ```
@@ -486,10 +475,21 @@ callTest(); // 123
 > - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 <br/><br/>
 
-:white_check_mark: 22. What Is First Class Function?
+:white_check_mark: 19. What Is First Class Function?
 > - In JavaScript, functions are first-class objects, which means they can be : passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 > - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 <br/><br/>
 
-23. What Is Delegate?
+❗ 20. What Is Prototype?
+<br/><br/>
+
+❗ 21. What Is Event Loop?
+<br/><br/>
+
+❗ 22. What Is Functional Programming?
+> - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
+](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
+<br/><br/>
+
+❗ 23. What Is Delegate?
 <br/><br/>
