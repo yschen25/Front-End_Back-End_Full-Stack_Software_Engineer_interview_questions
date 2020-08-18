@@ -592,19 +592,13 @@ useEffect(() => {
 <br/><br/>
 
 
-❗ 18. What Are Higher Order Components(HOC) ?
-<br/><br/>
-
-❗ 19. What are Pure Components ? 
-<br/><br/>
-
-20. What Is The Difference Between React And React Native ?
+18. What Is The Difference Between React And React Native ?
 > - ReactJS is a JavaScript library, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - React Native is a mobile framework that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
-21. Explain The Controlled Components And Uncontrolled Components.
+19. Explain The Controlled Components And Uncontrolled Components.
 > - **Controlled Components** : <br/> 
 (1) In most cases, we recommend using controlled components to implement forms.  <br/> 
 (2) Controls the values of input elements in a form using setState(). <br/> 
@@ -625,7 +619,7 @@ useEffect(() => {
 (3) Easy to use with third party library. 
 <br/><br/>
 
-21.1 When Use Controlled Components Or Uncontrolled Components ?
+19.1 When Use Controlled Components Or Uncontrolled Components ?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
@@ -639,7 +633,7 @@ useEffect(() => {
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
-22. Why Do I Need Keys In React Lists ?
+20. Why Do I Need Keys In React Lists ?
 > - Keys help React identify which items have changed, are added, or are removed.
 > - React recommends that you do not use indexes as keys, since it could impact performance negatively and could lead to some unstable component behaviour.
 > - React does not automatically pass they key like a prop. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
@@ -655,9 +649,15 @@ const content = posts.map((post) =>
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 <br/><br/>
 
-22.1 What are some exceptions where it is safe to use index as key?
+20.1 What are some exceptions where it is safe to use index as key?
 > - If your list is static (no additions/re-ordering/removal to the list).
 > - The list will never be re-ordered.
 > - The list will not be filtered (adding/removing items from the list).
 > - There are no ids for the items in the list.
+<br/><br/>
+
+❗ 21. What Are Higher Order Components(HOC) ?
+<br/><br/>
+
+❗ 22. What are Pure Components ? 
 <br/><br/>
