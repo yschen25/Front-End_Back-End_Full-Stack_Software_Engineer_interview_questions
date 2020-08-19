@@ -89,7 +89,7 @@
 
 > - **Class Components** : <br/>
 (1) These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state. <br/>
-(2) Constructor is optional, add the constructor when you need to use state or binfd function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(2) Constructor is optional, add the constructor when you need to use state or bind function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
