@@ -80,7 +80,7 @@
 
 <br/>
 
-5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ?
+5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ? (ref:17)
 
 > - **Functional Components** : <br/>
 (1) These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties). <br/>
