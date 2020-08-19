@@ -67,16 +67,16 @@
 > - Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
 <br/><br/>
 
-4. What Is Virtual DOM ?
+:white_check_mark: 4. What Is Virtual DOM ?
 
 <p align="center">
 <img src="img/virtual_DOM2.jpg" alt="virtual DOM" title="virtual DOM" width="70%">
 <img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="55%">
 </p>
 
-> - If a developer uses JSX to manipulate and update its DOM, React JS creates something called a Virtual DOM. The Virtual DOM is a copy of the site’s DOM, and React JS uses this copy to see what parts of the actual DOM need to change when an event happens.
+> - If a developer uses JSX to manipulate and update its DOM, React.js creates Virtual DOM which is a copy of the site’s DOM, and React.js uses this copy to see what parts of the actual DOM need to change when an event happens.
 
-> - If you’re not using React JS (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since the entire DOM needs to reload every time the user clicks a feature calling for a page refresh.
+> - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since the entire DOM needs to reload every time the user clicks a feature calling for a page refresh.
 
 <br/>
 
