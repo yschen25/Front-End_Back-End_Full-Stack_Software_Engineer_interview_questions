@@ -49,7 +49,7 @@
 
 <br/>
 
-3. What Is JSX ?
+:white_check_mark: 3. What Is JSX ?
 > - JSX stands for JavaScript XML.
 > - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript.
 > - JSX as a syntax sugar for calling React.createElement().
@@ -63,7 +63,7 @@
  (6) CamelCase https://jsfiddle.net/yschen25/x2n3oc8y/11/ <br/>
 <br/><br/>
 
-3.1 Why Can’t Browsers Read JSX?
+:white_check_mark: 3.1 Why Can’t Browsers Read JSX?
 > - Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
 <br/><br/>
 
