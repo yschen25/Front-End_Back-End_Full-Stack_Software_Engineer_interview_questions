@@ -1,7 +1,7 @@
-:white_check_mark: ## React Questions
+## React Questions
 <br/>
 
-1. What Is And When Use React.js ?
+:white_check_mark: 1. What Is And When Use React.js ?
 > - React is a front-end JavaScript library for building user interfaces which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - Build a huge website which includes complicated events and status change instead of buliding a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
