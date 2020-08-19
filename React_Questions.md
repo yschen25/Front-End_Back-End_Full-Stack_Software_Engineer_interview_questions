@@ -1,13 +1,13 @@
-## React Questions
+:white_check_mark: ## React Questions
 <br/>
 
-1. What Is React.js ?
+1. What Is And When Use React.js ?
 > - React is a front-end JavaScript library for building user interfaces which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - Build a huge website which includes complicated events and status change instead of buliding a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/>
 
-1.2 What Is Features Of React.js ?
+:white_check_mark: 1.2 What Is Features Of React.js ?
 > - Only the View of MVC.
 > - JSX.
 > - Virtual DOM.
@@ -15,7 +15,7 @@
 > - Components based.
 <br/>
 
-1.3 What Is Strength And Weakness Of React.js ?
+:white_check_mark: 1.3 What Is Strength And Weakness Of React.js ?
 > - **Strength** :  <br/>
 (1) Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 (2) It follows the component based approach which helps in building reusable UI components.  <br/>
@@ -33,14 +33,14 @@
 
 <br/>
 
-2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+:white_check_mark: 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
 | Syntax | ES6 | ES5, ES6 | TypeScript |
 | Architecture | Only the View of MVC | MVVM | Complete MVC |
 | Rendering | Server-side rendering | Client-side rendering | Client-side rendering |
-| DOM | virtual DOM | virtual DOM | Uses real DOM |
+| DOM | Virtual DOM | Virtual DOM | Real DOM |
 | Data Binding | One-way data binding | Two-way data binding | Two-way data binding |
 | Author | Facebook | Former google employee | Google |
 | When Use | • Your project can accept reusable components.  <br/> • Your project’s front-end is not too complex.  <br/> • The performance and scalability are critical.  <br/> • You have tight deadlines.  <br/> | • Your project scope is on the small side.  <br/> • You need high performance.  <br/> • You have no skilled front-end developers but have team members with JavaScript knowledge.  <br/> • You do not have much time to learn a new technology.  <br/> | • You are about to develop a very large and complex project. <br/> • You need easy and reliable scalability. <br/> • You have Angular developers on your team. <br/>   • You can afford some time for learning TypeScript before the project starts |
