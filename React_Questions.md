@@ -80,7 +80,7 @@
 
 <br/>
 
-5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ? (ref:17)
+:white_check_mark: 5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ? (ref:17)
 
 > - **Functional Components** : <br/>
 (1) These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties). <br/>
@@ -89,12 +89,12 @@
 
 > - **Class Components** : <br/>
 (1) These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state. <br/>
-(2) Constructor is optional, add the constructor when you need to use state or bind function. In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(2) Constructor is optional, add the constructor when you need to use state or bind function. (If use functional + hook or arrow function then don't need bind function) In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
 
-5.2 What Is The Difference Between Functional Components And Class Components ?
+:white_check_mark: 5.1 What Is The Difference Between Functional Components And Class Components ?
 
 |  Functional Components | Class Components |
 |---|---|
@@ -105,7 +105,7 @@
 
 <br/>
 
-5.3 When Use Functional Components And Class Components ?
+:white_check_mark: 5.2 When Use Functional Components And Class Components ?
 
 > - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
