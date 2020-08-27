@@ -150,23 +150,23 @@
 
 <br/>
 
-7. What Is State ?
+:white_check_mark:7. What Is State ?
 > - The state is a data structure that starts with a default value when a Component mounts.
 > - A component’s state can change over time; whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes determine the behavior of the component and how it will render.  
 > - Example : https://jsfiddle.net/yschen25/wc1qapz2/14/
 <br/>
 
-7.1 When Use State ?
+:white_check_mark:7.1 When Use State ?
 > - To store the data your current page needs in your controller-view.
 <br/><br/>
 
-7.2 How To Change State ?
-> - State of a component can be updated using this.setState().
+:white_check_mark:7.2 How To Change State ?
+> - State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
 <br/><br/>
 
-7.3 What Is The Difference Between Props And Status ?
+:white_check_mark:7.3 What Is The Difference Between Props And Status ?
 
 |  Conditions | State | Props |
 |---|---|---|
