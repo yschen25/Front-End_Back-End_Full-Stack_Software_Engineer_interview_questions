@@ -205,11 +205,11 @@ constructor(props) {
     }
     
     render() {
-    		return(
-        		<div>
-        		  <button onClick={this.addCount}>Click Me!</button>
-              <h1>{this.state.count}</h1>
-        		</div>
+    		return (
+		    <div>
+			<button onClick={this.addCount}>Click Me!</button>
+			<h1>{this.state.count}</h1>
+		    </div>
         )
     }
 ```
