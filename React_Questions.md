@@ -123,7 +123,7 @@
 
 <br/>
 
-6. What Is Props ?
+:white_check_mark: 6. What Is Props ?
 > - Props is the shorthand for Properties. props data is read-only, which means that data coming from the parent should not be changed by child components.
 > - They are always passed down from the parent to the child components in a uni-directional flow, a child component can never send a prop back to the parent component.
 > - Props form the parent to the child components will cause child components re-render.
@@ -133,18 +133,18 @@
     (2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
 <br/><br/>
 
-6.1 When Use Props ?
+:white_check_mark: 6.1 When Use Props ?
 > - To pass data & event handlers down to your child components.
 > - If you don't have to use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
-6.2 What Is PropTypes And DefaultProps ?
+:white_check_mark: 6.2 What Is PropTypes And DefaultProps ?
 > - PropTypes : A typechecking tool to make sure the data is valid, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
 > - DefaultProps : You can define default values for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
 
-6.3 How To Solve Props Hell (Wrapper Hell) ?
+:white_check_mark: 6.3 How To Solve Props Hell (Wrapper Hell) ?
 > - Redux.
 > - Functional components + hook. 
 
