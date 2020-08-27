@@ -203,6 +203,15 @@ constructor(props) {
             count: this.state.count + 1
         });
     }
+    
+    render() {
+    		return(
+        		<div>
+        		  <button onClick={this.addCount}>Click Me!</button>
+              <h1>{this.state.count}</h1>
+        		</div>
+        )
+    }
 ```
 <br/>
 
