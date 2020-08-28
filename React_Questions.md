@@ -596,7 +596,7 @@ useEffect(() => {
 (2) React’s Context API, it’s a way to pass data deeply throughout your app without having to manually pass props down through multiple levels. It can be a good alternative to tools like Redux, now we have useContext. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4
 
 4. Custom React Hooks : <br/>
-(1) These are normal javascript functions which can use other hooks inside of it and contain a common stateful logic that can be reused within multiple components, these functions are prefixed with the word use.
+(1) Custom hooks allow you to create functionality that can be reused across different components.
 
 
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
