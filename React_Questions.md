@@ -540,12 +540,12 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 17. Explain What Is Hook ?
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
-> - If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component.
+> - If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
 17.1 What Is Side Effects ?
-> - we cannot be sure what the result of the action will be. We can never be 100% certain what props we are going to receive, or what the response from an API call would be. And, we cannot be sure how this will affect our component.
+> - Side effects are all the operations that affect your component and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
 17.2 And How To Use Hook ?
