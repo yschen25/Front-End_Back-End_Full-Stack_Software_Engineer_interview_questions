@@ -257,11 +257,11 @@ addCount = () => {
  (1) Mounting : Means putting elements into the DOM. <br/>
  (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
  (3) Unmounting : When a component is removed from the DOM. <br/>
- (4) (Error Handling) : Occors javaScript errors. <br/>
+ (4) (Error Handling) : Occurs javaScript errors. <br/>
 <br/>
 
 **Mounting** : <br/>
-(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise ‘props’ will be undefined in the component. <br/>
+(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway, to avoid unexpected behavior. If you’re using arrow functions in your component, then you don’t need to bind ‘this’ to the functions as it is already implicitly passed.
 ```
 constructor(props){
