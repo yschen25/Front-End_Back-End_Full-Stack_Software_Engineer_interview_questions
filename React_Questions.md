@@ -150,17 +150,17 @@
 
 <br/>
 
-:white_check_mark:7. What Is State ?
+:white_check_mark: 7. What Is State ?
 > - The state is a data structure that starts with a default value when a Component mounts.
 > - A component’s state can change over time; whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes determine the behavior of the component and how it will render.  
 > - Example : https://jsfiddle.net/yschen25/wc1qapz2/14/
 <br/>
 
-:white_check_mark:7.1 When Use State ?
+:white_check_mark: 7.1 When Use State ?
 > - To store the data your current page needs in your controller-view.
 <br/><br/>
 
-:white_check_mark:7.2 How To Change State ?
+:white_check_mark: 7.2 How To Change State ?
 > - State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
@@ -524,7 +524,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Install @testing-library/react-hooks to test hooks.
 <br/><br/>
 
-15. Refs
+:white_check_mark: 15. Refs
 > - Refs is the short hand for References in React. The ref is used to return a reference to the element. 
 > - Use state and props to manage components instead using refs.
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
@@ -533,7 +533,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
-16. How To Use Arrow Function In The Class Components? (ref : 8)
+:white_check_mark: 16. How To Use Arrow Function In The Class Components? (ref : 8)
 > - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
@@ -604,7 +604,7 @@ useEffect(() => {
 <br/><br/>
 
 
-18. What Is The Difference Between React And React Native ?
+:white_check_mark: 18. What Is The Difference Between React And React Native ?
 > - ReactJS is a JavaScript library, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - React Native is a mobile framework that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
