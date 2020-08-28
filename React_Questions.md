@@ -610,11 +610,12 @@ useEffect(() => {
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
-19. Explain The Controlled Components And Uncontrolled Components.
+:white_check_mark: 19. Explain The Controlled Components And Uncontrolled Components.
 > - **Controlled Components** : <br/> 
-(1) In most cases, we recommend using controlled components to implement forms.  <br/> 
-(2) Controls the values of input elements in a form using setState(). <br/> 
-(3) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
+(1) Ｃontrol by status or props.
+(2) In most cases, we recommend using controlled components to implement forms.  <br/> 
+(3) Controls the values of input elements in a form using setState(). <br/> 
+(4) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
@@ -631,7 +632,7 @@ useEffect(() => {
 (3) Easy to use with third party library. 
 <br/><br/>
 
-19.1 When Use Controlled Components Or Uncontrolled Components ?
+:white_check_mark: 19.1 When Use Controlled Components Or Uncontrolled Components ?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
