@@ -242,6 +242,7 @@ addCount = () => {
     });
 ```
 <br/>
+
 > - Functional component + hook
 
 <br/><br/><br/>
