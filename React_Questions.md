@@ -538,17 +538,17 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-17. Explain What Is Hook ?
+:white_check_mark: 17. Explain What Is Hook ?
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
 > - If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
-17.1 What Is Side Effects ?
+:white_check_mark: 17.1 What Is Side Effects ?
 > - Side effects are all the operations that affect your component and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
-17.2 And How To Use Hook ?
+:white_check_mark: 17.2 And How To Use Hook ?
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
