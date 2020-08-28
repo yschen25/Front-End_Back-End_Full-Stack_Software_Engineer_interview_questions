@@ -644,7 +644,7 @@ useEffect(() => {
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
-20. Why Do I Need Keys In React Lists ?
+:white_check_mark: 20. Why Do I Need Keys In React Lists ?
 > - Keys help React identify which items have changed, are added, or are removed.
 > - React recommends that you do not use indexes as keys, since it could impact performance negatively and could lead to some unstable component behaviour.
 > - React does not automatically pass they key like a prop. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
@@ -660,7 +660,7 @@ const content = posts.map((post) =>
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 <br/><br/>
 
-20.1 What are some exceptions where it is safe to use index as key?
+:white_check_mark: 20.1 What Are Some Exceptions Where It Is Safe To Use Index As Key?
 > - If your list is static (no additions/re-ordering/removal to the list).
 > - The list will never be re-ordered.
 > - The list will not be filtered (adding/removing items from the list).
