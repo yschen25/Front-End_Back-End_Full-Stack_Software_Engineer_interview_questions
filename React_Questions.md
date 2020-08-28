@@ -245,7 +245,7 @@ addCount = () => {
 
 > - Functional component + hook
 
-<br/><br/><br/>
+<br/><br/>
 
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
 > - A benefit of using arrow functions is that this is already bound to that function so we don’t need to specify that anywhere else.
