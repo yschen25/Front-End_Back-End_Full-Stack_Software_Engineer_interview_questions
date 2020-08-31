@@ -389,10 +389,10 @@ componentDidCatch(error, info) {
 <br/>
 
 > - **Flux pattern pre-processing**： <br/>
-(1) Stores register callback to Dispatcher，notify Stores when data changes. <br/>
-(2) Views get inital data from Stores. <br/>
-(3) Views gives data to Views to render UI. <br/>
-(4) Views register listener to Store, notify Controller Views when data changes.
+(1) Stores register callback to Dispatcher, notify Stores when data changes. <br/>
+(2) Controller Views get inital data from Stores. <br/>
+(3) Controller Views gives data to Views to render UI. <br/>
+(4) Controller Views register listener to Store, notify Controller Views when data changes.
 <br/>
 
 > - **Flux interactive with users**： <br/>
