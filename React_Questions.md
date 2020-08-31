@@ -252,7 +252,7 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-9. Explain The Life Cycle Of React.js ? <br/>
+:white_check_mark: 9. Explain The Life Cycle Of React.js ? <br/>
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
  (1) Mounting : Means putting elements into the DOM. <br/>
  (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
@@ -300,7 +300,7 @@ You can use setState() here to modify the state, which is commonly done when dat
 The modification phase can be triggered using three methods :  <br/>
 (1) Receiving new props  <br/>
 (2) Calling setState() and updating the state  <br/>
-(3) Using this.forceUpdate  <br/>
+(3) Using this.forceUpdate  <br/><br/>
 
 (1) getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/><br/>
 
