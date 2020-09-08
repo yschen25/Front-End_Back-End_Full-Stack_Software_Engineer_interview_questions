@@ -453,14 +453,15 @@ componentDidCatch(error, info) {
 (3) subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed.
 <br/>
 
-> - **Combine with React-Redux**
+> - **Combine with React-Redux** <br/>
 (1) Provider : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
 (2) Connect : The connect() function connects a React component to a Redux store. <br/>
+(3) mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.  <br/>
+(4) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
 ```
 function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
 ```
-(3) mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.  <br/>
-(4) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
+
 <br/>
 
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
