@@ -367,7 +367,7 @@ componentDidCatch(error, info) {
 (8) Client side support for protecting against XSRF
 <br/><br/>
 
-11. What Is Flux ?
+:small_red_triangle: 11. What Is Flux ?
 
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
@@ -405,7 +405,7 @@ componentDidCatch(error, info) {
 > - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 <br/><br/>
 
-11.1 What Are The Strengths And Weaknesses Of Flux?
+:small_red_triangle: 11.1 What Are The Strengths And Weaknesses Of Flux?
 > - **Strengths** :  <br/>
 (1) The code becomes quite clear and easy to understand. <br/>
 (2) Easily testable using Unit Test. <br/>
@@ -445,7 +445,7 @@ componentDidCatch(error, info) {
 **(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
-12.2 How To Use Redux ?
+:white_check_mark: 12.2 How To Use Redux ?
 
 > - **Store Methods** <br/>
 **(1) getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
@@ -480,7 +480,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
 <br/><br/>
 
-12.2 What Are The Strengths And Weaknesses Of Redux?
+:white_check_mark: 12.2 What Are The Strengths And Weaknesses Of Redux?
 
 > - **Strengths** : <br/>
 (1) Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
@@ -497,7 +497,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
-12.3 What is Redux Different From Flux?
+:white_check_mark: 12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
