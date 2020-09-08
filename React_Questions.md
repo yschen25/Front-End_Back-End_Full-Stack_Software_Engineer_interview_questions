@@ -440,21 +440,21 @@ componentDidCatch(error, info) {
 <br/>
 
 > - **Redux follows three principles** : <br/>
-(1) **Single source of truth** : The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
-(2) **State is read-only** : `The only way to change the state is to trigger an action`. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
-(3) **Changes are made with pure functions** : In order to specify how the state tree is transformed by actions, you need pure functions. The reducer must be pure. Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
+**(1) Single source of truth** : The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
+**(2) State is read-only** : `The only way to change the state is to trigger an action`. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
+**(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
 12.2 How To Use Redux ?
 
 > - **Store Methods** <br/>
-(1) **getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
-(2) **dispatch(action)** : Dispatches an action. This is the only way to trigger a state change. <br/>
-(3) **subscribe(listener)** : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
-(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
-(4.1) reducer : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.<br/>
-(4.2) preloadedState : The initial state. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session.
-(4.3) enhancer : You can put such as `applyMiddleware` => Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
+**(1) getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
+**(2) dispatch(action)** : Dispatches an action. This is the only way to trigger a state change. <br/>
+**(3) subscribe(listener)** : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
+**(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
+**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.<br/>
+**(4.2) preloadedState** : The initial state. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session.
+**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
