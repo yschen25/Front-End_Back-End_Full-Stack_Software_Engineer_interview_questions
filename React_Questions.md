@@ -448,12 +448,13 @@ componentDidCatch(error, info) {
 12.2 How To Use Redux ?
 
 > - **Store Methods** <br/>
-(1) getState() : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
-(2) dispatch(action) : Dispatches an action. This is the only way to trigger a state change. <br/>
-(3) subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
-(4) createStore(reducer, [preloadedState], [enhancer]) <br/>
-(4.1) combineReducers : As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.<br/>
-(4.2) applyMiddleware : Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
+(1) **getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
+(2) **dispatch(action)** : Dispatches an action. This is the only way to trigger a state change. <br/>
+(3) **subscribe(listener)** : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
+(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
+(4.1) reducer : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.<br/>
+(4.2) preloadedState : The initial state. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session.
+(4.3) enhancer : You can put such as `applyMiddleware` => Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
@@ -461,16 +462,17 @@ const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoR
 let store = createStore(allReducers, applyMiddleware(thunkMiddleware));
 ```
 
-
 <br/>
 
 > - **Combine with React-Redux** <br/>
-(1) Provider : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
-(2) Connect : The connect() function connects a React component to a Redux store. <br/>
-(3) mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.  <br/>
-(4) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
+(1) **Provider** : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
+(2) **Connect** : The connect() function connects a React component to a Redux store. <br/>
+(2.1) mapStateToProps : As the first argument passed in to connect, if mapStateToProps is specified that any time the store is updated, mapStateToProps will be called. <br/>
+(2.2) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store. <br/>
+(2.3) mergeProps : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+(2.4) options : If specified, further customizes the behavior of the connector. 
 ```
-function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)
 ```
 
 <br/>
@@ -499,7 +501,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 | Flux | Redux |
 |---|---|
-| The Store contains state and change logic	| Store and change logic are separate |
+| The Store contains state and change logic| Store and change logic are separate |
 | There are multiple stores | There is only one store |
 | All the stores are disconnected and flat | Single store with hierarchical reducers |
 | Has singleton dispatcher | No concept of dispatcher |
@@ -610,7 +612,6 @@ useEffect(() => {
 
 4. Custom React Hooks : <br/>
 (1) Custom hooks allow you to create functionality that can be reused across different components.
-
 
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
