@@ -465,12 +465,12 @@ let store = createStore(allReducers, applyMiddleware(thunkMiddleware));
 <br/>
 
 > - **Combine with React-Redux** <br/>
-(1) **Provider** : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
-(2) **Connect** : The connect() function connects a React component to a Redux store. <br/>
-(2.1) mapStateToProps : As the first argument passed in to connect, if mapStateToProps is specified that any time the store is updated, mapStateToProps will be called. <br/>
-(2.2) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store. <br/>
-(2.3) mergeProps : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-(2.4) options : If specified, further customizes the behavior of the connector. 
+**(1) Provider** : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
+**(2) Connect** : The connect() function connects a React component to a Redux store. <br/>
+**(2.1) mapStateToProps** : As the first argument passed in to connect, if mapStateToProps is specified that any time the store is updated, mapStateToProps will be called. <br/>
+**(2.2) mapDispatchToProps** : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store. <br/>
+**(2.3) mergeProps** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+**(2.4) options** : If specified, further customizes the behavior of the connector. 
 ```
 function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)
 ```
