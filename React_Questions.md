@@ -427,23 +427,25 @@ componentDidCatch(error, info) {
 <br/>
 
 > - **Redux interactive with users**： <br/>
-(1) User click. <br/>
-(2) Action Creator send Action to Store. <br/>
-(3) Store call Reducer with state and action to get the new state. <br/>
-(4) View Re-render when state changes.
+(1) User click components. <br/>
+(2) `Action Creator` sends `Action` to `Store`. <br/>
+(3) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
+(4) `View` Re-render when get the new state from `Store`.
+<br/>
+
+> - **List Down The Components Of Redux** : 
+> - Action – To describe the type of event(type) and information(payload).
+> - Store – The core of redux, state/ object tree of the entire application is saved in the Store.
+> - Reducer – It is a place receiving previousState and action to determine the new state.
 <br/>
 
 > - **Redux follows three principles** : <br/>
 (1) Single source of truth : The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
-(2) State is read-only : The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
-(2) Changes are made with pure functions : In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
-<br/>
 
-> - **List Down The Components Of Redux** : 
-> - Action – It’s an object that describes what happened.
-> - Reducer – It is a place to determine how the state will change.
-> - Store – State/ Object tree of the entire application is saved in the Store.
-<br/><br/>
+(2) State is read-only : The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
+
+(3) Changes are made with pure functions : In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
+<br/>
 
 12.2 How To Use Redux ?
 
