@@ -426,17 +426,17 @@ componentDidCatch(error, info) {
 > - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
 <br/>
 
+> - **List Down The Components Of Redux** :  <br/>
+(1) Action – To describe the type of event(type) and informations(payload). <br/>
+(2) Store – The core of redux, the state of the entire application is stored in an object/ state tree within a single store. <br/>
+(3) Reducer – It is a place receiving previousState and action to determine the new state.
+<br/>
+
 > - **Redux interactive with users**： <br/>
-(1) User click components. <br/>
+(1) User clicks components. <br/>
 (2) `Action Creator` sends `Action` to `Store`. <br/>
 (3) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
 (4) `View` Re-render when get the new state from `Store`.
-<br/>
-
-> - **List Down The Components Of Redux** : 
-> - Action – To describe the type of event(type) and information(payload).
-> - Store – The core of redux, state/ object tree of the entire application is saved in the Store.
-> - Reducer – It is a place receiving previousState and action to determine the new state.
 <br/>
 
 > - **Redux follows three principles** : <br/>
@@ -454,13 +454,13 @@ componentDidCatch(error, info) {
 <br/>
 
 > - **Combine with React-Redux**
-> - Provider : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>.
-> - Connect : The connect() function connects a React component to a Redux store.
+(1) Provider : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
+(2) Connect : The connect() function connects a React component to a Redux store. <br/>
 ```
 function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
 ```
-> - mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.
-> - mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
+(3) mapStateToProps : As the first argument passed in to connect, mapStateToProps is used for selecting the part of the data from the store that the connected component needs.  <br/>
+(4) mapDispatchToProps : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store.
 <br/>
 
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
