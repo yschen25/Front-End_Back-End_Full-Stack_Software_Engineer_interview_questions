@@ -450,18 +450,16 @@ componentDidCatch(error, info) {
 > - **Store Methods** <br/>
 (1) getState() : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
 (2) dispatch(action) : Dispatches an action. This is the only way to trigger a state change. <br/>
-(3) subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed.
-(4) createStore(reducer, [preloadedState], [enhancer])
+(3) subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
+(4) createStore(reducer, [preloadedState], [enhancer]) <br/>
+(4.1) combineReducers : As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.<br/>
+(4.2) applyMiddleware : Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
 
 let store = createStore(allReducers, applyMiddleware(thunkMiddleware));
 ```
-
-combineReducers : As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore.
-
-applyMiddleware : Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
 
 
 <br/>
