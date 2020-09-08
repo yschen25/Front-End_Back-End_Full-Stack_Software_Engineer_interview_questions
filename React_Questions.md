@@ -441,9 +441,7 @@ componentDidCatch(error, info) {
 
 > - **Redux follows three principles** : <br/>
 (1) Single source of truth : The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
-
 (2) State is read-only : The only way to change the state is to trigger an action. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
-
 (3) Changes are made with pure functions : In order to specify how the state tree is transformed by actions, you need pure functions. Pure functions are those whose return value depends solely on the values of their arguments.
 <br/>
 
