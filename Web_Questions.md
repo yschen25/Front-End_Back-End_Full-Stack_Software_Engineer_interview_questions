@@ -306,7 +306,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 |---|---|---|
 | Rendering |It can basically be defined as doing the browser's work on the server. In connection requests to the server side, the server `returns the entire page content as a readable HTML response`. A readable content appears even when the `JavaScript codes are not executed`, but the page does not have the dynamics that the JavaScript codes provide. |Websites send very `little HTML response to connection requests`. This HTML response contains JavaScript codes that make up the content of the page. `Unless these JavaScript codes are executed, the website is a blank page`.|
 | SEO | `Good`, due to the `faster initial load time`, the HTML is available for the first time itself. | `Bad`, negative impact on SEO if there are any delays in API responses and rendering doesn’t happen correctly. CSR requires a `two-wave process for JS rendering and indexing` in a browser. |
-| Speed | Initial load time is fast. | Initial load time is slow, but website is rendered faster after the initial load. |
+| Speed | Initial load time is fast, browsing from page to page is often much slower. | Initial load time is slow, but website is rendered faster after the initial load. |
 | Loading | Mainly on `server`. | Mainly on `browser`. |
 | Application | Main page which needs SEO. | Other pages which don't need SEO or update frequently. |
    
