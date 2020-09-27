@@ -17,12 +17,12 @@
 
 :white_check_mark: 1.3 What Is Strength And Weakness Of React.js ?
 > - **Strength** :  <br/>
-(1) Ensures faster rendering with virtual DOM, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
-(2) It follows the component based approach which helps in building reusable UI components.  <br/>
-(3) Uni-directional data flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
-(4) SEO friendly, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.  <br/>
-(5) Can be used for the development of both web and mobile apps.   <br/>
-(6) Server-side rendering accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites.  <br/>
+(1) Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
+(2) It follows the `component based` approach which helps in building reusable UI components.  <br/>
+(3) `Uni-directional data` flow make it becomes easier to debug errors and know where a problem occurs in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
+(4) `SEO friendly`, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.  <br/>
+(5) Can be used for the development of both` web and mobile apps`.   <br/>
+(6) `Server-side rendering` accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites.  <br/>
 (7) Useful developer toolset.  <br/>
 (8) Strong community support.
 <br/>
