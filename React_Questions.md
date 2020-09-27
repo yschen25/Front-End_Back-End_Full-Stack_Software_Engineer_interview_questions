@@ -50,10 +50,10 @@
 <br/>
 
 :white_check_mark: 3. What Is JSX ?
-> - JSX stands for JavaScript XML.
-> - JSX is not JavaScript nor HTML, is an XML/HTML like extension to JavaScript.
+> - JSX stands for `JavaScript XML`.
+> - JSX is `not JavaScript nor HTML, is an XML/HTML like extension` to JavaScript.
 > - JSX as a syntax sugar for calling React.createElement().
-> - Instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript, then Babel will transform these expressions into actual JavaScript code. 
+> - Instead of putting JavaScript into HTML, JSX allows us to `put HTML into JavaScript`, then Babel will transform these expressions into actual JavaScript code. 
 > - Examples : <br/>
  (1) Return one element https://jsfiddle.net/yschen25/29xrnmtw/ <br/>
  (2) Self-closing tags https://jsfiddle.net/yschen25/8g0w7thy/ <br/>
@@ -64,7 +64,7 @@
 <br/><br/>
 
 :white_check_mark: 3.1 Why Can’t Browsers Read JSX?
-> - Browsers can only read JavaScript objects but JSX in not a regular JavaScript object. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using JSX transformers like Babel and then pass it to the browser.
+> - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers` like Babel and then pass it to the browser.
 <br/><br/>
 
 :white_check_mark: 4. What Is Virtual DOM ?
@@ -74,9 +74,9 @@
 <img src="img/virtual_DOM1.png" alt="virtual DOM" title="virtual DOM" width="55%">
 </p>
 
-> - If a developer uses React.js (and JSX) to manipulate and update its DOM, React.js creates Virtual DOM which is a copy of the site’s DOM, when status changes the algorithm will compute the difference between virtual DOM and real DOM then only update the change part without reloading entire DOM.
+> - If a developer uses React.js (and JSX) to manipulate and update its DOM, React.js creates `Virtual DOM which is a copy of the real DOM`, when status changes the algorithm will compute the difference between virtual DOM and real DOM then only `update the change part without reloading entire DOM`.
 
-> - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since the entire DOM needs to reload every time the user clicks a feature calling for a page refresh.
+> - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since `the entire DOM needs to reload every time` the user clicks a feature calling for a page refresh.
 
 <br/>
 
