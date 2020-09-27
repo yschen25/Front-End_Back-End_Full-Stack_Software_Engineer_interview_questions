@@ -300,40 +300,15 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 > - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
 
-18. What Is SSR(Server-Side Rendering) And CSR(Client-Side Rendering)?
+18. What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?
 
-<table>
-    <tr>
-        <th></th>
-        <th>SSR (Server-side rendering)</th>
-        <th>CSR (Client-side rendering)</th>
-    </tr>
-    <tr>
-        <td>Rendering</td>
-        <td>Websites send very little HTML response to connection requests. This HTML response contains JavaScript codes that make up the content of the page. Unless these JavaScript codes are executed, the website is a blank page.</td>
-        <td>It can basically be defined as doing the browser's work on the server. In connection requests to the server side, the server returns the entire page content as a readable HTML response. A readable content appears even when the JavaScript codes are not executed, but the page does not have the dynamics that the JavaScript codes provide. </td>
-    </tr>
-    <tr>
-        <td>SEO</td>
-        <td>Due to the faster initial load time, the HTML is available for the first time itself.</td>
-        <td>Negative impact on SEO if there are any delays in API responses and rendering doesn’t happen correctly. CSR requires a two-wave process for JS rendering and indexing in a browser.</td>
-    </tr>
-    <tr>
-        <td>Speed</td>
-        <td>Initial load time is fast.</td>
-        <td>Initial load time is slow, but website is rendered faster after the initial load.</td>
-    </tr>
-    <tr>
-        <td>Loading</td>
-        <td>Mainly on server.</td>
-        <td>Mainly on browser.</td>
-    </tr>
-    <tr>
-        <td>Application</td>
-        <td>Main page which needs SEO.</td>
-        <td>Other pages which don't need SEO or update frequently.</td>
-    </tr>
-</table>
-
+|   | SSR (Server-side rendering) | CSR (Client-side rendering) |
+|---|---|---|
+| Rendering |It can basically be defined as doing the browser's work on the server. In connection requests to the server side, the server `returns the entire page content as a readable HTML response`. A readable content appears even when the `JavaScript codes are not executed`, but the page does not have the dynamics that the JavaScript codes provide. |Websites send very `little HTML response to connection requests`. This HTML response contains JavaScript codes that make up the content of the page. `Unless these JavaScript codes are executed, the website is a blank page`.|
+| SEO | `Good`, due to the `faster initial load time`, the HTML is available for the first time itself. | `Bad`, negative impact on SEO if there are any delays in API responses and rendering doesn’t happen correctly. CSR requires a `two-wave process for JS rendering and indexing` in a browser. |
+| Speed | Initial load time is fast. | Initial load time is slow, but website is rendered faster after the initial load. |
+| Loading | Mainly on `server`. | Mainly on `browser`. |
+| Application | Main page which needs SEO. | Other pages which don't need SEO or update frequently. |
+   
 > - Related Reference :[現代前端渲染機制: SSR vs. CSR](https://growingdna.com/ssr-versus-csr/), [Pros and Cons of Client-Side Rendering](https://www.pluralsight.com/guides/pros-and-cons-of-client-side-rendering), [Javascript SEO: What is SSR/CSR? Advantages and Disadvantages](https://zeo.org/blog/javascript-seo-what-is-ssr-csr-advantages-and-disadvantages/)
 <br/>
