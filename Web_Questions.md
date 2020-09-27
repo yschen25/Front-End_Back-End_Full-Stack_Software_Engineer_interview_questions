@@ -299,3 +299,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 > - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
+
+18. What Is SSR, CSR?
+
+> - Related Reference :[現代前端渲染機制: SSR vs. CSR](https://growingdna.com/ssr-versus-csr/)
