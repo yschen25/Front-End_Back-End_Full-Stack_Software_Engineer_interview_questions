@@ -80,16 +80,17 @@
 
 <br/>
 
-:white_check_mark: 5. What Is Functional Components(Stateless Component) And Class Components (Stateful Components) ? (ref:17)
+:white_check_mark: 5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components) ? 
 
 > - **Functional Components** : <br/>
-(1) These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties). <br/>
-(2) Example : https://jsfiddle.net/yschen25/dmacrpjq/
+(1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
+(2) Functional components can have state when use hook. (ref:17) <br/>
+(3) Example : https://jsfiddle.net/yschen25/dmacrpjq/
 <br/>
 
 > - **Class Components** : <br/>
-(1) These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state. <br/>
-(2) Constructor is optional, add the constructor when you need to use state or bind function. (If use functional + hook or arrow function then don't need bind function) In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`  (ref:8). In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
@@ -101,7 +102,7 @@
 | Calculates the internal state of the components | Stores info about component’s state change in memory |
 | Do not have the authority to change state | Have authority to change state |
 | Contains no knowledge of past, current and possible future state changes | Contains the knowledge of past, current and possible future changes in state |
-| They receive the props from the Stateful components and treat them as callback functions | Stateless components notify them about the requirement of the state change, then they send down the props to them |
+| They receive the props from the Class components and treat them as callback functions | Functional components notify them about the requirement of the state change, then they send down the props to them |
 
 <br/>
 
@@ -110,14 +111,14 @@
 > - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
 (2) Don't need to use state  <br/>
-(3) Create reusable components  <br/>
+(3) `Create reusable components`  <br/>
 (4) Only render UI
 <br/>
 
 > - **Class Components** :  <br/>
 (1) Need to use lifecycle  <br/>
 (2) Need to use state  <br/>
-(3) Have to receive data form user  <br/>
+(3) Have to `receive data form user`  <br/>
 (4) Create interactive objects  <br/>
 (5) Render after change state
 
