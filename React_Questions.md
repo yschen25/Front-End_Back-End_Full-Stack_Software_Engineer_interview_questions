@@ -33,7 +33,7 @@
 
 <br/>
 
-:white_check_mark: 2. What Is The Differences Between Vue.js, Angular.js and React.js ?
+:white_check_mark: 2. What Are The Differences Between Vue.js, Angular.js and React.js ?
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
@@ -124,7 +124,7 @@
 
 <br/>
 
-:white_check_mark: 6. What Is Props ?
+:white_check_mark: 6. What Are Props ?
 > - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
 > - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
 > - Props from the parent to the child components will `cause child components re-render`.
