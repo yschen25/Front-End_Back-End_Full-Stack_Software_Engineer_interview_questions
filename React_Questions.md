@@ -186,7 +186,7 @@
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you `need to access props, state on the class`, then you would need to bind it.
 > - Related Reference : [why do you need to bind a function in a constructor
-](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling `this`](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
+](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
 <br/><br/>
 
 :white_check_mark: 8.1 How To Bind The Function ?
@@ -249,7 +249,7 @@ addCount = () => {
 <br/>
 
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
-> - A benefit of using arrow functions is that this is already bound to that function so we don’t need to specify that anywhere else.
+> - A benefit of using arrow functions is that `this` is `already bound to that function` so we don’t need to specify that anywhere else.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
