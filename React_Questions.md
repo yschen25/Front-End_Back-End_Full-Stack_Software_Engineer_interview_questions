@@ -181,10 +181,10 @@
 
 :white_check_mark: 8. Why Should We Bind The Function ?
 
-> - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. In JavaScript, class methods are not bound by default. If you forget to bind this.someEventHandler and pass it to onChange, this will be undefined when the function is actually called.
-> - This is a way of saving the current value of this, which is in scope during the call to the constructor, so that it can be used later when the function is called.
+> - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. In JavaScript, `class methods are not bound by default`. If you forget to bind this.someEventHandler, this `will be undefined` when the function is actually called.
+> - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
-> - When you need to access props, state or other members on the class, then you would need to bind it.
+> - When you `need to access props, state on the class`, then you would need to bind it.
 > - Related Reference : [why do you need to bind a function in a constructor
 ](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling `this`](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
 <br/><br/>
