@@ -125,10 +125,10 @@
 <br/>
 
 :white_check_mark: 6. What Is Props ?
-> - Props is the shorthand for Properties. props data is read-only, which means that data coming from the parent should not be changed by child components.
-> - They are always passed down from the parent to the child components in a uni-directional flow, a child component can never send a prop back to the parent component.
-> - Props form the parent to the child components will cause child components re-render.
-> - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell).
+> - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
+> - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
+> - Props form the parent to the child components will `cause child components re-render`.
+> - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell) (ref:6.3).
 > - Examples : <br/>
     (1) Pass props via Functional Component (notice : use props.data) https://jsfiddle.net/yschen25/0e5udb1x/ <br/>
     (2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
@@ -136,13 +136,13 @@
 
 :white_check_mark: 6.1 When Use Props ?
 > - To pass data & event handlers down to your child components.
-> - If you don't have to use state or bind function then you don't need to write constructor.
+> - If you just want to use props, not use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
 :white_check_mark: 6.2 What Is PropTypes And DefaultProps ?
-> - PropTypes : A typechecking tool to make sure the data is valid, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
-> - DefaultProps : You can define default values for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
+> - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
+> - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
 
 :white_check_mark: 6.3 How To Solve Props Hell (Wrapper Hell) ?
@@ -250,6 +250,7 @@ addCount = () => {
 
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
 > - A benefit of using arrow functions is that `this` is `already bound to that function` so we don’t need to specify that anywhere else.
+> Simply because arrow function `does not have the following(this, arguments, super, new.target)` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
