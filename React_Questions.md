@@ -250,7 +250,7 @@ addCount = () => {
 
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
 > - A benefit of using arrow functions is that `this` is `already bound to that function` so we don’t need to specify that anywhere else.
-> Simply because arrow function `does not have the following(this, arguments, super, new.target)` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
+> - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
