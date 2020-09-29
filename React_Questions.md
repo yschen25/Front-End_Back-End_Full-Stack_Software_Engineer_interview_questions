@@ -127,7 +127,7 @@
 :white_check_mark: 6. What Is Props ?
 > - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
 > - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
-> - Props form the parent to the child components will `cause child components re-render`.
+> - Props from the parent to the child components will `cause child components re-render`.
 > - When your applications have a massive quantity of nested components it will may causes props hell (wrapper hell) (ref:6.3).
 > - Examples : <br/>
     (1) Pass props via Functional Component (notice : use props.data) https://jsfiddle.net/yschen25/0e5udb1x/ <br/>
