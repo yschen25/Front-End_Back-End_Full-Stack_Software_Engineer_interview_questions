@@ -175,7 +175,7 @@
 | | Mutable | Immutable |
 | | Can be modified using setState() method | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
-| (ref:8)| Can only be used with Class Components | Can be used with both Class as well as Functional Components |
+| | Can only be used with class Components (ref:17.2) | Can be used with both class as well as functional components |
 
 <br/>
 
@@ -251,6 +251,11 @@ addCount = () => {
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
 > - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
+<br/><br/>
+
+:white_check_mark: 8.3 How To Use Arrow Function In The Class Components? (ref:8.1)
+> - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
+> - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
 :white_check_mark: 9. Explain The Life Cycle Of React.js ? <br/>
@@ -549,22 +554,17 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
-:white_check_mark: 16. How To Use Arrow Function In The Class Components? (ref : 8)
-> - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
-> - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
-<br/><br/>
-
-:white_check_mark: 17. Explain What Is Hook ?
+:white_check_mark: 16. Explain What Is Hook ?
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
 > - If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
-:white_check_mark: 17.1 What Is Side Effects ?
+:white_check_mark: 16.1 What Is Side Effects ?
 > - Side effects are all the operations that affect your component and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
-:white_check_mark: 17.2 And How To Use Hook ?
+:white_check_mark: 16.2 And How To Use Hook ?
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
@@ -619,13 +619,13 @@ useEffect(() => {
 <br/><br/>
 
 
-:white_check_mark: 18. What Is The Difference Between React And React Native ?
+:white_check_mark: 17. What Is The Difference Between React And React Native ?
 > - ReactJS is a JavaScript library, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - React Native is a mobile framework that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
-:white_check_mark: 19. Explain The Controlled Components And Uncontrolled Components.
+:white_check_mark: 18. Explain The Controlled Components And Uncontrolled Components.
 > - **Controlled Components** : <br/> 
 (1) Ｃontrol by status or props.
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
@@ -647,7 +647,7 @@ useEffect(() => {
 (3) Easy to use with third party library. 
 <br/><br/>
 
-:white_check_mark: 19.1 When Use Controlled Components Or Uncontrolled Components ?
+:white_check_mark: 18.1 When Use Controlled Components Or Uncontrolled Components ?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
@@ -661,7 +661,7 @@ useEffect(() => {
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
-:white_check_mark: 20. Why Do I Need Keys In React Lists ?
+:white_check_mark: 19. Why Do I Need Keys In React Lists ?
 > - Keys help React identify which items have changed, are added, or are removed.
 > - React recommends that you do not use indexes as keys, since it could impact performance negatively and could lead to some unstable component behaviour.
 > - React does not automatically pass they key like a prop. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
@@ -677,15 +677,15 @@ const content = posts.map((post) =>
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 <br/><br/>
 
-:white_check_mark: 20.1 What Are Some Exceptions Where It Is Safe To Use Index As Key?
+:white_check_mark: 19.1 What Are Some Exceptions Where It Is Safe To Use Index As Key?
 > - If your list is static (no additions/re-ordering/removal to the list).
 > - The list will never be re-ordered.
 > - The list will not be filtered (adding/removing items from the list).
 > - There are no ids for the items in the list.
 <br/><br/>
 
-❗ 21. What Are Higher Order Components(HOC) ?
+❗ 20. What Are Higher Order Components(HOC) ?
 <br/><br/>
 
-❗ 22. What are Pure Components ? 
+❗ 21. What are Pure Components ? 
 <br/><br/>
