@@ -300,7 +300,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 > - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
 
-18. What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?
+:white_check_mark: 18. What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?
 
 |   | SSR (Server-side rendering) | CSR (Client-side rendering) |
 |---|---|---|
