@@ -181,7 +181,7 @@
 
 :white_check_mark: 8. Why Should We Bind The Function ?
 
-> - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. In JavaScript, `class methods are not bound by default`. If you forget to bind this.someEventHandler, this `will be undefined` when the function is actually called.
+> - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. If we don't use bind method, the `this will refer to window scope`, and code within the class body's syntactic boundary is always executed in strict mode, then `will be undefined` when the function is actually called.
 > - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you `need to access props, state on the class`, then you would need to bind it.
@@ -249,7 +249,6 @@ addCount = () => {
 <br/>
 
 :white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
-> - A benefit of using arrow functions is that `this` is `already bound to that function` so we don’t need to specify that anywhere else.
 > - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
