@@ -19,7 +19,7 @@
 |---|---|---|
 | Major | Minor | Patch  |
 
-> - The semantic version is `consist by Major, Minor and Patch`.
+> - The semantic version is `consist of Major, Minor and Patch`.
 > - **Add Major** : it means add new function and it **IS NOT** downward compatibility, mahor number add one, minor and patch number change to 0.
 > - **Add Minor** : it means add new function and it **IS** downward compatibility, minor number add one, patch number change to 0.
 > - **Add Patch** : it means fixs the simple bugs, patch number add one.
