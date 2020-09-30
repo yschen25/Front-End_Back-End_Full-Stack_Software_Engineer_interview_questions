@@ -3,12 +3,12 @@
 
 :white_check_mark: 1. Please Explain The Difference Between Visibility : Hidden, Display : None And Opacity : 0?
 
-|   |  Visibility : hidden | Display : none | Opacity : 0 |
+| | Visibility : hidden | Display : none | Opacity : 0 |
 |---|---|---|---|
-|   | Doesn't show up | Doesn't show up  | Doesn't show up  |   
-|   | Takes space  | Doesn't take space| Takes space|   
-|   |  Unclickable | Unclickable  | Clickable  |  
-|   |  Doesn't cause DOM reflow | Causes DOM reflow  |   |  
+| | Doesn't show up | Doesn't show up | Doesn't show up |   
+| | Takes space | Doesn't take space| Takes space|   
+| | Unclickable | Unclickable | Clickable |  
+| | Doesn't cause DOM reflow | Causes DOM reflow | Doesn't cause DOM reflow |  
 
 > - Example : https://jsfiddle.net/yschen25/289xv1ba/
 <br/>
