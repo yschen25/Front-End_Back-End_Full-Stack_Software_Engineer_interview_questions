@@ -30,3 +30,13 @@
 |  | Should not be used when sending sensitive information | Used when sending sensitive information | 
 > - Related Reference : [http Post 和 Get 差異](https://medium.com/@totoroLiu/http-post-%E5%92%8C-get-%E5%B7%AE%E7%95%B0-928829d29914)
 <br/>
+
+:white_check_mark: 4. What Need To Declare <!DOCTYPE>?
+> - All HTML documents must start with a <!DOCTYPE> declaration. It is an information to tell the browser about what document type to expect. Avoiding page shows unexpected layout.
+
+> - In HTML 5, the declaration is simple:
+```
+<!DOCTYPE html>
+```
+<br/>
+
