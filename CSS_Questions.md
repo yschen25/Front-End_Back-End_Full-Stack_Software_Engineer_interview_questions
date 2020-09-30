@@ -21,7 +21,7 @@
 > - Related Reference : [Visibility vs Display in CSS](http://vanseodesign.com/css/visibility-vs-display/)
 <br/>
 
-:white_check_mark: 2. Please Explain The Difference Between Inline, Block And Inline-Block?
+:white_check_mark: 2. Please Explain The Difference Between Inline, Block And Inline-Block Elements?
 
 > - Inline<br/>
 > -> It has no line break before or after it, allow other elements to sit to their left and right.<br/>
