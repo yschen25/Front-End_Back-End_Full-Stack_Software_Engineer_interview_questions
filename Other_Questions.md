@@ -44,7 +44,7 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 <br/>
 
 :white_check_mark: 6 What Is Cloud Computing?
-> - "The cloud"(internet) is a way of managing IT resources that replaces local machines and private data centers with virtual infrastructure, including servers, storage, databases, networking, software, analytics. Users access virtual compute, network, and storage resources made available online by a remote provider. 
+> - The cloud(internet) computing is a way of `managing IT resources that replaces local machines and private data centers with virtual infrastructure`, including servers, storage, databases, networking, software, analytics. Users access virtual compute, network, and storage resources made available online by a remote provider. 
 > - These resources can be provisioned instantly, which is particularly useful for companies that need to scale their infrastructure up or down quickly in response to fluctuating demand.
 > - Related Reference : [徹底了解 Cloud Computing](https://www.ithome.com.tw/article/93006)
 <br/>
