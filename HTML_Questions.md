@@ -23,6 +23,7 @@
 <br/>
 
 :white_check_mark: 2.1 What Do We Need To Declare <!DOCTYPE>?
+> - DOCTYPE means `Document Type`.
 > - All HTML documents must start with a <!DOCTYPE> declaration. It is an information to tell the browser about what document type to expect. Avoiding page shows unexpected layout.
 
 > - In HTML 5, the declaration is simple:
