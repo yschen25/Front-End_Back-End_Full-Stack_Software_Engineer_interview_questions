@@ -568,14 +568,18 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
-(2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
-(3) Example : Before hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)<br/>
+(2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
+(3) Example : Before hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://codesandbox.io/s/reacthookusestate-u65hn)<br/>
+```
+const [count, addCount] = useState(0);
+```
+<br/>
 
 2. useEffect() : <br/>
-(1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
-(2) There are two arguments that are passed to useEffect(), useEffect(callback, array)
+(1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+(2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
 
-① An anonymous callback function that houses your useEffect logic. This logic is executed based upon how you set up useEffect() to run.
+① The first an anonymous callback function that houses your useEffect logic.
 ```
 useEffect(() => {
     console.log('This is like componentDidMount')
@@ -587,9 +591,9 @@ useEffect(() => {
 ```
 <br/>
  
-② The second is an array that takes in comma-delimited variables called the dependency list. This is how you change the way useEffect() operates.
+② The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
- - Running an effect once (componentDidMount) : The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. The key to running an effect once is to pass in an empty array. <br/>
+ - Running an effect once (componentDidMount) : The key to running an effect once is to pass in an empty array. <br/>
 ```
 useEffect(() => {
 	console.log('This only runs once');
@@ -600,7 +604,7 @@ useEffect(() => {
  - Using effects when things change (componentDidUpdate) : 
 ```
 useEffect(() => {
-	console.log('This is like componentDidUpdate, I will be triger whenever count state change')
+	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
  }, [count]);
 ```
 <br/>
@@ -608,8 +612,8 @@ useEffect(() => {
 (3) Example : https://tinyurl.com/y6yb643h <br/>
 
 3. useContext() :  <br/>
-(1) The React Context API is a simple, easy-to-understand alternative to “prop-drilling” up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-(2) React’s Context API, it’s a way to pass data deeply throughout your app without having to manually pass props down through multiple levels. It can be a good alternative to tools like Redux, now we have useContext. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4
+(1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
+(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4
 
 4. Custom React Hooks : <br/>
 (1) Custom hooks allow you to create functionality that can be reused across different components.
