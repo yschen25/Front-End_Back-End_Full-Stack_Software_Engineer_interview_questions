@@ -258,6 +258,10 @@ addCount = () => {
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
+<p align="center">
+<img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles">
+</p>
+
 :white_check_mark: 9. Explain The Life Cycle Of React.js? <br/>
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
  (1) Mounting : Means putting elements into the DOM. <br/>
@@ -267,8 +271,8 @@ addCount = () => {
 <br/>
 
 **Mounting** : <br/>
-(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, binding member functions and setting the initial state. Each can only be used in class components. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
-Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway, to avoid unexpected behavior. If you’re using arrow functions in your component, then you don’t need to bind 'this' to the functions as it is already implicitly passed.
+(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
+Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
 ```
 constructor(props){
         super(props);
@@ -280,7 +284,7 @@ constructor(props){
 ```
 <br/>
 
-(2) getDerivedStateFromProps() : Called right before rendering the elements in the DOM, and is executed every time the component updates, including the initial render. It is usually used to set the initial state depending on the props passed to the component.
+(2) static getDerivedStateFromProps() : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
 ```
  static getDerivedStateFromProps(props, state){
         return {
@@ -299,7 +303,7 @@ render() {
 ```
 <br/>
 
-(4) componentDidMount() : When your component is loaded in the DOM, this method is executed. Therefore, it makes this an ideal place to perform any API calls or make changes to the DOM. After executing once, it is not triggered again for the duration of the component’s life. <br/>
+(4) componentDidMount() : When your `component is loaded in the DOM`, this method is executed. Therefore, it makes this an ideal place to perform any `API calls or make changes to the DOM`. After executing once, it is not triggered again for the duration of the component’s life. <br/>
 You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/>
 
 **Updating** : <br/>
@@ -308,9 +312,9 @@ The modification phase can be triggered using three methods :  <br/>
 (2) Calling setState() and updating the state  <br/>
 (3) Using this.forceUpdate  <br/><br/>
 
-(1) getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/><br/>
+(1) static getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/><br/>
 
-(2) shouldComponentUpdate() : This method is designed to increase performance in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React should update the component or not. 
+(2) shouldComponentUpdate() : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. 
 ```
 shouldComponentUpdate(nextProps, nextState){
     if(this.state.name === nextState.name) { return false; }
@@ -322,7 +326,7 @@ shouldComponentUpdate(nextProps, nextState){
 
 (4) getSnapshotBeforeUpdate() : This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/><br/>
 
-(5) componentDidUpdate() : This method is executed right after all the changes have been propagated to the DOM. Here, we have access to the previous props, state and the value returned by getSnapshotBeforeUpdate() also known as the snapshot. If we want to modify the state in this method, we must do so in a conditional statement. 
+(5) componentDidUpdate() : This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to modify the state in this method, we must do so in a conditional statement. 
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
@@ -333,7 +337,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 <br/>
 
 **Unmounting** :  <br/>
-(1) componentWillUnmount() : This method is called right before the component is unmounted from the DOM. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.
+(1) componentWillUnmount() : This method is called `right before the component is unmounted from the DOM`. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.
 ```
  componentWillUnmount(){
       this.clearInterval(this.timer);
