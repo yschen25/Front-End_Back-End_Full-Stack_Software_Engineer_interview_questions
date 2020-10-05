@@ -109,7 +109,7 @@
 ④ Margin - Clears an area outside the border, The margin is transparent.
 <br/><br/>
 
-:white_check_mark: 8.1 What Is Box-Sizing : Content-Box And Box-Sizing : Border-Box?
+:white_check_mark: 8.1 What Is Box-Sizing: Content-Box And Box-Sizing: Border-Box?
 
 <p align="center">
 <img src="img/compare_models.png" alt="compare_models" title="compare_models">
