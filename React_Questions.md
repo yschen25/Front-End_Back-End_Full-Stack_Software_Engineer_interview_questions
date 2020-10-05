@@ -309,11 +309,11 @@ You can use setState() here to modify the state, which is commonly done when dat
 
 **Updating** : <br/>
 The modification phase can be triggered using three methods :  <br/>
-(1) Receiving new props  <br/>
-(2) Calling setState() and updating the state  <br/>
-(3) Using this.forceUpdate  <br/><br/>
+> - Receiving new props  <br/>
+> - Calling setState() and updating the state  <br/>
+> - Using this.forceUpdate  <br/><br/>
 
-(1) static getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/><br/>
+(1) static getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
 
 (2) shouldComponentUpdate() : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. 
 ```
@@ -321,7 +321,6 @@ shouldComponentUpdate(nextProps, nextState){
     if(this.state.name === nextState.name) { return false; }
   }
 ```
-<br/>
 
 (3) render() : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
 
@@ -353,7 +352,6 @@ static getDerivedStateFromError(error) {
     return { error: error.message };
   }
 ```
-<br/>
 
 (2) componentDidCatch() : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
 ```
