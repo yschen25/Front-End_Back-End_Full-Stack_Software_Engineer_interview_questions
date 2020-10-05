@@ -128,8 +128,7 @@
 > - Images Source : [CSS3 Box Model Behaviour](https://crypt.codemancers.com/posts/2013-11-17-box-model-behaviour/)
 <br/><br/>
 
-:white_check_mark: 9. How To Center An Element Horizontally And Vertically? <br/>
-
+:white_check_mark: 9. How To Center An Element Horizontally And Vertically?
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 </br>
 
@@ -139,13 +138,13 @@
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
 </br>
 
-:white_check_mark: 11. Introduction The CSS Selectors
+:white_check_mark: 11. Introduction The CSS Selectors.
 
 > - !important > Inline styles > ID Selectors > Class selectors > Element > *
 
 > - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454), [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
 </br>
 
-:white_check_mark: 12. What Is Flex Box?
+:white_check_mark: 12. What Is Flexbox?
 
 > - Related Reference :  [深入解析 CSS Flexbox](https://www.oxxostudio.tw/articles/201501/css-flexbox.html)
