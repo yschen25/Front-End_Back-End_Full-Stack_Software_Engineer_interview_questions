@@ -71,7 +71,7 @@
 :white_check_mark: 5.1 Why Should We Clear Float?
 > - If there are one large box contain two small float boxes, it will cause the big one can't extend the height.<br/> 
 
-:white_check_mark: 5.2 How To Clear Float?
+:white_check_mark: 5.2 How To Clear Float? <br/>
 > - Clear is the properity to clear the float. <br/>
 > - There are clear : left, right, both. <br/>
 > - Way to clear float : 
