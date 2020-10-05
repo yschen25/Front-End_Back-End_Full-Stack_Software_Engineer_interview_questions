@@ -619,10 +619,9 @@ useEffect(() => {
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
 <br/><br/>
 
-
-:white_check_mark: 17. What Is The Difference Between React And React Native ?
-> - ReactJS is a JavaScript library, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
-> - React Native is a mobile framework that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
+:white_check_mark: 17. What Is The Difference Between React And React Native?
+> - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
+> - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
@@ -685,8 +684,8 @@ const content = posts.map((post) =>
 > - There are no ids for the items in the list.
 <br/><br/>
 
-❗ 20. What Are Higher Order Components(HOC) ?
+❗ 20. What Are Higher-Order Components(HOC)?
 <br/><br/>
 
-❗ 21. What are Pure Components ? 
+❗ 21. What are Pure Components? 
 <br/><br/>
