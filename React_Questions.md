@@ -1,13 +1,13 @@
 ## React Questions
 <br/>
 
-:white_check_mark: 1. What Is And When Use React.js ?
+:white_check_mark: 1. What Is And When Use React.js?
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and status change` instead of buliding a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/>
 
-:white_check_mark: 1.2 What Is Features Of React.js ?
+:white_check_mark: 1.2 What Is Features Of React.js?
 > - Only the View of MVC.
 > - JSX.
 > - Virtual DOM.
@@ -15,7 +15,7 @@
 > - Components based.
 <br/>
 
-:white_check_mark: 1.3 What Is Strength And Weakness Of React.js ?
+:white_check_mark: 1.3 What Is Strength And Weakness Of React.js?
 > - **Strength** :  <br/>
 (1) Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 (2) It follows the `component based` approach which helps in building reusable UI components.  <br/>
@@ -33,7 +33,7 @@
 
 <br/>
 
-:white_check_mark: 2. What Are The Differences Between Vue.js, Angular.js and React.js ?
+:white_check_mark: 2. What Are The Differences Between Vue.js, Angular.js and React.js?
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
@@ -49,7 +49,7 @@
 
 <br/>
 
-:white_check_mark: 3. What Is JSX ?
+:white_check_mark: 3. What Is JSX?
 > - JSX stands for `JavaScript XML`.
 > - JSX is `not JavaScript nor HTML, is an XML/HTML like extension` to JavaScript.
 > - JSX as a syntax sugar for calling React.createElement().
@@ -67,7 +67,7 @@
 > - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers` like Babel and then pass it to the browser.
 <br/><br/>
 
-:white_check_mark: 4. What Is Virtual DOM ?
+:white_check_mark: 4. What Is Virtual DOM?
 
 <p align="center">
 <img src="img/virtual_DOM2.jpg" alt="virtual DOM" title="virtual DOM" width="70%">
@@ -80,7 +80,7 @@
 
 <br/>
 
-:white_check_mark: 5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components) ? 
+:white_check_mark: 5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components)? 
 
 > - **Functional Components** : <br/>
 (1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
@@ -95,7 +95,7 @@
 <br/><br/>
 
 
-:white_check_mark: 5.1 What Is The Difference Between Functional Components And Class Components ?
+:white_check_mark: 5.1 What Is The Difference Between Functional Components And Class Components?
 
 |  Functional Components | Class Components |
 |---|---|
@@ -106,7 +106,7 @@
 
 <br/>
 
-:white_check_mark: 5.2 When Use Functional Components And Class Components ?
+:white_check_mark: 5.2 When Use Functional Components And Class Components?
 
 > - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
@@ -124,7 +124,7 @@
 
 <br/>
 
-:white_check_mark: 6. What Are Props ?
+:white_check_mark: 6. What Are Props?
 > - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
 > - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
 > - Props from the parent to the child components will `cause child components re-render`.
@@ -134,18 +134,18 @@
     (2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
 <br/><br/>
 
-:white_check_mark: 6.1 When Use Props ?
+:white_check_mark: 6.1 When Use Props?
 > - To pass data & event handlers down to your child components.
 > - If you just want to use props, not use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
-:white_check_mark: 6.2 What Is PropTypes And DefaultProps ?
+:white_check_mark: 6.2 What Is PropTypes And DefaultProps?
 > - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
 > - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
 
-:white_check_mark: 6.3 How To Solve Props Hell (Wrapper Hell) ?
+:white_check_mark: 6.3 How To Solve Props Hell (Wrapper Hell)?
 > - Redux.
 > - Functional components + hook. 
 
@@ -161,13 +161,13 @@
 > - To store the data your current page needs in your controller-view.
 <br/><br/>
 
-:white_check_mark: 7.2 How To Change State ?
+:white_check_mark: 7.2 How To Change State?
 > - State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
 <br/><br/>
 
-:white_check_mark: 7.3 What Is The Difference Between Props And Status ?
+:white_check_mark: 7.3 What Is The Difference Between Props And Status?
 
 |  Conditions | State | Props |
 |---|---|---|
@@ -179,7 +179,7 @@
 
 <br/>
 
-:white_check_mark: 8. Why Should We Bind The Function ?
+:white_check_mark: 8. Why Should We Bind The Function?
 
 > - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. If we don't use bind method, the `this will refer to window scope`, and code within the class body's syntactic boundary is always executed in strict mode, then `will be undefined` when the function is actually called.
 > - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
@@ -189,7 +189,7 @@
 ](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
 <br/><br/>
 
-:white_check_mark: 8.1 How To Bind The Function ?
+:white_check_mark: 8.1 How To Bind The Function?
 > - Class component : Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
 
 ```
@@ -248,7 +248,7 @@ addCount = () => {
 
 <br/>
 
-:white_check_mark: 8.2 Why We Don't Need Bind Arrow Function ?
+:white_check_mark: 8.2 Why We Don't Need Bind Arrow Function?
 > - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
@@ -258,7 +258,7 @@ addCount = () => {
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-:white_check_mark: 9. Explain The Life Cycle Of React.js ? <br/>
+:white_check_mark: 9. Explain The Life Cycle Of React.js? <br/>
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
  (1) Mounting : Means putting elements into the DOM. <br/>
  (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
@@ -451,7 +451,7 @@ componentDidCatch(error, info) {
 **(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
-:white_check_mark: 12.2 How To Use Redux ?
+:white_check_mark: 12.2 How To Use Redux?
 
 > - **Store Methods** <br/>
 **(1) getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
@@ -535,7 +535,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 <br/><br/>
 
-:white_check_mark: 14.2 Jest And Enzyme
+:white_check_mark: 14.2 Jest And Enzyme.
 > - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
 > - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
 > - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
@@ -555,17 +555,17 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
-:white_check_mark: 16. Explain What Is Hook ?
+:white_check_mark: 16. Explain What Is Hook?
 > - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
 > - If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
-:white_check_mark: 16.1 What Is Side Effects ?
+:white_check_mark: 16.1 What Is Side Effects?
 > - Side effects are all the operations that affect your component and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
-:white_check_mark: 16.2 And How To Use Hook ?
+:white_check_mark: 16.2 And How To Use Hook?
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
@@ -627,7 +627,7 @@ useEffect(() => {
 
 :white_check_mark: 18. Explain The Controlled Components And Uncontrolled Components.
 > - **Controlled Components** : <br/> 
-(1) Ｃontrol by status or props.
+(1) `Control by status or props`. <br/> 
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
 (3) Controls the values of input elements in a form using setState(). <br/> 
 (4) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
@@ -642,12 +642,12 @@ useEffect(() => {
 <br/>
 
 > - **Uncontrolled Components** :   <br/> 
-(1) Doesn't control by status or props, use ref to control DOM (https://jsfiddle.net/yschen25/o237p9Ld/).  <br/> 
+(1) `Doesn't control by status or props, use ref to control DOM` (https://jsfiddle.net/yschen25/o237p9Ld/).  <br/> 
 (2) Allow set up the value by defaultValue.  <br/> 
 (3) Easy to use with third party library. 
 <br/><br/>
 
-:white_check_mark: 18.1 When Use Controlled Components Or Uncontrolled Components ?
+:white_check_mark: 18.1 When Use Controlled Components Or Uncontrolled Components?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
