@@ -84,12 +84,12 @@
 
 :white_check_mark: 6. What Is The Difference Between Em and Rem?
 
-> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em **WILL BE AFFECTED**, but the children with rem **WILL NOT BE AFFECTED**.
+> - Em is relative to its parent's font size, rem is relative to root font size. If change the container's font size, the children with em `will be affected`, but the children with rem `will not be affected`.
 <br/>
 
-:white_check_mark: 7. What Is The Position : Relative, Absolute, Fixed? <br/>
+:white_check_mark: 7. What Is The Position: Relative, Absolute, Fixed? <br/>
 
-> ① Position : relative is positioned relative to its normal position. <br/>
+> ① Position : relative is positioned relative to its own position. <br/>
 > ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
 > ③ Position : fixed is positioned relative to the browser window.
 
