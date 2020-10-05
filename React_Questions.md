@@ -361,8 +361,9 @@ componentDidCatch(error, info) {
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 <br/><br/>
 
-:small_red_triangle: 10. Axios
-> - Axios is a promise-based HTTP client that works both in the browser and in a Node.js environment. It provides a single API for dealing with XMLHttpRequests and node’s http interface. Besides that, it wraps the requests using a polyfill for ES6 new’s promise syntax. <br/>
+:white_check_mark: 10. Axios
+> - To send Http requests from (client-side) JavaScript.
+<br/>
 (1) Make XMLHttpRequests from the browser <br/>
 (2) Make http requests from node.js <br/>
 (3) Supports the Promise API <br/>
