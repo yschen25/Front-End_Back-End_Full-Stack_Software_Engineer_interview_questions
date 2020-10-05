@@ -55,24 +55,26 @@
 
 :white_check_mark: 4. What Is CSS Reset And CSS Normalize?
 
-> - Every browser has its own default 'user agent' stylesheet, CSS reset and CSS normalize is use to make it look consistent across browsers.
+> - Every browser has its own default 'user agent' stylesheet, CSS reset and CSS normalize is use `to make it look consistent across browsers`.
 
 :white_check_mark: 4.1 What Is The Difference Between CSS Reset And CSS Normalize?
-> - CSS reset removes all built-in browser styling, after assigning the values of margin padding and other attributes to 0. CSS normalize keeps useful defaults rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
+> - `CSS reset removes all built-in browser styling`, after assigning the values of margin padding and other attributes to 0. `CSS normalize keeps useful defaults` rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
 <br/>
 
 :white_check_mark: 5. What Is Float?
 
-> - Float is a CSS positioning property, an element can be declared to be outside the normal flow of elements.<br/>
+> - Float is a CSS positioning property, an element can be declared to be `outside the normal flow of elements`.<br/>
 > - There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
 > - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
 <br/>
 
-:small_red_triangle: 5.1 How To Clear Float?
+:white_check_mark: 5.1 Why Should We Clear Float?
+> - If there are one large box contain two small float boxes, it will cause the big one can't extend the height.<br/> 
 
-> - Clear is the properity to clear the float.<br/>
-> - There are clear : left, right, both.<br/>
-> - I.g., If there are one large box contain two small float boxes, it will cause the big one can't extend the height, there are many ways to solve the problems.<br/> 
+:white_check_mark: 5.2 How To Clear Float?
+> - Clear is the properity to clear the float. <br/>
+> - There are clear : left, right, both. <br/>
+> - Way to clear float : 
 ① Empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
 ② Overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
 ③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
