@@ -556,21 +556,20 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 :white_check_mark: 16. Explain What Is Hook?
-> - Hooks are in-built functions that allow React developers to use state and lifecycle methods inside functional components.
-> - If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
+> - Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
 :white_check_mark: 16.1 What Is Side Effects?
-> - Side effects are all the operations that affect your component and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
+> - Side effects are all the operations that `affect your component` and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
 :white_check_mark: 16.2 And How To Use Hook?
 
 1. useState() : <br/>
-(1) Allows React developers to update, handle and manipulate state inside functional components without needing to convert it to a class component. <br/>
+(1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the actual state, while the second variable is a function that is meant for updating the state by providing a new state.  <br/>
-(3) Example : Befer hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)<br/>
+(3) Example : Before hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://tinyurl.com/yxpd3g7g)<br/>
 
 2. useEffect() : <br/>
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you perform side effects in function components, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
