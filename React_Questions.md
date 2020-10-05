@@ -560,7 +560,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Hooks don’t work inside classes.
 <br/>
 
-:white_check_mark: 16.1 What Is Side Effects?
+:white_check_mark: 16.1 What Are Side Effects?
 > - Side effects are all the operations that `affect your component` and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
@@ -609,11 +609,11 @@ useEffect(() => {
 ```
 <br/>
 
-(3) Example : https://tinyurl.com/y6yb643h <br/>
+(3) Example : https://tinyurl.com/y6yb643h <br/><br/>
 
 3. useContext() :  <br/>
 (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4
+(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4 <br/>
 
 4. Custom React Hooks : <br/>
 (1) Custom hooks allow you to create functionality that can be reused across different components.
