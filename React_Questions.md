@@ -663,7 +663,7 @@ useEffect(() => {
 
 :white_check_mark: 19. Why Do I Need To Use Keys In React Lists ?
 > - Keys help React `identify which items have changed, are added, or are removed`.
-> - React recommends that you `do not use indexes as keys`, since it could `impact performance negatively and could lead to some unstable component behaviour`.
+> - React recommends that you `do not use indexes as keys`, since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
 > - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
 ```
 const content = posts.map((post) =>
@@ -678,8 +678,7 @@ const content = posts.map((post) =>
 <br/><br/>
 
 :white_check_mark: 19.1 What Are Some Exceptions Where It Is Safe To Use Index As Key?
-> - If your list is static (no additions/re-ordering/removal to the list).
-> - There are no ids for the items in the list.
+> - If your `list is static` (no additions/re-ordering/removal to the list).
 <br/><br/>
 
 ❗ 20. What Are Higher-Order Components(HOC)?
