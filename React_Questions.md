@@ -363,7 +363,6 @@ componentDidCatch(error, info) {
 
 :white_check_mark: 10. Axios
 > - To send Http requests from (client-side) JavaScript.
-<br/>
 (1) Make XMLHttpRequests from the browser <br/>
 (2) Make http requests from node.js <br/>
 (3) Supports the Promise API <br/>
