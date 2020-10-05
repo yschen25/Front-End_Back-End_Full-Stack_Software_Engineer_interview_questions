@@ -258,11 +258,12 @@ addCount = () => {
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
+:white_check_mark: 9. Explain The Life Cycle Of React.js? <br/>
+
 <p align="center">
-<img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles">
+<img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
 </p>
 
-:white_check_mark: 9. Explain The Life Cycle Of React.js? <br/>
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
  (1) Mounting : Means putting elements into the DOM. <br/>
  (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
