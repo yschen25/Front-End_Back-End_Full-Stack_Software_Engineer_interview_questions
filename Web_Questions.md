@@ -82,6 +82,7 @@
 > - Minify files : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
 > - Defer lag file loading : ensure that the rest of your content can load without a delay. <br/>
 > - Use asynchronous loading : the browser could continue loading other elements on the page at the same time. <br/>
+> - Optimize render web page (ref:15.1)
 
 > - Related Reference : [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/), [讓你的網頁加載時間降低到1s 內](https://www.jianshu.com/p/d857c3ff78d6)
 <br/>
@@ -231,9 +232,9 @@ Get：
 > - Related Reference : [GraphQL和RESTful的比較](https://segmentfault.com/a/1190000012878342)
 <br/>
 
-:white_check_mark: 12. What Is Token?
+:white_check_mark: 12. What Is A Token?
 
-> - Token likes a passport, after user enter the id and password, sever-side will generate a token for this user,
+> - Token likes a passport, after user enter the id and password, server-side will generate a token for this user,
 then the user will has permission to view or manipulate corresponding informations by the token. There are a lots of way to generate token, such use Mac, sessionId, etc.
 
 > - Related Reference : [Token令牌入門學習](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/35304/#outline__1_0_1), [簡單理解token機制](http://www.woshipm.com/pd/877760.html)
@@ -263,29 +264,29 @@ then the user will has permission to view or manipulate corresponding informatio
 <br/>
 
 :white_check_mark: 15. What Is Reflow And Repaint? 
-> - Reflow : it will reflow when manipulate DOM (add, change, delete, etc.), change CSS(width, position, etc.), change size of browser, etc. Change width → Reflow → Repaint.
-> - Repaint : it will repaint when change style of element. Change color → Repaint.
+> - Reflow : It will reflow when `manipulate DOM (add, change, delete, etc.)`, `change CSS(width, position, etc.)`, `change size of browser`, etc. Change width → Reflow → Repaint.
+> - Repaint : It will repaint when `change style of element`. Change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 <br/>
 
-:white_check_mark: 15.1 How To Optimize Render Web Page? (ref : 2)
+:white_check_mark: 15.1 How To Optimize Render Web Page?
 > - Combine multiple operations to one time.
-> - Modify element's style by change class name instead of changeing the style by css-in-js.
+> - `Modify element's style by change class name` instead of changeing the style by css-in-js.
 > - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape from document flow to prevent affect other elements. 
 > - ...
 <br/>
 
 :white_check_mark: 16. What Is The Async And Defer In Script Tag? 
-> - Defer : load script after finishing loading other documents, recommended use in every scripts.
-> - Async : continue loading other documents when loading script, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
+> - Defer : Load script after finishing loading other documents, recommended use in every scripts.
+> - Async : Continue loading other documents when loading script, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
 > - Async + Defer : load script asynchronous after loading other documents.
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
 
 :white_check_mark: 17. What Is CORS?
 
-> -  A request from the orgin domain is different from the target domain which violate the Same-Origin Policy, for the security, usually fobidden Cross Domain Access to prevent CSRF.
-> - Cross Origin Resource Sharing is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
+> -  A request from the orgin domain is different from the target domain which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
+> - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
 
 ```
 <? php
