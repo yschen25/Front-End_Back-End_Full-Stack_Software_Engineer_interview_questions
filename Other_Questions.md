@@ -37,13 +37,32 @@
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 <br/>
 
-:white_check_mark: 5. What Is XSS?
+:white_check_mark: 5. What Is CORS?
+
+> -  A request from the orgin domain is different from the target domain which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
+> - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
+
+```
+<? php
+ 
+// Cross-Origin Resource Sharing Header
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+ 
+?>
+```
+
+> - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
+<br/>
+
+:white_check_mark: 6. What Is XSS?
 > - Cross-Site Scripting (XSS) attack website through the website vulnerability by script.
 > - Related Reference : [常見攻擊：XSS、SQL Injection
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html)
 <br/>
 
-:white_check_mark: 6. What Is Cloud Computing?
+:white_check_mark: 7. What Is Cloud Computing?
 > - The cloud(internet) computing is a way of `managing IT resources that replaces local machines and private data centers with virtual infrastructure`, including servers, storage, databases, networking, software, analytics. Users access virtual compute, network, and storage resources made available online by a remote provider. 
 > - These resources can be provisioned instantly, which is particularly useful for companies that need to scale their infrastructure up or down quickly in response to fluctuating demand.
 > - Related Reference : [徹底了解 Cloud Computing](https://www.ithome.com.tw/article/93006)
