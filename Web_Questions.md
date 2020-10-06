@@ -136,8 +136,8 @@
 :white_check_mark: 7. What Is SPA?
 
 > - SPA is short for `Single Page Application`. 
-> - One SPA is one web application, it will load all you need (HTML, CSS, JS) at first time.
-> - It will `not reload whole` website when user manipulate the pages, only reload the different part, let user has better user experiences.
+> - One SPA is one web application, it will `load all you need (HTML, CSS, JS) at first time`.
+> - It will `not reload whole` website when user manipulate the pages, `only reload the different part`, let user has better user experiences.
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
@@ -150,7 +150,7 @@
 
 :white_check_mark: 7.2 How To Solve The Problem?
 
-> - SSR, Server Side Rendering, render the fist page with server side, the others with client side. (ref:18)
+> - SSR, Server Side Rendering, `render the fist page with server side, the others with client side`. (ref:18)
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
