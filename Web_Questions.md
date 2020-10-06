@@ -53,7 +53,7 @@
     </tr>
     <tr>
         <td>Usability</td>
-        <td>Easily to use</td>
+        <td>Easy to use</td>
         <td>The API is difficult to use</td>
         <td colspan="2">Has method setItem, getItem, removeItem, clear that easy to use</td>
     </tr>
