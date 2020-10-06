@@ -173,17 +173,17 @@
 > - Related Reference : [PWA 初體驗](https://hsiangfeng.github.io/pwa/20191017/2186080947/)
 <br/>
 
-:white_check_mark: 10. What Is Gateway, API Gateway and API?
+:white_check_mark: 10. What Is Gateway, API And API Gateway ?
 
-> - Gateway : a interface to receive and handle the request.
-> - API : a Application Programming Interface to let user manipulate to achieve what they want.
-> - API Gateway : a service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
+> - Gateway : An interface to receive and handle the request.
+> - API : A `Application Programming Interface` to let user manipulate to achieve what they want.
+> - API Gateway : A service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
 > - Related Reference : [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 <br/>
 
-:white_check_mark: 11. What Is Rest API? 
+:white_check_mark: 11. What Is Rest API (Restful API)? 
 
-> - Rest API also call Restful API, it's a  and isn't mandatory to use it. The purpose is make api easily to maintain and develop. 
+> - Rest API also call `Restful API`, the purpose is make api easily to maintain and develop. 
 
 ```
 https://localhost:8080/myweb/getDogs --> GET /rest/api/dogs get dogs 
@@ -197,13 +197,13 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 
 :white_check_mark: 11.1 What Is Strength And Weakness?
 
-> - Strength : simple and uniform Interface, cachable
-> - Weakness : need to create multiple requests to get complex data 
+> - Strength : Simple and uniform Interface, cachable
+> - Weakness : Need to create multiple requests to get complex data 
 <br/>
 
-:white_check_mark: 11.2 How To Solve The problem 11?
+:white_check_mark: 11.2 How To Solve Problem 11.1?
 
-> - GraphQL allow using one entry point to get all data, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
+> - `GraphQL allow using one entry point to get all data`, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
 ```
 Serach：
