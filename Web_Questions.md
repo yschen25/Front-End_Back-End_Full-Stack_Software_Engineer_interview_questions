@@ -27,13 +27,13 @@
     </tr>
     <tr>
         <td>Expired Time</td>
-        <td>If user doesn’t active for a long time which over expire time, the server-side will delete the session to
+        <td>If the user doesn’t active for a long time which over expires time, the server-side will delete the session to
             save the space
         </td>
-        <td><li>user can set expiration time for each cookies.</li> <li>It will expire after closing browser if it set on client-side
+        <td><li>Users can set the expiration time for each cookie.</li> <li>It will expire after closing the browser if it set on client-side
         </li></td>
         <td>The data clear automatically when the browser is closed</td>
-        <td>The data <b>WILL NOT</b> be deleted when the browser is closed until user clear through JavaScript, browser cache /
+        <td>The data <b>WILL NOT</b> be deleted when the browser is closed until the user clear through JavaScript, browser cache /
             locally stored data
         </td>
     </tr>
@@ -54,13 +54,13 @@
     <tr>
         <td>Usability</td>
         <td>Easily to use</td>
-        <td>The api is difficult to use</td>
-        <td colspan="2">Has method setItem, getItem, removeItem, clear that easily to use</td>
+        <td>The API is difficult to use</td>
+        <td colspan="2">Has method setItem, getItem, removeItem, clear that easy to use</td>
     </tr>
     <tr>
         <td>HTTP Request</td>
         <td></td>
-        <td>The data is sent back to the server for every HTTP request which cause performance problems</td>
+        <td>The data is sent back to the server for every HTTP request which causes performance problems</td>
         <td colspan="2">The data is <b>NOT</b> sent back to the server for every HTTP request</td>
     </tr>
     <tr>
