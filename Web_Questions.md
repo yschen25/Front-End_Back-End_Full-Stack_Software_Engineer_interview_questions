@@ -283,26 +283,7 @@ then the user will has permission to view or manipulate corresponding informatio
 > - Related Reference : [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 <br/>
 
-:white_check_mark: 17. What Is CORS?
-
-> -  A request from the orgin domain is different from the target domain which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
-> - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
-
-```
-<? php
- 
-// Cross-Origin Resource Sharing Header
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
- 
-?>
-```
-
-> - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
-<br/>
-
-:white_check_mark: 18. What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?
+:white_check_mark: 17. What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?
 
 |   | SSR (Server-side rendering) | CSR (Client-side rendering) |
 |---|---|---|
