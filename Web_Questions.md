@@ -149,7 +149,7 @@ One SPA is one web application, it will load all you need (HTML, CSS, JS) at fir
 
 :white_check_mark: 7.2 How To Solve The Problem?
 
-> - SSR, Server Side Rendering, render the fist page with server side, the others with client side.
+> - SSR, Server Side Rendering, render the fist page with server side, the others with client side. (ref:18)
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
