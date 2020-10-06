@@ -135,8 +135,9 @@
 
 :white_check_mark: 7. What Is SPA?
 
-> - SPA is short for Single Page Application. 
-One SPA is one web application, it will load all you need (HTML, CSS, JS) at first time, only reload the different part when you manipulate the page.
+> - SPA is short for `Single Page Application`. 
+> - One SPA is one web application, it will load all you need (HTML, CSS, JS) at first time.
+> - It will `not reload whole` website when user manipulate the pages, only reload the different part, let user has better user experiences.
 > - Related Reference : [跟著小明一起搞懂技術名詞：MVC、SPA 與 SSR](https://medium.com/@hulitw/introduction-mvc-spa-and-ssr-545c941669e9)
 <br/><br/>
 
