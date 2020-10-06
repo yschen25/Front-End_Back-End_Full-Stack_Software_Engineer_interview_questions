@@ -98,8 +98,7 @@
 
 :white_check_mark: 4. What Is NPM?
 
-> - NPM is short for Node Package Manager, it is an online library for download open-source javaScript projects,
-we can manage packages via NPM.
+> - NPM is short for Node Package Manager, it is an online library for `download manage open-source javaScript projects`.
 <br/>
 
 :white_check_mark: 4.1 Why Use NPM?
