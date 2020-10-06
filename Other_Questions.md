@@ -37,7 +37,7 @@
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 <br/>
 
-:white_check_mark: 5. What Is CORS?
+:white_check_mark: 5. What Is CORS? (ref:4)
 
 > -  A request from the orgin domain is different from the target domain which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
 > - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
