@@ -39,7 +39,7 @@
 
 :white_check_mark: 5. What Is CORS? (ref:4)
 
-> -  A request from the orgin domain is different from the target domain which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
+> -  `A request from the orgin domain is different from the target domain` which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
 > - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
 
 ```
