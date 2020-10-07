@@ -180,7 +180,7 @@ function letFunction () {
 varFunction(); 
 letFunction();
 ```
-> - Compare var and let in loop https://jsfiddle.net/yschen25/7qwp480z/1/.
+> - Compare var and let in loop https://jsfiddle.net/yschen25/7qwp480z/1/. (ref:[ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/))
 > - `Let is for declare variables`. <br/>
 > - `Const is for declare const variables`, need initialize in declaration, `can't reassignment`. <br/>
 ```
@@ -206,6 +206,7 @@ function test() {
 }
 test()
 ```
+> - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/>
 
 :white_check_mark: 12. Explan What Is "this"?
