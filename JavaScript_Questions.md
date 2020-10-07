@@ -331,7 +331,7 @@ func.bind(obj)();  // 123
 > - Non-Primitive Types : array, object, function, date, regx.
 <br/><br/>
 
-:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13)
+:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13, 14.1)
 
 > - **Call By Value** : 
 
@@ -339,7 +339,7 @@ func.bind(obj)();  // 123
 <img src="img/call_by_value.png" alt="call_by_value" title="call_by_value" width="60%">
 </p>
 
-> - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b also `has own memory location` and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref:14.1)
+> - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b also `has own memory location` and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other. 
 
 > - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
@@ -370,10 +370,10 @@ func.bind(obj)();  // 123
 <img src="img/shallow_deep_copy2.png" alt="shallow_deep_copy" title="shallow_deep_copy">
 </p>
 
-> - Shallow Copy : Duplicates as little as possible. If b is a shallow copy of a, b points to a's location in memory, b ```WILL CHANGE``` it's value when change a. 
+> - **Shallow Copy** : Duplicates as little as possible. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
 > - Method => spread operator, object.assign
 
-> - Deep Copy : Duplicates everything. If b is a deep copy of a, a and b has it's own memory location, b ```WILL NOT CHANGE``` it's value when change a. 
+> - **Deep Copy** : Duplicates everything. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
 > - Method => javaScript : JSON.parse(JSON.stringify(object)) (not for function), jQuery : $.extend, lodash : _.cloneDeep
 
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
