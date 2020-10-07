@@ -322,13 +322,17 @@ func.bind(obj)();  // 123
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
 
-:white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Type In Javascript.
+:white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Types In Javascript.
 <p align="center">
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
 </p>
+
+> - Primitive Types : string, number, boolean, undefined, null, symbol.
+> - Non-Primitive Types : array, object, function, date, regx.
+> - Not defined means the varable doesn't exist, undefined means a value without assigning value, null means value is empty.
 <br/><br/>
 
-:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing?
+:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13)
 
 > - **Call By Value** : 
 
@@ -336,7 +340,7 @@ func.bind(obj)();  // 123
 <img src="img/call_by_value.png" alt="call_by_value" title="call_by_value" width="60%">
 </p>
 
-> - When you declare a primitive type (string, number, boolean, null, undefined, symbol) variable a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value ```WILL NOT CHANGE``` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref : Deep copy)
+> - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref:14.1)
 
 > - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
@@ -347,12 +351,12 @@ func.bind(obj)();  // 123
 <img src="img/call_by_reference.png" alt="call_by_reference" title="call_by_reference" width="60%">
 </p>
 
-> - When you declare a non-primitive(objects) type(array, object, function, date, regx) variable a, it will has own memory location and store it's own value in it, then assign b equal to a, b ```WILL NOT``` has an own memory location, a and b will has same memory location, b's value ```WILL CHANGE``` when a's value changes.  (Ref : Shallow copy)
+> - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a, it will has own memory location and store it's own value in it, then assign b equal to a, b will `not has an own memory` location, a and b will has same memory location, b's value `will change` when a's value changes.  (Ref : Shallow copy)
 
 > - Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
-> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a, assign b equal to a, but use ```Array Literals``` or ```Object Literals``` to reassign a's value, b's value ```WILL NOT CHANGE``` when a's value changes. 
+> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes. 
 
 > - Example : https://jsfiddle.net/yschen25/7djyawve
 
