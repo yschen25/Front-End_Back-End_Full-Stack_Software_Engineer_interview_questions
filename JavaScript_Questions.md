@@ -59,8 +59,11 @@ myPromise.then((message) => {
 <br/><br/>
 
 :white_check_mark: 3. Explain What Is The New Feature In ES6?
+> - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals.
+<br/><br/>
 
-> - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals
+:white_check_mark: 3.1 Explain What Is The New Feature In ES7?
+> - Async, Await.
 <br/><br/>
 
 :white_check_mark: 4. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
