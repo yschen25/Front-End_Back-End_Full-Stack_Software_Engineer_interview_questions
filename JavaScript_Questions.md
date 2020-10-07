@@ -327,7 +327,7 @@ func.bind(obj)();  // 123
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
 </p>
 
-> - Primitive Types : string, number, boolean, undefined, null, symbol.
+> - Primitive Types : string, number, boolean, undefined, null, symbol. (ref:15)
 > - Non-Primitive Types : array, object, function, date, regx.
 <br/><br/>
 
@@ -339,7 +339,7 @@ func.bind(obj)();  // 123
 <img src="img/call_by_value.png" alt="call_by_value" title="call_by_value" width="60%">
 </p>
 
-> - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a , it will has own memory location and store it's own value in it, then assign another variable b equal to a, b also has own memory location and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref:14.1)
+> - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b also `has own memory location` and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.  (Ref:14.1)
 
 > - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
 <br/><br/>
@@ -350,12 +350,12 @@ func.bind(obj)();  // 123
 <img src="img/call_by_reference.png" alt="call_by_reference" title="call_by_reference" width="60%">
 </p>
 
-> - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a, it will has own memory location and store it's own value in it, then assign b equal to a, b will `not has an own memory` location, a and b will has same memory location, b's value `will change` when a's value changes.  (Ref : Shallow copy)
+> - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b `doesn't have own memory` location, a and b will has same memory location, b's value `will change` when a's value changes.  (Ref : Shallow copy)
 
 > - Example : https://jsfiddle.net/yschen25/ov3rq5me
 <br/><br/>
 
-> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes. 
+> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes. 
 
 > - Example : https://jsfiddle.net/yschen25/7djyawve
 
