@@ -120,7 +120,7 @@ window.setTimeout( function(){ ... }, 1000);
 
 :white_check_mark: 9. Explan What Is Hoisting?
 
-> - Hoisting is JavaScript's default behavior of moving declarations to the top. <br/>
+> - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 ```
 console.log(a); // Uncaught ReferenceError: a is not defined
 ```
@@ -145,13 +145,13 @@ test(10)
 console.log(a); // undefined
 var a = 5;
 ```
-> - Not only hoist variable, also hoist function, and the function's priority is higher than variable.
+> - Not only `hoist variable, also hoist function`, and the function's priority is higher than variable.
 ```
 console.log(a) // function a(){}
 var a
 function a(){}
 ```
-> - JavaScript in strict mode(use strict) does not allow variables to be used if they are not declared. <br/>
+> - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
 > - You can use ```let/const``` instead of ```var``` to avoid hoisting, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
