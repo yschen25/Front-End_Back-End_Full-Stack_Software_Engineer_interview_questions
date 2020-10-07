@@ -118,7 +118,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-:white_check_mark: 9. Explan What Is Hoisting?
+:white_check_mark: 9. Explain What Is Hoisting?
 
 > - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 ```
@@ -159,7 +159,7 @@ function a(){}
 
 :white_check_mark: 10. What Is Let And Const?
 
-> - ```let``` and ```const``` is block scope, ```var``` is function scope. <br/>
+> - `Let and Const is block scope`, `Var is function scope`. <br/>
 ```
 function varFunction () {
   var ming = 'May';
@@ -181,8 +181,8 @@ varFunction();
 letFunction();
 ```
 > - Compare var and let in loop https://jsfiddle.net/yschen25/7qwp480z/1/.
-> - Let is for declare variable. <br/>
-> - Const is for declare const variable, need initialize in declaration, can't reassignment. <br/>
+> - `Let is for declare variables`. <br/>
+> - `Const is for declare const variables`, need initialize in declaration, `can't reassignment`. <br/>
 ```
 const a = 10
 a = 20  // TypeError: Assignment to constant variable.
@@ -193,7 +193,7 @@ a = 20  // TypeError: Assignment to constant variable.
 
 :white_check_mark: 11. Explan What Is TDZ?
 
-> - TDZ is short of Temporal Dead Zone. You will get error notification if you try to access a variable after hoisting and before initialization.
+> - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable after hoisting and before initialization.
 ```
 function test() {
     var a = 1; // Start C's TDZ
