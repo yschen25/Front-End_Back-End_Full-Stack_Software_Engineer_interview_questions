@@ -444,6 +444,7 @@ console.log(superSecret);
 
 :white_check_mark: 18. What Is Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
+
 (1) A function created with a name. 
 ```
 function statement(item) {
@@ -465,6 +466,7 @@ callTest(); // 123
 <br/>
 
 > - **Function Expression** :  <br/>
+
 (1) The name may be omitted in function expressions, making that function anonymous. <br/>
 ```
 var expression = function(item) {
