@@ -152,7 +152,7 @@ var a
 function a(){}
 ```
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
-> - You can use ```let/const``` instead of ```var``` to avoid hoisting, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
+> - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
@@ -191,7 +191,7 @@ a = 20  // TypeError: Assignment to constant variable.
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/><br/>
 
-:white_check_mark: 11. Explan What Is TDZ (Temporal Dead Zone)? (ref:10)
+:white_check_mark: 11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
 
 > - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization` which declared with let or const.
 ```
