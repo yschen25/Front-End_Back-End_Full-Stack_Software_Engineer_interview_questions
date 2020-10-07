@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-:white_check_mark: 2. Explain What Is Promise?
+:white_check_mark: 2. Explain What Is Promise? (ref:3)
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -118,7 +118,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-:white_check_mark: 9. Explain What Is Hoisting?
+:white_check_mark: 9. Explain What Is Hoisting? (ref:10)
 
 > - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 ```
@@ -157,7 +157,7 @@ function a(){}
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
-:white_check_mark: 10. What Is Let And Const?
+:white_check_mark: 10. What Is Let And Const? (ref:11)
 
 > - `Let and Const is block scope`, `Var is function scope`. <br/>
 ```
@@ -191,18 +191,18 @@ a = 20  // TypeError: Assignment to constant variable.
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/><br/>
 
-:white_check_mark: 11. Explan What Is TDZ?
+:white_check_mark: 11. Explan What Is TDZ (Temporal Dead Zone)? (ref:10)
 
-> - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable after hoisting and before initialization.
+> - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization` which declared with let or const.
 ```
 function test() {
-    var a = 1; // Start C's TDZ
+    var a = 1; // Start varable c's TDZ
     var b = 2;
     console.log(c) // Uncaught ReferenceError: Cannot access 'c' before initialization
     if (a > 1) {
       console.log(a)
     }
-    let c = 10 // End C's TDZ
+    let c = 10 // End varable c's TDZ
 }
 test()
 ```
