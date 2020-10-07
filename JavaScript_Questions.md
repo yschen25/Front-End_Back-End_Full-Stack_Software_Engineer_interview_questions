@@ -481,12 +481,12 @@ callTest(); // 123
 <br/><br/>
 
 :white_check_mark: 19. What Is First Class Function?
-> - First Class Function means that you can do the things to the functions same as to other types(objects, string, boolean, numbers).
-1. Functions are objects. <br/>
-2. Can pass as an argument to other functions. <br/>
-3. can be assigned as a variable. <br/>
-4. can be returned by another function. <br/>
-5. Function have property.
+> - First Class Function means that you can do the things to the functions same as to other types(objects, string, boolean, numbers). <br/>
+(1) Functions are objects. <br/>
+(2) Can pass as an argument to other functions. <br/>
+(3) can be assigned as a parameter. <br/>
+(4) can be returned by another function. <br/>
+(5) Function have properties.
 
 > - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 <br/><br/>
