@@ -329,7 +329,6 @@ func.bind(obj)();  // 123
 
 > - Primitive Types : string, number, boolean, undefined, null, symbol.
 > - Non-Primitive Types : array, object, function, date, regx.
-> - Not defined means the varable doesn't exist, undefined means a value without assigning value, null means value is empty.
 <br/><br/>
 
 :white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13)
@@ -380,8 +379,12 @@ func.bind(obj)();  // 123
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-:white_check_mark: 15. Explain What Is Null And Undefined?
+:white_check_mark: 15. Explain What Is Not Defined, Undefined and Null?
 
+**Not Defined**
+> - Not defined means the varable doesn't exist.
+
+**Undefined**
 > - Primitive type
 > - Undefined means a variable has been declared but has not yet been assigned a value. <br/>
 > - Boolean(undefined) = false <br/>
@@ -390,6 +393,7 @@ let a;<br/>
 console.log(a);         // undefined<br/>
 console.log(typeof a);  // undefined<br/>
 
+**Null**
 > - Primitive type
 > - Null is an assignment value. It can be assigned to a variable as a representation of no value. <br/>
 > - Boolean(null) = false <br/>
