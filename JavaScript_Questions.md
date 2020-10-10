@@ -297,7 +297,7 @@ el.addEventListener("click", function(event) {
 ```
 <br/>
 
-> - Use `call()` to execute the function.
+> - Use `call(), apply()` to execute the function.
 ```
 var person = {
   name: "Kuro",
