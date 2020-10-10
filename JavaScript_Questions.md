@@ -16,7 +16,7 @@
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
 
-> - Promise is guarantee to do specfic things after resolved or rejected, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
+> - `Promise is guarantee to do specfic things after resolved or rejected`, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
 
 ```
 const myPromise = new Promise((resolve, reject) => {  
@@ -24,10 +24,10 @@ const myPromise = new Promise((resolve, reject) => {
 });
 ```
 
-> - A promise starts in the pending state which indicates that the promise hasn’t completed, it ends with either fulfilled (successful) or rejected (failed) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
-(1) Resolved: The state of a promise representing a successful operation. <br/>
-(2) Rejected: The state of a promise representing a failed operation. <br/>
-(3) Pending: Initial state, before the promise succeeds or fails. <br/>
+> - A promise starts in the `pending state which indicates that the promise hasn’t completed`, it ends with either success (resolve) or fail (reject) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
+(1) **Resolved** : The state of a promise representing a successful operation. <br/>
+(2) **Rejected** : The state of a promise representing a failed operation. <br/>
+(3) **Pending** : Initial state, before the promise succeeds or fails. <br/>
 
 ```
 const myPromise = new Promise((resolve, reject) => {  
@@ -42,11 +42,12 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - How to deal with states :  <br/>
-(1) then( )  : If the promise gets `resolved`, the then( ) method is called after the promise is resolved, then we can decide what to do with the resolved promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
-(2) catch( )  : If the promise gets `rejected`, it will jump to the catch( ) method. <br/>
-(3) finally() : Execute the same piece of code whether the promise is `fulfilled` or `rejected`. <br/>
-(4) all() : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected.  <br/>
+(1) **then( )**  : If the promise gets `resolved`, the then( ) method is called, then we can decide what to do with the resolved promise. then( ) accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
+(2) **catch( )**  : If the promise gets `rejected`, it will jump to the catch( ) method. <br/>
+(3) **finally()** : Execute the `same piece of code whether the promise is resolved or rejected`. <br/>
+(4) **all()** : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected.  <br/>
 (5) Keep waiting : During pending.  
+
 ```
 myPromise.then((message) => { 
     console.log(message);
@@ -59,11 +60,25 @@ myPromise.then((message) => {
 <br/><br/>
 
 :white_check_mark: 3. Explan What Is Async/Await? (ref:2)
-> - Async and await is syntactic sugar for promises in javaScript.
-> - The async functions return a promise.
-> - At an await expression, the execution of the async function is paused and waits for the operand promise to resolve. 
-> - The await operator returns the promise’s resolved value. 
-> - An await operand can only be used inside an async function.
+> - Async and Await is `syntax sugar for promises` in javaScript.
+> - Await ensures executing next step `after specific operations`. 
+> - An Await operand can `only be used inside an Async function`.
+> - The Async functions return a promise.
+
+```
+async function fetchData(){
+  await a();
+  .....       // Execute after a
+  await b();
+  .....       // Execute after b
+}
+
+fetchData();
+fetchData().then(() => {
+  .....       // Execute after fetchData
+});
+```
+
 > - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
 ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
 <br/><br/>
