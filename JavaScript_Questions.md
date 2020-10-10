@@ -379,7 +379,7 @@ func.bind(obj)();  // 123
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-:white_check_mark: 15. Explain What Is Not Defined, Undefined and Null?
+:white_check_mark: 15. Explain What Is Not Defined, Undefined And Null?
 
 **Not Defined**
 > - Not defined means the varable doesn't exist.
@@ -408,7 +408,7 @@ null === undefined  // false
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 <br/><br/>
 
-:white_check_mark: 16. What Is Event Bubbling And How To Stop IT?
+:white_check_mark: 16. What Is Event Bubbling And How To Stop I?
 
 > - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
 > - (2)Using event.stopPropagation()
@@ -416,33 +416,7 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-:white_check_mark: 17. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
-> -  (pronounced 'iffy') Is a function defined as an expression and executed immediately after creation.
-> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
-```
-(function(){
-    //...
-})();
-```
-<br/>
-
-> - See the example : We can’t access the superSecret variable outside of the IIFE. All of the code within our IIFE stays within the private scope of our function. Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
-```
-(function(){
-  var superSecret = 195;
-})()
-console.log(superSecret);
-//  Uncaught ReferenceError: superSecret is not defined
-```
-<br/>
-
-:white_check_mark: 17.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result ?
-> - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around. With the function hanging out, oh-so readily available, it could accidentally be invoked again. Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
-
-> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
-<br/><br/>
-
-:white_check_mark: 18. What Is Function Statements(Declaration) And Function Expressions?
+:white_check_mark: 17. What Is Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
 
 (1) A function created with a name. 
@@ -488,6 +462,32 @@ callTest(); // 123
 <br/>
 
 > - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
+<br/><br/>
+
+:white_check_mark: 18. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
+> -  (pronounced 'iffy') Is a function `defined as an expression and executed immediately after creation`.
+> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
+```
+(function(){
+    //...
+})();
+```
+<br/>
+
+> - See the example : We can’t access the variable superSecret outside of the IIFE. All of the code within our IIFE stays within the private scope of our function. Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
+```
+(function(){
+  var superSecret = 195;
+})()
+console.log(superSecret);
+//  Uncaught ReferenceError: superSecret is not defined
+```
+<br/>
+
+:white_check_mark: 18.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result ?
+> - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around. With the function hanging out, oh-so readily available, it could accidentally be invoked again. Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
+
+> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 <br/><br/>
 
 :white_check_mark: 19. What Is First Class Function?
