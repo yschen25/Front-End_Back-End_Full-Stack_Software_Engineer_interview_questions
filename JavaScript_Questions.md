@@ -59,7 +59,7 @@ myPromise.then((message) => {
 > - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
 <br/><br/>
 
-:white_check_mark: 3. Explan What Is Async/Await? (ref:2)
+:white_check_mark: 3. Explain What Is Async/Await? (ref:2)
 > - Async and Await is `syntax sugar for promises` in javaScript.
 > - Await ensures executing next step `after specific operations`. 
 > - An Await operand can `only be used inside an Async function`.
