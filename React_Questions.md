@@ -465,24 +465,25 @@ componentDidCatch(error, info) {
 </Provider>
 ```
 		
-**(2) Connect** : The connect() function `connects a React component to a Redux store`. <br/>
-**(2.1) mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. <br/>
-**(2.2) mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
-**(2.3) mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-**(2.4) options** : If specified, further `customizes the behavior` of the connector. 
+(2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+(2.1) **mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. <br/>
+(2.2) **mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
+(2.3) **mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+(2.4) **options** : If specified, further `customizes the behavior` of the connector. 
 ```
 function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main);
 ```
 <br/>
 
 **Store Methods** <br/>
-**(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
-**(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
-**(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
-**(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
-**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
-**(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
-**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
+
+(1) **getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
+(2) **dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
+(3) **subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
+(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
+(4.1) **reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
+(4.2) **preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
+(4.3) **enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
