@@ -227,49 +227,44 @@ test()
 :white_check_mark: 12. Explan What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
 > - In an `object method`, this refers to the `owner` of the method.
+> - **Default Binding** 
+> - In a JavaScript `function(default)`, the owner of the function is the `global object`, so this refers to the `global object`.
 ```
-function callName() {
-  console.log(this.name);
+var a = 123;
+
+function foo() {
+  console.log(this.a);
 }
 
-var name = 'Joe';
-var girl = {
-  name: 'Amy',
-  callName: callName  
-}
-
-callName()      // Joe
-girl.callName() // Amy
-
+foo(); // 123
 ```
-<br/>
 
-> - When `it doesn't refer this to something`, the owner is the `global object`, so this refers to the `global object`.
-```
-var x = this;
-console.log(x) // [object Window]
-```
-<br/>
-
-> - In a JavaScript `function(default)`, the owner of the function is the `default binding for this`.
-```
-function myFunction() {
-  return this;
-}
-
-myFunction() // [object Window]
-```
-<br/>
-
-> - In a JavaScript `function(strict)`, strict mode does not allow default binding, So in strict mode is undefined.
+> - In a JavaScript `function(strict)`, strict mode `does not allow default binding`, So in strict mode is undefined.
 ```
 "use strict";
 
-function myFunction() {
-  return this;
+var a = 123;
+function foo() {
+  console.log(this.a);
 }
 
-myFunction() // undifined
+foo(); // undefined
+```
+<br/>
+
+> - **Implicit Binding** 
+```
+function func() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: func
+};
+
+func();       // undefined
+obj.foo();    // 2
 ```
 <br/>
 
@@ -280,6 +275,8 @@ myFunction() // undifined
 ```
 <br/>
 
+
+> - **Explicit Binding**
 > - Use `another variable` to temp save this.
 ```
 let el = document.getElementById('app');
@@ -335,6 +332,16 @@ func();            // undefined
 func.bind(obj)();  // 123
 ```
 <br/>
+
+> **New Binding**
+```
+function foo(a) {
+  this.a = a;
+}
+
+var obj = new foo(123);
+console.log( obj.a ); // 123
+```
 
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
