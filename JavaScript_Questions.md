@@ -226,7 +226,6 @@ test()
 
 :white_check_mark: 12. Explan What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
-> - In an `object method`, this refers to the `owner` of the method.
 <br/>
 
 **Default Binding** 
@@ -256,6 +255,7 @@ foo(); // undefined
 <br/>
 
 **Implicit Binding** 
+> - In an `object method`, this refers to the `owner` of the method.
 ```
 function func() {
   console.log( this.a );
