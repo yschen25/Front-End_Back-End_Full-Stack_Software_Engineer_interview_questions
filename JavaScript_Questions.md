@@ -225,7 +225,7 @@ test()
 <br/>
 
 :white_check_mark: 12. Explain What Is "this"?
-> - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
+> - The this keyword evaluates to the value of the ThisBinding of the current execution context, the `value of this is determined by how a function is called`.
 <br/>
 
 **Default Binding** 
