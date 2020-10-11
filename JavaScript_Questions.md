@@ -224,7 +224,7 @@ test()
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/>
 
-:white_check_mark: 12. Explan What Is "this"?
+:white_check_mark: 12. Explain What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
 <br/>
 
