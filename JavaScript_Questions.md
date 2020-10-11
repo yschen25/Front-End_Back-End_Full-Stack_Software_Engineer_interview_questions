@@ -227,6 +227,7 @@ test()
 :white_check_mark: 12. Explan What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
 > - In an `object method`, this refers to the `owner` of the method.
+<br/>
 
 **Default Binding** 
 > - In a JavaScript `function(default)`, the owner of the function is the `global object`, so this refers to the `global object`.
