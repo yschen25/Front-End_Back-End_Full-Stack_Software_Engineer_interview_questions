@@ -265,9 +265,9 @@ addCount = () => {
 </p>
 
 > - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
- (1) Mounting : Means putting elements into the DOM. <br/>
- (2) Updating : A component is updated whenever there is a change in the component's state or props. <br/>
- (3) Unmounting : When a component is removed from the DOM. <br/>
+ (1) **Mounting** : Means putting elements into the DOM. <br/>
+ (2) **Updating** : A component is updated whenever there is a change in the component's state or props. <br/>
+ (3) **Unmounting** : When a component is removed from the DOM. <br/>
  (4) (Error Handling) : Occurs javaScript errors. <br/>
 <br/>
 
@@ -432,13 +432,13 @@ componentDidCatch(error, info) {
 </p>
 <br/><br/>
 
-> - It is a predictable state container for JavaScript applications and is used for the entire applications state management.
+> - It is a `predictable state container` for JavaScript applications and is used for the `entire applications state management`.
 <br/>
 
 > - **List down three components of redux** :  <br/>
-(1) Action – To describe the type of `event (type)` and `informations (payload)`. <br/>
-(2) Store – The core of redux, the state of the entire application is stored in an object / state tree within a single store. <br/>
-(3) Reducer – It is a place `receiving previousState and action to determine the new state`.
+(1) **Action** – To describe the type of `event (type)` and `informations (payload)`. <br/>
+(2) **Store** – The core of redux, `the state of the entire application` is stored in an object / state tree within a single store. <br/>
+(3) **Reducer** – It is a place `receiving previousState and action to determine the new state`.
 <br/>
 
 > - **Redux interactive with users**： <br/>
@@ -449,7 +449,7 @@ componentDidCatch(error, info) {
 <br/>
 
 > - **Redux follows three principles** : <br/>
-**(1) Single source of truth** : The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br/>
+**(1) Single source of truth** : The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application. <br/>
 **(2) State is read-only** : `The only way to change the state is to trigger an action`. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
 **(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
@@ -457,31 +457,37 @@ componentDidCatch(error, info) {
 :white_check_mark: 12.2 How To Use Redux?
 
 > - **Store Methods** <br/>
-**(1) getState()** : Returns the current state tree of your application. It is equal to the last value returned by the store's reducer. <br/>
-**(2) dispatch(action)** : Dispatches an action. This is the only way to trigger a state change. <br/>
-**(3) subscribe(listener)** : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. <br/>
+**(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
+**(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
+**(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
 **(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
-**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore. <br/>
-**(4.2) preloadedState** : The initial state. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
-**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to extend Redux with custom functionality. The applyMiddleware combines mutiple middleware into a single function.
+**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
+**(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
+**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
 
-let store = createStore(allReducers, applyMiddleware(thunkMiddleware));
+let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 ```
 
 <br/>
 
 > - **Combine with React-Redux** <br/>
-**(1) Provider** : The <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level, with the entire app’s component tree inside of it. Normally, you can’t use a connected component unless it is nested inside of a <Provider>. <br/>
-**(2) Connect** : The connect() function connects a React component to a Redux store. <br/>
-**(2.1) mapStateToProps** : As the first argument passed in to connect, if mapStateToProps is specified that any time the store is updated, mapStateToProps will be called. <br/>
-**(2.2) mapDispatchToProps** : As the second argument passed in to connect, mapDispatchToProps is used for dispatching actions to the store. <br/>
-**(2.3) mergeProps** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-**(2.4) options** : If specified, further customizes the behavior of the connector. 
+**(1) Provider** : The Provider makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level, with the entire app’s component tree inside of it. Normally, `you can’t use a connected component unless it is nested inside of a <Provider>`. <br/>
 ```
-function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)
+<Provider store={store}>
+    <Main />
+</Provider>
+```
+		
+**(2) Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+**(2.1) mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. <br/>
+**(2.2) mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
+**(2.3) mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+**(2.4) options** : If specified, further `customizes the behavior` of the connector. 
+```
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main);
 ```
 
 <br/>
