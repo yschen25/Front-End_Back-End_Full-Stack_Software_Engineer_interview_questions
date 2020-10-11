@@ -376,7 +376,7 @@ componentDidCatch(error, info) {
 (8) Client side support for protecting against XSRF
 <br/><br/>
 
-:small_red_triangle: 11. What Is Flux ?
+:small_red_triangle: 11. What Is Flux?
 
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
@@ -426,7 +426,7 @@ componentDidCatch(error, info) {
 (1) Too complicated to small application.
 <br/><br/>
 
-12. What Is Redux ?
+:white_check_mark: 12. What Is Redux ?
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
@@ -456,7 +456,7 @@ componentDidCatch(error, info) {
 
 :white_check_mark: 12.2 How To Use Redux?
 
-> - **Combine with React-Redux** <br/>
+**Combine with React-Redux** <br/>
 
 **(1) Provider** : The Provider makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level, with the entire app’s component tree inside of it. Normally, `you can’t use a connected component unless it is nested inside of a <Provider>`. <br/>
 ```
@@ -475,7 +475,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main)
 ```
 <br/>
 
-> - **Store Methods** <br/>
+**Store Methods** <br/>
 **(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
 **(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
 **(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
