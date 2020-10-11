@@ -227,7 +227,8 @@ test()
 :white_check_mark: 12. Explan What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the value of this is determined by how a function is called.
 > - In an `object method`, this refers to the `owner` of the method.
-> - **Default Binding** 
+
+**Default Binding** 
 > - In a JavaScript `function(default)`, the owner of the function is the `global object`, so this refers to the `global object`.
 ```
 var a = 123;
@@ -238,6 +239,7 @@ function foo() {
 
 foo(); // 123
 ```
+<br/>
 
 > - In a JavaScript `function(strict)`, strict mode `does not allow default binding`, So in strict mode is undefined.
 ```
@@ -252,7 +254,7 @@ foo(); // undefined
 ```
 <br/>
 
-> - **Implicit Binding** 
+**Implicit Binding** 
 ```
 function func() {
   console.log( this.a );
@@ -276,7 +278,7 @@ obj.foo();    // 2
 <br/>
 
 
-> - **Explicit Binding**
+**Explicit Binding**
 > - Use `another variable` to temp save this.
 ```
 let el = document.getElementById('app');
@@ -333,7 +335,7 @@ func.bind(obj)();  // 123
 ```
 <br/>
 
-> **New Binding**
+**New Binding**
 ```
 function foo(a) {
   this.a = a;
