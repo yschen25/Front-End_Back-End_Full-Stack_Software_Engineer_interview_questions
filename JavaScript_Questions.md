@@ -244,7 +244,7 @@ girl.callName() // Amy
 ```
 <br/>
 
-> - When `used alone`, the owner is the `global object`, so this refers to the `global object`.
+> - When `it doesn't refer this to something`, the owner is the `global object`, so this refers to the `global object`.
 ```
 var x = this;
 console.log(x) // [object Window]
@@ -264,9 +264,11 @@ myFunction() // [object Window]
 > - In a JavaScript `function(strict)`, strict mode does not allow default binding, So in strict mode is undefined.
 ```
 "use strict";
+
 function myFunction() {
   return this;
 }
+
 myFunction() // undifined
 ```
 <br/>
