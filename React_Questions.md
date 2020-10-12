@@ -230,8 +230,8 @@ addCount() {
                 <button onClick={this.addCount.bind(this)}>Click Me!</button>
                 <h1>{this.state.count}</h1>
             </div>
-        )
-    }
+         )
+     }
 ```
 <br/>
 
@@ -244,12 +244,12 @@ addCount = () => {
     
     render() {
     	return(
-        	<div>
-        		<button onClick={this.addCount}>Click Me!</button>
-              		<h1>{this.state.count}</h1>
-        	</div>
-             )
-    }
+             <div>
+	        <button onClick={this.addCount}>Click Me!</button>
+	        <h1>{this.state.count}</h1>
+             </div>
+          )
+      }
 ```
 <br/>
 
