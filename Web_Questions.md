@@ -256,8 +256,8 @@ then the user will has permission to view or manipulate corresponding informatio
 <img src="img/website_rendering_02.jpg" alt="website_rendering" title="website_rendering" width="70%">
 </p>
 
-> - 1. Start parsing HTML to DOM(Document Object Model) Tree and parding CSS to CSSOM(CSS Object Model) Tree
-> - 2. Combine DOM and CSSOM to calucate html and style then generate render tree
+> - 1. Start parsing HTML to DOM(Document Object Model) Tree and parsing CSS to CSSOM(CSS Object Model) Tree
+> - 2. Combine DOM and CSSOM to calculate html and style then generate render tree
 > - 3. Determine every element's layout (Reflow)
 > - 4. Paint the result on the screen (Repaint)
 > - Related Reference : [瀏覽器渲染過程與性能優化](https://sylvanassun.github.io/2017/10/03/2017-10-03-BrowserCriticalRenderingPath/), [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
