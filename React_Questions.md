@@ -443,7 +443,7 @@ componentDidCatch(error, info) {
 (1) Too complicated to small application.
 <br/><br/>
 
-:white_check_mark: 12. What Is Redux ?
+12. What Is Redux ?
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
