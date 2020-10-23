@@ -686,7 +686,7 @@ useEffect(() => {
 <br/><br/>
 
 :white_check_mark: 19. Why Do I Need To Use Keys In React Lists ?
-> - Keys help React `identify which items have changed, are added, or are removed`.
+> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
 > - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
 ```
 const content = posts.map((post) =>
@@ -721,3 +721,4 @@ const content = posts.map((post) =>
 > - I wrote a tool that can creat twitter social button quickly with react hooks, jest react-hook-teating-libraty instead of enzyme, because enzyme not support hooks so far,
 then I push the tool to NPM platform, first week I got 3,000 download. 
 > - I also wrote a interactive resume which like a galgame that user can check the item to solve the puzzle on website, I wrote this with class components and redux.
+> - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
