@@ -541,3 +541,8 @@ console.log(superSecret);
 
 ❗ 23. What Is Delegate?
 <br/><br/>
+
+24. In Javascript What Can Cause A Script To Run Indefinitely And How Can You Mitigate This Situation?
+> - Recursion
+> - Set the condition to stop it
+<br/><br/>
