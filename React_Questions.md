@@ -159,7 +159,7 @@
 
 <br/>
 
- 7. What Is State ?
+7. What Is State ?
 > - The state is a data structure that starts with a `default value` when a component mounts.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 > - Example : https://jsfiddle.net/yschen25/wc1qapz2/14/
@@ -270,7 +270,7 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-:white_check_mark: 8.3 How To Use Arrow Function In The Class Components? (ref:8.1)
+8.3 How To Use Arrow Function In The Class Components? (ref:8.1)
 > - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
@@ -659,13 +659,13 @@ useEffect(() => {
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
 <br/><br/>
 
-:white_check_mark: 17. What Is The Difference Between React And React Native?
+17. What Is The Difference Between React And React Native?
 > - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
 <br/><br/>
 
-:white_check_mark: 18. Explain The Controlled Components And Uncontrolled Components.
+18. Explain The Controlled Components And Uncontrolled Components.
 > - **Controlled Components** : <br/> 
 (1) `Control by status or props`. <br/> 
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
@@ -687,7 +687,7 @@ useEffect(() => {
 (3) Easy to use with third party library. 
 <br/><br/>
 
-:white_check_mark: 18.1 When Use Controlled Components Or Uncontrolled Components?
+18.1 When Use Controlled Components Or Uncontrolled Components?
 | Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
