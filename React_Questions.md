@@ -1,13 +1,13 @@
 ## React Questions
 <br/>
 
-:white_check_mark: 1. What Is And When Use React.js?
+1. What Is And When Use React.js?
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and status change` instead of buliding a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/>
 
-:white_check_mark: 1.2 What Is Features Of React.js?
+1.2 What Is Features Of React.js?
 > - Only the View of MVC.
 > - JSX.
 > - Virtual DOM.
@@ -15,7 +15,7 @@
 > - Components based.
 <br/>
 
-:white_check_mark: 1.3 What Is Strength And Weakness Of React.js?
+1.3 What Is Strength And Weakness Of React.js?
 > - **Strength** :  <br/>
 (1) Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 (2) It follows the `component based` approach which helps in building reusable UI components, it save the time and repeat working.  <br/>
@@ -33,7 +33,7 @@
 
 <br/>
 
-:white_check_mark: 2. What Are The Differences Between Vue.js, Angular.js and React.js?
+2. What Are The Differences Between Vue.js, Angular.js and React.js?
 
 | TOPIC | React | Vue | Angular |
 |---|---|---|---|
@@ -49,7 +49,7 @@
 
 <br/>
 
-:white_check_mark: 3. What Is JSX?
+3. What Is JSX?
 > - JSX stands for `JavaScript XML`.
 > - JSX is `not JavaScript nor HTML, is an XML/HTML like extension` to JavaScript.
 > - JSX as a syntax sugar for calling `React.createElement()`.
@@ -63,11 +63,11 @@
  (6) CamelCase https://jsfiddle.net/yschen25/x2n3oc8y/11/ <br/>
 <br/><br/>
 
-:white_check_mark: 3.1 Why Can’t Browsers Read JSX?
+3.1 Why Can’t Browsers Read JSX?
 > - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers` like Babel and then pass it to the browser.
 <br/><br/>
 
-:white_check_mark: 4. What Is Virtual DOM?
+4. What Is Virtual DOM?
 
 <p align="center">
 <img src="img/virtual_DOM2.jpg" alt="virtual DOM" title="virtual DOM" width="70%">
@@ -82,7 +82,7 @@
 
 <br/>
 
-:white_check_mark: 5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components)? 
+5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components)? 
 
 > - **Functional Components** : <br/>
 (1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
@@ -97,7 +97,7 @@
 <br/><br/>
 
 
-:white_check_mark: 5.1 What Is The Difference Between Functional Components And Class Components?
+5.1 What Is The Difference Between Functional Components And Class Components?
 
 |  Functional Components | Class Components |
 |---|---|
@@ -537,18 +537,28 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/>
 
-:white_check_mark: 13. What Is Styled Component?
+13. What Is Styled Component?
 > - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
-> - It also allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
 > - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 <br/><br/>
 
-:white_check_mark: 14. What Is Jest?
+13.1 What Is Strength And Weakness Of Styled Component?
+> - **Strength**
+> - Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
+> - Painless Maintenance: You don't have maintain mutiple CSS files.
+> - Semantic Element: You can know the meaning of the element by its name.
+
+> - **Weakness**
+> - Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict.) leads hard to debug.
+> - Solving the problem with installing babel-plugin-macros or 
+<br/>
+
+14. What Is Jest?
 > - A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
 
 <br/>
 
-:white_check_mark: 14.1 What Is An Enzyme?
+14.1 What Is An Enzyme?
 > - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
 > - Enzyme only works with React.
 > - Enzyme must be paired with another test runner.
@@ -556,18 +566,18 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 <br/><br/>
 
-:white_check_mark: 14.2 Jest And Enzyme.
+14.2 Jest And Enzyme.
 > - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
 > - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
 > - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
 <br/><br/>
 
-:white_check_mark: 14.3 React-testing-library/React-hooks-testing-library
+14.3 React-testing-library/React-hooks-testing-library
 > - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
 > - Install @testing-library/react-hooks to test hooks.
 <br/><br/>
 
-:white_check_mark: 15. Refs.
+15. Refs.
 > - Refs is the `short hand for References` in React. The ref is used to return a reference to the element. 
 > - Use state and props to manage components instead using refs. (ref:18)
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
@@ -685,7 +695,7 @@ useEffect(() => {
 > - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
 <br/><br/>
 
-:white_check_mark: 19. Why Do I Need To Use Keys In React Lists ?
+19. Why Do I Need To Use Keys In React Lists ?
 > - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
 > - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
 ```
@@ -697,14 +707,14 @@ const content = posts.map((post) =>
 );
 ```
 
-:white_check_mark: 19.1 Why Don't Recommend To Use Indexes As Keys?
+19.1 Why Don't Recommend To Use Indexes As Keys?
 > - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.<br/>
 
 > - Related Reference : [Why do I need Keys in React Lists?
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 <br/><br/>
 
-:white_check_mark: 19.2 What Are Some Exceptions Where It Is Safe To Use Index As Key?
+19.2 What Are Some Exceptions Where It Is Safe To Use Index As Key?
 > - If your `list is static` (no additions/re-ordering/removal to the list).
 <br/><br/>
 
@@ -721,4 +731,6 @@ const content = posts.map((post) =>
 > - I wrote a tool that can creat twitter social button quickly with react hooks, jest react-hook-teating-libraty instead of enzyme, because enzyme not support hooks so far,
 then I push the tool to NPM platform, first week I got 3,000 download. 
 > - I also wrote a interactive resume which like a galgame that user can check the item to solve the puzzle on website, I wrote this with class components and redux.
-> - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
+> - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.<br/>
+
+❗ 2. Have You Encountered Any Difficulties When You Writing React? 
