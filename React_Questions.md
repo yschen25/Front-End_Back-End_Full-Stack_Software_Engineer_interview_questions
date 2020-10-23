@@ -18,7 +18,7 @@
 :white_check_mark: 1.3 What Is Strength And Weakness Of React.js?
 > - **Strength** :  <br/>
 (1) Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
-(2) It follows the `component based` approach which helps in building reusable UI components.  <br/>
+(2) It follows the `component based` approach which helps in building reusable UI components, it save the time and repeat working.  <br/>
 (3) `Uni-directional data flow` make it becomes `easier to debug errors and know where a problem occurs` in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
 (4) `SEO friendly`, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.  <br/>
 (5) Can be used for the development of both `web and mobile apps`.   <br/>
@@ -75,7 +75,9 @@
 </p>
 
 > - If a developer uses React.js (and JSX) to manipulate and update its DOM, React.js creates `Virtual DOM which is a copy of the real DOM`, when status changes the algorithm will compute the difference between virtual DOM and real DOM then only `update the change part without reloading entire DOM`.
+<br/>
 
+:white_check_mark: 4.1 How About Not Using Virtual DOM?
 > - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since `the entire DOM needs to reload every time` the user clicks a feature calling for a page refresh.
 
 <br/>
