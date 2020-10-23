@@ -731,6 +731,12 @@ const content = posts.map((post) =>
 <br/><br/>
 
 
+❗ 22. What Is The Component Render Process Of React?
+<br/><br/>
+
+❗ 23. What Is React CLI?
+<br/><br/>
+
 <hr/>
 
 1. Where Do You Use React?
