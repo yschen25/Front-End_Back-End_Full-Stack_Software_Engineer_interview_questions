@@ -592,16 +592,16 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 <br/><br/>
 
-:white_check_mark: 16. Explain What Is Hook?
+16. Explain What Is Hook?
 > - Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 <br/>
 
-:white_check_mark: 16.1 What Are Side Effects?
+16.1 What Are Side Effects?
 > - Side effects are all the operations that `affect your component` and can’t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.
 <br/><br/>
 
-:white_check_mark: 16.2 And How To Use Hook?
+16.2 And How To Use Hook?
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
@@ -727,9 +727,8 @@ const content = posts.map((post) =>
 ❗ 20. What Are Higher-Order Components(HOC)?
 <br/><br/>
 
-❗ 21. What are Pure Components? 
+❗ 21. What Are Pure Components? 
 <br/><br/>
-
 
 ❗ 22. What Is The Component Render Process Of React?
 <br/><br/>
@@ -748,3 +747,5 @@ then I push the tool to NPM platform, first week I got 3,000 download.
 <br/><br/>
 
 ❗ 2. Have You Encountered Any Difficulties When You Writing React? 
+
+<br/><br/>
