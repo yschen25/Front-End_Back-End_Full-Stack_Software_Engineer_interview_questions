@@ -126,6 +126,12 @@
 
 <br/>
 
+5.3 Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?
+> - Make code simple
+> - Reduce using complicated lifecycle
+
+<br/>
+
 6. What Are Props?
 > - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
 > - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
@@ -149,7 +155,7 @@
 
 6.3 How To Solve Props Hell (Wrapper Hell)?
 > - Redux.
-> - Functional components + hook. 
+> - Functional components + React hooks. 
 
 <br/>
 
@@ -159,11 +165,11 @@
 > - Example : https://jsfiddle.net/yschen25/wc1qapz2/14/
 <br/>
 
-:white_check_mark: 7.1 When Use State ?
+7.1 When Use State ?
 > - To store the data your current page needs in your controller-view.
 <br/><br/>
 
-:white_check_mark: 7.2 How To Change State?
+7.2 How To Change State?
 > - State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
@@ -181,7 +187,7 @@
 
 <br/>
 
-:white_check_mark: 8. Why Should We Bind The Function?
+8. Why Should We Bind The Function?
 
 > - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. If we don't use bind method, the `this will refer to window scope`, and code within the class body's syntactic boundary is always executed in strict mode, then `will be undefined` when the function is actually called.
 > - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
@@ -259,7 +265,7 @@ addCount = () => {
 
 <br/>
 
-:white_check_mark: 8.2 Why We Don't Need Bind Arrow Function?
+8.2 Why We Don't Need Bind Arrow Function?
 > - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
@@ -269,7 +275,7 @@ addCount = () => {
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-:white_check_mark: 9. Explain The Life Cycle Of React.js? <br/>
+9. Explain The Life Cycle Of React.js? <br/>
 
 <p align="center">
 <img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
@@ -562,7 +568,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
 > - Enzyme only works with React.
 > - Enzyme must be paired with another test runner.
-> - `Not support testing hook so far`.
+> - `Not support testing React hooks so far`.
 > - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 <br/><br/>
 
@@ -731,6 +737,8 @@ const content = posts.map((post) =>
 > - I wrote a tool that can creat twitter social button quickly with react hooks, jest react-hook-teating-libraty instead of enzyme, because enzyme not support hooks so far,
 then I push the tool to NPM platform, first week I got 3,000 download. 
 > - I also wrote a interactive resume which like a galgame that user can check the item to solve the puzzle on website, I wrote this with class components and redux.
-> - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.<br/>
+> - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
+
+<br/><br/>
 
 ❗ 2. Have You Encountered Any Difficulties When You Writing React? 
