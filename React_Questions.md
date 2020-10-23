@@ -77,7 +77,7 @@
 > - If a developer uses React.js (and JSX) to manipulate and update its DOM, React.js creates `Virtual DOM which is a copy of the real DOM`, when status changes the algorithm will compute the difference between virtual DOM and real DOM then only `update the change part without reloading entire DOM`.
 <br/>
 
-:white_check_mark: 4.1 How About Not Using Virtual DOM?
+4.1 How About Not Using Virtual DOM?
 > - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since `the entire DOM needs to reload every time` the user clicks a feature calling for a page refresh.
 
 <br/>
@@ -175,7 +175,7 @@
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
 <br/><br/>
 
-:white_check_mark: 7.3 What Is The Difference Between Props And Status?
+7.3 What Is The Difference Between Props And Status?
 
 |  Conditions | State | Props |
 |---|---|---|
@@ -197,7 +197,7 @@
 ](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?source=post_page---------------------------)
 <br/><br/>
 
-:white_check_mark: 8.1 How To Bind The Function?
+8.1 How To Bind The Function?
 > - Class component : Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
 
 ```
@@ -471,7 +471,7 @@ componentDidCatch(error, info) {
 **(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
-:white_check_mark: 12.2 How To Use Redux?
+12.2 How To Use Redux?
 
 **Combine with React-Redux** <br/>
 
@@ -513,7 +513,7 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
 <br/><br/>
 
-:white_check_mark: 12.2 What Are The Strengths And Weaknesses Of Redux?
+12.2 What Are The Strengths And Weaknesses Of Redux?
 
 > - **Strengths** : <br/>
 (1) Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
@@ -530,7 +530,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
-:white_check_mark: 12.3 What is Redux Different From Flux?
+12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
@@ -584,8 +584,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 15. Refs.
-> - Refs is the `short hand for References` in React. The ref is used to return a reference to the element. 
-> - Use state and props to manage components instead using refs. (ref:18)
+> - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
+> - `Use state and props to manage components instead using refs`. (ref:18)
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
 > - Refs can't use in functional components, `only for class components`.
 > - Example : https://jsfiddle.net/yschen25/ewdtvn5b/9/
