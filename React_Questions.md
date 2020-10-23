@@ -52,7 +52,7 @@
 :white_check_mark: 3. What Is JSX?
 > - JSX stands for `JavaScript XML`.
 > - JSX is `not JavaScript nor HTML, is an XML/HTML like extension` to JavaScript.
-> - JSX as a syntax sugar for calling React.createElement().
+> - JSX as a syntax sugar for calling `React.createElement()`.
 > - Instead of putting JavaScript into HTML, JSX allows us to `put HTML into JavaScript`, then Babel will transform these expressions into actual JavaScript code. 
 > - Examples : <br/>
  (1) Return one element https://jsfiddle.net/yschen25/29xrnmtw/ <br/>
