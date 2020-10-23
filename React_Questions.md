@@ -108,7 +108,7 @@
 
 <br/>
 
-:white_check_mark: 5.2 When Use Functional Components And Class Components?
+5.2 When Use Functional Components And Class Components?
 
 > - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
@@ -126,7 +126,7 @@
 
 <br/>
 
-:white_check_mark: 6. What Are Props?
+6. What Are Props?
 > - Props is the shorthand for Properties. props data is `read-only`, which means that data coming from the parent should `not be changed by child components`.
 > - They are always `passed down` from the parent to the child components in a uni-directional flow, a child component `can never send a prop back` to the parent component.
 > - Props from the parent to the child components will `cause child components re-render`.
@@ -136,24 +136,24 @@
     (2) Pass props via Class Component (notice : use this.props.data) https://jsfiddle.net/yschen25/3vhqL8bn/
 <br/><br/>
 
-:white_check_mark: 6.1 When Use Props?
+6.1 When Use Props?
 > - To pass data & event handlers down to your child components.
 > - If you just want to use props, not use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
-:white_check_mark: 6.2 What Is PropTypes And DefaultProps?
+6.2 What Is PropTypes And DefaultProps?
 > - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
 > - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
 
-:white_check_mark: 6.3 How To Solve Props Hell (Wrapper Hell)?
+6.3 How To Solve Props Hell (Wrapper Hell)?
 > - Redux.
 > - Functional components + hook. 
 
 <br/>
 
-:white_check_mark: 7. What Is State ?
+ 7. What Is State ?
 > - The state is a data structure that starts with a `default value` when a component mounts.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 > - Example : https://jsfiddle.net/yschen25/wc1qapz2/14/
