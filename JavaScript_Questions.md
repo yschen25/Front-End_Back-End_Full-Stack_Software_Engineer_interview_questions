@@ -559,7 +559,7 @@ console.log(superSecret);
 ❗ 26. What Is Delegate?
 <br/><br/>
 
-<hr/>
+## Customized javaScript Questions
 
 ❗ 1. Where Do You Use Async, Await and Promise?
 <br/><br/>
