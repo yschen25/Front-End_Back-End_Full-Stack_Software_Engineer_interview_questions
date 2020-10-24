@@ -534,6 +534,8 @@ console.log(superSecret);
 <br/><br/>
 
 ❗ 21. What Is Prototype?
+<br/><br/>
+
 ❗ 21.1 What Is Prototype Chain?
 > - Related Reference : [JavaScript 筆記 ( Prototype )
 ](https://www.oxxostudio.tw/articles/201603/javascript-prototype.html)
