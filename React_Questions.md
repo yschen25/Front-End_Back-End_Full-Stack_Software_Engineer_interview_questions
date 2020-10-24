@@ -443,13 +443,13 @@ componentDidCatch(error, info) {
 (1) Too complicated to small application.
 <br/><br/>
 
-12. What Is Redux ?
+12. What Is Redux? (Ref:16.3)
 <p align="center">
 <img src="img/redux_data_flow.png" alt="redux_data_flow" title="redux_data_flow" width="70%">
 </p>
 <br/><br/>
 
-> - It is a `predictable state container` for JavaScript applications and is used for the `entire applications state management`.
+> - It is a `predictable state container` for JavaScript applications and is used for the `entire applications state management`, it can also `prevent props hell`.
 <br/>
 
 > - **List down three components of redux** :  <br/>
