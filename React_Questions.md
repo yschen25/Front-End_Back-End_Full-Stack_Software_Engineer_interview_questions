@@ -737,7 +737,12 @@ const content = posts.map((post) =>
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
-21. What Are Pure Components? (ref:24)
+21. Describe Shallow Comparasion In React?
+> - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
+> - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
+<br/><br/>
+
+22. What Are Pure Components? (ref:21)
 > - If we extend a class with Pure Component, there is `no need for shouldComponentUpdate() Lifecycle Method`. Pure Component Class does the shallow comparisons of current state and props with new props and states to decide whether the React component should re-render itself or Not.
 > - There is a simple Welcome Pure Component and Hello Stateless Component. When you use these two in your Parent Component, you will see Hello will re-render whenever Parent Component will re-render but Welcome Component will not. This is because PureComponent changes the life-cycle method shouldComponentUpdate and adds some logic to automatically check whether a re-render is required for the component. This allows a PureComponent to call the method render only if it detects changes in state or props.
 ```
@@ -769,9 +774,9 @@ const MyComponent = React.memo(function MyComponent(props) {
 ```
 > - Related Reference : [Pure Component in React.js](https://www.tutorialspoint.com/pure-component-in-react-js), [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b), [Pure Components in React](https://dev.to/sumitkharche/pure-components-in-react-57on),[React 性能優化那件大事，使用 memo、useCallback、useMemo](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-optimize-performance-using-memo-usecallback-usememo-a76b6b272df3)
 
-<br/><br/>
+<br/>
 
-22. What Is The Component Render Process Of React?
+23. What Is The Component Render Process Of React?
 > - During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. For each flagged component, React will call either classComponentInstance.render() (for class components) or FunctionComponent() (for function components), and save the render output.
 > - A component's render output is normally written in JSX syntax, which is then converted to React.createElement() calls as the JS is compiled and prepared for deployment. createElement returns React elements.
 > - After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. The diffing and calculation process is known as "reconciliation".
@@ -779,14 +784,10 @@ const MyComponent = React.memo(function MyComponent(props) {
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
 
-23. What Is React CLI?
+24. What Is React CLI?
 > - Create React App is an officially supported way to create single-page React.
 <br/><br/>
 
-24. Describe Shallow Comparasion In React?
-> - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
-> - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
-<br/><br/>
 
 <hr/>
 
