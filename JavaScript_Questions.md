@@ -528,29 +528,33 @@ console.log(superSecret);
 > - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 <br/><br/>
 
-❗ 20. What Is Prototype?
+20. In Javascript What Can Cause A Script To Run Indefinitely And How Can You Mitigate This Situation?
+> - Recursion
+> - Set the condition to stop it
 <br/><br/>
 
-❗ 21. What Is An Event Loop?
+❗ 21. What Is Prototype?
+❗ 21.1 What Is Prototype Chain?
+> - Related Reference : [JavaScript 筆記 ( Prototype )
+](https://www.oxxostudio.tw/articles/201603/javascript-prototype.html)
 <br/><br/>
 
-❗ 22. What Is Pure Functional?
+❗ 22. What Is An Event Loop?
+> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
 <br/><br/>
 
-❗ 23. What Is High Order Function?
+❗ 23. What Is Pure Functional?
 <br/><br/>
 
-❗ 24. What Is Functional Programming?
+❗ 24. What Is High Order Function?
+<br/><br/>
+
+❗ 25. What Is Functional Programming?
 > - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
 ](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
 <br/><br/>
 
-❗ 25. What Is Delegate?
-<br/><br/>
-
-24. In Javascript What Can Cause A Script To Run Indefinitely And How Can You Mitigate This Situation?
-> - Recursion
-> - Set the condition to stop it
+❗ 26. What Is Delegate?
 <br/><br/>
 
 <hr/>
