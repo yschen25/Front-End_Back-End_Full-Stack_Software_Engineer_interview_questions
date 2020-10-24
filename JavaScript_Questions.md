@@ -560,8 +560,8 @@ Person.prototype.name = function() {
   return this.firstName + " " + this.lastName;
 };
 ```
-> - prototype is a property of a Function object. It is the prototype of objects constructed by that function.
-> - __proto__ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype. Current standards provide an equivalent Object.getPrototypeOf(O) method.
+> - `prototype is a property of a Function object`. It is the prototype of objects constructed by that function.
+> - `__ proto __ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype`. Current standards provide an equivalent Object.getPrototypeOf(O) method.
 > - Related Reference : [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 <br/><br/>
 
