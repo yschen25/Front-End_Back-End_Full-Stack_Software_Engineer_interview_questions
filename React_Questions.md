@@ -737,8 +737,40 @@ const content = posts.map((post) =>
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
-21. What Are Pure Components? 
-> - If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or  Not.
+21. What Are Pure Components? (ref:24)
+> - If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. Pure Component Class does the shallow comparisons of current state and props with new props and states to decide whether the React component should re-render itself or Not.
+> - There is a simple Welcome Pure Component and Hello Stateless Component. When you use these two in your Parent Component, you will see Hello will re-render whenever Parent Component will re-render but Welcome Component will not. This is because PureComponent changes the life-cycle method shouldComponentUpdate and adds some logic to automatically check whether a re-render is required for the component. This allows a PureComponent to call the method render only if it detects changes in state or props.
+```
+class Welcome extends React.PureComponent {  
+  render() {
+    return <h1>Welcome</h1>
+  }
+}
+
+Hello = () => {
+  return <h1>Hello</h1>;
+}
+```
+
+> - It increases performance because it reduces the number of render operation in the application.
+> - For class components react provides React.PureComponent base class.
+```
+import React, {PureComponent} from 'react';
+export default class Test extends PureComponent{
+   render() {
+      return '';
+   }
+}
+```
+> - For Functional component react provides React.memo HOC (Higher Order Component).
+```
+import { pure } from 'recompose';
+export default pure ( (props) => {
+   // custom code
+   return 'something useful';
+})
+```
+> - Related Reference : [Pure Component in React.js](https://www.tutorialspoint.com/pure-component-in-react-js), [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b), [Pure Components in React](https://dev.to/sumitkharche/pure-components-in-react-57on)
 
 <br/><br/>
 
@@ -756,6 +788,8 @@ const content = posts.map((post) =>
 
 24. Describe Shallow Compare In React?
 > - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
+> - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
+<br/><br/>
 
 <hr/>
 
