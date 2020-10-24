@@ -545,7 +545,7 @@ console.log(superSecret);
 > - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
 <br/><br/>
 
-❗ 23. What Is Pure Functional?
+❗ 23. What Is Pure Function?
 <br/><br/>
 
 ❗ 24. What Is High Order Function?
