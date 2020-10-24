@@ -541,19 +541,19 @@ console.log(superSecret);
 ](https://www.oxxostudio.tw/articles/201603/javascript-prototype.html)
 <br/><br/>
 
-❗ 22. What Is An Event Loop?
-> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
+❗ 22. What Is Pure Function?
 <br/><br/>
 
-❗ 23. What Is Pure Function?
+❗ 23. What Is High Order Function?
 <br/><br/>
 
-❗ 24. What Is High Order Function?
-<br/><br/>
-
-❗ 25. What Is Functional Programming?
+❗ 24. What Is Functional Programming?
 > - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
 ](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
+<br/><br/>
+
+❗ 25. What Is An Event Loop?
+> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
 <br/><br/>
 
 ❗ 26. What Is Delegate?
