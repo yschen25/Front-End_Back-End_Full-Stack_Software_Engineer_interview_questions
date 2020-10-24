@@ -289,7 +289,7 @@ addCount = () => {
 <br/>
 
 **Mounting** : <br/>
-(1) constructor() : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
+(1) **constructor()** : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
 ```
 constructor(props){
@@ -302,7 +302,7 @@ constructor(props){
 ```
 <br/>
 
-(2) static getDerivedStateFromProps() : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
+(2) **static getDerivedStateFromProps()** : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
 ```
  static getDerivedStateFromProps(props, state){
         return {
@@ -312,7 +312,7 @@ constructor(props){
 ```
 <br/>
 
-(3) render() : The only required method in a component. It is responsible for rendering the JSX into the DOM. If using conditional rendering, some simple logic can be applied inside this method, such as a ternary operator or pure functions.  <br/><br/>
+(3) **render()** : The only required method in a component. It is responsible for rendering the JSX into the DOM. If using conditional rendering, some simple logic can be applied inside this method, such as a ternary operator or pure functions.  <br/><br/>
 Don't make API request, put any action that needs to occur only once in the lifetime of the component here and set the state here (Your app will be thrown into an infinite loop of rendering as this.setState will change the state and then call the render function which in turn will again set the state and so on).
 ```
 render() {
@@ -321,7 +321,7 @@ render() {
 ```
 <br/>
 
-(4) componentDidMount() : When your `component is loaded in the DOM`, this method is executed. Therefore, it makes this an ideal place to perform any `API calls or make changes to the DOM`. After executing once, it is not triggered again for the duration of the component’s life. <br/>
+(4) **componentDidMount()** : When your `component is loaded in the DOM`, this method is executed. Therefore, it makes this an ideal place to perform any `API calls or make changes to the DOM`. After executing once, it is not triggered again for the duration of the component’s life. <br/>
 You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/><br/>
 
 **Updating** : <br/>
@@ -330,20 +330,20 @@ The modification phase can be triggered using three methods :  <br/>
 > - Calling setState() and updating the state  <br/>
 > - Using this.forceUpdate  <br/><br/>
 
-(1) static getDerivedStateFromProps() : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
+(1) **static getDerivedStateFromProps()** : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
 
-(2) shouldComponentUpdate() : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. 
+(2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. 
 ```
 shouldComponentUpdate(nextProps, nextState){
     if(this.state.name === nextState.name) { return false; }
   }
 ```
 
-(3) render() : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
+(3) **render()** : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
 
-(4) getSnapshotBeforeUpdate() : This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
+(4) **getSnapshotBeforeUpdate()** : This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
 
-(5) componentDidUpdate() : This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to modify the state in this method, we must do so in a conditional statement. 
+(5) **componentDidUpdate()** : This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
@@ -354,7 +354,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 <br/>
 
 **Unmounting** :  <br/>
-(1) componentWillUnmount() : This method is called `right before the component is unmounted from the DOM`. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to clean up any subscriptions or events in componentWillUnmount(), that you may have created earlier in componentDidMount.
+(1) **componentWillUnmount()** : This method is called `right before the component is unmounted from the DOM`. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to `clean up any subscriptions or events` in componentWillUnmount(), that you may have created earlier in componentDidMount.
 ```
  componentWillUnmount(){
       this.clearInterval(this.timer);
@@ -363,14 +363,14 @@ componentDidUpdate(prevProps, prevState, snapshot) {
  <br/>
 
 **Error Handling** : <br/>
-(1) getDerivedStateFromError() : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
+(1) **getDerivedStateFromError()** : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
     return { error: error.message };
   }
 ```
 
-(2) componentDidCatch() : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
+(2) **componentDidCatch()** : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
 ```
 componentDidCatch(error, info) {
     this.logError(error, info);
