@@ -577,7 +577,8 @@ var nick = new Person('nick', 18);
 console.log(nick.__proto__ === Person.prototype) // true
 console.log(nick.prototype === undefined) // true
 ```
-> - Related Reference : [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
+> - Related Reference : [__ proto __ VS. prototype in JavaScript
+](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 <br/><br/>
 
 21.1 What Is Prototype Chain?
