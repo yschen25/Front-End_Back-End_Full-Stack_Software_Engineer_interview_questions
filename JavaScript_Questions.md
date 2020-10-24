@@ -1,7 +1,7 @@
 ## JavaScript Questions
 <br/>
 
-:white_check_mark: 1. Explain What Is Closure?
+1. Explain What Is Closure?
 
 > - If we use the global variables in the wrong way, may cause some problems like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), `closure uses outer function returns the inner function (which we really want to execute) to let us have private variable without affected by environment`, see the [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
 > - Improve code [Use Anonymous And Arrow Function](https://jsfiddle.net/yschen25/rjefc2sg/). <br/>
@@ -11,7 +11,7 @@
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 <br/><br/>
 
-:white_check_mark: 2. Explain What Is Promise? (ref:3)
+2. Explain What Is Promise? (ref:3)
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -59,7 +59,7 @@ myPromise.then((message) => {
 > - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
 <br/><br/>
 
-:white_check_mark: 3. Explain What Is Async/Await? (ref:2)
+3. Explain What Is Async/Await? (ref:2)
 > - Async and Await is `syntax sugar for promises` in javaScript.
 > - Await ensures executing next step `after specific operations`. 
 > - An Await operand can `only be used inside an Async function`.
@@ -83,11 +83,11 @@ fetchData().then(() => {
 ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
 <br/><br/>
 
-:white_check_mark: 4. Explain What Is The New Feature In ES6?
+4. Explain What Is The New Feature In ES6?
 > - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals.
 <br/><br/>
 
-:white_check_mark: 4.1 Explain What Is The New Feature In ES7?
+4.1 Explain What Is The New Feature In ES7?
 > - Async, Await.
 <br/><br/>
 
@@ -133,7 +133,7 @@ window.setTimeout( function(){ ... }, 1000);
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
-:white_check_mark: 9. Explain What Is Hoisting? (ref:10)
+9. Explain What Is Hoisting? (ref:10)
 
 > - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 ```
@@ -172,7 +172,7 @@ function a(){}
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
 
-:white_check_mark: 10. What Is Let And Const? (ref:11)
+10. What Is Let And Const? (ref:11)
 
 > - `Let and Const is block scope`, `Var is function scope`. <br/>
 ```
@@ -206,7 +206,7 @@ a = 20  // TypeError: Assignment to constant variable.
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/><br/>
 
-:white_check_mark: 11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
+11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
 
 > - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization` which declared with let or const.
 ```
@@ -224,7 +224,7 @@ test()
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/>
 
-:white_check_mark: 12. Explain What Is "this"?
+12. Explain What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the `value of this is determined by how a function is called`.
 <br/>
 
@@ -349,7 +349,7 @@ console.log( obj.a ); // 123
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
 
-:white_check_mark: 13. List The Primitive And Non-Primitive(Objects) Types In Javascript.
+13. List The Primitive And Non-Primitive(Objects) Types In Javascript.
 <p align="center">
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
 </p>
@@ -358,7 +358,7 @@ console.log( obj.a ); // 123
 > - Non-Primitive Types : array, object, function, date, regx.
 <br/><br/>
 
-:white_check_mark: 14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13, 14.1)
+14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13, 14.1)
 
 > - **Call By Value** : 
 
@@ -390,7 +390,7 @@ console.log( obj.a ); // 123
 [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 <br/><br/>
 
-:white_check_mark: 14.1 Explan What Is Shallow Copy And Deep Copy?
+14.1 Explan What Is Shallow Copy And Deep Copy?
  
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
@@ -406,7 +406,7 @@ console.log( obj.a ); // 123
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-:white_check_mark: 15. Explain What Is Not Defined, Undefined And Null?
+15. Explain What Is Not Defined, Undefined And Null?
 
 **Not Defined**
 > - Not defined means the varable doesn't exist.
@@ -435,7 +435,7 @@ null === undefined  // false
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 <br/><br/>
 
-:white_check_mark: 16. What Is Event Bubbling And How To Stop I?
+16. What Is Event Bubbling And How To Stop I?
 
 > - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
 > - (2)Using event.stopPropagation()
@@ -443,7 +443,7 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-:white_check_mark: 17. What Is Function Statements(Declaration) And Function Expressions?
+17. What Is Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
 
 (1) A function created with a name. 
@@ -491,7 +491,7 @@ callTest(); // 123
 > - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 <br/><br/>
 
-:white_check_mark: 18. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
+18. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
 > -  (pronounced 'iffy') Is a function `defined as an expression and executed immediately after creation`.
 > - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
 ```
@@ -511,13 +511,13 @@ console.log(superSecret);
 ```
 <br/>
 
-:white_check_mark: 18.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result?
+18.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result?
 > - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
 
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 <br/><br/>
 
-:white_check_mark: 19. What Is First Class Function?
+19. What Is First Class Function?
 > - First Class Function means that `you can do the things to the functions same as to other types(objects, string, boolean, numbers)`. <br/>
 (1) Functions are objects. <br/>
 (2) Can pass as an argument to other functions. <br/>
