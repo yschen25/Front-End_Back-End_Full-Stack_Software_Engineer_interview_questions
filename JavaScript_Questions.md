@@ -546,3 +546,9 @@ console.log(superSecret);
 > - Recursion
 > - Set the condition to stop it
 <br/><br/>
+
+<hr/>
+
+❗ 1. Where Do You Use Async, Await and Promise?
+<br/><br/>
+
