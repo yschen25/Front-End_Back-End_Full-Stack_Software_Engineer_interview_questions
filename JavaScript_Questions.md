@@ -561,6 +561,7 @@ console.log(superSecret);
 
 ## Customized javaScript Questions
 
-❗ 1. Where Do You Use Async, Await and Promise?
+1. Where Do You Use Async, Await and Promise?
+> - To do somthing after receive the data from API calls.
 <br/><br/>
 
