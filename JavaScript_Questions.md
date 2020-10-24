@@ -397,10 +397,10 @@ console.log( obj.a ); // 123
 <img src="img/shallow_deep_copy2.png" alt="shallow_deep_copy" title="shallow_deep_copy">
 </p>
 
-> - **Shallow Copy** : Duplicates as little as possible. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
+> - **Shallow Copy** : `Duplicates as little as possible`. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
 > - Method => spread operator, object.assign
 
-> - **Deep Copy** : Duplicates everything. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
+> - **Deep Copy** : `Duplicates everything`. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
 > - Method => javaScript : JSON.parse(JSON.stringify(object)) (not for function), jQuery : $.extend, lodash : _.cloneDeep
 
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
