@@ -91,7 +91,7 @@ fetchData().then(() => {
 > - Async, Await.
 <br/><br/>
 
-:white_check_mark: 5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
+:small_red_triangle: 5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
 | Methods | push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
