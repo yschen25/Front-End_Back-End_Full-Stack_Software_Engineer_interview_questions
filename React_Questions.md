@@ -731,7 +731,10 @@ const content = posts.map((post) =>
 > - If your `list is static` (no additions/re-ordering/removal to the list).
 <br/><br/>
 
-❗ 20. What Are Higher-Order Components(HOC)?
+20. What Are Higher-Order Components(HOC)?
+> - Takes one or more components as arguments, and return a new upgraded component. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
+> - HOCs are commonly used to to enhance the reusability of particular components in multiple modules or components.
+> - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
 ❗ 21. What Are Pure Components? 
