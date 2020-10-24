@@ -518,7 +518,7 @@ console.log(superSecret);
 <br/><br/>
 
 :white_check_mark: 19. What Is First Class Function?
-> - First Class Function means that you can do the things to the functions same as to other types(objects, string, boolean, numbers). <br/>
+> - First Class Function means that `you can do the things to the functions same as to other types(objects, string, boolean, numbers)`. <br/>
 (1) Functions are objects. <br/>
 (2) Can pass as an argument to other functions. <br/>
 (3) Can be assigned as a parameter. <br/>
