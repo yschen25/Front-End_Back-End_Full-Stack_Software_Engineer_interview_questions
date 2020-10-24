@@ -471,7 +471,7 @@ componentDidCatch(error, info) {
 **(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
-12.2 How To Use Redux?
+12.1 How To Use Redux?
 
 **Combine with React-Redux** <br/>
 
@@ -516,13 +516,13 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 12.2 What Are The Strengths And Weaknesses Of Redux?
 
 > - **Strengths** : <br/>
-(1) Predictability of outcome – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
-(2) Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
-(3) Server-side rendering – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
-(4) Developer tools – From actions to state changes, developers can track everything going on in the application in real time. <br/>
+(1) **Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
+(2) **Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
+(3) **Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
+(4) **Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
 Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it. <br/>
-(5) Ease of testing – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
-(6) Organization – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+(5) **Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
+(6) **Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
 > - **Weaknesses** : <br/>
@@ -530,7 +530,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
-12.3 What is Redux Different From Flux?
+:small_red_triangle: 12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
@@ -550,13 +550,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 13.1 What Is Strength And Weakness Of Styled Component?
 > - **Strength**
-> - Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
-> - Painless Maintenance: You don't have maintain mutiple CSS files.
-> - Semantic Element: You can know the meaning of the element by its name.
+> - **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
+> - **Painless Maintenance**: You don't have maintain mutiple CSS files.
+> - **Semantic Element**: You can know the meaning of the element by its name.
 
 > - **Weakness**
-> - Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict.) leads hard to debug.
-> - Solving the problem with installing babel-plugin-macros or 
+> - Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug.
+> - Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props.
+> - Related Reference : [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 <br/>
 
 14. What Is Jest?
