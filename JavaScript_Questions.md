@@ -533,12 +533,41 @@ console.log(superSecret);
 > - Set the condition to stop it
 <br/><br/>
 
-❗ 21. What Is Prototype?
+21. What Is Prototype?
+> - All JavaScript objects inherit properties and methods from a prototype.
+> - Prototype property allows you to `add new properties` to object constructors.
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+```
+
+> - Prototype property allows you to `add new methods` to object constructors.
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+```
+> - prototype is a property of a Function object. It is the prototype of objects constructed by that function.
+> - __proto__ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype. Current standards provide an equivalent Object.getPrototypeOf(O) method.
+> - Related Reference : [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 <br/><br/>
 
-❗ 21.1 What Is Prototype Chain?
-> - Related Reference : [JavaScript 筆記 ( Prototype )
-](https://www.oxxostudio.tw/articles/201603/javascript-prototype.html)
+21.1 What Is Prototype Chain?
+> - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
+> - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 <br/><br/>
 
 ❗ 22. What Is Pure Function?
