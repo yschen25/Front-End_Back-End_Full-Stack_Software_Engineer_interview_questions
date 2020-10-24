@@ -562,6 +562,21 @@ Person.prototype.name = function() {
 ```
 > - `prototype is a property of a Function object`. It is the prototype of objects constructed by that function.
 > - `__ proto __ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype`. Current standards provide an equivalent Object.getPrototypeOf(O) method.
+```
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.log = function () {
+  console.log(this.name + ', age:' + this.age);
+}
+
+var nick = new Person('nick', 18);
+
+console.log(nick.__proto__ === Person.prototype) // true
+console.log(nick.prototype === undefined) // true
+```
 > - Related Reference : [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 <br/><br/>
 
