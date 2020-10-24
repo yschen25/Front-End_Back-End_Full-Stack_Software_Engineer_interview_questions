@@ -737,7 +737,9 @@ const content = posts.map((post) =>
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
-❗ 21. What Are Pure Components? 
+21. What Are Pure Components? 
+> - If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or  Not.
+
 <br/><br/>
 
 ❗ 22. What Is The Component Render Process Of React?
@@ -751,6 +753,9 @@ const content = posts.map((post) =>
 23. What Is React CLI?
 > - Create React App is an officially supported way to create single-page React.
 <br/><br/>
+
+24. Describe Shallow Compare In React?
+> - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
 
 <hr/>
 
