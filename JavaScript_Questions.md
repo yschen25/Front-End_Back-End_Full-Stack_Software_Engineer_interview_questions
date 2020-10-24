@@ -534,12 +534,18 @@ console.log(superSecret);
 ❗ 21. What Is An Event Loop?
 <br/><br/>
 
-❗ 22. What Is Functional Programming?
+❗ 22. What Is Pure Functional?
+<br/><br/>
+
+❗ 23. What Is High Order Function?
+<br/><br/>
+
+❗ 24. What Is Functional Programming?
 > - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
 ](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
 <br/><br/>
 
-❗ 23. What Is Delegate?
+❗ 25. What Is Delegate?
 <br/><br/>
 
 24. In Javascript What Can Cause A Script To Run Indefinitely And How Can You Mitigate This Situation?
