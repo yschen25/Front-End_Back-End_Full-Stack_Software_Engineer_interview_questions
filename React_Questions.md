@@ -733,7 +733,8 @@ const content = posts.map((post) =>
 ❗ 22. What Is The Component Render Process Of React?
 <br/><br/>
 
-❗ 23. What Is React CLI?
+23. What Is React CLI?
+> - Create React App is an officially supported way to create single-page React.
 <br/><br/>
 
 <hr/>
