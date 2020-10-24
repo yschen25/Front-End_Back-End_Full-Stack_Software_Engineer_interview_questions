@@ -655,6 +655,8 @@ useEffect(() => {
 4. Custom React Hooks : <br/>
 (1) Custom hooks allow you to create functionality that can be reused across different components.
 
+<br/>
+
 16.3 Compare Redux And useContext() API and React Hooks. 
 > - Redux works for state management in React applications and has a few advantages, but its verbosity makes it really difficult to pick up, and the ton of extra code needed to get it working in our application introduces a lot of unnecessary complexity.
 > - On the other hand, with the useContext API and React Hooks, there is no need to install external libraries or add a bunch of files and folders in order to get our app working. This makes it a much simpler, more straightforward way to handle global state management in React applications.
