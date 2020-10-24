@@ -731,6 +731,10 @@ const content = posts.map((post) =>
 <br/><br/>
 
 ❗ 22. What Is The Component Render Process Of React?
+> - During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. For each flagged component, React will call either classComponentInstance.render() (for class components) or FunctionComponent() (for function components), and save the render output.
+> - A component's render output is normally written in JSX syntax, which is then converted to React.createElement() calls as the JS is compiled and prepared for deployment. createElement returns React elements.
+> - After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. The diffing and calculation process is known as "reconciliation".
+> - React then applies all the calculated changes to the DOM in one synchronous sequence.
 <br/><br/>
 
 23. What Is React CLI?
