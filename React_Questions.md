@@ -483,7 +483,7 @@ componentDidCatch(error, info) {
 ```
 		
 (2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
-(2.1) **mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. <br/>
+(2.1) **mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
 (2.2) **mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
 (2.3) **mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
 (2.4) **options** : If specified, further `customizes the behavior` of the connector. 
