@@ -443,7 +443,7 @@ null === undefined  // false
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
 <br/><br/>
 
-17. What Is Function Statements(Declaration) And Function Expressions?
+17. What A Function Statements(Declaration) And Function Expressions?
 > - **Function Statement** : <br/>
 
 (1) A function created with a name. 
@@ -581,7 +581,7 @@ console.log(nick.prototype === undefined) // true
 ](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 <br/><br/>
 
-21.1 What Is Prototype Chain?
+21.1 What Is A Prototype Chain?
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 <br/><br/>
