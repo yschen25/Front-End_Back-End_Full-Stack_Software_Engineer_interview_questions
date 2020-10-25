@@ -15,7 +15,11 @@
 > - Components based.
 <br/>
 
-1.3 What Is Strength And Weakness Of React.js?
+1.3 What Is The Meaning Of The Component-based Architecture Of React?
+> - With the component-based system in place, all of the individual entities become completely reusable and independent of each other.
+<br/><br/>
+
+1.4 What Is Strength And Weakness Of React.js?
 > - **Strength** :  <br/>
 (1) Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 (2) It follows the `component based` approach which helps in building reusable UI components, it save the time and repeat working.  <br/>
@@ -186,6 +190,9 @@
 | | Can only be used with class Components (ref:17.2) | Can be used with both class as well as functional components |
 
 <br/>
+7.4 Why Can't You Update State Directly Without setState()?
+> - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
+<br/><br/>
 
 8. Why Should We Bind The Function?
 
@@ -387,6 +394,11 @@ componentDidCatch(error, info) {
 > - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
 <br/>
 
+9.2. Explain Error Boundaries? (ref:9)
+> - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+> static getDerivedStateFromError(), componentDidCatch()
+<br/>
+
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 <br/><br/>
 
@@ -539,7 +551,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
-12.3 What is Redux Different From Flux?
+12.3 What Are Alternatives To Redux?
+> - MobX, RxJs, apollo client + graphQL
+<br/><br/>
+
+12.4. What Is Redux Middleware?
+<br/><br/>
+
+12.5 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
@@ -785,50 +804,44 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 <br/>
 
-23. Explain How The React Rendering works?
-> - React listens for DOM updates and rerenders the DOM tree on every change but it can do this very quickly because it uses component diffing which means that React checks if there has been a change to the component and only rerenders it if there is one.
-> - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
+23. How Many Ways You Can Conditionally Render In React?
+> - If statement , expression 
 <br/><br/>
 
-24. What Is React CLI?
-> - Create React App is an officially supported way to create single-page React.
+24. Explain How The React Rendering works?
+> - React listens for DOM updates and rerenders the DOM tree on every change but it can do this very quickly because it uses component diffing which means that React checks if there has been a change to the component and only rerenders it if there is one.
+> - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
 
 25. How To Prevent Components From Re-Rendering?
 > shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
 <br/><br/>
 
-26. Explain Error Boundaries? (ref:9)
-> - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
-> static getDerivedStateFromError(), componentDidCatch()
+26. What Would You Do If Your React Application Application Is Rendering Slowly?
+> - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
+> - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
+
 <br/><br/>
 
-27. Name Some Patterns And Usage Of React.
+27. What Is React CLI?
+> - Create React App is an officially supported way to create single-page React.
+<br/><br/>
+
+28. Name Some Patterns And Usage Of React.
 > - **Context-api pattern** :  To pass data deeply throughout your app without having to manually pass props down through multiple levels
 > - **Render props** :  For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
 > - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components. 
 <br/><br/>
 
-28. Why Can't You Update State Directly Without setState()?
-> - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
-<br/><br/>
-
-29. How Many Ways You Can Conditionally Render In React?
-> - If statement , expression 
-<br/><br/>
-
-30. What Is Fragments And Why Do We Use It?
-<br/><br/>
-
-31. What Is React Router?
+29. What Is React Router?
 > - Is a package which is used to create Routing.
 <br/><br/>
 
-31.1 Why Do We Need React Router?
+29.1 Why Do We Need React Router?
 > - React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
 <br/><br/>
 
-31.2 How Is Routing in React Different From Conventional Routing?
+29.2 How Is Routing in React Different From Conventional Routing?
 | SN | React Routing | Conventional Routing |
 |---|---|---|
 | | Single HTML page | Each view is a new HTML file |
@@ -838,23 +851,10 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 <br/>
 
-32. What Is The Meaning Of Synthetic Events In React?
-> - A synthetic event is an object which acts as a cross-browser wrapper around the browser's native event. It combines the behavior of different browser's native event into on API and this makes sure that the events are consistent across different browser.
-<br/><br/>
-
-33. What Would You Do If Your React Application Application Is Rendering Slowly?
-> - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
-> - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
-
-<br/>
-
-34. What Is The Meaning Of The Component-based architecture Of React?
-> - With the component-based system in place, all of the individual entities become completely reusable and independent of each other.
-<br/><br/>
-
-35. What Is React Fiber?
+30. What Is React Fiber?
 > - Is a new engine. the main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
 <br/><br/>
+
 
 
 ## Customized React Questions
