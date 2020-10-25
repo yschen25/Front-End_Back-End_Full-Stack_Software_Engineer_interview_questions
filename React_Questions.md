@@ -811,16 +811,16 @@ const MyComponent = React.memo(function MyComponent(props) {
 > - If else statement , expression 
 <br/><br/>
 
-24. Explain How React Rendering works?
-> - 1. During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. 
-> - 2. JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment.
-> - 3. After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output.
-> - 4. React then applies all the calculated changes to the DOM.
+24. Explain How React Rendering works?  <br/>
+(1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
+(2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
+(3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
+(4) React then applies all the calculated changes to the DOM.
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
 
 25. How To Prevent Components From Re-Rendering?
-> shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
+> - shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
 <br/><br/>
 
 26. What Would You Do If Your React Application Application Is Rendering Slowly?
