@@ -368,7 +368,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
  <br/>
 
 **Error Handling** : <br/>
-(1) **getDerivedStateFromError()** : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
+(1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
     return { error: error.message };
@@ -799,6 +799,18 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 25. How To Prevent Components From Re-Rendering?
 > shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
+<br/><br/>
+
+26. Explain Error Boundaries? (ref:9)
+> - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+> static getDerivedStateFromError(), componentDidCatch()
+<br/><br/>
+
+27. Name Some Patterns And Usage Of React.
+> - **Context-api pattern** :  To pass data deeply throughout your app without having to manually pass props down through multiple levels
+> - **Render props** :  For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
+> - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components. 
+
 <br/><br/>
 
 ## Customized React Questions
