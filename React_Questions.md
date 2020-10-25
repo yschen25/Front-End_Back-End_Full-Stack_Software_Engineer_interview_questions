@@ -557,7 +557,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 12.4. What Is Redux Middleware?
-> - Redux middleware function provides a medium to interact with dispatched action before they reach the reducer such like React-Thunk, React-Saga.
+> - Redux middleware function provides a medium to interact with dispatched action before they reach the reducer.
+> - React-Thunk, React-Saga.
 <br/><br/>
 
 12.5 What is Redux Different From Flux?
