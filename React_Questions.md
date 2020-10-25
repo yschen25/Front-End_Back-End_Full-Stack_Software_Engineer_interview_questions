@@ -288,7 +288,7 @@ addCount = () => {
 <br/><br/>
 
 
-9. Explain The Life Cycle Of React.js? (Name Lifecycle Methods and their purpose.)<br/>
+9. Explain The Life Cycle Of React.js (Name Lifecycle Methods and their purpose.)? <br/>
 
 <p align="center">
 <img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
