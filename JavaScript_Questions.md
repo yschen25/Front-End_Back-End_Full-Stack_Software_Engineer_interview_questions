@@ -595,7 +595,7 @@ const add = (x, y) => x + y;
 add(2, 4); // 6
 ```
 
-<br/><br/>
+<br/>
 
 23. What Is High Order Function?
 > - Takes one or more functions as arguments.
