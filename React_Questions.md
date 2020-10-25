@@ -332,7 +332,7 @@ The modification phase can be triggered using three methods :  <br/>
 
 (1) **static getDerivedStateFromProps()** : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
 
-(2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. 
+(2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. (ref:22)
 ```
 shouldComponentUpdate(nextProps, nextState){
     if(this.state.name === nextState.name) { return false; }
@@ -341,9 +341,9 @@ shouldComponentUpdate(nextProps, nextState){
 
 (3) **render()** : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
 
-(4) **getSnapshotBeforeUpdate()** : This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
+(4) **getSnapshotBeforeUpdate()** : If you want to do something before render then can do it right here. This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
 
-(5) **componentDidUpdate()** : This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
+(5) **componentDidUpdate()** : You can do the samething as what did in componentDidMount(). This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
@@ -376,6 +376,10 @@ componentDidCatch(error, info) {
     this.logError(error, info);
   }
 ```
+<br/>
+
+9.1 Why static getDerivedStateFromProps() Is Static?
+> - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
 <br/>
 
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
