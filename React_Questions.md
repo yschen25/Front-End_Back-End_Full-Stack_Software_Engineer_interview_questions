@@ -810,8 +810,49 @@ const MyComponent = React.memo(function MyComponent(props) {
 > - **Context-api pattern** :  To pass data deeply throughout your app without having to manually pass props down through multiple levels
 > - **Render props** :  For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
 > - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components. 
+<br/><br/>
+
+28. Why Can't You Update State Directly Without setState()?
+> - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
+<br/><br/>
+
+29. How Many Ways You Can Conditionally Render In React?
+> - If statement , expression 
+<br/><br/>
+
+30. What Is Fragments And Why Do We Use It?
+<br/><br/>
+
+31. What Is React Router?
+> - Is a package which is used to create Routing.
+<br/><br/>
+
+31.1 Why Do We Need React Router?
+> - React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
+<br/><br/>
+
+31.2 How Is Routing in React Different From Conventional Routing?
+| SN | React Routing | Conventional Routing |
+|---|---|---|
+| | Single HTML page | Each view is a new HTML file |
+| | User navigates mutiple view in the same file | User navigates mutioles for each view |
+| | The page does not refresh since it's a single file| The page refreshes every time user navigates |
+| | Improved performance | Slower performance|
 
 <br/><br/>
+
+32. What Is The Meaning Of Synthetic Events In React?
+A synthetic event is an object which acts as a cross-browser wrapper around the browser's native event. It combines the behavior of different browser's native event into on API and this makes sure that the events are consistent across different browser.
+<br/><br/>
+
+33. What Would You Do If Your React Application Application Is Rendering Slowly?
+> - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
+> - Use React.PureComponent or React.memo()
+<br/><br/>
+
+
+
+
 
 ## Customized React Questions
 
@@ -820,9 +861,12 @@ const MyComponent = React.memo(function MyComponent(props) {
 then I push the tool to NPM platform, first week I got 3,000 download. 
 > - I also wrote a interactive resume which like a galgame that user can check the item to solve the puzzle on website, I wrote this with class components and redux.
 > - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
-
 <br/>
 
-❗ 2. Have You Encountered Any Difficulties When You Writing React? 
+2. Why would You Use React In Your Project?
+> - It depens on the project, such like if we have a project gets 3 monthes to develop, then I would not use react because react changes fast. Compare to angular, React is easier to learn, compare to vue, React has strong community support and documents.
+<br/>
+
+❗ 3. Have You Encountered Any Difficulties When You Writing React? 
 
 <br/><br/>
