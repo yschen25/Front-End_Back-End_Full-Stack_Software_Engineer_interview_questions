@@ -586,10 +586,21 @@ console.log(nick.prototype === undefined) // true
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 <br/><br/>
 
-❗ 22. What Is Pure Function?
+22. What Is Pure Function?
+> - Its return value is the same for the same arguments.
+> - Its evaluation has no side effects
+```
+const add = (x, y) => x + y;
+
+add(2, 4); // 6
+```
+
 <br/><br/>
 
-❗ 23. What Is High Order Function?
+23. What Is High Order Function?
+> - Takes one or more functions as arguments
+> - Returns a function as its result.
+> - forEach(), map(), reduce(), filter()
 <br/><br/>
 
 ❗ 24. What Is Functional Programming?
