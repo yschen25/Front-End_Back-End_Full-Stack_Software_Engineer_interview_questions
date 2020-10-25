@@ -785,11 +785,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 <br/>
 
-23. What Is The Component Render Process Of React?
-> - During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. For each flagged component, React will call either classComponentInstance.render() (for class components) or FunctionComponent() (for function components), and save the render output.
-> - A component's render output is normally written in JSX syntax, which is then converted to React.createElement() calls as the JS is compiled and prepared for deployment. createElement returns React elements.
-> - After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. The diffing and calculation process is known as "reconciliation".
-> - React then applies all the calculated changes to the DOM in one synchronous sequence.
+23. Explain How The React Rendering works?
+> - React listens for DOM updates and rerenders the DOM tree on every change but it can do this very quickly because it uses component diffing which means that React checks if there has been a change to the component and only rerenders it if there is one.
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
 
@@ -839,7 +836,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 | | The page does not refresh since it's a single file| The page refreshes every time user navigates |
 | | Improved performance | Slower performance|
 
-<br/><br/>
+<br/>
 
 32. What Is The Meaning Of Synthetic Events In React?
 A synthetic event is an object which acts as a cross-browser wrapper around the browser's native event. It combines the behavior of different browser's native event into on API and this makes sure that the events are consistent across different browser.
@@ -847,10 +844,17 @@ A synthetic event is an object which acts as a cross-browser wrapper around the 
 
 33. What Would You Do If Your React Application Application Is Rendering Slowly?
 > - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
-> - Use React.PureComponent or React.memo()
+> - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
+
 <br/><br/>
 
+34. What Is The Meaning Of The Component-based architecture Of React?
+> - With the component-based system in place, all of the individual entities become completely reusable and independent of each other.
+<br/><br/>
 
+35. What Is React Fiber?
+> - Is a new engine. the main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
+<br/><br/>
 
 
 
