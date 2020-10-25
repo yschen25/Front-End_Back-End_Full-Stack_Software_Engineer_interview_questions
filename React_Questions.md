@@ -7,7 +7,7 @@
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/>
 
-1.2 What Is Features Of React.js?
+1.2 What Are The Features Of React.js?
 > - Only the View of MVC.
 > - JSX.
 > - Virtual DOM.
@@ -86,7 +86,7 @@
 
 <br/>
 
-5. What Is Functional Components (Stateless Component) And Class Components (Stateful Components)? 
+5. What Are Functional Components (Stateless Components) And Class Components (Stateful Components)? 
 
 > - **Functional Components** : <br/>
 (1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
@@ -152,7 +152,7 @@
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
 
-6.2 What Is PropTypes And DefaultProps?
+6.2 What Are PropTypes And DefaultProps?
 > - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
 > - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
 <br/><br/>
@@ -557,6 +557,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/><br/>
 
 12.4. What Is Redux Middleware?
+> - Redux middleware function provides a medium to interact with dispatched action before they reach the reducer such like React-Thunk, React-Saga.
 <br/><br/>
 
 12.5 What is Redux Different From Flux?
@@ -835,18 +836,15 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 29. What Is A React Router?
 > - Is a package which is used to create Routing.
+> - React Router, and dynamic, client-side routing, allows us to `build a single-page web application with navigation without the page refreshing as the user navigates`.
 <br/><br/>
 
-29.1 Why Do We Need A React Router?
-> - React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
-<br/><br/>
-
-29.2 How Is Routing in React Different From Conventional Routing?
+29.1 How Is Routing in React Different From Conventional Routing?
 | SN | React Routing | Conventional Routing |
 |---|---|---|
 | | Single HTML page | Each view is a new HTML file |
-| | User navigates mutiple view in the same file | User navigates mutioles for each view |
-| | The page does not refresh since it's a single file| The page refreshes every time user navigates |
+| | User navigates multiple view in the same file | User navigates multiple files for each view |
+| | The page does not refresh since it's a single file | The page refreshes every time user navigates |
 | | Improved performance | Slower performance|
 
 <br/>
@@ -857,7 +855,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/><br/>
 
 31. What Are Fragments?
-> -A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM
+> - A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
 <br/><br/>
 
 
