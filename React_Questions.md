@@ -797,7 +797,9 @@ const MyComponent = React.memo(function MyComponent(props) {
 > - Create React App is an officially supported way to create single-page React.
 <br/><br/>
 
-
+25. How To Prevent Components From Re-Rendering?
+> shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
+<br/><br/>
 
 ## Customized React Questions
 
