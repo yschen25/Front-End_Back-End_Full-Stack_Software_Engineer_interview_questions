@@ -572,12 +572,12 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/>
 
-13. What Is Styled Component?
+13. What Is A Styled Component?
 > - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
 > - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 <br/><br/>
 
-13.1 What Is Strength And Weakness Of Styled Component?
+13.1 What Is Strength And Weakness Of Styled Components?
 > - **Strength**
 > - **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
 > - **Painless Maintenance**: You don't have maintain mutiple CSS files.
@@ -760,7 +760,7 @@ const content = posts.map((post) =>
 > - If your `list is static` (no additions/re-ordering/removal to the list).
 <br/><br/>
 
-20. What Are Higher-Order Components(HOC)?
+20. What Are Higher-Order Components (HOC)?
 > - Takes one or more components as arguments, and return a new upgraded component. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
 > - HOCs are commonly used to to enhance the reusability of particular components in multiple modules or components.
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
@@ -828,16 +828,16 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/><br/>
 
 28. Name Some Patterns And Usage Of React.
-> - **Context-api pattern** :  To pass data deeply throughout your app without having to manually pass props down through multiple levels
-> - **Render props** :  For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
+> - **Context-api pattern** : To pass data deeply throughout your app without having to manually pass props down through multiple levels
+> - **Render props** : For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
 > - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components. 
 <br/><br/>
 
-29. What Is React Router?
+29. What Is A React Router?
 > - Is a package which is used to create Routing.
 <br/><br/>
 
-29.1 Why Do We Need React Router?
+29.1 Why Do We Need A React Router?
 > - React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates.
 <br/><br/>
 
@@ -852,9 +852,13 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 30. What Is React Fiber?
-> - Is a new engine. the main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
+> - The core of React algorithm. 
+> - The main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
 <br/><br/>
 
+31. What Are Fragments?
+> -A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM
+<br/><br/>
 
 
 ## Customized React Questions
