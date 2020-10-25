@@ -270,12 +270,17 @@ addCount = () => {
 > - Related Reference : [Why we don't need to bind the arrow function in React?](https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 <br/><br/>
 
-8.3 How To Use Arrow Function In The Class Components? (ref:8.1)
+8.3 Why Do We Use Arrow Function In React?
+> - Arrow functions don’t redefine the value of this within their function body. This makes it a lot easier to predict their behavior when passed as callbacks, and prevents bugs caused by use of this within callbacks.
+<br/><br/>
+
+8.4 How To Use Arrow Function In The Class Components? (ref:8.1)
 > - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
 > - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 <br/><br/>
 
-9. Explain The Life Cycle Of React.js? <br/>
+
+9. Explain The Life Cycle Of React.js? (Name Lifecycle Methods and their purpose.)<br/>
 
 <p align="center">
 <img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
