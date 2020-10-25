@@ -402,7 +402,7 @@ componentDidCatch(error, info) {
 (8) Client side support for protecting against XSRF
 <br/><br/>
 
-:small_red_triangle: 11. What Is Flux?
+11. What Is Flux?
 
 <p align="center">
 <img src="img/flux_data_flow1.png" alt="flux_data_flow" title="flux_data_flow" width="70%">
@@ -440,7 +440,7 @@ componentDidCatch(error, info) {
 > - Related Reference : [Flux 基礎概念與實戰入門](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-flux-introduction.md), [Getting To Know Flux, the React.js Architecture](https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture), [How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 <br/><br/>
 
-:small_red_triangle: 11.1 What Are The Strengths And Weaknesses Of Flux?
+11.1 What Are The Strengths And Weaknesses Of Flux?
 > - **Strengths** :  <br/>
 (1) The code becomes quite clear and easy to understand. <br/>
 (2) Easily testable using Unit Test. <br/>
@@ -539,7 +539,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 <br/><br/>
 
-:small_red_triangle: 12.3 What is Redux Different From Flux?
+12.3 What is Redux Different From Flux?
 
 | Flux | Redux |
 |---|---|
@@ -839,14 +839,14 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 32. What Is The Meaning Of Synthetic Events In React?
-A synthetic event is an object which acts as a cross-browser wrapper around the browser's native event. It combines the behavior of different browser's native event into on API and this makes sure that the events are consistent across different browser.
+> - A synthetic event is an object which acts as a cross-browser wrapper around the browser's native event. It combines the behavior of different browser's native event into on API and this makes sure that the events are consistent across different browser.
 <br/><br/>
 
 33. What Would You Do If Your React Application Application Is Rendering Slowly?
 > - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
 > - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
 
-<br/><br/>
+<br/>
 
 34. What Is The Meaning Of The Component-based architecture Of React?
 > - With the component-based system in place, all of the individual entities become completely reusable and independent of each other.
@@ -855,7 +855,6 @@ A synthetic event is an object which acts as a cross-browser wrapper around the 
 35. What Is React Fiber?
 > - Is a new engine. the main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
 <br/><br/>
-
 
 
 ## Customized React Questions
@@ -871,6 +870,7 @@ then I push the tool to NPM platform, first week I got 3,000 download.
 > - It depens on the project, such like if we have a project gets 3 monthes to develop, then I would not use react because react changes fast. Compare to angular, React is easier to learn, compare to vue, React has strong community support and documents.
 <br/>
 
-❗ 3. Have You Encountered Any Difficulties When You Writing React? 
+3. Have You Encountered Any Difficulties When You Writing React? 
+> - At first I  dont used to use state to manipulate rendering DOM because jQuery doesn't has this concept
 
 <br/><br/>
