@@ -603,13 +603,26 @@ add(2, 4); // 6
 > - forEach(), map(), reduce(), filter().
 <br/><br/>
 
-❗ 24. What Is Functional Programming?
-> - Related Reference : [Functional Programming - What Is It and Why Does It Matter?](https://www.keycdn.com/blog/functional-programming), [What is Functional Programming?](https://www.dummies.com/programming/what-is-functional-programming/), [Functional Programming Paradigm
-](https://www.geeksforgeeks.org/functional-programming-paradigm/), [Functional Programming 基本觀念](https://ithelp.ithome.com.tw/articles/10186465), [談談 JavaScript 那些常見的 Functional Programming 的概念帶來了怎樣的好處](https://tinyurl.com/ybrplrvz), [JavaScript: Functional Programming 函式編程概念](https://tinyurl.com/ycoo6yfe), [Functional Programming 一文到底全紀錄](https://tinyurl.com/y8wjozqy)
+24. What Is Functional Programming (FP)?
+> - Functional programming is characterized by pure, higher order functions and immutable data. It is a programming paradigm, meaning it is a way of thinking of software construction based on higher level principles.
+> - Functional langauges empazies on expressions and declarations rather than execution of statements, it avoid mutating data and side effect.
+> - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
+<br/><br/>
+
+24.1 What Are The Strengths Of Functional Programming?
+> - Allows you to avoid confusing problems and errors in the code
+> - Easier to test and execute Unit testing and debug FP Code.
+> - Parallel processing and concurrency
+> - Hot code deployment and fault tolerance
+> - Offers better modularity with a shorter code
+> - Increased productivity of the developer
+> - Supports Nested Functions
+> - Functional Constructs like Lazy Map & Lists, etc.
+> - Allows effective use of Lambda Calculus
 <br/><br/>
 
 ❗ 25. What Is An Event Loop?
-> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
+> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript), [Functional programming and pure functions](https://dev.to/xshirl/functional-programming-and-pure-functions-2j6e)
 <br/><br/>
 
 ❗ 26. What Is Delegate?
