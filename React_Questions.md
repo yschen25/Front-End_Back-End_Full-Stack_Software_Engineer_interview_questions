@@ -852,11 +852,11 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 30. What Is React Fiber?
 > - The core of React algorithm. 
-> - The main goal of React Fiber is to ensure that there are incremental rendering facilities for the virtual DOM.
+> - The main goal of React Fiber is to ensure that there are `incremental rendering facilities for the virtual DOM`.
 <br/><br/>
 
 31. What Are Fragments?
-> - A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
+> - A common pattern in React is for a `component to return multiple elements`. Fragments let you group a list of children `without adding extra nodes to the DOM`.
 <br/><br/>
 
 
