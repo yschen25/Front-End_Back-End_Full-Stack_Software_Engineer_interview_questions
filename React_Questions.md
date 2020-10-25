@@ -872,7 +872,7 @@ then I push the tool to NPM platform, first week I got 3,000 download.
 > - It depens on the project, such like if we have a project gets 3 monthes to develop, then I would not use react because react changes fast. Compare to angular, React is easier to learn, compare to vue, React has strong community support and documents.
 <br/>
 
-3. Have You Encountered Any Difficulties When You Writing React? 
+3. Have You Encountered Any Difficulties When You Write React? 
 > - At first I  dont used to use state to manipulate rendering DOM because jQuery doesn't has this concept
 
 <br/><br/>
