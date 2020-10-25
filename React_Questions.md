@@ -191,7 +191,7 @@
 
 <br/>
 
-7.4 Why Can't You Update State Directly Without setState()?
+7.4 Why Can't Update State Directly Without setState()?
 > - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
 <br/><br/>
 
