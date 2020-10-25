@@ -812,7 +812,10 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/><br/>
 
 24. Explain How React Rendering works?
-> - React listens for DOM updates and rerenders the DOM tree on every change but it can do this very quickly because it uses component diffing which means that React checks if there has been a change to the component and only rerenders it if there is one.
+> - 1. During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. 
+> - 2. A component's render output is normally written in JSX syntax, which is then converted to React.createElement() calls as the JS is compiled and prepared for deployment.
+> - 3. After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output.
+> - 4. React then applies all the calculated changes to the DOM
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
 
