@@ -806,10 +806,10 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 23. How Many Ways You Can Conditionally Render In React?
-> - If statement , expression 
+> - If else statement , expression 
 <br/><br/>
 
-24. Explain How The React Rendering works?
+24. Explain How React Rendering works?
 > - React listens for DOM updates and rerenders the DOM tree on every change but it can do this very quickly because it uses component diffing which means that React checks if there has been a change to the component and only rerenders it if there is one.
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 <br/><br/>
