@@ -190,6 +190,7 @@
 | | Can only be used with class Components (ref:17.2) | Can be used with both class as well as functional components |
 
 <br/>
+
 7.4 Why Can't You Update State Directly Without setState()?
 > - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
 <br/><br/>
