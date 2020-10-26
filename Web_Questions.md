@@ -1,7 +1,7 @@
 ## Web Questions
 <br/>
 
-:white_check_mark: 1. What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?
+1. What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?
 
 <table>
     <tr>
