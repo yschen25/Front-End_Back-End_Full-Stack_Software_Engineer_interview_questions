@@ -1,18 +1,18 @@
 ## HTML Questions
 <br/>
 
-:white_check_mark: 1. What Is Semantic Elements?
+1. What Are Semantic Elements?
 
 > - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer. <br/>
 > - I.g., \<header>, \<footer>, \<nav>, etc.
 <br/>
 
-:white_check_mark: 1.2 Why Use Semantic Elements?
+1.2 Why Use Semantic Elements?
 
 > - Improving SEO and making maintain easily
 <br/>
 
-:white_check_mark: 2. What Is The New Features in HTML5?
+2. What Are The New Features in HTML5?
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
@@ -22,7 +22,7 @@
 > - Related Reference : [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)
 <br/>
 
-:white_check_mark: 2.1 What Do We Need To Declare <!DOCTYPE>?
+2.1 What Do We Need To Declare <!DOCTYPE>?
 > - DOCTYPE means `Document Type`.
 > - All HTML documents must start with a <!DOCTYPE> declaration. It is an information to tell the browser about what document type to expect. Avoiding page shows unexpected layout.
 
@@ -32,7 +32,7 @@
 ```
 <br/>
 
-:white_check_mark: 3. What Is The Difference Between Http Method Get And Post?
+3. What Is The Difference Between Http Methods Get And Post?
 
 | Methods |  Get |  Post | 
 |---|---|---|
