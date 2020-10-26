@@ -872,7 +872,7 @@ then I push the tool to NPM platform, first week I got 3,000 download.
 > - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
 <br/>
 
-2. Why would You Use React In Your Project?
+2. Why Would You Use React In Your Project?
 > - It depens on the project, such like if we have a project gets 3 monthes to develop, then I would not use react because react changes fast. Compare to angular, React is easier to learn, compare to vue, React has strong community support and documents.
 <br/>
 
