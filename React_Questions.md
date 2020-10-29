@@ -179,7 +179,7 @@
 > - Example : https://jsfiddle.net/yschen25/a2cmdb04/
 <br/><br/>
 
-7.3 What Is The Difference Between Props And Status?
+7.3 What Is The Difference Between Props And State?
 
 |  Conditions | State | Props |
 |---|---|---|
