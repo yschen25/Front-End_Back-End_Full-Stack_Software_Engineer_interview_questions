@@ -71,11 +71,11 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 ## Customized React Questions
 
 1. How Do You Deploy Your Code To The Production? 
-> - (1) First write the code and test, then scan by ESLint and SonarLint.
-> - (2) After pass all the tests I will push the branch to github, then test by product manager.
-> - (3) After test by the product manager I will make a merge request to develop environment then test by pipeline.
-> - (4) After pass the pipeline, my colleague or boss will review code, then fix it.
-> - (5) We have develop, stage and master environment, so I will repeat the procedure until push code to the production.
+> - (1) Scan code quality by ESLint and SonarLint.
+> - (2) Test by product manager.
+> - (3) Push to github then test by pipeline.
+> - (4) Code review by boss or colleagues.
+> - (5) Repeat 2 - 5 until to the production. 
 <br/>
 
 2. How Do You Cooperate With Other Front-End Developers? 
