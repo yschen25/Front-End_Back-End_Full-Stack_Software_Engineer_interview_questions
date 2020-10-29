@@ -26,9 +26,8 @@
 (3) `Uni-directional data flow` make it becomes `easier to debug errors and know where a problem occurs` in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
 (4) `SEO friendly`, React can run on the server, rendering and returning the virtual DOM to the browser as a regular webpage.  <br/>
 (5) Can be used for the development of both `web and mobile apps`.   <br/>
-(6) `Server-side rendering` accelerates loads of starting page because users do not need to wait for JavaScript loadings before viewing web sites. ([Web_Questions](https://github.com/yschen25/Web_Questions_Collection/blob/master/Web_Questions.md) ref:18)<br/>
-(7) Useful developer toolset.  <br/>
-(8) Strong community support.
+(6) Useful developer toolset.  <br/>
+(7) Strong community support.
 <br/>
 
 > - **Weakness** : <br/>
