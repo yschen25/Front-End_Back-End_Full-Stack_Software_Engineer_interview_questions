@@ -79,6 +79,10 @@ fetchData().then(() => {
 });
 ```
 
+3.1 Explain What Is Asynchronous And Synchronous?
+> - You execute something synchronously, you need to wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
+
+
 > - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
 ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
 <br/><br/>
@@ -123,13 +127,17 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 <br/>
 
-:white_check_mark: 8. Explain What Is Callbacks?
+8. Explain What Is Callbacks?
 
 > - `Take a function as another function's parameter, called by another function`.
 > - Control the sequence of function execute.
 ```
 window.setTimeout( function(){ ... }, 1000);
 ```
+
+8.1 Why Do We Use Callback?
+> - Callback functions allow us to do something with data at a later time. But too much callback will cause callback hell, we can use promise to replace it.
+
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 <br/><br/>
 
@@ -168,6 +176,10 @@ function a(){}
 ```
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
 > - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
+
+9.1 What Is "Use strict"?
+> - This strict context prevents certain actions from being taken and throws more exceptions.
+> - Using strict mode, don’t allow to use a variable without declaring it, Duplicating a parameter name is not allowed, etc.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 <br/><br/>
