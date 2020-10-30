@@ -215,7 +215,51 @@ const a = 10
 a = 20  // TypeError: Assignment to constant variable.
 ```
 
-10.1 What Is Block Scope And Function Scope?
+10.1 What Is Local Scope And Global Scope?
+**Local Scope : **
+> - Variables declared within a JavaScript function, become LOCAL to the function.
+> - Local variables have Function scope: They can only be accessed from within the function.
+```
+// code here can NOT use carName
+
+function myFunction() {
+  var carName = "Volvo";
+
+  // code here CAN use carName
+
+}
+```
+
+**Global Scope : **
+> - A variable declared outside a function, becomes global.
+> - A global variable has global scope: All scripts and functions on a web page can access it. 
+```
+var carName = "Volvo";
+
+// code here can use carName
+
+function myFunction() {
+
+  // code here can also use carName
+
+}
+```
+
+> - If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+> - This code example will declare a global variable carName, even if the value is assigned inside a function.
+
+```
+myFunction();
+
+// code here can use carName
+
+function myFunction() {
+  carName = "Volvo";
+}
+```
+<br/>
+
+10.2 What Is Block Scope And Function Scope?
 > - Block scope is everything inside a set of braces `{ a block scope here }`
 > - A block scope is sometimes the same as a function scope.
 ```
