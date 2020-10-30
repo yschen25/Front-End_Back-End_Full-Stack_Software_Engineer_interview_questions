@@ -295,3 +295,10 @@ then the user will has permission to view or manipulate corresponding informatio
    
 > - Related Reference :[現代前端渲染機制: SSR vs. CSR](https://growingdna.com/ssr-versus-csr/), [Pros and Cons of Client-Side Rendering](https://www.pluralsight.com/guides/pros-and-cons-of-client-side-rendering), [Javascript SEO: What is SSR/CSR? Advantages and Disadvantages](https://zeo.org/blog/javascript-seo-what-is-ssr-csr-advantages-and-disadvantages/)
 <br/>
+
+18. What Is HTTP Cache?
+
+<br/>
+
+
+
