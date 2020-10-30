@@ -32,7 +32,7 @@
   <img src="img/csrf.png" alt="csrf" title="csrf">
 </p>
 
-> - Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated.
+> - Cross-Site Request Forgery (CSRF) is an attack that `forces an end user to execute unwanted actions` on a web application in which they’re currently authenticated.
 > - If you login website A then visit a dangerous website B, and click the btn on website B, send a request to website A however website A's session or cookie doesn't expired, website A will accept the request from user then execute it.
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 <br/>
@@ -57,7 +57,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 <br/>
 
 6. What Is XSS?
-> - Cross site scripting (XSS) is an attack which injects malicious executable scripts into the code of a trusted application or website.
+> - Cross site scripting (XSS) is an attack which `injects malicious executable scripts into the code of a trusted application or website`.
 > - There are three types of XSS : <br/>
 (1) Reflected XSS, where the malicious script comes from the current HTTP request. <br/>
 (2) Stored XSS, where the malicious script comes from the website's database, such as someone enter the script on message board. <br/>
