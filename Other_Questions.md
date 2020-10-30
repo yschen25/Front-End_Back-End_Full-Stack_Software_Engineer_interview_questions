@@ -57,9 +57,22 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 <br/>
 
 6. What Is XSS?
-> - Cross-Site Scripting (XSS) attack website through the website vulnerability by script.
+> - Cross site scripting (XSS) is an attack which injects malicious executable scripts into the code of a trusted application or website.
+> - There are three types of XSS : <br/>
+(1) Reflected XSS, where the malicious script comes from the current HTTP request. <br/>
+(2) Stored XSS, where the malicious script comes from the website's database, such as someone enter the script on message board. <br/>
+(3) DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code,. usually by writing the data back to the DOM.
+<br/>
+
+6.1 How To Prevent XSS?
+> - Filter input on arrival.
+> - Encode data on output 
+> - Use appropriate response headers.
+> - Follow the Content Security Policy
+
+
 > - Related Reference : [常見攻擊：XSS、SQL Injection
-SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html)
+SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html), [Cross Site Scripting (XSS)](https://www.synopsys.com/glossary/what-is-cross-site-scripting.html), [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
 <br/>
 
 7. What Is Cloud Computing?
