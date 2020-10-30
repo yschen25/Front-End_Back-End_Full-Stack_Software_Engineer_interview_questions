@@ -214,11 +214,12 @@ letFunction();
 const a = 10
 a = 20  // TypeError: Assignment to constant variable.
 ```
+<br/>
 
 10.1 What Is Local Scope And Global Scope?
 
 **Local Scope**
-> - Variables declared within a JavaScript function, become LOCAL to the function.
+> - Variables `declared within a JavaScript function`, become `local` to the function.
 > - Local variables have Function scope: They can only be accessed from within the function.
 ```
 // code here can NOT use carName
@@ -233,7 +234,7 @@ function myFunction() {
 
 
 **Global Scope**
-> - A variable declared outside a function, becomes global.
+> - A variable `declared outside a function`, becomes `global`.
 > - A global variable has global scope: All scripts and functions on a web page can access it. 
 ```
 var carName = "Volvo";
@@ -247,7 +248,7 @@ function myFunction() {
 }
 ```
 
-> - If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+> - If you `assign a value to a variable that has not been declared`, it will automatically become a `global` variable.
 > - This code example will declare a global variable carName, even if the value is assigned inside a function.
 
 ```
@@ -287,7 +288,6 @@ function foo() {
     console.log(c); // c is not defined
 }
 
-foo();
 ```
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
