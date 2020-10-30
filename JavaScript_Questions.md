@@ -216,7 +216,8 @@ a = 20  // TypeError: Assignment to constant variable.
 ```
 
 10.1 What Is Local Scope And Global Scope?
-**Local Scope : **
+
+**Local Scope**
 > - Variables declared within a JavaScript function, become LOCAL to the function.
 > - Local variables have Function scope: They can only be accessed from within the function.
 ```
@@ -230,7 +231,8 @@ function myFunction() {
 }
 ```
 
-**Global Scope : **
+
+**Global Scope**
 > - A variable declared outside a function, becomes global.
 > - A global variable has global scope: All scripts and functions on a web page can access it. 
 ```
