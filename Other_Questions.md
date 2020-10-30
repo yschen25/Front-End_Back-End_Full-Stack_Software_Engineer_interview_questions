@@ -59,9 +59,9 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 6. What Is XSS?
 > - Cross site scripting (XSS) is an attack which `injects malicious executable scripts into the code of a trusted application or website`.
 > - There are three types of XSS : <br/>
-(1) Reflected XSS, where the malicious script comes from the current HTTP request. <br/>
-(2) Stored XSS, where the malicious script comes from the website's database, such as someone enter the script on message board. <br/>
-(3) DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code,. usually by writing the data back to the DOM.
+(1) Reflected XSS, where the malicious script comes `from the current HTTP request`. <br/>
+(2) Stored XSS, where the malicious script comes from the `website's database`, such as someone enter the script on message board. <br/>
+(3) DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code,. usually by `writing the data back to the DOM`.
 
 6.1 How To Prevent XSS?
 > - Filter input on arrival.
