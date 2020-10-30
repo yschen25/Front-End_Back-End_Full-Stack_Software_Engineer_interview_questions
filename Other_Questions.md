@@ -41,7 +41,7 @@
 
 > -  `A request from the orgin domain is different from the target domain` which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
 > - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
-
+> - By building on top of the XMLHttpRequest object, CORS allows developers to work with the same idioms as same-domain requests.
 ```
 <? php
  
