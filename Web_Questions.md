@@ -297,7 +297,10 @@ then the user will has permission to view or manipulate corresponding informatio
 <br/>
 
 18. What Is HTTP Cache?
-
+> - HTTP caching is a process of temporarily storing web content and rich media—images, audio, and video—on a CDN server in a content distribution network (CDN), or content delivery network.
+> - The first time a browser loads a web page, it stores the page resources in the HTTP Cache. The next time the browser hits that page, it can look in the cache for resources that were previously fetched and retrieve them from disk, often faster than it can download them from the network.
+> - Two main types of cache headers, cache-control and expires, define the caching characteristics for your resources.
+> - Related Reference : [HTTP Caching](https://developers.google.com/web/fundamentals/performance/get-started/httpcaching-6)
 <br/>
 
 
