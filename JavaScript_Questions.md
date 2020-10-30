@@ -95,7 +95,7 @@ fetchData().then(() => {
 > - Async, Await.
 <br/><br/>
 
-:small_red_triangle: 5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
+5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
 | Methods | push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
@@ -105,7 +105,7 @@ fetchData().then(() => {
 Example : https://jsfiddle.net/yschen25/bcuto13q/
 <br/><br/>
 
-:small_red_triangle: 6. Explain What Is The Difference Between slice(), splice()?
+6. Explain What Is The Difference Between slice(), splice()?
 
 | Methods |  slice(start index, end index) | splice(index, howmany, item1, ....., itemX) 
 |---|---|---|
@@ -117,7 +117,7 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
-:small_red_triangle: 7. Explain What Is The Difference Between map(), forEach()?
+7. Explain What Is The Difference Between map(), forEach()?
 
 | Methods | map() | foEach() |
 |---|---|---|
@@ -213,6 +213,35 @@ letFunction();
 ```
 const a = 10
 a = 20  // TypeError: Assignment to constant variable.
+```
+
+10.1 What Is Block Scope And Function Scope?
+> - Block scope is everything inside a set of braces `{ a block scope here }`
+> - A block scope is sometimes the same as a function scope.
+```
+function test(x) {
+   // this is both a block scope and a function scope
+   let y = 5;
+   if (x) {
+       // this is a smaller block scope that is not the same as the function scope
+       let z = 1;
+   }
+}
+```
+
+```
+function foo() {
+    if (true) {
+        var a = 1;
+        let b = 2;
+        const c = 3;
+    }
+    console.log(a); // 1
+    console.log(b); // b is not defined
+    console.log(c); // c is not defined
+}
+
+foo();
 ```
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
