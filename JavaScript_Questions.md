@@ -522,12 +522,30 @@ null === undefined  // false
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 <br/><br/>
 
-16. What Is Event Bubbling And How To Stop I?
+16. What Is Event Bubbling And How To Stop It?
 
 > - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
 > - (2)Using event.stopPropagation()
 
 > - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
+<br/><br/>
+
+16.1 What Is Event Capturing?
+> - The event is first captured by the outermost element and propagated to the inner elements.
+> - If you click on < p >, then the sequence is: <br/>
+(1) HTML → BODY → FORM → DIV (capturing phase, the first listener): <br/>
+(2) P (target phase, triggers two times, as we’ve set two listeners: capturing and bubbling) <br/>
+(3) DIV → FORM → BODY → HTML (bubbling phase, the second listener).
+	
+```
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P
+    </p>
+  </div>
+</form>
+```
+> - Related Reference : [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
 <br/><br/>
 
 17. What A Function Statements(Declaration) And Function Expressions?
@@ -749,11 +767,12 @@ console.log('end')
 
 ```
 
-
 > - Related Reference : [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/), [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[How JavaScript Works: Web APIs, Callback Queue, and Event Loop](https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e),[JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
 <br/><br/>
 
-❗ 26. What Is Delegate?
+26. What Is Delegate?
+> - Event delegation allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements.
+> - Related Reference : [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 <br/><br/>
 
 ## Customized javaScript Questions
