@@ -708,8 +708,19 @@ add(2, 4); // 6
 > - Allows effective use of Lambda Calculus
 <br/><br/>
 
-❗ 25. What Is An Event Loop?
-> - Related Reference : [What is an event loop in JavaScript?](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript), [Functional programming and pure functions](https://dev.to/xshirl/functional-programming-and-pure-functions-2j6e)
+25. What Is An Event Loop?
+
+<p align="center">
+<img src="img/event_loop.png" alt="event_loop" title="event_loop" width="60%">
+</p>
+
+> - JavaScript is single-threaded, once your browser starts processing too many tasks in the Call Stack, it may stop being responsive for a long time, even block the UI thread, and the user cannot click around, scroll the page, and so on.
+> -The Event Loop make every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser. Monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+> - **Web APIs** : In essence, they are threads that you can’t access, you can just make calls to them.
+> - **Call stack** : The Call Stack is a data structure which records basically where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack. 
+> - **Callback Queue** : The Callback Queue is a FIFO data structure. Stores all the callback functions in the order in which they are added.
+
+> - Related Reference : [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/), [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[How JavaScript Works: Web APIs, Callback Queue, and Event Loop](https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e)
 <br/><br/>
 
 ❗ 26. What Is Delegate?
