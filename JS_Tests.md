@@ -271,7 +271,7 @@ Ans： 10 / 2
 
 <br/>
 
-##### Call by value or reference
+#### Call by value or reference
 ```
 var arr1 = "john".split('');
 var arr2 = arr1.reverse();
@@ -326,7 +326,9 @@ Ans：[{prop1: 42}, {someProp: "also value of array A!"}, 3,4,5]
 
 <br/>
 
-#### Write a sum method which will work properly when invoked using either syntax below.
+#### Others
+
+##### Write a sum method which will work properly when invoked using either syntax below.
 ```
 console.log(sum(2,3));   // Outputs 5
 console.log(sum(2)(3));  // Outputs 5
@@ -345,7 +347,6 @@ function sum(x, y) {
 
 <br/>
 
-#### Others
 ```
 function a(a) {
   a();
