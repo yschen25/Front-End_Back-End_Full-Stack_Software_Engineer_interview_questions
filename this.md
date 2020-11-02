@@ -46,3 +46,75 @@ callName3;
 callName4;
 ```
 Ans：漂亮阿姨 / Magic Watch
+
+
+
+==
+```
+function func() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: func
+};
+
+obj.foo();  // 2
+
+var func2 = obj.foo;
+func2();    // undefined
+```
+
+```
+var a = 3;
+function func() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: func
+};
+
+obj.foo();  // 2
+
+var func2 = obj.foo;
+func2();    // 3
+```
+
+```
+function func() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: func
+};
+
+obj.foo(); // 2
+
+var func2 = obj.foo;
+
+func2; // function func()
+```
+
+```
+function func() {
+  console.log( this.a );
+}
+
+var obj = {
+  a: 2,
+  foo: func
+};
+
+obj.foo(); // 2
+
+var func2 = obj.foo(); 
+
+func2; // 2
+```
+
+
