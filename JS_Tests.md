@@ -29,6 +29,7 @@ x();
 Ans : undefined / b is not defined
 
 <br/>
+
 #### Hoisting
 ```
 (function () {
@@ -45,6 +46,7 @@ Ans : undefined / b is not defined
 Ans : 1 / undefined / 2
 
 <br/>
+
 #### IIFE 
 ```
 (function(){
@@ -79,6 +81,7 @@ console.log(b);
 Ans : a is not defined / 3
 
 <br/>
+
 #### This
 ```
 function callName() {
@@ -247,6 +250,7 @@ obj.method(fn, 1);
 Ans： 10 / 2
 
 <br/>
+
 ##### Call by value or reference
 ```
 var arr1 = "john".split('');
@@ -268,6 +272,7 @@ console.log(a);
 ??? Ans：{}
 
 <br/>
+
 #### Write a sum method which will work properly when invoked using either syntax below.
 ```
 console.log(sum(2,3));   // Outputs 5
@@ -286,6 +291,7 @@ function sum(x, y) {
 ```
 
 <br/>
+
 #### Others
 ```
 function a(a) {
