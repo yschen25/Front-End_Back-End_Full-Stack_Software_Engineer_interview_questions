@@ -285,13 +285,23 @@ Ans：array 1: length=5 last=j,o,n,e,s / array 2: length=5 last=j,o,n,e,s"
 <br/>
 
 ```
+var objA = {prop1: 42};
+var objB = objA;
+objB = {};
+console.log(objA)
+```
+Ans：{prop1: 42}
+
+<br/>
+
+```
 var a = {};
 var b = a;
 var c = b = { number: 1 };
 c.name = '小明';
 console.log(a);
 ```
-??? Ans：{}
+Ans：{}
 
 <br/>
 
