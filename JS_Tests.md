@@ -1,4 +1,82 @@
-1. 請問 this 將會出現什麼答案？
+#### Let and Var
+```
+function x() {
+
+    if (true) {
+        var a = 1;
+        let b = 2;
+    }
+    console.log(a);
+    console.log(b);
+}
+x();
+```
+Ans : 1 / b is not defined
+
+```
+function x() {
+
+    if (true) {
+        console.log(a);
+        console.log(b);
+        var a = 1;
+        let b = 2;
+    }
+
+}
+x();
+```
+Ans : undefined / b is not defined
+
+#### Hoisting
+```
+(function () {
+    try {
+        throw new Error();
+    } catch (x) {
+        var x = 1, y = 2;
+        console.log(x);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+Ans : 1 / undefined / 2
+
+#### IIFE 
+```
+(function(){
+  var a = b = 3;
+})();
+
+console.log(a);
+console.log(b);
+```
+Ans : a is not defined / 3
+
+```
+(function(){
+  'use strict';
+  var a = b = 3;
+})();
+
+console.log(a);
+console.log(b);
+```
+Ans : a is not defined / b is not defined
+
+```
+(function(){
+  'use strict';
+  var a = window.b = 3;
+})();
+
+console.log(a);
+console.log(b);
+```
+Ans : a is not defined / 3
+
+#### This
 ```
 function callName() {
   console.log(this.name);
@@ -134,4 +212,34 @@ var callName1 = auntie.callName();
 callName1;
 ```
 Ans：漂亮阿姨
+
+##### Call by value or reference
+```
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+```
+Ans：array 1: length=5 last=j,o,n,e,s / array 2: length=5 last=j,o,n,e,s"
+
+
+#### Write a sum method which will work properly when invoked using either syntax below.
+```
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+Ans :
+```
+function sum(x, y) {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+```
+
 
