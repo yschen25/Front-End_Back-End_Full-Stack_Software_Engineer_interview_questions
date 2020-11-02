@@ -78,10 +78,10 @@ var obj = {
   foo: func
 };
 
-obj.foo();  // 2
+obj.foo(); 
 
 var func2 = obj.foo;
-func2();    // 3
+func2(); 
 ```
 Ans：2 / 3
 
