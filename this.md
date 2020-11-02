@@ -65,7 +65,7 @@ obj.foo();
 var func2 = obj.foo;
 func2(); 
 ```
-Ans：2/undefined
+Ans：2 / undefined
 
 ```
 var a = 3;
@@ -83,7 +83,7 @@ obj.foo();  // 2
 var func2 = obj.foo;
 func2();    // 3
 ```
-Ans：2/3
+Ans：2 / 3
 
 ```
 function func() {
@@ -101,7 +101,7 @@ var func2 = obj.foo;
 
 func2; 
 ```
-Ans：2/function func()
+Ans：2 / function func()
 
 ```
 function func() {
@@ -119,5 +119,5 @@ var func2 = obj.foo();
 
 func2; // 2
 ```
-Ans：2/2
+Ans：2 / 2
 
