@@ -13,6 +13,8 @@ x();
 ```
 Ans : 1 / b is not defined
 
+<br/>
+
 ```
 function x() {
 
@@ -58,6 +60,8 @@ console.log(b);
 ```
 Ans : a is not defined / 3
 
+<br/>
+
 ```
 (function(){
   'use strict';
@@ -68,6 +72,8 @@ console.log(a);
 console.log(b);
 ```
 Ans : a is not defined / b is not defined
+
+<br/>
 
 ```
 (function(){
@@ -107,6 +113,8 @@ callName4;
 ```
 Ans：漂亮阿姨 / function callName()
 
+<br/>
+
 ```
 function callName() {
   console.log(this.name);
@@ -131,6 +139,8 @@ callName4;
 ```
 Ans：漂亮阿姨 / Magic Watch
 
+<br/>
+
 ```
 var name = "KAKA";
 function callName() {
@@ -151,6 +161,8 @@ var callName1 = auntie.callName;
 callName1();
 ```
 Ans：undefined
+
+<br/>
 
 ```
 var name = "KAKA";
@@ -174,6 +186,8 @@ callName1();
 Ans：KAKA <br/>
 auntie.callName 賦值給變數 callName1 時，callName 並沒有被呼叫，也就是函式只是另一個函式的參考。因此 callName1() 就只是一般的函式呼叫。
 
+<br/>
+
 ```
 var name = "KAKA";
 function callName() {
@@ -194,6 +208,8 @@ var callName1 = auntie.callName;
 callName1;
 ```
 Ans：function callName()
+
+<br/>
 
 ```
 var name = "KAKA";
@@ -216,6 +232,8 @@ callName1;
 ```
 Ans：漂亮阿姨
 
+<br/>
+
 ```
 function callName(name) {
   console.log(this.name, name);
@@ -230,6 +248,8 @@ cllName(undefined, '小明');
 callName.call(auntie, '小明');
 ```
 Ans： 全域阿婆 / undefined，漂亮阿姨 / 小明
+
+<br/>
 
 ```
 var length = 10;
@@ -261,6 +281,8 @@ console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
 console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 ```
 Ans：array 1: length=5 last=j,o,n,e,s / array 2: length=5 last=j,o,n,e,s"
+
+<br/>
 
 ```
 var a = {};
