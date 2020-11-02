@@ -90,7 +90,8 @@ var callName1 = auntie.callName;
 
 callName1();
 ```
-Ans：KAKA
+Ans：KAKA <br/>
+auntie.callName 賦值給變數 callName1 時，callName 並沒有被呼叫，也就是函式只是另一個函式的參考。因此 callName1() 就只是一般的函式呼叫。
 
 ```
 var name = "KAKA";
