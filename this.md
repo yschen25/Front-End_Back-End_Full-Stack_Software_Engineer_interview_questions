@@ -60,11 +60,12 @@ var obj = {
   foo: func
 };
 
-obj.foo();  // 2
+obj.foo(); 
 
 var func2 = obj.foo;
-func2();    // undefined
+func2(); 
 ```
+Ans：2/undefined
 
 ```
 var a = 3;
@@ -82,6 +83,7 @@ obj.foo();  // 2
 var func2 = obj.foo;
 func2();    // 3
 ```
+Ans：2/3
 
 ```
 function func() {
@@ -93,12 +95,13 @@ var obj = {
   foo: func
 };
 
-obj.foo(); // 2
+obj.foo(); 
 
 var func2 = obj.foo;
 
-func2; // function func()
+func2; 
 ```
+Ans：2/function func()
 
 ```
 function func() {
@@ -116,5 +119,5 @@ var func2 = obj.foo();
 
 func2; // 2
 ```
-
+Ans：2/2
 
