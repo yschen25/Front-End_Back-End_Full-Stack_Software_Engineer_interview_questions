@@ -51,73 +51,86 @@ Ans：漂亮阿姨 / Magic Watch
 
 ==
 ```
-function func() {
-  console.log( this.a );
+var name = "KAKA";
+function callName() {
+  console.log(this.name);
 }
 
-var obj = {
-  a: 2,
-  foo: func
+var auntie = {
+  name: '漂亮阿姨',
+  callName: callName,
+  watch: {
+    name: 'Magic Watch',
+    callName: callName,
+  },
 };
 
-obj.foo(); 
+var callName1 = auntie.callName;
 
-var func2 = obj.foo;
-func2(); 
+callName1();
 ```
-Ans：2 / undefined
+Ans：undefined
 
 ```
-var a = 3;
-function func() {
-  console.log( this.a );
+var name = "KAKA";
+function callName() {
+  console.log(this.name);
 }
 
-var obj = {
-  a: 2,
-  foo: func
+var auntie = {
+  name: '漂亮阿姨',
+  callName: callName,
+  watch: {
+    name: 'Magic Watch',
+    callName: callName,
+  },
 };
 
-obj.foo(); 
+var callName1 = auntie.callName;
 
-var func2 = obj.foo;
-func2(); 
+callName1();
 ```
-Ans：2 / 3
+Ans：KAKA
 
 ```
-function func() {
-  console.log( this.a );
+var name = "KAKA";
+function callName() {
+  console.log(this.name);
 }
 
-var obj = {
-  a: 2,
-  foo: func
+var auntie = {
+  name: '漂亮阿姨',
+  callName: callName,
+  watch: {
+    name: 'Magic Watch',
+    callName: callName,
+  },
 };
 
-obj.foo(); 
+var callName1 = auntie.callName;
 
-var func2 = obj.foo;
-
-func2; 
+callName1;
 ```
-Ans：2 / function func()
+Ans：function callName()
 
 ```
-function func() {
-  console.log( this.a );
+var name = "KAKA";
+function callName() {
+  console.log(this.name);
 }
 
-var obj = {
-  a: 2,
-  foo: func
+var auntie = {
+  name: '漂亮阿姨',
+  callName: callName,
+  watch: {
+    name: 'Magic Watch',
+    callName: callName,
+  },
 };
 
-obj.foo(); // 2
+var callName1 = auntie.callName();
 
-var func2 = obj.foo(); 
-
-func2; // 2
+callName1;
 ```
-Ans：2 / 2
+Ans：漂亮阿姨
 
