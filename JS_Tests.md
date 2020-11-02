@@ -49,35 +49,6 @@ Ans : 1 / undefined / 2
 
 <br/>
 
-```
-(function() {
-	console.log(typeof displayFunc);
-	var displayFunc = function(){
-		console.log("Hi I am inside displayFunc");
-	}
-}());
-```
-??? Ans : undefined
-
-<br/>
-
-```
-var employeeId = 'abc123';
-
-function foo() {
-	employeeId = '123bcd';
-	return;
-
-	function employeeId() {}
-}
-foo();
-console.log(employeeId);
-```
-??? Ans : 'abc123'
-
-<br/>
-
-
 #### IIFE 
 ```
 (function(){
