@@ -28,6 +28,7 @@ x();
 ```
 Ans : undefined / b is not defined
 
+<br/>
 #### Hoisting
 ```
 (function () {
@@ -43,6 +44,7 @@ Ans : undefined / b is not defined
 ```
 Ans : 1 / undefined / 2
 
+<br/>
 #### IIFE 
 ```
 (function(){
@@ -76,6 +78,7 @@ console.log(b);
 ```
 Ans : a is not defined / 3
 
+<br/>
 #### This
 ```
 function callName() {
@@ -125,9 +128,6 @@ callName4;
 ```
 Ans：漂亮阿姨 / Magic Watch
 
-
-
-==
 ```
 var name = "KAKA";
 function callName() {
@@ -213,6 +213,40 @@ callName1;
 ```
 Ans：漂亮阿姨
 
+```
+function callName(name) {
+  console.log(this.name, name);
+}
+
+var name = '全域阿姨';
+var auntie = {
+  name: '漂亮阿姨',
+};
+
+cllName(undefined, '小明');
+callName.call(auntie, '小明');
+```
+Ans： 全域阿婆 / undefined，漂亮阿姨 / 小明
+
+```
+var length = 10;
+function fn() {
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+
+obj.method(fn, 1);
+```
+Ans： 10 / 2
+
+<br/>
 ##### Call by value or reference
 ```
 var arr1 = "john".split('');
@@ -224,7 +258,16 @@ console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 ```
 Ans：array 1: length=5 last=j,o,n,e,s / array 2: length=5 last=j,o,n,e,s"
 
+```
+var a = {};
+var b = a;
+var c = b = { number: 1 };
+c.name = '小明';
+console.log(a);
+```
+??? Ans：{}
 
+<br/>
 #### Write a sum method which will work properly when invoked using either syntax below.
 ```
 console.log(sum(2,3));   // Outputs 5
@@ -242,4 +285,22 @@ function sum(x, y) {
 }
 ```
 
+<br/>
+#### Others
+```
+function a(a) {
+  a();
+}
+
+function b(b) {
+  b();
+}
+
+function c(c) {
+  console.log('casper');
+}
+
+a(b(c));
+```
+??? Ans：casper / a is not a function
 
