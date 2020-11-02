@@ -49,6 +49,35 @@ Ans : 1 / undefined / 2
 
 <br/>
 
+```
+(function() {
+	console.log(typeof displayFunc);
+	var displayFunc = function(){
+		console.log("Hi I am inside displayFunc");
+	}
+}());
+```
+??? Ans : undefined
+
+<br/>
+
+```
+var employeeId = 'abc123';
+
+function foo() {
+	employeeId = '123bcd';
+	return;
+
+	function employeeId() {}
+}
+foo();
+console.log(employeeId);
+```
+??? Ans : 'abc123'
+
+<br/>
+
+
 #### IIFE 
 ```
 (function(){
@@ -305,6 +334,27 @@ Ans：{}
 
 <br/>
 
+```
+var arrA = [0,1,2,3,4,5];
+var arrB = arrA.slice();
+arrB[0]=42;
+console.log(arrA)
+```
+Ans：[0,1,2,3,4,5]
+
+<br/>
+
+```
+var arrA = [{prop1: "value of array A!!"}, {someProp: "also value of array A!"},3,4,5];
+var arrB = arrA.slice();
+arrB[0].prop1=42;
+arrB[3] = 20;
+console.log(arrA);
+```
+Ans：[{prop1: 42}, {someProp: "also value of array A!"}, 3,4,5]
+
+<br/>
+
 #### Write a sum method which will work properly when invoked using either syntax below.
 ```
 console.log(sum(2,3));   // Outputs 5
@@ -341,4 +391,7 @@ function c(c) {
 a(b(c));
 ```
 ??? Ans：casper / a is not a function
+
+Related Reference : [37 Essential JavaScript Interview Questions](https://www.toptal.com/javascript/interview-questions), [JavaScript 熱門面試題](https://hackmd.io/@chupai/r1mW5_gEB), [
+123-Essential-JavaScript-Interview-Questions](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions)
 
