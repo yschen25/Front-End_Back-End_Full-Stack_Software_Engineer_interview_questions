@@ -271,6 +271,41 @@ Ans： 10 / 2
 
 <br/>
 
+```
+function getFullname() {
+    return this.fullname;
+}
+
+var fullname = 'A';
+var obj = {
+    fullname: 'B',
+    getFullname: getFullname,
+    prop: {
+        fullname: 'C',
+        getFullname: () => {
+            return this.fullname
+        }
+    }
+}
+
+var test = obj.getFullname;
+
+console.log(obj.getFullname());
+console.log(getFullname());
+console.log(obj.getFullname.bind({
+    fullname: 'C'
+})());
+console.log(test());
+console.log(obj.prop.getFullname());
+
+```
+Ans： B / A / C / A / A <br/>
+第五個因為他是 arrow function 沒有自己的 this，this 等於外層 scope 的 this (此例中的 global) <br/>
+如果換成是一般 function (getFullname: getFullname)，this 就是 function 的呼叫者，也就是 obj.prop
+
+<br/>
+
+
 #### Call by value or reference
 ```
 var arr1 = "john".split('');
