@@ -763,7 +763,7 @@ const content = posts.map((post) =>
 
 20. What Are Higher-Order Components (HOC)?
 > - Takes one or more components as arguments, and return a new upgraded component. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
-> - HOCs are commonly used to to enhance the reusability of particular components in multiple modules or components.
+> - HOCs are commonly used to enhance the reusability of particular components in multiple modules or components.
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
