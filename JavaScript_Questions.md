@@ -178,7 +178,7 @@ function a(){}
 > - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
 9.1 What Is "Use strict"?
-> - This strict context prevents certain actions from being taken and throws more exceptions.
+> - This strict context `prevents certain actions from being taken and throws more exceptions`.
 > - Using strict mode, don’t allow to use a variable without declaring it, Duplicating a parameter name is not allowed, etc.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
@@ -733,12 +733,13 @@ add(2, 4); // 6
 </p>
 
 > - `JavaScript is single-threaded`, once your browser starts processing too many tasks in the Call Stack, it may stop being responsive for a long time, even block the UI thread, and the user cannot click around, scroll the page, and so on.
-> - The Event Loop make `every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser`. Monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+> - The Event Loop make `every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser`. 
+> - Monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
 > - **Web APIs** : In essence, they are threads that you can’t access, you can just make calls to them. (Ajax, setTimeout, setInterval)
 > - **Call Stack** : The Call Stack is a data structure which records basically where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack. 
 > - **Callback Queue** : 
-(1) The Callback Queue is a FIFO data structure. Stores all the callback functions in the order in which they are added. 
-(2) Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The priority Mircotasks is higher than Marcotasks.
+(1) The Callback Queue is a FIFO data structure. Stores all the callback functions in the order in which they are added. <br/>
+(2) Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.<br/>
 ```
 console.log('start')
 
@@ -771,7 +772,7 @@ console.log('end')
 <br/><br/>
 
 26. What Is Delegate?
-> - Event delegation allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements.
+> - Event delegation allows you to `avoid adding event listeners to specific nodes, instead, the event listener is added to one parent.` That event listener analyzes bubbled events to find a match on child elements.
 > - Related Reference : [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 <br/><br/>
 
