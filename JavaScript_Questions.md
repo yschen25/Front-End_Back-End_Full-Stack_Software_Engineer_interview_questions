@@ -737,7 +737,7 @@ add(2, 4); // 6
 > - Monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
 > - **Web APIs** : In essence, they are threads that you can’t access, you can just make calls to them. (Ajax, setTimeout, setInterval)
 > - **Call Stack** : The Call Stack is a data structure which records basically where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack. 
-> - **Callback Queue** : 
+> - **Callback Queue** :  <br/>
 (1) The Callback Queue is a FIFO data structure. Stores all the callback functions in the order in which they are added. <br/>
 (2) Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.<br/>
 ```
