@@ -661,6 +661,15 @@ useEffect(() => {
  
 ② The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
+- Running every time. <br/>
+```
+useEffect(() => {
+	console.log('Runs every time');
+});
+```
+
+```
+
  - Running an effect once (componentDidMount) : The key to running an effect once is to pass in an empty array. <br/>
 ```
 useEffect(() => {
