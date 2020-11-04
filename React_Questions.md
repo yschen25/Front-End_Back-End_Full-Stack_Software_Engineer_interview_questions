@@ -146,7 +146,7 @@
 <br/><br/>
 
 6.1 When Use Props?
-> - To pass data & event handlers down to your child components.
+> - To `pass data & event handlers` down to your child components.
 > - If you just want to use props, not use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 <br/><br/>
