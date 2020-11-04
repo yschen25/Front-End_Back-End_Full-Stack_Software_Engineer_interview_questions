@@ -353,9 +353,9 @@ shouldComponentUpdate(nextProps, nextState){
 
 (3) **render()** : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
 
-(4) **getSnapshotBeforeUpdate()** : If you want to do something before render then can do it right here. This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
+(4) **getSnapshotBeforeUpdate()** : If you want to `do something before render` then can do it right here. This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
 
-(5) **componentDidUpdate()** : You can do the samething as what did in componentDidMount(). This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
+(5) **componentDidUpdate()** : You can `do the samething as what did in componentDidMount()`. This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
@@ -396,7 +396,7 @@ componentDidCatch(error, info) {
 
 9.2. Explain Error Boundaries? (ref:9)
 > - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
-> static getDerivedStateFromError(), componentDidCatch()
+> - static getDerivedStateFromError(), componentDidCatch()
 <br/>
 
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
@@ -771,8 +771,8 @@ const content = posts.map((post) =>
 <br/><br/>
 
 20. What Are Higher-Order Components (HOC)?
-> - Takes one or more components as arguments, and return a new upgraded component. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
-> - HOCs are commonly used to enhance the reusability of particular components in multiple modules or components.
+> - `Takes one or more components as arguments, and return a new upgraded component`. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
+> - HOCs are commonly used to `enhance the reusability of particular components` in multiple modules or components.
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
@@ -868,6 +868,32 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 31. What Are Fragments?
 > - A common pattern in React is for a `component to return multiple elements`. Fragments let you group a list of children `without adding extra nodes to the DOM`.
+```
+class Columns extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <td>Hello</td>
+        <td>World</td>
+      </React.Fragment>
+    );
+  }
+}
+```
+
+```
+class Columns extends React.Component {
+  render() {
+    return (
+      <>
+        <td>Hello</td>
+        <td>World</td>
+      </>
+    );
+  }
+}
+```
+> - Related Reference : [React Fragment](https://www.fooish.com/reactjs/fragment.html)
 <br/><br/>
 
 
