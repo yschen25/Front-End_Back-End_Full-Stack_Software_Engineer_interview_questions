@@ -709,8 +709,7 @@ add(2, 4); // 6
 <br/><br/>
 
 24. What Is Functional Programming (FP)?
-> - Functional programming is characterized by pure, higher order functions and immutable data. It is a programming paradigm, meaning it is a way of thinking of software construction based on higher level principles.
-> - Functional langauges empazies on expressions and declarations rather than execution of statements, it avoid mutating data and side effect.
+> - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
 > - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
 <br/><br/>
 
