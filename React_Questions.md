@@ -668,7 +668,7 @@ useEffect(() => {
 });
 ```
 
-```
+<br/>
 
  - Running an effect once (componentDidMount) : The key to running an effect once is to pass in an empty array. <br/>
 ```
