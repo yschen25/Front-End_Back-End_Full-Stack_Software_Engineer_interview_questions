@@ -711,9 +711,20 @@ useEffect(() => {
 
 <br/>
 
-16.3 Compare Redux And useContext() API and React Hooks. 
-> - Redux makes it really difficult to pick up, and the ton of extra code needed to get it working in our application introduces a lot of unnecessary complexity.
-> - useContext API and React Hooks, there is no need to install external libraries or add a bunch of files and folders in order to get our app working. This makes it a much simpler, more straightforward way to handle global state management in React applications.
+16.3 Compare Redux And React Hooks. 
+> - For a smaller project, use React Hooks instead of Redux <br/>
+(1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
+(2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity. 
+
+> - For a bigger project, use React Hooks and Redux in duck pattern  (combine reducer, action types, and action to one file)
+
+> - React Hooks can’t replace Redux, which one we need to use it depends on the project. <br/>
+(1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
+(2) Have the ability to use middleware to deal with some async tasks. <br/>
+(3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
+(4) Higher-Order Components to compose in cross-cutting concerns that are shared by all or most of my application views, such as the Redux provider, a common layout provider, a configuration provider, authentication/authorization, i18n, and so on. <br/>
+(5) React also has its own hook. 
+
 
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
@@ -926,5 +937,8 @@ then I push the tool to NPM platform, first week I got 3,000 download.
 
 3. Have You Encountered Any Difficulties When You Write React? 
 > - At first I  dont used to use state to manipulate rendering DOM because jQuery doesn't has this concept
+<br/>
+
+4. If now we don’t use React, how would you implement the same functionality as React?
 
 <br/><br/>
