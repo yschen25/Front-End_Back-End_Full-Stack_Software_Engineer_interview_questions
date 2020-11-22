@@ -81,18 +81,18 @@
  <br/>
  
 > - **For huge data :**
-> - Virtualize Long Lists :  React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes. 
+> - Virtualize Long Lists : React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes. 
 > - Use webStorage : user id, record the search key and result that user used before, user setting : layout, lang.
 > - Use Promise to make multiple calls
-> - Service worker: will first immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
+> - Service worker : will first immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
 
  <br/>
  
 > - **For files:**
-> - Code splitting: To solve the problem that js bundle size is too large, to divide to smaller chunks.
+> - Code splitting : To solve the problem that js bundle size is too large, to divide to smaller chunks.  <br/>
 (1) Dynamic Import. path :  React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
 (2) Bundle third party files to one file : CommonsChunkPlugin, By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. <br/>
-(3) Preload, Async...files: React Loadable: Use async, defer, prefetch, preload, preconnect, dns-preconnect, prerender tags. Preload to preload potential resources for the next page on control component. <br/>
+(3) Preload, Async...files : React Loadable: Use async, defer, prefetch, preload, preconnect, dns-preconnect, prerender tags. Preload to preload potential resources for the next page on control component. <br/>
 > - Offer the different website content depends on user’s internet speed 
 > - Delete unused code : remove spaces, commas, and other unnecessary characters.
 > - Minify files : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
