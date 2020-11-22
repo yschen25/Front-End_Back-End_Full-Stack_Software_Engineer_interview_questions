@@ -77,13 +77,17 @@
 > - Analysis tools : (1) Performance Analyzers : Lighthouse, PageSpeed (2) Webpack : Webpack Bundle Analyzer 
 > - Web Application : SPA. Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
 > - Technology : React. (1) Router: React-router + React.lazy (2) Virtual DOM: dependency array of useEffect, key in the list. (3) Pure component or shouldComponentUpdate.
+
  <br/>
+ 
 > - **For huge data :**
 > - Virtualize Long Lists :  React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes. 
 > - Use webStorage : user id, record the search key and result that user used before, user setting : layout, lang.
 > - Use Promise to make multiple calls
 > - Service worker: will first immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
+
  <br/>
+ 
 > - **For files:**
 > - Code splitting: To solve the problem that js bundle size is too large, to divide to smaller chunks.
 (1) Dynamic Import. path :  React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
@@ -93,7 +97,9 @@
 > - Delete unused code : remove spaces, commas, and other unnecessary characters.
 > - Minify files : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
 > - Lazy load images
+
  <br/>
+ 
 > - **Others:**
 > - Reduce the HTTP request : use sprite images, combine files...etc.
 > - Use CDN.
