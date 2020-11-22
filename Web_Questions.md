@@ -303,5 +303,8 @@ then the user will has permission to view or manipulate corresponding informatio
 > - Related Reference : [HTTP Caching](https://developers.google.com/web/fundamentals/performance/get-started/httpcaching-6)
 <br/>
 
-
+19. What Is The Purpose Of A CDN And What Benefits Does It Bring?
+> - The primary purpose of CDN is to improve a website’s loading speed.
+> - This helps users around the world view the same high-quality content and also improve their site performance without slow loading times.
+<br/>
 
