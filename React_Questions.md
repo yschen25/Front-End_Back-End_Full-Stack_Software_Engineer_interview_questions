@@ -856,7 +856,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 > - shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
 <br/><br/>
 
-26. What Would You Do If Your React Application Application Is Rendering Slowly?
+26. What Would You Do If Your React Application Is Rendering Slowly?
 > - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
 > - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
 <br/>
