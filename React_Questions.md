@@ -801,7 +801,7 @@ const content = posts.map((post) =>
 > - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 <br/><br/>
 
-21. Describe Shallow Comparision In React?
+21. Describe Shallow Comparison In React?
 > - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
 > - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
 <br/><br/>
