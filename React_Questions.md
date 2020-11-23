@@ -926,7 +926,7 @@ class Columns extends React.Component {
 
 1. Where Do You Use React?
 > - I wrote a tool that can creat twitter social button quickly with react hooks, jest react-hook-teating-libraty instead of enzyme, because enzyme not support hooks so far,
-then I push the tool to NPM platform, first week I got 3,000 download. 
+then I push the tool to NPM platform, first week I got 300 download. 
 > - I also wrote a interactive resume which like a galgame that user can check the item to solve the puzzle on website, I wrote this with class components and redux.
 > - In company, we doesn't use React, but we using javaScript ES6 and ES7 syntax instead.
 <br/>
