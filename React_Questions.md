@@ -375,14 +375,14 @@ componentDidUpdate(prevProps, prevState, snapshot) {
  <br/>
 
 **Error Handling** : <br/>
-(1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. You can update the state, depending on the error, to be used anywhere in the component, possibly to show a fallback UI. 
+(1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. `You can update the state depending on the error`, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
     return { error: error.message };
   }
 ```
 
-(2) **componentDidCatch()** : Error boundaries are components that can catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
+(2) **componentDidCatch()** : Error boundaries are components that can `catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI`. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
 ```
 componentDidCatch(error, info) {
     this.logError(error, info);
@@ -481,9 +481,10 @@ componentDidCatch(error, info) {
 
 > - **Redux interactive with users**： <br/>
 (1) User clicks components. <br/>
-(2) `Action Creator` sends `Action` to `Store`. <br/>
-(3) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
-(4) `View` Re-render when gets the new state from `Store`.
+(2) Components send the action to the `Action Creator` <br/>
+(3) `Action Creator` sends `Action` to `Store`. <br/>
+(4) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
+(5) `View` Re-render when gets the new state from `Store`.
 <br/>
 
 > - **Redux follows three principles** : <br/>
