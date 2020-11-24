@@ -3,7 +3,7 @@
 
 1. What Is And When Use React.js?
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
-> - React used to build a huge website which includes `complicated events and status change` instead of building a simple web.<br /><br/>
+> - React used to build a huge website which includes `complicated events and state changes` instead of building a simple web.<br /><br/>
 > - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 <br/>
 
