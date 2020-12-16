@@ -40,7 +40,15 @@
 > - Insufficient Transport Layer Protection
 <br/>
 
-5. What Is CSRF?
+5. What Is SQL Injection?
+> - SQL injection is a code injection technique that might destroy your database, usually occurs when you ask a user for input, the user gives you an SQL statement that you will unknowingly run on your database.
+<br/>
+
+5.1 How To Prevent SQL Injection?
+> - Using SQL parameters.
+<br/>
+
+6. What Is CSRF?
 <p align="center">
   <img src="img/csrf.png" alt="csrf" title="csrf">
 </p>
@@ -50,7 +58,7 @@
 > - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 <br/>
 
-6. What Is CORS? (ref:4)
+7. What Is CORS? (ref:4)
 
 > -  `A request from the orgin domain is different from the target domain` which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
 > - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
@@ -69,14 +77,14 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 > - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
 
-7. What Is XSS?
+8. What Is XSS?
 > - Cross site scripting (XSS) is an attack which `injects malicious executable scripts into the code of a trusted application or website`.
 > - There are three types of XSS : <br/>
 (1) **Reflected XSS** : where the malicious script comes `from the current HTTP request`. <br/>
 (2) **Stored XSS** : where the malicious script comes from the `website's database`, such as someone enter the script on message board. <br/>
 (3) **DOM-based XSS** : where the vulnerability exists in client-side code rather than server-side code,. usually by `writing the data back to the DOM`.
 
-7.1 How To Prevent XSS?
+8.1 How To Prevent XSS?
 > - Filter input on arrival.
 > - Encode data on output 
 > - Use appropriate response headers.
@@ -87,7 +95,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html), [Cross Site Scripting (XSS)](https://www.synopsys.com/glossary/what-is-cross-site-scripting.html), [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
 <br/>
 
-8. What Is Cloud Computing?
+9. What Is Cloud Computing?
 > - The cloud(internet) computing is a way of `managing IT resources that replaces local machines and private data centers with virtual infrastructure`, including servers, storage, databases, networking, software, analytics. Users access virtual compute, network, and storage resources made available online by a remote provider. 
 > - These resources can be provisioned instantly, which is particularly useful for companies that need to scale their infrastructure up or down quickly in response to fluctuating demand.
 > - Related Reference : [徹底了解 Cloud Computing](https://www.ithome.com.tw/article/93006)
