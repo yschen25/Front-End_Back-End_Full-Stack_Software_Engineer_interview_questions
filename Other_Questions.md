@@ -103,10 +103,11 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 
 10. What Does The Clean Code Mean To You? 
 > - Testable, Readable, Maintainable.
+<br/>
 
 11. What Kind Of Strategy Do You Follow? 
 > - TDD (Test Driven Development).
-
+<br/>
 
 ## Customized React Questions
 
