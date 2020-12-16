@@ -101,6 +101,13 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 > - Related Reference : [徹底了解 Cloud Computing](https://www.ithome.com.tw/article/93006)
 <br/>
 
+10. What Does The Clean Code Mean To You? 
+> - Testable, Readable, Maintainable.
+
+11. What Kind Of Strategy Do You Follow? 
+> - TDD (Test Driven Development).
+
+
 ## Customized React Questions
 
 1. How Do You Deploy Your Code To The Production? 
