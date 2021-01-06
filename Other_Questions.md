@@ -123,6 +123,15 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 > - One responsible for writing the layout and the other responsible for concatenating API or compontnts.
 <br/>
 
+3. Why Chose ESLint?
+Compared to JSLint, JSHint, ESLint is easy to extend and allow users to customize rules, easy to know where the error is.
+<br/>
 
+4. What Are The Most Important Things You Think About During The Code Review? 
+- Functional programming : focus on high order function and pure function, prevent side effect and mutable data. 
+- Single responsibility : one function only responsible for one functionality. 
+- Open-close : open to extension, close to modification. 
+- DRY principle : Don’t repeat yourself
+<br/>
 
 
