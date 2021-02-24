@@ -218,7 +218,38 @@ a = 20  // TypeError: Assignment to constant variable.
 ```
 <br/>
 
-10.1 What Is Local Scope And Global Scope?
+10.1 What Is Block Scope And Function Scope?
+> - Block scope is everything inside a set of braces `{ a block scope here }`
+> - A block scope is sometimes the same as a function scope.
+```
+function test(x) {
+   // this is both a block scope and a function scope
+   let y = 5;
+   if (x) {
+       // this is a smaller block scope that is not the same as the function scope
+       let z = 1;
+   }
+}
+```
+
+```
+function foo() {
+    if (true) {
+        var a = 1;
+        let b = 2;
+        const c = 3;
+    }
+    console.log(a); // 1
+    console.log(b); // b is not defined
+    console.log(c); // c is not defined
+}
+
+```
+
+> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
+<br/>
+
+10.2 What Is Local Scope And Global Scope?
 
 **Local Scope**
 > - Variables `declared within a JavaScript function`, become `local` to the function.
@@ -262,37 +293,6 @@ function myFunction() {
   carName = "Volvo";
 }
 ```
-<br/>
-
-10.2 What Is Block Scope And Function Scope?
-> - Block scope is everything inside a set of braces `{ a block scope here }`
-> - A block scope is sometimes the same as a function scope.
-```
-function test(x) {
-   // this is both a block scope and a function scope
-   let y = 5;
-   if (x) {
-       // this is a smaller block scope that is not the same as the function scope
-       let z = 1;
-   }
-}
-```
-
-```
-function foo() {
-    if (true) {
-        var a = 1;
-        let b = 2;
-        const c = 3;
-    }
-    console.log(a); // 1
-    console.log(b); // b is not defined
-    console.log(c); // c is not defined
-}
-
-```
-
-> - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/><br/>
 
 11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
