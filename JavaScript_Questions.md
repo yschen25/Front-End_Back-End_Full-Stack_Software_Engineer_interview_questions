@@ -117,7 +117,14 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 <br/><br/>
 
-7. Explain What Is The Difference Between map(), forEach()?
+7. Explain What And When Use The map(), forEach(), filter(), find(), reduce()?
+> - **map()**: transform elements in an array.
+> - **forEach()**: execute a function for each individual element in an array.
+> - **filter()**: select a subset of multiple elements from an array.
+> - **find()**: select a single element from an array.
+> - **reduce()**: derive a single value from multiple elements in an array.
+
+7.1 Explain What Is The Difference Between map(), forEach()?
 
 | Methods | map() | foEach() |
 |---|---|---|
