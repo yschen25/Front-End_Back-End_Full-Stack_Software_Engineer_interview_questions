@@ -123,7 +123,9 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 |---|---|---|
 | Return | Returns a new array | **DOES NOT** return a new array, returns undefined |
 | | **DOES NOT** change the original array | |
-| |The function is not executed for array elements without values.| The function is not executed for array elements without values. |
+| | Ability to chain other methods| Can't chain other methods |
+
+> - Related Reference : [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
 
 <br/>
 
