@@ -124,6 +124,8 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 > - **find()**: select a single element from an array.
 > - **reduce()**: derive a single value from multiple elements in an array.
 
+<br/>
+
 7.1 Explain What Is The Difference Between map(), forEach()?
 
 | Methods | map() | foEach() |
@@ -300,7 +302,7 @@ function myFunction() {
   carName = "Volvo";
 }
 ```
-<br/><br/>
+<br/>
 
 11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
 
