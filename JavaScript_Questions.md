@@ -188,6 +188,8 @@ function a(){}
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
 > - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
+<br/>
+
 9.1 What Is "Use strict"?
 > - This strict context `prevents certain actions from being taken and throws more exceptions`.
 > - Using strict mode, don’t allow to use a variable without declaring it, Duplicating a parameter name is not allowed, etc.
