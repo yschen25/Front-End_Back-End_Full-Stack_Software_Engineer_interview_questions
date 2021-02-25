@@ -449,6 +449,12 @@ console.log( obj.a ); // 123
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
 
+12.1 What Is Difference Between Bind(), Call() And Apply()?
+> - Bind() is when you want that function to later be called with a certain context, useful in events. Use call() or apply() when you want to invoke the function immediately, and modify the context.
+> Fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments. The difference is that call() takes the function arguments separately, and apply() takes the function arguments in an array.
+
+<br/>
+
 13. List The Primitive And Non-Primitive(Objects) Types In Javascript.
 <p align="center">
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
