@@ -1,19 +1,21 @@
-# Web_Qusestions_Collection
+# Front-End / Back-End / Full-Stack / Software Engineer interview questions
 
+[HTML_Questions](Questions/HTML.md) 
 
-:herb: [HTML_Questions](HTML_Questions.md) 
+[CSS_Questions](Questions/CSS.md)
 
-:cherry_blossom: [CSS_Questions](CSS_Questions.md)
+[JavaScript_Questions](Questions/JavaScript.md)
 
-:rose: [JavaScript_Questions](JavaScript_Questions.md)
+[React_Questions](Questions/React.md)
 
-:hibiscus: [Web_Questions](Web_Questions.md)
+[Website_Questions](Questions/Website.md)
 
-:four_leaf_clover: [React_Questions](React_Questions.md)
+[Coding_Style_Principls_Strategy_Questions](Questions/Coding_Style_Principls_Strategy.md)
 
-:fallen_leaf: [Other_Questions](Other_Questions.md)
+[Other_Questions](Questions/Others.md)
 
 </br>
 
 ## Author
-* **:octocat: Writer : [Me](https://github.com/yschen25)**
+[Yi-Shiuan Chen](https://www.linkedin.com/in/yschen25) <br/>
+yschen25@gmail.com
