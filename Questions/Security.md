@@ -69,3 +69,16 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html), [Cross Site Scripting (XSS)](https://www.synopsys.com/glossary/what-is-cross-site-scripting.html), [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
 <br/>
 
+7. What Is CQRS?
+> - CQRS (Command-Query Responsibility Segregation) : The update command should separate from query command
+<br/>
+
+8. What Is ACID?
+> - A (Atomicity) : Atomicity means that you guarantee that either all the transaction succeeds or failure, we commit when transaction succeeds, and we roll back when the transaction failure.
+C (Consistency) : This ensures that all data will be consistent when execute transaction 
+I (Isolation) : All transactions will occur in isolation
+D (Durability) : Durability means that, once a transaction is committed, it will remain in the system – even if there’s a system crash
+<br/>
+
+9. What Is Locking?
+> - Use locking when multiple users are accessing data at the same time to protected resources such as tables, data rows, etc. For the concurrency and  isolation purpose.

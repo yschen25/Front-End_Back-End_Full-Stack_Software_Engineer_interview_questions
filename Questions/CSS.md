@@ -146,3 +146,13 @@
 12. What Is Flexbox?
 
 > - Related Reference :  [深入解析 CSS Flexbox](https://www.oxxostudio.tw/articles/201501/css-flexbox.html)
+</br>
+
+13. What Is Media queries?
+- We can set the condition for the @media and write the CSS inside the block, the CSS will take effect when the condition is true, we can use media to set the different layout for different width.
+</br>
+
+14. How would you reload a cached CSS file that has changed since it was cached?
+- Change the file name 
+- Using query string
+<br/>

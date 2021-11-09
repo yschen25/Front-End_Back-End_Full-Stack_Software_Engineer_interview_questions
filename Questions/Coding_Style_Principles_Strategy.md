@@ -12,11 +12,47 @@
 > - DRY principle : Don’t repeat yourself
 <br/>
 
-3. What Does The Clean Code Mean To You? 
+3. What is SOLID principle?
+- S = Single-responsibility principle (SRP)
+- O = Open–closed principle (OCP)
+- L = Liskov substitution principle (LSP)
+- I = Interface segregation principle (ISP)
+- D = Dependency inversion principle (DIP)
+
+4. What Does The Clean Code Mean To You? 
 > - Testable, Readable, Maintainable.
 <br/>
 
-4. What Kind Of Strategy Do You Follow? 
-> - TDD (Test Driven Development).
+5. Do You Know TDD? 
+> - TDD (Test Driven Development) : An approach to automated software testing that involves writing a failing test before writing the production code to make it pass.
+
+(1) Add a test 
+When performing outside-in TDD, our first step is to create an end-to-end test describing the feature we want users to be able to do. 
+
+(2) Run all tests. The new test should fail for expected reasons
+After we've created our test, the next step in TDD is to run the test and watch it fail. This test will fail (be "red") at first because we haven't yet implemented the functionality.
+
+(3) Write the simplest code that passes the new test
+The next step of TDD is to write only enough production code to fix the current error or test failure.
+
+sometimes we need to step down from the "outside" level of end-to-end tests to an "inside" component test
+
+(4) All tests should now pass
+
+(5) Refactor as needed, using tests after each refactor to ensure that functionality is preserved
+
+Repeat
+
+
+<br/>
+
+6. Do You Know DDD? 
+> - DDD (Domain Driven Design) :  Focus on the core domain and domain logic.
+Base complex designs on models of the domain. Constantly collaborate with domain experts, in order to improve the application model and resolve any emerging domain-related issues.
+<br/>
+
+7. Why unit tests are important?
+- Prevent the bug in advance
+- Maintain the code stable
 <br/>
 

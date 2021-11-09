@@ -331,3 +331,12 @@ then the user will has permission to view or manipulate corresponding informatio
 > - This helps users around the world view the same high-quality content and also improve their site performance without slow loading times.
 <br/>
 
+20. What happens when you click a link on a page?
+- Browser gathers the information about the link and sends the request to a naming server. 
+
+The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
+If the address is found, the IP address is sent to my browser. 
+The browser then contacts the web server that has the web page I requested. 
+The page is then sent to your browser.
+
+<br/>
