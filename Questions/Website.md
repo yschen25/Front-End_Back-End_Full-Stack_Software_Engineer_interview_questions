@@ -74,37 +74,60 @@
 <br/>
 
 2. How To Speed Up The Website?
-> - Analysis tools : (1) Performance Analyzers : Lighthouse, PageSpeed (2) Webpack : Webpack Bundle Analyzer 
+> - Analysis tools : 
+(1) Performance Analyzers : Lighthouse, PageSpeed, GTMatrix, etc.
+(2) Webpack : Webpack Bundle Analyzer 
+
 > - Web Application : SPA. Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
-> - Technology : React. (1) Router: React-router + React.lazy (2) Virtual DOM: dependency array of useEffect, key in the list. (3) Pure component or shouldComponentUpdate.
+
+> - Technology : React. 
+(1) Router: React-router + React.lazy 
+(2) Virtual DOM: dependency array of useEffect, key in the list. 
+(3) Pure component or shouldComponentUpdate.
 
  <br/>
  
 > - **For huge data :**
 > - Virtualize Long Lists : React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes. 
+
 > - Use webStorage : user id, record the search key and result that user used before, user setting : layout, lang.
-> - Use Promise to make multiple calls
+
+> - Use Promise to make multiple calls.
+
 > - Service worker : will first immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
 
  <br/>
  
 > - **For files:**
 > - Code splitting : To solve the problem that js bundle size is too large, to divide to smaller chunks.  <br/>
+
 (1) Dynamic Import. path :  React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
+
 (2) Bundle third party files to one file : CommonsChunkPlugin, By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. <br/>
-(3) Preload, Async...files : React Loadable: Use async, defer, prefetch, preload, preconnect, dns-preconnect, prerender tags. Preload to preload potential resources for the next page on control component. <br/>
+
+(3) Preload, prefetch, prepender, async...files : Use async, defer, prefetch, preload, preconnect, dns-preconnect, prerender tags.
+ <br/>
+
 > - Offer the different website content depends on user’s internet speed 
+
 > - Delete unused code : remove spaces, commas, and other unnecessary characters.
-> - Minify files : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
-> - Lazy load images
+
+> - Minify CSS, JS, images : use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files.
+
+> - Proper image size and format, use jpg instead of png,  use webp  instead of jpg.
+
+> - Lazy load JS, CSS, images, 3rd party scripts such as Google Tag Manager, facebook pixel code.
+
+> - Eliminate render-blocking resources : Not waiting website load the js, css resources then render the page.
 
  <br/>
  
 > - **Others:**
 > - Reduce the HTTP request : use sprite images, combine files...etc.
 > - Use CDN.
-> - Use Cache.
 > - Reduce redirects.
+> - Stable server.
+> - Use Cache, for static resources use longer cache expiration.
 > - Optimize render web page (ref:15.1)
 
 > - Related Reference : [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/), [讓你的網頁加載時間降低到1s 內](https://www.jianshu.com/p/d857c3ff78d6)

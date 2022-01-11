@@ -512,7 +512,7 @@ console.log( obj.a ); // 123
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
 <br/><br/>
 
-15. Explain What Is Not Defined, Undefined And Null?
+15. Explain What Is Not Defined, Undefined, Empty and Null?
 
 **Not Defined**
 > - Not defined means the varable doesn't exist.
@@ -525,6 +525,10 @@ console.log( obj.a ); // 123
 let a;<br/>
 console.log(a);         // undefined<br/>
 console.log(typeof a);  // undefined<br/>
+
+**Empty**
+> - Empty is assign the "" to a variable. <br/>
+> - Boolean('') = false <br/>
 
 **Null**
 > - Primitive type

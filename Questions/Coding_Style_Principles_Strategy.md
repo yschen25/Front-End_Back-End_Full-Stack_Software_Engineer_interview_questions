@@ -24,6 +24,11 @@
 <br/>
 
 5. Do You Know TDD? 
+<p align="center">
+<img src="img/TDD.png" alt="TDD" title="TDD" width="40%">
+</p>
+<br/>
+
 > - TDD (Test Driven Development) : An approach to automated software testing that involves writing a failing test before writing the production code to make it pass.
 
 (1) Add a test 
@@ -42,8 +47,6 @@ sometimes we need to step down from the "outside" level of end-to-end tests to a
 (5) Refactor as needed, using tests after each refactor to ensure that functionality is preserved
 
 Repeat
-
-
 <br/>
 
 6. Do You Know DDD? 
@@ -52,7 +55,18 @@ Base complex designs on models of the domain. Constantly collaborate with domain
 <br/>
 
 7. Why unit tests are important?
-- Prevent the bug in advance
-- Maintain the code stable
+ > - To test every function and procedure.
+ > - To find early bugs and fix in the development cycle and to save costs.
+ > -To help the developers to understand the code base and enable them to make changes quickly.
+ > -To help for code reuse.
 <br/>
 
+8. Functional, unit, integration, end-to-end (E2E)) testing?
+
+> - Functional testing : Testing the functions. 
+
+> - Unit testing : Testing an independent unit of behavior, such as a method (function) in a class.
+
+> - Integration testing : Combines mutiple components testings.
+
+> - End-to-End Testing : Mainly testing the whole working flow,  from the end user’s experience by simulating the real user scenario and validating the system under test and its components for integration and data integrity.

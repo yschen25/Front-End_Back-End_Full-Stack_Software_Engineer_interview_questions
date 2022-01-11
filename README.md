@@ -10,7 +10,7 @@
 
 [Website_Questions](Questions/Website.md)
 
-[Coding_Style_Principls_Strategy_Questions](Questions/Coding_Style_Principls_Strategy.md)
+[Coding_Style_Principls_Strategy_Questions](Questions/Coding_Style_Principles_Strategy.md)
 
 [Database_SQL_Questions](Questions/Database_SQL.md)
 
