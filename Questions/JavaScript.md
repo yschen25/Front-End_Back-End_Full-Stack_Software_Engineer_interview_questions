@@ -804,7 +804,10 @@ console.log('end')
 > - To do somthing after receive the data from API calls.
 <br/>
 
-2. What Is Your Favorite Thing About Working With JavaScript?
+2. What Do You Think About JavaScript?
 > - With JavaScript we can build websites, mobile apps, web apps, and writing back-end code, It works on many platforms and environments. Many new features in ES6 and ES7 such as spread operator, promise, async, and await can greatly increase our ease of development. JavaScript is also a foundation of frameworks such as React, Vue, etc. We can use the frameworks to solve many real-world problems and extend the language.
+
+JavaScript is very relaxed about the difference between strings and numbers.
+such as using string + number will be string, and using string will be number. It might cause the error code, but we can us TypeScript to prevent this simple error occurs.
 <br/><br/>
 
