@@ -9,7 +9,8 @@
 > - Sometimes use the new feature ```Let``` in ES6 can solve the problem.
 
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
-<br/><br/>
+
+<br/>
 
 2. Explain What Is Promise? (ref:3)
 <p align="center">
@@ -57,7 +58,8 @@ myPromise.then((message) => {
 ```
 
 > - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
-<br/><br/>
+
+<br/>
 
 3. Explain What Is Async/Await? (ref:2)
 > - Async and Await is `syntax sugar for promises` in javaScript.
@@ -85,15 +87,18 @@ fetchData().then(() => {
 
 > - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
 ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
-<br/><br/>
+
+<br/>
 
 4. Explain What Is The New Feature In ES6?
 > - Arrow Function, Class, Promise, Block-Scoped Constructs Let and Const, Template Literals.
-<br/><br/>
+
+<br/>
 
 4.1 Explain What Is The New Feature In ES7?
 > - Async, Await.
-<br/><br/>
+
+<br/>
 
 5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
 
@@ -103,27 +108,80 @@ fetchData().then(() => {
 | Return | New length | The removed item | New length | The removed item |
 
 Example : https://jsfiddle.net/yschen25/bcuto13q/
-<br/><br/>
 
-6. Explain What Is The Difference Between slice(), splice()?
+<br/>
 
-| Methods |  slice(start index, end index) | splice(index, howmany, item1, ....., itemX) 
-|---|---|---|
-|  | (optional, optional) | (required, optional, optional)|
-|  | (If use negative numbers it will select from the end of an array, it acts like "0" if omitted ; Whole array will be selected if omitted, use negative numbers will select from the end of an array) | (Specifies at what position to add/remove items, use negative values to specify the position from the end of the array ; The number of items to be removed; The new item(s) to be added to the array) |
-| | Starting at the given start argument, and ends at, but does not include | The end doesn't include |
-| | **NOT** changes the original array | **CHANGES** the original array |
+6. Explain What Is The Difference Between slice(), splice() and split()?
+
+| Methods | slice (start index, end index) | splice (index, howmany, item1, ....., itemX) | split (separator, howmany) |
+|---|---|---|---|
+| | Array, string | Array | String |
+|  | Return a new array object selected from begin to end (end not included). |  Changes the contents of an array by removing existing elements and/or adding new elements. | Splits a string object into an array |
+| | Starting at the given start argument, and ends at, but does not include | The end doesn't include | ddd |
+| | **NOT** changes the original array | **CHANGES** the original array | **NOT** changes the original array |
 
 Example : https://jsfiddle.net/yschen25/vxmp7z3t/
-<br/><br/>
+
+> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), ([Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
+
+<br/>
 
 7. Explain What And When Use The map(), forEach(), filter(), find(), reduce()?
-> - **map()**: transform elements in an array.
-> - **forEach()**: execute a function for each individual element in an array.
-> - **filter()**: select a subset of multiple elements from an array.
-> - **find()**: select a single element from an array.
-> - **reduce()**: derive a single value from multiple elements in an array.
+> - **map()**: returns new array with transformed elements, leaving back original array unchanged.
+> - **forEach()**: like a for loop, but is more readable and intuitive. Use it when we want to perform a specific action for each element of an array.
+> - **filter()**: return an array which that match the criteria.
+> - **find()**: returns the first element in an array that satisfies a provided function.
+> - **reduce()**: return a value by running the reducer across all elements of the array, leaving back original array unchanged.
 
+```
+var people = [
+  {
+    name: 'Casper',
+    like: 'Noodles',
+    age: 18
+  },
+  {
+    name: 'Wang',
+    like: 'Rice',
+    age: 24
+  },
+  {
+    name: 'Bobo',
+    like: 'Steak',
+    age: 1
+  },
+  {
+    name: 'Andy',
+    like: 'Fish',
+    age: 3
+  }
+];
+
+// Map
+let map = people.map((item) => item.age + 10);
+console.log(map);
+
+// Foreach
+people.forEach((item) => console.log (item.name + " likes " + item.like))
+
+// Filter
+let filter = people.filter((item) => item.age <= 3)
+console.log(filter)
+
+// Find
+let find = people.find((item) => item.age <= 3)
+console.log(find)
+
+// Get the ages from array first
+const agesArr = people.map((item) => item.age);
+
+// Reduce
+const reduce = agesArr.reduce((accumulator, current) => accumulator + current
+);
+
+console.log(reduce); 
+
+```
 <br/>
 
 7.1 Explain What Is The Difference Between map(), forEach()?
@@ -138,6 +196,25 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 <br/>
 
+7.2 Write The Map By Yourself.
+
+```
+const arr = [1,2,3];
+
+const myMap = (arr, func) => {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    let result = func(arr[i], i, arr)
+    newArr.push(result);
+  }
+  return newArr;
+}
+
+console.log('My Map',  myMap(arr, num => num + 1));
+
+```
+<br/><br/>
+
 8. Explain What Is Callbacks?
 
 > - `Take a function as another function's parameter, called by another function`.
@@ -146,11 +223,15 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 window.setTimeout( function(){ ... }, 1000);
 ```
 
+<br/><br/>
+
 8.1 Why Do We Use Callback?
 > - Callback functions allow us to do something with data at a later time. But too much callback will cause callback hell, we can use promise to replace it.
 
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
+
 <br/><br/>
+
 
 9. Explain What Is Hoisting? (ref:10)
 
@@ -188,7 +269,7 @@ function a(){}
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
 > - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
-<br/>
+<br/><br/>
 
 9.1 What Is "Use strict"?
 > - This strict context `prevents certain actions from being taken and throws more exceptions`.
@@ -258,7 +339,8 @@ function foo() {
 ```
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
-<br/>
+
+<br/><br/>
 
 10.2 What Is Local Scope And Global Scope?
 
@@ -322,11 +404,14 @@ function test() {
 test()
 ```
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
-<br/>
+
+<br/><br/>
+
 
 12. Explain What Is "this"?
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the `value of this is determined by how a function is called`.
-<br/>
+
+<br/><br/>
 
 **Default Binding** 
 > - In a JavaScript `function(default)`, the owner of the function is the `global object`, so this refers to the `global object`.
@@ -504,12 +589,13 @@ console.log( obj.a ); // 123
 </p>
 
 > - **Shallow Copy** : `Duplicates as little as possible`. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
-> - Method => spread operator, object.assign
+> - Method => spread operator (The spread operator makes deep copies of data if the data is not nested.), object.assign
 
 > - **Deep Copy** : `Duplicates everything`. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
 > - Method => javaScript : JSON.parse(JSON.stringify(object)) (not for function), jQuery : $.extend, lodash : _.cloneDeep
 
-> - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/)
+> - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/), [The Spread Operator: Deep and Shallow Copies](https://medium.com/@kevinlai76/the-spread-operator-deep-and-shallow-copies-d193ac9b58bf), [How to Deep Clone an Array in JavaScript](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig)
+
 <br/><br/>
 
 15. Explain What Is Not Defined, Undefined, Empty and Null?
@@ -543,6 +629,7 @@ console.log(typeof a);  // object<br/>
 null === undefined  // false
 
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
+
 <br/><br/>
 
 16. What Is Event Bubbling And How To Stop It?
@@ -569,6 +656,7 @@ null === undefined  // false
 </form>
 ```
 > - Related Reference : [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
+
 <br/><br/>
 
 17. What A Function Statements(Declaration) And Function Expressions?
@@ -578,7 +666,7 @@ null === undefined  // false
 ```
 function statement(item) {
     console.log('Function statement example'+ item);
-  }
+}
 ```
 <br/>
 
@@ -617,6 +705,7 @@ callTest(); // 123
 <br/>
 
 > - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
+
 <br/><br/>
 
 18. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
@@ -643,17 +732,19 @@ console.log(superSecret);
 > - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
 
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
+
 <br/><br/>
 
 19. What Is First Class Function?
 > - First Class Function means that `you can do the things to the functions same as to other types(objects, string, boolean, numbers)`. <br/>
 (1) Functions are objects. <br/>
-(2) Can pass as an argument to other functions. <br/>
+(2) Can be passed as an argument to other functions. <br/>
 (3) Can be assigned as a parameter. <br/>
 (4) Can be returned by another function. <br/>
 (5) Function have properties.
 
 > - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
+
 <br/><br/>
 
 20. In Javascript What Can Cause A Script To Run Indefinitely And How Can You Mitigate This Situation?
@@ -707,34 +798,97 @@ console.log(nick.prototype === undefined) // true
 ```
 > - Related Reference : [__ proto __ VS. prototype in JavaScript
 ](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
+
 <br/><br/>
 
 21.1 What Is A Prototype Chain?
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
+
 <br/><br/>
 
-22. What Is Pure Function?
-> - Its return value is the same for the same arguments.
-> - Its evaluation has no side effects.
+22. What Is Pure Function And What Is Impure Function?
+> - Pure Functions = Consistent Results
+The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
+(1) Its return value is the same for the same arguments. <br/>
+(2) Its evaluation has no side effects.
+
 ```
+// Pure Function
 const add = (x, y) => x + y;
 
-add(2, 4); // 6
+console.log(add(2, 4)); // 6
+
+```
+
+
+> - Impure Functions = Inconsistent Results
+The second example returns nothing. It relies on shared state to do its job by incrementing a variable outside of its own scope. In the example : The first time results in 6, next time is 10 and so on.
+
+```
+// Impure Function
+let x = 2;
+
+const add = (y) =>  x += y;
+
+console.log(add(4)); // 6
+console.log(add(4));  // 10
+```
+
+> - Related Reference : [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
+
+<br/><br/>
+
+
+23. What Is Higher Order Function (HOF)?
+> - To match one of the criteria as below 
+
+(1) Takes one or more functions as arguments. 
+
+```
+/** Higher Order Function **/
+function higherOrderFunction (callback) {
+  console.log("higherOrderFunction...");
+  callback();
+}
+
+function callbackFunction () {
+  console.log("callbackFunction...");
+}
+
+/** Callback Function */
+higherOrderFunction(callbackFunction);
+```
+<br/>
+
+(2) Returns a function as its result. 
+
+```
+/** Higher Order Function **/
+function higherOrderFunction () {
+  console.log("higherOrderFunction...");
+  return function(arg1) {
+    console.log(arg1 + "...");
+  };
+}
+
+/** Returned Function **/
+var returnedFunction = higherOrderFunction();
+returnedFunction("returnedFunction");
 ```
 
 <br/>
 
-23. What Is High Order Function?
-> - Takes one or more functions as arguments.
-> - Returns a function as its result.
-> - forEach(), map(), reduce(), filter().
-<br/><br/>
+> - forEach(), map(), reduce(), filter(), etc. are HOFs. <br/>
+> - Related Reference : [JavaScript 什麼是Higher Order Function？](https://matthung0807.blogspot.com/2019/05/javascript-higher-order-function.html)
+
+<br/>
 
 24. What Is Functional Programming (FP)?
 > - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
 > - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
-<br/><br/>
+
+<br/>
 
 24.1 What Are The Strengths Of Functional Programming?
 > - Allows you to avoid confusing problems and errors in the code
@@ -746,7 +900,8 @@ add(2, 4); // 6
 > - Supports Nested Functions
 > - Functional Constructs like Lazy Map & Lists, etc.
 > - Allows effective use of Lambda Calculus
-<br/><br/>
+
+<br/>
 
 25. What Is An Event Loop?
 
@@ -791,12 +946,124 @@ console.log('end')
 ```
 
 > - Related Reference : [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/), [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[How JavaScript Works: Web APIs, Callback Queue, and Event Loop](https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e),[JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
-<br/><br/>
+
+<br/>
 
 26. What Is Delegate?
 > - Event delegation allows you to `avoid adding event listeners to specific nodes, instead, the event listener is added to one parent.` That event listener analyzes bubbled events to find a match on child elements.
 > - Related Reference : [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
-<br/><br/>
+
+<br/>
+
+
+27. What Is Curry?
+> - Currying is transforming a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
+
+```
+// Before curring
+function minusFunc(x, y) {
+  return x + y;
+}
+
+console.log(1, 2) // 3
+
+
+// After curring
+// Syntax 1
+function minusFunc(x) { 
+  return function(y) {
+    return x + y;
+  }
+}
+
+const returnFunc = minusFunc(1);
+console.log(returnFunc); // Function
+console.log(returnFunc(2)); // 3
+console.log(minusFunc(1)(2)); // 3
+
+// Syntax 2
+const minusFunc = (x) => (y) => x - y;
+
+const retuernFunc = minusFunc(1);
+console.log(returnFunc); // Function
+console.log(retuernFunc(5)) // 3
+console.log(minusFunc(1)(5)) // 3
+```
+
+<br/>
+
+
+28. What Is Expressions And Statement?
+> - Expression : Any unit of code that can be evaluated to a value is an expression.
+
+```
+1;
+1 + 2;
+"Hello";
+10 > 9;
+```
+
+> - Statements : A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc. JavaScript programs are actually a sequence of statements.
+
+```
+if (expression) 
+    statement 1
+else 
+    statement 2
+```
+
+<br/>
+
+29. What Is Funcution composition?
+> - Function composition is the process of combining two or more functions to produce a new function.
+
+```
+const double = (x) => x * 2;
+const square = (y) => y * y;
+const minus = (z) => z - 10;
+
+// Before implementing the funcution composition
+// Method 1
+let a = double(1);
+let b = square(a);
+
+console.log('Method 1', b) // 4
+
+// Method 2 
+console.log('Method 2', square(double(1))) // 4
+
+// After implementing the funcution composition
+// For only 2 functions
+const composeForTwo = (fun1, fun2) => x => fun1(fun2(1));
+console.log('Function composition for 2 functons', composeForTwo(square, double)(1)); // 4
+
+// For mutiple functions
+const compose = (...fcs) => x => fcs.reduceRight((val, fc) => fc(val), x);
+console.log('Function composition for mutiple functions', compose(minus, square, double)(1)); // -6
+```
+
+> - Related Reference : [Function composition in JavaScript](https://www.educative.io/edpresso/function-composition-in-javascript), [Master the JavaScript Interview: What is Function Composition?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0), [Write better JavaScript, function composition with pipe and compose](https://itnext.io/write-better-javascript-function-composition-with-pipe-and-compose-93cc39ab16ee)
+
+<br/>
+
+30. What Is Recursion?
+> - Recursion is a process of calling itself. A function that calls itself is called a recursive function. A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.
+
+```
+function recu(i) {
+  if(i < 10) {
+    i++;
+    return recu(i);
+  } else {
+    return i;
+  }
+}
+
+console.log(recu(1)) // 10
+
+```
+
+<br/>
 
 ## Customized javaScript Questions
 
@@ -809,5 +1076,5 @@ console.log('end')
 
 JavaScript is very relaxed about the difference between strings and numbers.
 such as using string + number will be string, and using string will be number. It might cause the error code, but we can us TypeScript to prevent this simple error occurs.
-<br/><br/>
+<br/>
 
