@@ -12,11 +12,10 @@
 > - Primitive Types : string, number, boolean, undefined, null, symbol.
 > - Non-Primitive Types : array, object, function, date, regx.
 
-
+<br/>
 
 ### **Explain What Is Not Defined, Undefined, Empty and Null?**
 
-<br/>
 
 **Not Defined**
 > - Not defined means the varable doesn't exist.
