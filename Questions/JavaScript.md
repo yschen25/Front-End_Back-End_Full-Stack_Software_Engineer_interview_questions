@@ -1,9 +1,6 @@
 # JavaScript Questions
 
-
-### **List The Primitive And Non-Primitive(Objects) Types In Javascript.**
-
-<br/>
+### **List Down The Primitive And Non-Primitive Types.**
 
 <p align="center">
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
@@ -14,49 +11,51 @@
 
 <br/>
 
-### **Explain What Is Not Defined, Undefined, Empty and Null?**
 
+### **Explain What Is Not Defined, Undefined, Empty and Null?**
 
 **Not Defined**
 > - Not defined means the varable doesn't exist.
 
 **Undefined**
-> - Primitive type
-> - Undefined means a variable has been declared but has not yet been assigned a value. <br/>
-> - Boolean(undefined) = false <br/>
-> - Type of undefined = undefined <br/>
-let a;<br/>
-console.log(a);         // undefined<br/>
-console.log(typeof a);  // undefined<br/>
+> - Undefined means a variable has been declared but has not yet been assigned a value.
+> - Boolean(undefined) = false
+> - Type of undefined = undefined
+
+```
+let a;
+console.log(a);           // undefined
+console.log(Boolean(a));  // false
+console.log(typeof a);    // undefined
+```
 
 **Empty**
-> - Empty is assign the "" to a variable. <br/>
-> - Boolean('') = false <br/>
+> - Empty is assign the " " to a variable.
+> - Boolean(" ") = false
 
 **Null**
-> - Primitive type
-> - Null is an assignment value. It can be assigned to a variable as a representation of no value. <br/>
-> - Boolean(null) = false <br/>
-> - Type of null = object <br/>
+> - Null is can be assigned to a variable as a representation of no value.
+> - Boolean(null) = false 
+> - Type of null = object
 
 ```
 let a = null;
-console.log(a);         // null
-console.log(typeof a);  // object
-console.log(typeof a);  // object
+console.log(a);           // null
+console.log(Boolean(a));  // false
+console.log(typeof a);    // object
 
 console.log(null == undefined);  // true
 console.log(null === undefined); // false
 ```
 
-
 > - Related Reference : [Javascript中undefined和null的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript中undefined和null的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 
 <br/>
 
-14. Explan What Is Call By Value, Call By Reference And Call By Sharing? (ref:13, 14.1)
 
-> - **Call By Value** : 
+### **Explan What Is Call By Value, Call By Reference And Call By Sharing?**
+
+**Call By Value**
 
 <p align="center">
 <img src="img/call_by_value.png" alt="call_by_value" title="call_by_value" width="60%">
@@ -65,9 +64,10 @@ console.log(null === undefined); // false
 > - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b also `has own memory location` and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other. 
 
 > - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
-<br/><br/>
 
-> - **Call By Reference** : 
+<br/>
+
+**Call By Reference**
 
 <p align="center">
 <img src="img/call_by_reference.png" alt="call_by_reference" title="call_by_reference" width="60%">
@@ -76,9 +76,11 @@ console.log(null === undefined); // false
 > - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b `doesn't have own memory` location, a and b will has same memory location, b's value `will change` when a's value changes.  (Ref : Shallow copy)
 
 > - Example : https://jsfiddle.net/yschen25/ov3rq5me
-<br/><br/>
 
-> - **Call By Sharing** : When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes. 
+<br/>
+
+**Call By Sharing**
+> - When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes. 
 
 > - Example : https://jsfiddle.net/yschen25/7djyawve
 
@@ -88,24 +90,29 @@ console.log(null === undefined); // false
 <br/>
 
 
-14.1 Explan What Is Shallow Copy And Deep Copy?
+### **Explan What Is Shallow Copy And Deep Copy?**
  
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
 <img src="img/shallow_deep_copy2.png" alt="shallow_deep_copy" title="shallow_deep_copy">
 </p>
 
-> - **Shallow Copy** : `Duplicates as little as possible`. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
+**Shallow Copy**
+> - `Duplicates as little as possible`. If b is a shallow copy of a, b points to a's location in memory, b `will change` it's value when changes a. 
+
 > - Method => spread operator (The spread operator makes deep copies of data if the data is not nested.), object.assign
 
-> - **Deep Copy** : `Duplicates everything`. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
+**Deep Copy**
+> - `Duplicates everything`. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a. 
+
 > - Method => javaScript : JSON.parse(JSON.stringify(object)) (not for function), jQuery : $.extend, lodash : _.cloneDeep
 
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/), [The Spread Operator: Deep and Shallow Copies](https://medium.com/@kevinlai76/the-spread-operator-deep-and-shallow-copies-d193ac9b58bf), [How to Deep Clone an Array in JavaScript](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig)
 
 <br/>
 
-5. Explain What Is The Difference Between push(), pop(), unshift(), shift()?
+
+### **Explain What Is The Difference Between push(), pop(), unshift(), shift()?**
 
 | Methods | push() | pop() | unshift() | shift() | 
 |---|---|---|---|---|
@@ -116,7 +123,8 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 
 <br/>
 
-6. Explain What Is The Difference Between slice(), splice() and split()?
+
+### **Explain What Is The Difference Between slice(), splice() and split()?**
 
 | Methods | slice (start index, end index) | splice (index, howmany, item1, ....., itemX) | split (separator, howmany) |
 |---|---|---|---|
@@ -131,7 +139,8 @@ Example : https://jsfiddle.net/yschen25/vxmp7z3t/
 
 <br/>
 
-9. Explain What Is Hoisting? (ref:10)
+
+### **Explain What Is Hoisting?**
 
 > - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 ```
@@ -167,16 +176,18 @@ function a(){}
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
 > - You can use `let/const instead of var to avoid hoisting`, actually let/const has hoisting, but they have ```TDZ(Temporal Dead Zone)```.
 
-<br/><br/>
+<br/>
 
-9.1 What Is "Use strict"?
+
+### **What Is "Use strict"?**
 > - This strict context `prevents certain actions from being taken and throws more exceptions`.
 > - Using strict mode, don’t allow to use a variable without declaring it, Duplicating a parameter name is not allowed, etc.
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
-<br/><br/>
 
-10. What Is Let And Const? (ref:11)
+<br/>
+
+### **What Is Let And Const?**
 
 > - `Let and Const is block scope`, `Var is function scope`. <br/>
 ```
@@ -208,7 +219,8 @@ a = 20  // TypeError: Assignment to constant variable.
 ```
 <br/>
 
-10.1 What Is Block Scope And Function Scope?
+
+### **What Is Block Scope And Function Scope?**
 > - Block scope is everything inside a set of braces `{ a block scope here }`
 > - A block scope is sometimes the same as a function scope.
 ```
@@ -238,9 +250,10 @@ function foo() {
 
 > - Related Reference :  [let與const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 
-<br/><br/>
+<br/>
 
-10.2 What Is Local Scope And Global Scope?
+
+### **What Is Local Scope And Global Scope?**
 
 **Local Scope**
 > - Variables `declared within a JavaScript function`, become `local` to the function.
@@ -255,7 +268,6 @@ function myFunction() {
 
 }
 ```
-
 
 **Global Scope**
 > - A variable `declared outside a function`, becomes `global`.
@@ -284,9 +296,11 @@ function myFunction() {
   carName = "Volvo";
 }
 ```
+
 <br/>
 
-11. Explain What Is TDZ (Temporal Dead Zone)? (ref:10)
+
+### **Explain What Is TDZ (Temporal Dead Zone)?**
 
 > - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization` which declared with let or const.
 ```
@@ -303,13 +317,13 @@ test()
 ```
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 
-<br/><br/>
+<br/>
 
 
-12. Explain What Is "this"?
+### **Explain What Is "this"?**
 > - The this keyword evaluates to the value of the ThisBinding of the current execution context, the `value of this is determined by how a function is called`.
 
-<br/><br/>
+<br/>
 
 **Default Binding** 
 > - In a JavaScript `function(default)`, the owner of the function is the `global object`, so this refers to the `global object`.
@@ -432,14 +446,14 @@ console.log( obj.a ); // 123
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 <br/><br/>
 
-12.1 What Is Difference Between Bind(), Call() And Apply()?
+### **What Is Difference Between Bind(), Call() And Apply()?**
 > - Bind() is when you want that function to later be called with a certain context, useful in events. Use call() or apply() when you want to invoke the function immediately, and modify the context.
 > Fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments. The difference is that call() takes the function arguments separately, and apply() takes the function arguments in an array.
 
 <br/>
 
 
-8. Explain What Is Callbacks?
+### **Explain What Is Callbacks?**
 
 > - `Take a function as another function's parameter, called by another function`.
 > - Control the sequence of function execute.
@@ -449,14 +463,15 @@ window.setTimeout( function(){ ... }, 1000);
 
 <br/>
 
-8.1 Why Do We Use Callback?
+### **Why Do We Use Callback?**
 > - Callback functions allow us to do something with data at a later time. But too much callback will cause callback hell, we can use promise to replace it.
 
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 
 <br/>
 
-28. What Is Expressions And Statement?
+
+### **What Is Expressions And Statement?**
 > - Expression : Any unit of code that can be evaluated to a value is an expression.
 
 ```
@@ -478,7 +493,7 @@ else
 <br/>
 
 
-17. What A Function Statements(Declaration) And Function Expressions?
+### **What A Function Statements(Declaration) And Function Expressions?**
 > - **Function Statement** : <br/>
 
 (1) A function created with a name. 
@@ -525,9 +540,10 @@ callTest(); // 123
 
 > - [[筆記] 進一步談JavaScript中函式的建立─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 
-<br/><br/>
+<br/>
 
-18. What Is IIFE(Immediately Invoked Function Expression)? (ref:21)
+
+### **What Is IIFE(Immediately Invoked Function Expression)?**
 > -  (pronounced 'iffy') Is a function `defined as an expression and executed immediately after creation`.
 > - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions. 
 ```
@@ -554,7 +570,8 @@ console.log(superSecret);
 
 <br/>
 
-19. What Is First Class Function?
+
+### **What Is First Class Function?**
 > - First Class Function means that `you can do the things to the functions same as to other types(objects, string, boolean, numbers)`. <br/>
 (1) Functions are objects. <br/>
 (2) Can be passed as an argument to other functions. <br/>
@@ -566,7 +583,8 @@ console.log(superSecret);
 
 <br/>
 
-23. What Is Higher Order Function (HOF)?
+
+### **What Is Higher Order Function (HOF)?**
 > - To match one of the criteria as below 
 
 (1) Takes one or more functions as arguments. 
@@ -610,7 +628,7 @@ returnedFunction("returnedFunction");
 
 <br/>
 
-7. Explain What And When Use The map(), forEach(), filter(), find(), reduce()?
+### **Explain What And When Use The map(), forEach(), filter(), find(), reduce()?**
 > - **map()**: returns new array with transformed elements, leaving back original array unchanged.
 > - **forEach()**: like a for loop, but is more readable and intuitive. Use it when we want to perform a specific action for each element of an array.
 > - **filter()**: return an array which that match the criteria.
@@ -668,7 +686,8 @@ console.log(reduce);
 ```
 <br/>
 
-7.1 Explain What Is The Difference Between map(), forEach()?
+
+### **Explain What Is The Difference Between map(), forEach()?**
 
 | Methods | map() | foEach() |
 |---|---|---|
@@ -680,7 +699,8 @@ console.log(reduce);
 
 <br/>
 
-7.2 Write The Map By Yourself.
+
+### **Write The Map By Yourself.**
 
 ```
 const arr = [1,2,3];
@@ -700,7 +720,8 @@ console.log('My Map',  myMap(arr, num => num + 1));
 
 <br/>
 
-27. What Is Curry?
+
+### **What Is Curry?**
 > - Currying is transforming a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
 
 ```
@@ -736,7 +757,8 @@ console.log(minusFunc(1)(5)) // 3
 
 <br/>
 
-1. Explain What Is Closure?
+
+### **Explain What Is Closure?**
 
 > - If we use the global variables in the wrong way, may cause some problems like [Without Use Closure](https://jsfiddle.net/yschen25/aofkj153/14/), `closure uses outer function returns the inner function (which we really want to execute) to let us have private variable without affected by environment`, see the [Use Closure](https://jsfiddle.net/yschen25/pvqbxjr7). <br/>
 > - Improve code [Use Anonymous And Arrow Function](https://jsfiddle.net/yschen25/rjefc2sg/). <br/>
@@ -747,7 +769,8 @@ console.log(minusFunc(1)(5)) // 3
 
 <br/>
 
-29. What Is Funcution composition?
+
+### **What Is Funcution composition?**
 > - Function composition is the process of combining two or more functions to produce a new function.
 
 ```
@@ -779,7 +802,8 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 
 <br/>
 
-2. Explain What Is Promise? (ref:3)
+
+### **Explain What Is Promise?**
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
@@ -828,7 +852,8 @@ myPromise.then((message) => {
 
 <br/>
 
-3. Explain What Is Async/Await? (ref:2)
+
+### **Explain What Is Async/Await?**
 > - Async and Await is `syntax sugar for promises` in javaScript.
 > - Await ensures executing next step `after specific operations`. 
 > - An Await operand can `only be used inside an Async function`.
@@ -857,13 +882,15 @@ fetchData().then(() => {
 
 <br/>
 
-24. What Is Functional Programming (FP)?
+
+### **What Is Functional Programming (FP)?**
 > - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
 > - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
 
 <br/>
 
-24.1 What Are The Strengths Of Functional Programming?
+
+### **What Are The Strengths Of Functional Programming?**
 > - Allows you to avoid confusing problems and errors in the code
 > - Easier to test and execute Unit testing and debug FP Code.
 > - Parallel processing and concurrency
@@ -877,7 +904,7 @@ fetchData().then(() => {
 <br/>
 
 
-22. What Is Pure Function And What Is Impure Function?
+### **What Is Pure Function And What Is Impure Function?**
 > - Pure Functions = Consistent Results
 The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
 (1) Its return value is the same for the same arguments. <br/>
@@ -910,7 +937,7 @@ console.log(add(4));  // 10
 <br/>
 
 
-16. What Is Event Bubbling And How To Stop It?
+### **What Is Event Bubbling And How To Stop It?**
 
 > - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
 > - (2)Using event.stopPropagation()
@@ -938,7 +965,8 @@ console.log(add(4));  // 10
 
 <br/>
 
-21. What Is Prototype?
+
+### **What Is Prototype?**
 > - All JavaScript objects inherit properties and methods from a prototype.
 > - Prototype property allows you to `add new properties` to object constructors.
 ```
@@ -987,12 +1015,13 @@ console.log(nick.prototype === undefined) // true
 
 <br/>
 
-21.1 What Is A Prototype Chain?
+
+### **What Is A Prototype Chain?**
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 
 
-25. What Is An Event Loop?
+### **What Is An Event Loop?**
 
 <p align="center">
 <img src="img/event_loop.png" alt="event_loop" title="event_loop" width="60%">
@@ -1039,7 +1068,7 @@ console.log('end')
 <br/>
 
 
-30. What Is Recursion?
+### **What Is Recursion?**
 > - Recursion is a process of calling itself. A function that calls itself is called a recursive function. A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.
 
 ```
@@ -1056,24 +1085,29 @@ console.log(recu(1)) // 10
 
 ```
 
-
 <br/>
 
-26. What Is Delegate?
+
+### **What Is Delegate?**
 > - Event delegation allows you to `avoid adding event listeners to specific nodes, instead, the event listener is added to one parent.` That event listener analyzes bubbled events to find a match on child elements.
 > - Related Reference : [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 
 <br/>
 
-## Customized javaScript Questions
 
-1. Where Do You Use Async, Await and Promise?
+# Customized javaScript Questions
+
+### **Where Do You Use Async, Await and Promise?**
 > - To do somthing after receive the data from API calls.
+
 <br/>
 
-2. What Do You Think About JavaScript?
+
+### **What Do You Think About JavaScript?**
 > - With JavaScript we can build websites, mobile apps, web apps, and writing back-end code, It works on many platforms and environments. Many new features in ES6 and ES7 such as spread operator, promise, async, and await can greatly increase our ease of development. JavaScript is also a foundation of frameworks such as React, Vue, etc. We can use the frameworks to solve many real-world problems and extend the language.
 
-JavaScript is very relaxed about the difference between strings and numbers.
+> - JavaScript is very relaxed about the difference between strings and numbers.
 such as using string + number will be string, and using string will be number. It might cause the error code, but we can us TypeScript to prevent this simple error occurs.
+
+
 <br/>
