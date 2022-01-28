@@ -1,13 +1,13 @@
 # JavaScript Questions
 
-### **List Down The Primitive And Non-Primitive Types.**
+### **List Down The Primitive And Non-Primitive(Object) Types.**
 
 <p align="center">
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
 </p>
 
 > - Primitive Types : string, number, boolean, undefined, null, symbol.
-> - Non-Primitive Types : array, object, function, date, regx.
+> - Non-Primitive(Object) Types : array, object, function, date, regx.
 
 <br/>
 
@@ -103,6 +103,71 @@ console.log(null === undefined); // false
 > - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/),  [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/), [The Spread Operator: Deep and Shallow Copies](https://medium.com/@kevinlai76/the-spread-operator-deep-and-shallow-copies-d193ac9b58bf), [How to Deep Clone an Array in JavaScript](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig)
 
 <br/>
+
+### **What Is Spread Operator?**
+> - It consists of three dots (...). The spread operator allows you to spread out elements of an iterable object such as an array, map, or set.
+
+```
+let number = [1, 2, 3, 4, 5];
+console.log(Math.max(number));  // NaN
+
+// Using spread operator
+let number = [1, 2, 3, 4, 5];
+console.log(Math.max(...number)); // 5
+
+```
+<br/>
+
+
+### **What Is Rest Operator?**
+> - It consists of three dots (...) which collects all remaining elements into an array.
+
+```
+let avg = function(arr) {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+console.log(avg(1,3,5,7,9));  // NaN
+
+// Using rest operator
+let avg = function(...arr) {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+console.log(avg(1, 3, 5, 7, 9));  // 5
+
+```
+
+> - Related Reference : [[筆記] JavaScript ES6 中的展開運算子（spread operator）和其餘運算子（rest operator）](https://pjchender.blogspot.com/2017/01/es6-spread-operatorrest-operator.html)
+<br/>
+
+
+### **What Is Destructuring Assignment?**
+> - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+```
+const [a, b] = [1, 2]; // a = 1, b = 2
+
+const [a, , b] = [1, 2, 3];  // a = 1, b = 3
+
+const [a, ...b] = [1, 2, 3]; // a = 1, b = [2,3]
+
+const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
+```
+
+> - Related Reference : [解構賦值](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/destructuring.html)
+<br/>
+
+<br/>
+
 
 
 ### **Explain What Is The Difference Between push(), pop(), unshift(), shift()?**
@@ -437,7 +502,9 @@ console.log( obj.a ); // 123
 ```
 
 > - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
-<br/><br/>
+
+<br/>
+
 
 ### **What Is Difference Between Bind(), Call() And Apply()?**
 > - Bind() is when you want that function to later be called with a certain context, useful in events. Use call() or apply() when you want to invoke the function immediately, and modify the context.
@@ -455,6 +522,7 @@ window.setTimeout( function(){ ... }, 1000);
 ```
 
 <br/>
+
 
 ### **Why Do We Use Callback?**
 > - Callback functions allow us to do something with data at a later time. But too much callback will cause callback hell, we can use promise to replace it.
@@ -700,7 +768,7 @@ const arr = [1,2,3];
 
 const myMap = (arr, func) => {
   let newArr = [];
-  for(let i = 0; i < arr.length; i++){
+  for(let i = 0; i < arr.length; i++) {
     let result = func(arr[i], i, arr)
     newArr.push(result);
   }
@@ -936,7 +1004,7 @@ console.log(add(4));  // 10
 
 <br/>
 
-16.1 What Is Event Capturing?
+### **What Is Event Capturing?**
 > - The event is first captured by the outermost element and propagated to the inner elements.
 > - If you click on < p >, then the sequence is: <br/>
 (1) HTML → BODY → FORM → DIV (capturing phase, the first listener): <br/>
@@ -1067,9 +1135,8 @@ function recu(i) {
   if(i < 10) {
     i++;
     return recu(i);
-  } else {
-    return i;
   }
+    return i;
 }
 
 console.log(recu(1)) // 10
