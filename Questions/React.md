@@ -854,8 +854,11 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/><br/>
 
 25. How To Prevent Components From Re-Rendering?
-> - shouldComponentUpdate(), React.PureComponent (class component), React.memo (functional component)
-<br/><br/>
+> - Class component : shouldComponentUpdate(), React.PureComponent.
+> - Functional component : React.memo.
+
+<br/>
+
 
 26. What Would You Do If Your React Application Is Rendering Slowly?
 > - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
