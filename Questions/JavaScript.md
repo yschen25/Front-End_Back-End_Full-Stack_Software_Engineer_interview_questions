@@ -845,6 +845,42 @@ console.log(myMap2(arr, num => num + 1)); // [2, 3, 4]
 
 > - Related Reference : [Javascript - Writing Map as a Recursive Function](https://dev.to/alexmercedcoder/javascript-writing-map-as-a-recursive-function-2854)
 
+<br>
+
+### **Write The Map By Yourself With TypeScript**
+
+```
+type MyFnType<Type> = (arg1: Type) => Type;
+
+const myMap1 = <Type>(arr: Type[], fn: MyFnType<Type>): Type[] => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(fn(arr[i]));
+  }
+  return newArr;
+};
+
+console.log(myMap1(arr, (x: number) => x + 1));
+
+// Without using for loop
+const myMap2 = <Type>(
+  oldArr: Type[],
+  fn: MyFnType<Type>,
+  newArr: Type[] = []
+): Type[] => {
+  if (oldArr.length <= 0) {
+    return newArr;
+  } else {
+    const [val, ...rest] = oldArr;
+    newArr.push(fn(val));
+    return myMap2(rest, fn, newArr);
+  }
+};
+
+console.log(myMap2(arr, (x: number) => x + 1));
+```
+
+
 <br/>
 
 ### **What Is Set?**

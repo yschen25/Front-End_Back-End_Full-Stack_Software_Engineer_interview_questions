@@ -14,6 +14,10 @@
 
 [Database_SQL_Questions](Questions/Database_SQL.md)
 
+[Deployment](Deployment.md)
+
+[Security](Security.md)
+
 [Other_Questions](Questions/Others.md)
 
 </br>
