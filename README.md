@@ -14,9 +14,9 @@
 
 [Database_SQL_Questions](Questions/Database_SQL.md)
 
-[Deployment](Deployment.md)
+[Deployment](Questions/Deployment.md)
 
-[Security](Security.md)
+[Security](Questions/Security.md)
 
 [Other_Questions](Questions/Others.md)
 
