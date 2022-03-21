@@ -1,18 +1,19 @@
-## HTML Questions
-<br/>
+# HTML Questions
 
-1. What Are Semantic Elements?
+### **What Are Semantic Elements?**
 
-> - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer. <br/>
+> - Elements with a meaning, it can clearly describes its meaning to both the browser and the developer
 > - I.g., \<header>, \<footer>, \<nav>, etc.
+
 <br/>
 
-1.2 Why Use Semantic Elements?
+### **Why Use Semantic Elements?**
 
 > - Improving SEO and making maintain easily
+
 <br/>
 
-2. What Are The New Features in HTML5?
+### **What Are The New Features in HTML5?**
 
 > - Simplified doctype string : \<!DOCTYPE html>.
 > - Data-* attributes.
@@ -20,19 +21,19 @@
 > - Drag and drop.
 > - Add new elements : \<canvas>, \<header>, \<footer>, \<nav>, geolocation API, audio, video...etc.
 > - Related Reference : [What's New In HTML 5](https://www.lifewire.com/whats-new-in-html5-3467974), [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)
+
 <br/>
 
-2.1 What Do We Need To Declare <!DOCTYPE>?
+### **What Do We Need To Declare <!DOCTYPE>?**
 > - DOCTYPE means `Document Type`.
 > - All HTML documents must start with a <!DOCTYPE> declaration. It is an information to tell the browser about what document type to expect. Avoiding page shows unexpected layout.
-
 > - In HTML 5, the declaration is simple:
 ```
 <!DOCTYPE html>
 ```
 <br/>
 
-3. What Is The Difference Between Http Methods Get And Post?
+### **What Is The Difference Between Http Methods Get And Post?**
 
 | Methods |  Get |  Post | 
 |---|---|---|

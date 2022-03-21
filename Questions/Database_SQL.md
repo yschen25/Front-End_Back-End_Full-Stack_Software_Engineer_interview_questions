@@ -3,6 +3,7 @@
 ### **What Is a Database Join Used For And What Are The Different Types Of Join? 
 > - Joining the tables makes us easy to query.
 > - inner join, outer join, left join, right join.
+
 <br/>
 
 ### **Difference Between Inner and Outer Joins**
@@ -13,8 +14,7 @@
 
 ### **What Is Database Partitioning / Sharding?**
 > - Partitioning is a general term used to describe the act of breaking up our logical data elements into multiple entities for the purpose of performance, availability, or maintainability.
-
-Sharding is the equivalent of "horizontal partitioning". When you shard a database, you create replications of the table schema, then divide, what data is stored in each shard based on a shard key.
+> - Sharding is the equivalent of "horizontal partitioning". When you shard a database, you create replications of the table schema, then divide, what data is stored in each shard based on a shard key.
 
 <br/>
 

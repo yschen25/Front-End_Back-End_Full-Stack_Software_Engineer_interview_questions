@@ -673,7 +673,8 @@ console.log(superSecret);
 
 <br/>
 
-18.1 Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result?
+
+### **Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result?**
 
 > - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
 
@@ -1206,7 +1207,7 @@ fetchData().then(() => {
 ### **What Is Pure Function And What Is Impure Function?**
 
 > - Pure Functions = Consistent Results
->   The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
+> - The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
 >   (1) Its return value is the same for the same arguments. <br/>
 >   (2) Its evaluation has no side effects.
 
@@ -1219,7 +1220,7 @@ console.log(add(2, 4)); // 6
 ```
 
 > - Impure Functions = Inconsistent Results
->   The second example returns nothing. It relies on shared state to do its job by incrementing a variable outside of its own scope. In the example : The first time results in 6, next time is 10 and so on.
+> - The second example returns nothing. It relies on shared state to do its job by incrementing a variable outside of its own scope. In the example : The first time results in 6, next time is 10 and so on.
 
 ```
 // Impure Function
@@ -1228,7 +1229,7 @@ let x = 2;
 const add = (y) =>  x += y;
 
 console.log(add(4)); // 6
-console.log(add(4));  // 10
+console.log(add(4)); // 10
 ```
 
 > - Related Reference : [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
@@ -1324,20 +1325,98 @@ console.log(nick.prototype === undefined) // true
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 
+
+### **What Is Stack?**
+
+<p align="center">
+<img src="img/stack.png" alt="event_loop" title="event_loop" width="60%">
+</p>
+
+> - Stack is a linear data structure which follows a order LIFO(Last In First Out) in which the operations are performed.
+> - Related Reference : [解釋 Event Loop ( 上 ) --- Call Stack](https://ithelp.ithome.com.tw/articles/10260433)
+
+<br/>
+
+### **What Is Queue?**
+
+<p align="center">
+<img src="img/queue.png" alt="event_loop" title="event_loop" width="60%">
+</p>
+
+> - A Queue is a linear structure which follows a order FIFO(First In First Out) in which the operations are performed. 
+> - Related Reference : [解釋 Event Loop ( 下 ) --- Task Queue ( Callback Queue )](https://ithelp.ithome.com.tw/articles/10261593)
+
+<br/>
+
+
+### **What Is Call Stack?**
+
+> - The call stack is what a program uses to keep track of method calls. The call stack is made up of stack frames
+
+```
+function a() {
+
+    function b() {
+
+        function c() {
+            console.log('This is c()');
+        }
+
+        c();
+        console.log('This is b()');
+    }
+
+    b();
+    console.log('This is a()');
+} 
+a();
+
+// This is c();
+// This is b();
+// This is a();
+```
+
+<br/>
+
+
+### **What Is Stack Overflow?**
+
+<br/>
+
+
+### **What Is Callback/Event/Task Queue?**
+
+> -  This is where the `asynchronous code` gets pushed to, and waits for the execution.
+>  - Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.
+
+<br/>
+
+### **What Is Job Queue?**
+
+> - Apart from Callback Queue, reserved only for new Promise() functionality.
+
+<br/>
+
+
 ### **What Is An Event Loop?**
 
 <p align="center">
 <img src="img/event_loop.png" alt="event_loop" title="event_loop" width="60%">
 </p>
 
-> - `JavaScript is single-threaded`, once your browser starts processing too many tasks in the Call Stack, it may stop being responsive for a long time, even block the UI thread, and the user cannot click around, scroll the page, and so on.
-> - The Event Loop make `every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser`.
-> - Monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
-> - **Web APIs** : In essence, they are threads that you can’t access, you can just make calls to them. (Ajax, setTimeout, setInterval)
-> - **Call Stack** : The Call Stack is a data structure which records basically where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack.
-> - **Callback Queue** : <br/>
->   (1) The Callback Queue is a FIFO data structure. Stores all the callback functions in the order in which they are added. <br/>
->   (2) Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.
+#### You should know before reading about event loop
+> - **Process** : A process can have anywhere from just one thread to many threads.
+> - **Threaded** : A thread is the unit of execution within a process.
+``single thread means it can only do one thing at the same time``.
+> - **Runtime** : Where your program will be executed. It determines what global objects your program can access and it can also impact how it runs. This article covers the two JavaScript runtime environments: <br/>
+(1) The runtime environment of a browser (like Chrome, or Firefox). <br/>
+(2) The Node runtime environment.
+> - **Web APIs** : The Web APIs are provided by the web browser that gives additional functionality to the V8 engine, like the DOM, AJAX, setTimeout and much more.
+> - **Heap** : It's not a data structure here, this is where all the memory allocation happens for your variables, that you have defined in your program.
+
+> - JavaScript is a `single-threaded` programming language which can run at various `runtime`, once your browser starts processing too many tasks in the call stack, it may stop being responsive for a long time, even block the UI thread, and the user can't click around, scroll the page, and so on. 
+> - In order to run the make sure `every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser when using web APIs`, the `event loop` continuous monitoing the `call stack and the callback queue`. If the call stack is empty, it will take the first event from the queue and will push it to the call stack, which effectively runs it.
+
 
 ```
 console.log('start')
@@ -1367,7 +1446,7 @@ console.log('end')
 
 ```
 
-> - Related Reference : [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/), [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[How JavaScript Works: Web APIs, Callback Queue, and Event Loop](https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e),[JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
+> - Related Reference : [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[Understanding Event Loop, Call Stack, Event & Job Queue in Javascript](https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd),[JS底層學習筆記 - EventLoop](https://front-chef.coderbridge.io/2021/05/08/js-eventloop/), [JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
 
 <br/>
 

@@ -877,7 +877,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 29. What Is A React Router?
 > - Is a package which is used to create Routing.
-> - React Router, and dynamic, client-side routing, allows us to `build a single-page web application with navigation without the page refreshing as the user navigates`.
+> - React Router, and dynamic, client-side routing, allows us to `build a SPA(single-page web application) with navigation without the page refreshing as the user navigates`.
 <br/><br/>
 
 29.1 How Is Routing in React Different From Conventional Routing?
