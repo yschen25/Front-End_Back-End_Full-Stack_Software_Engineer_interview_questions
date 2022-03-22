@@ -88,3 +88,12 @@ D (Durability) : Durability means that, once a transaction is committed, it will
 
 ### **What Is Locking?**
 > - Use locking when multiple users are accessing data at the same time to protected resources such as tables, data rows, etc. For the concurrency and  isolation purpose.
+
+<br/>
+
+### **How To Store The Password?**
+> - Recommended : "hashed and salted", Salting is simply the addition of a unique, random string of characters known only to the site to each password before it is hashed
+> - Not recommended : MD5, SHA1, SHA256
+> - Related Reference : [Passwords and hacking: the jargon of hashing, salting and SHA-2 explained](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
+
+<br/>

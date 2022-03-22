@@ -1,6 +1,5 @@
 # Other Questions
 
-
 ### **What Is Git SSH Key?**
 > - Let github knows we authorize the specific computer has permission to push code by gening and setting ssh key, one computer only need to authorize for one time.
 > - Related Reference : [Git 版本控制筆記 - 使用 github 及 ssh 金鑰設定](https://blog.jaycetyle.com/2018/02/github-ssh/)
@@ -11,6 +10,21 @@
 > - SSH : When you want to push/pull code that you **DON'T** need to enter the id and password due to set up the SSH key already.
 > - HTTPS : When you want to push/pull code that you need to enter the id and password.
 > - Related Reference : [設定 Github SSH 金鑰 feat. Github SSH、HTTPS 的差異](https://ithelp.ithome.com.tw/articles/10205988)
+
 <br/>
 
+### **What Is Difference Between Concurrency And Parallelism?**
+> - Concurrency : Multiple tasks making progress at the same timem, such as multithreaded.
+> - Parallelism : The tasks are divided into smaller sub-tasks that are processing simultaneously or parallel, such as load balancing.
 
+<br/>
+
+### **What Is Microservice architecture?**
+<p align="center">
+<img src="img/microservices.png" alt="data_type" title="data_type" width="60%">
+</p>
+
+> - Microservices are an architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs. These services are owned by small, self-contained teams.
+> - Related Reference : [What are Microservices?](https://aws.amazon.com/microservices/)
+
+<br/>
