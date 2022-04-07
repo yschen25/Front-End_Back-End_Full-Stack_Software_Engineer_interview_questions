@@ -1325,11 +1325,12 @@ console.log(nick.prototype === undefined) // true
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 
+<br/>
 
 ### **What Is Stack?**
 
 <p align="center">
-<img src="img/stack.png" alt="event_loop" title="event_loop" width="60%">
+<img src="img/stack.png" alt="event_loop" title="event_loop" width="40%">
 </p>
 
 > - Stack is a linear data structure which follows a order LIFO(Last In First Out) in which the operations are performed.
