@@ -88,7 +88,7 @@ console.log(null === undefined); // false
 
 <br/>
 
-### **Explan What Is Shallow Copy And Deep Copy?**
+### **Explain What Is Shallow Copy And Deep Copy?**
 
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
