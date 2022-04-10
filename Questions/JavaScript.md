@@ -32,12 +32,12 @@ console.log(typeof a);    // undefined
 
 **Empty**
 
-> - Empty is assign the " " to a variable.
+> - Empty is used to refer to a unique string with zero length.
 > - Boolean(" ") = false
 
 **Null**
 
-> - Null is can be assigned to a variable as a representation of no value.
+> - Null is used to refer to nothing.
 > - Boolean(null) = false
 > - Type of null = object
 
