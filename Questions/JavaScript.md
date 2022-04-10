@@ -15,7 +15,7 @@
 
 **Not Defined**
 
-> - Not defined means the varable doesn't exist.
+> - Not defined means the variable doesn't exist.
 
 **Undefined**
 
@@ -55,7 +55,7 @@ console.log(null === undefined); // false
 
 <br/>
 
-### **Explan What Is Call By Value, Call By Reference And Call By Sharing?**
+### **Explain What Is Call By Value, Call By Reference And Call By Sharing?**
 
 **Call By Value**
 
