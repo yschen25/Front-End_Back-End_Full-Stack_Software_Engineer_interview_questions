@@ -64,7 +64,14 @@ console.log(null === undefined); // false
 </p>
 
 > - When you declare a `primitive type (string, number, boolean, null, undefined, symbol) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b also `has own memory location` and store a's value in it. b's value `will not change` when a's value changes, a and b's memory location is isolate, they won't interrupt each other.
-> - Example : https://jsfiddle.net/yschen25/9v0t2fx6/
+
+```
+var a = 2;
+var b = a;
+a = 3;
+
+// a = 3, b = 2
+```
 
 <br/>
 
@@ -75,18 +82,36 @@ console.log(null === undefined); // false
 </p>
 
 > - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b `doesn't have own memory` location, a and b will has same memory location, b's value `will change` when a's value changes. (Ref : Shallow copy)
-> - Example : https://jsfiddle.net/yschen25/ov3rq5me
+```
+var a = {greeting:'Hello'};
+var b = a;
+
+a.greeting = 'Hola';
+
+console.log(a) // Hola 
+console.log(b) // Hola  
+
+var c = [1, 2, 3];
+var d = c;
+
+c[0] = 5;
+
+console.log(c) // [5, 2, 3] 
+console.log(d) // [5, 2, 3]
+
+```
 
 <br/>
+
 
 **Call By Sharing**
 
 > - When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes.
-> - Example : https://jsfiddle.net/yschen25/7djyawve
 > - Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html),
 >   [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 
 <br/>
+
 
 ### **Explan What Is Shallow Copy And Deep Copy?**
 
@@ -181,7 +206,26 @@ const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
 |         | **ADD** the element in the **END** of array | **DELETE** the element in the **END** of array | **ADD** the element in the **BEGINNING** of array | **DELETE** the element in the **BEGINNING** of array |
 | Return  | New length                                  | The removed item                               | New length                                        | The removed item                                     |
 
-Example : https://jsfiddle.net/yschen25/bcuto13q/
+```
+let arr = [1, 2, 3, 4, 5];
+console.log(arr);
+
+// Push
+console.log(arr.push(6));
+console.log(arr);
+
+// Pop
+console.log(arr.pop());
+console.log(arr);
+
+// Unshift
+console.log(arr.unshift());
+console.log(arr);
+
+// Shift
+console.log(arr.shift());
+console.log(arr);
+```
 
 <br/>
 
@@ -194,7 +238,28 @@ Example : https://jsfiddle.net/yschen25/bcuto13q/
 |         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    | ddd                                  |
 |         | **NOT** changes the original array                                       | **CHANGES** the original array                                                             | **NOT** changes the original array   |
 
-Example : https://jsfiddle.net/yschen25/vxmp7z3t/
+```
+let arr = [1, 2, 3, 4, 5];
+
+// Slice
+console.log(arr.slice(0)) // [1, 2 ,3 , 4, 5]
+console.log( arr.slice(2, 4)) // [3, 4]
+console.log(arr.slice(-2)) // [4, 5]
+
+// Splice
+let arr3 = [1, 2, 3, 4, 5];
+arr3.splice(0, 3);
+console.log(arr3); [4, 5]
+
+let arr4 = [1, 2, 3, 4, 5];
+arr4.splice(2, 0, 55, 66);
+console.log(arr4); // [1, 2, 55, 66, 3, 4, 5] 
+
+let arr5 = [1, 2, 3, 4, 5];
+arr5.splice(-2);
+console.log(arr5) // [1, 2, 3]
+```
+
 
 > - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), ([Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
 
@@ -281,7 +346,26 @@ varFunction();
 letFunction();
 ```
 
-> - Compare var and let in loop https://jsfiddle.net/yschen25/7qwp480z/1/. (ref:[ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/))
+> - Compare var and let in loop  
+
+```
+for (var i = 0; i < 10; i++) {
+  setTimeout(function () {
+    console.log('execute ' + i + ' times '); 
+  }, 10);
+}
+
+// execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times
+
+for (let i = 0; i < 10; i++) {
+  setTimeout(function () {
+    console.log('execute ' + i + ' times ');
+  }, 10);
+}
+
+// execute 0 times execute 1 times execute 2 times execute 3 times execute 4 times execute 5 times execute 6 times execute 7 times execute 8 times execute 9 times
+```
+
 > - `Let is for declare variables`. <br/>
 > - `Const is for declare const variables`, need initialize in declaration, `can't reassignment`. <br/>
 
@@ -290,7 +374,9 @@ const a = 10
 a = 20  // TypeError: Assignment to constant variable.
 ```
 
+> - Related Reference : [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/>
+
 
 ### **What Is Block Scope And Function Scope?**
 
@@ -325,6 +411,7 @@ function foo() {
 > - Related Reference : [let 與 const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 
 <br/>
+
 
 ### **What Is Local Scope And Global Scope?**
 
