@@ -15,7 +15,7 @@
 
 **Not Defined**
 
-> - Not defined means the varable doesn't exist.
+> - Not defined means the variable doesn't exist.
 
 **Undefined**
 
@@ -32,12 +32,12 @@ console.log(typeof a);    // undefined
 
 **Empty**
 
-> - Empty is assign the " " to a variable.
+> - Empty is used to refer to a unique string with zero length.
 > - Boolean(" ") = false
 
 **Null**
 
-> - Null is can be assigned to a variable as a representation of no value.
+> - Null is used to refer to nothing.
 > - Boolean(null) = false
 > - Type of null = object
 
@@ -55,7 +55,7 @@ console.log(null === undefined); // false
 
 <br/>
 
-### **Explan What Is Call By Value, Call By Reference And Call By Sharing?**
+### **Explain What Is Call By Value, Call By Reference And Call By Sharing?**
 
 **Call By Value**
 
@@ -1412,11 +1412,12 @@ console.log(nick.prototype === undefined) // true
 > - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
 > - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 
+<br/>
 
 ### **What Is Stack?**
 
 <p align="center">
-<img src="img/stack.png" alt="event_loop" title="event_loop" width="60%">
+<img src="img/stack.png" alt="event_loop" title="event_loop" width="40%">
 </p>
 
 > - Stack is a linear data structure which follows a order LIFO(Last In First Out) in which the operations are performed.
