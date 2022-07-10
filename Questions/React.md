@@ -632,9 +632,6 @@ componentDidCatch(error, info) {
 ### **Explain Error Boundaries?**
 > - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
 > - static getDerivedStateFromError(), componentDidCatch()
-
-<br/>
-
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 
 <br/>
@@ -695,11 +692,11 @@ componentDidCatch(error, info) {
 </Provider>
 ```
 		
-(2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
-(2.1) **mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
-(2.2) **mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
-(2.3) **mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-(2.4) **options** : If specified, further `customizes the behavior` of the connector. 
+**(2) Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+**(2.1) mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
+**(2.2) mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
+**(2.3) mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+**(2.4) options** : If specified, further `customizes the behavior` of the connector. 
 ```
 function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main);
 ```
@@ -707,13 +704,13 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main)
 
 **Store Methods** <br/>
 
-(1) **getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
-(2) **dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
-(3) **subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
-(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
-(4.1) **reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
-(4.2) **preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
-(4.3) **enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
+**(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
+**(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
+**(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
+**(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
+**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
+**(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
+**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
@@ -790,14 +787,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 
 ### **What Are The Strengths And Weaknesses Of Styled Components?**
-> - **Strength**
-(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
-(2) Painless Maintenance: You don't have maintain mutiple CSS files.
-(3) Semantic Element: You can know the meaning of the element by its name.
+> - **Strength** </br>
+(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
+(2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
+(3) Semantic Element: You can know the meaning of the element by its name. </br>
 
-> - **Weakness**
-(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug.
-(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props.
+> - **Weakness** </br>
+(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
+(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
 (3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
@@ -819,7 +816,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **Jest And Enzyme.**
+### **What Is Jest And Enzyme?**
 > - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
 > - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
 > - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
@@ -827,14 +824,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **React-testing-library/React-hooks-testing-library**
+### **What Is React-testing-library/React-hooks-testing-library?**
 > - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
 > - Install @testing-library/react-hooks to test hooks.
 
 <br/>
 
 
-### **Refs.**
+### **What Is Refs?**
 > - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
 > - `Use state and props to manage components instead using refs`. (ref:18)
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
@@ -864,8 +861,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
 
-Before hook
 ```
+// Before hook
 class ClickClass extends React.Component {
   constructor(props) {
     super(props);
@@ -891,8 +888,8 @@ class ClickClass extends React.Component {
 ReactDOM.render(<ClickClass />, document.querySelector("#app"));
 ```
 
-After hook 
 ```
+// After hook 
 const [count, addCount] = useState(0);
 ```
 
@@ -901,8 +898,8 @@ const [count, addCount] = useState(0);
 2. useEffect() : <br/>
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
-
 (2.1) The first an anonymous callback function that houses your useEffect logic.
+
 ```
 useEffect(() => {
     console.log('This is like componentDidMount')
@@ -965,8 +962,6 @@ useEffect(() => {
 (3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
 (4) Higher-Order Components to compose in cross-cutting concerns that are shared by all or most of my application views, such as the Redux provider, a common layout provider, a configuration provider, authentication/authorization, i18n, and so on. <br/>
 (5) React also has its own hook. 
-
-
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
 
@@ -1058,7 +1053,6 @@ const content = posts.map((post) =>
 
 ### **Why Don't Recommend To Use Indexes As Keys?**
 > - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-
 > - Related Reference : [Why do I need Keys in React Lists?
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
@@ -1098,6 +1092,8 @@ Hello = () => {
 }
 ```
 
+<br/>
+
 > - It increases performance because it `reduces the number of render operation` in the application.
 > - For class components react provides `React.PureComponent` base class.
 ```
@@ -1107,6 +1103,10 @@ class MyComponent extends PureComponent{
    }
 }
 ```
+
+<br/>
+
+
 > - For Functional component react provides `React.memo HOC (Higher Order Component)`.
 ```
 const MyComponent = React.memo(function MyComponent(props) {
@@ -1125,10 +1125,10 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **Explain How React Rendering works?**
-(1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
-(2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
-(3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
-(4) React then applies all the calculated changes to the DOM.
+> - (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
+> - (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
+> - (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
+> - (4) React then applies all the calculated changes to the DOM.
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 
 <br/>
@@ -1165,7 +1165,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 ### **What Is A React Router?**
 > - Is a package which is used to create Routing.
 > - React Router, and dynamic, client-side routing, allows us to `build a SPA(single-page web application) with navigation without the page refreshing as the user navigates`.
-<br/><br/>
+> 
+<br/>
 
 ### **How Is Routing in React Different From Conventional Routing?**
 | | React Routing | Conventional Routing |
@@ -1181,7 +1182,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 ### **What Is React Fiber?**
 > - The core of React algorithm. 
 > - The main goal of React Fiber is to ensure that there are `incremental rendering facilities for the virtual DOM`.
-<br/><br/>
+
+<br/>
 
 ### **What Are Fragments?**
 > - A common pattern in React is for a `component to return multiple elements`. Fragments let you group a list of children `without adding extra nodes to the DOM`.
