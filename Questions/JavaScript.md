@@ -382,7 +382,7 @@ a = 20  // TypeError: Assignment to constant variable.
 
 ### **What Is Block Scope And Function Scope?**
 
-> - Block scope is everything inside a set of braces `{ a block scope here }`
+> - Block scope is everything inside a set of braces `{a block scope here}`
 > - A block scope is sometimes the same as a function scope.
 
 ```
@@ -644,7 +644,7 @@ console.log( obj.a ); // 123
 > - Control the sequence of function execute.
 
 ```
-window.setTimeout( function(){ ... }, 1000);
+window.setTimeout(function(){ ... }, 1000);
 ```
 
 <br/>
