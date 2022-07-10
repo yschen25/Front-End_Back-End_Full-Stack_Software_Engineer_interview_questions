@@ -55,6 +55,7 @@
 <p align="center">
 <img src="img/google.png" alt="sprite_image" title="sprite_image">
 </p>
+
 <br/>
 
 ### **What Does CSS Reset And CSS Normalize?**
@@ -62,8 +63,9 @@
 > - Every browser has its own default 'user agent' stylesheet, CSS reset and CSS normalize is use `to make it look consistent across browsers`.
 
 ### **What Is The Difference Between CSS Reset And CSS Normalize?**
-> - `CSS reset removes all built-in browser styling`, after assigning the values of margin padding and other attributes to 0. `CSS normalize keeps useful defaults` rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
-> 
+> - `CSS reset removes all built-in browser styling`, after assigning the values of margin padding and other attributes to 0. `CSS normalize keeps useful defaults` rather than unstyling everything and corrects some common bugs that are out of scope for reset.css.
+
+
 <br/>
 
 ### **What Is Float?**
