@@ -202,7 +202,7 @@ const MyComponent = function () {
 
 ### **When Use Functional Components And Class Components?**
 
-**> - **Functional Components** :  <br/>
+> - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
 (2) Don't need to use state  <br/>
 (3) `Create reusable components`  <br/>
@@ -234,39 +234,38 @@ const MyComponent = function () {
 ```
 // Pass props via Functional Component (notice : use props.data)
 const User = (props) => {
-		return(
-				<p>Hello! {props.name}</p>
-		);
+	return(
+		<p>Hello! {props.name}</p>
+	);
 };
 
 class Welcome extends React.Component{
-
-		render(){
-				return(
-						<User name='KaKa'/>
-				)
-		}
+	render() {
+		 return(
+			<User name='KaKa'/>
+		)
+	}
 }
 
 // Pass props via Class Component (notice : use this.props.data)
 class TempPassword extends React.Component{
-		constructor(props){
-    		super(props);
+	constructor(props) {
+    	super(props);
     }
     
-  	render(){
-    		return(
-        		<h1>My password is : {this.props.temPwd}</h1>
-        )
-    }
+    render() {
+       return(
+	      <h1>My password is : {this.props.temPwd}</h1>
+	     )
+      }
 }
 
 class Password extends React.Component{
 
-    render(){
-    		return(
-     				<TempPassword temPwd='123' />   
-        )
+    render() {
+	return(
+		<TempPassword temPwd='123' />   
+	)
     }
 }
 ```
@@ -300,19 +299,16 @@ class Password extends React.Component{
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 ```
 class YourName extends React.Component{
-		constructor(props) {
-    		super(props);
-        
-        this.state = {
-    				name : 'Ka Ka'
-    		}
+	constructor(props) {
+	super(props);
+        this.state = {name : 'Ka Ka'}
     }
     
     render() {
-    		return (
-                <p>My name is {this.state.name}</p>
-        );
-    }
+	return (
+		 <p>My name is {this.state.name}</p>
+	);
+     }
 };
 ```
 <br/>
@@ -327,28 +323,22 @@ class YourName extends React.Component{
 > - setState is asynchronous.
 ```
 class MyComponent extends React.Component{
-		constructor(props){
-    		super(props);
-        
-        this.state = {
-        		text : 'initial text'
-        }
-        
+	constructor(props){
+	super(props);
+        this.state = {text : 'initial text'}
         this.changeText = this.changeText.bind(this);
     }
     
     changeText() {
-    		this.setState({
-        		text : 'Love You 3000 times'
-        })
+    		   this.setState({text : 'Love You 3000 times'})
     }
     
     render(){
-    		return(
-        	<div>
-              <button onClick={this.changeText}>Click Me!</button>
-        	    <h1>{this.state.text}</h1>
-          </div>
+    	return(
+		<div>
+		      <button onClick={this.changeText}>Click Me!</button>
+		      <h1>{this.state.text}</h1>
+		  </div>
         )
     }
 }
@@ -405,11 +395,11 @@ constructor(props) {
     }
     
     render() {
-    		return (
-		    <div>
-			<button onClick={this.addCount}>Click Me!</button>
-			<h1>{this.state.count}</h1>
-		    </div>
+	return (
+	    <div>
+		<button onClick={this.addCount}>Click Me!</button>
+		<h1>{this.state.count}</h1>
+	    </div>
         )
     }
 ```
