@@ -1021,22 +1021,22 @@ class MyForm extends React.Component {
 }
 
 ReactDOM.render(<MyForm />, document.getElementById("container"));
-
 ```
+
+<br/>
+
 it needs to add onChange handler to listen to the input value.
 
 ```
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
-    // 利用 this.state 設定 input 預設值
-    this.state = { text: "Hello" };
+    this.state = {text: "Hello"};
     this.changeState = this.changeState.bind(this);
   }
 
   changeState(e) {
     this.setState({
-      // e.target 是觸發事件當前的 DOM
       text: e.target.value
     });
   }
@@ -1045,7 +1045,6 @@ class MyForm extends React.Component {
     return (
       <form>
         <label>Text : </label>
-        {/* onChange 去監聽 input 值變化來更新 state*/}
         <input
           name="text"
           value={this.state.text}
