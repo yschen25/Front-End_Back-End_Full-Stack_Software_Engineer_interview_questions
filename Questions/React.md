@@ -1025,7 +1025,7 @@ ReactDOM.render(<MyForm />, document.getElementById("container"));
 
 <br/>
 
-it needs to add onChange handler to listen to the input value.
+It needs to add onChange handler to listen to the input value.
 
 ```
 class MyForm extends React.Component {
