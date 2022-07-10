@@ -76,6 +76,7 @@ const JSX = (
 
 ReactDOM.render(JSX, document.getElementById("container"));
 
+
 // Self-closing tags
 class MyComponent extends React.Component {
   render() {
@@ -91,6 +92,7 @@ class MyComponent extends React.Component {
 
 ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
+
 // Comments
 /* This is a comment */
 // This is also a comment
@@ -103,6 +105,7 @@ const JSX = (
 );
 
 ReactDOM.render(JSX, document.getElementById("container"));
+
 
 // Js in JSX
 let text = "React";
@@ -118,11 +121,13 @@ const JSX = (
 
 ReactDOM.render(JSX, document.getElementById("container"));
 
+
 // Ternary operator
 let i = -1;
 const JSX = <div>{i > 0 ? <div>Hello</div> : <div>React</div>}</div>;
 
 ReactDOM.render(JSX, document.getElementById("container"));
+
 
 // CamelCase
 class MyHeader extends React.Component {
@@ -173,13 +178,24 @@ ReactDOM.render(<MyHeader />, document.getElementById("container"));
 const MyComponent = function () {
   return <h1>Functional Component</h1>;
 };
-
 ```
 <br/>
 
 > - **Class Components** : <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
-(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`  (ref:8). In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor, 
+```
+class MyComponent extends React.Component {
+  render() {
+    return <h1>{this.props.text}</h1>;
+  }
+}
+
+ReactDOM.render(
+  <MyComponent text="hey" />,
+  document.getElementById("container")
+);
+```
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 
 <br/>
@@ -240,6 +256,7 @@ class Welcome extends React.Component {
   }
 }
 
+
 // Pass props via Class Component (notice : use this.props.data)
 class TempPassword extends React.Component {
   constructor(props) {
@@ -269,8 +286,28 @@ class Password extends React.Component {
 <br/>
 
 ### **What Are PropTypes And DefaultProps?**
-> - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
-> - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
+> - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode.
+```
+const SayMyName = (props) => {
+  return <p>My name is {props.name}</p>;
+};
+
+SayMyName.defaultProps = {name: "Default Name"};
+SayMyName.propTypes = {name: PropTypes.string};
+
+ReactDOM.render(<SayMyName />, document.getElementById("container"));
+```
+
+> - DefaultProps : You can `define default values` for props by assigning defaultProps.
+```
+const SayMyName = (props) => {
+  return <p>My name is {props.name}</p>;
+};
+
+SayMyName.defaultProps = {name: "Default Name"};
+
+ReactDOM.render(<SayMyName />, document.getElementById("container"));
+```
 
 <br/>
 
@@ -366,61 +403,23 @@ class MyComponent extends React.Component {
 
 
 ### **How To Bind The Function?**
-> - Class component : Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
+> - Class component : Bind in constructor
 
 ```
-constructor(props) {
-        super(props);
-        this.state = {count: 0};
-        this.addCount = this.addCount.bind(this);
-    }
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+    this.addCount = this.addCount.bind(this);
+  }
 
-    addCount() {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
-    
-    render() {
-	return (
-	    <div>
-		<button onClick={this.addCount}>Click Me!</button>
-		<h1>{this.state.count}</h1>
-	    </div>
-        )
-    }
-```
-<br/>
-
-> - Class component : Bind in render : https://jsfiddle.net/yschen25/otd36q24/
-```
-addCount() {
+  addCount() {
     this.setState({
       count: this.state.count + 1
     });
   }
 
-render() {
-    return (
-      <div>
-        <button onClick={this.addCount.bind(this)}>Click Me!</button>
-        <h1>{this.state.count}</h1>
-      </div>
-    );
-  }
-```
-<br/>
-
-
-> -  Class component : use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
-```
-addCount() {
-    this.setState({
-      count: this.state.count + 1
-    });
-  }
-
-render() {
+  render() {
     return (
       <div>
         <button onClick={this.addCount}>Click Me!</button>
@@ -428,6 +427,71 @@ render() {
       </div>
     );
   }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+
+```
+<br/>
+
+> - Class component : Bind in render
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+  }
+
+  addCount() {
+    this.setState({
+      count: this.state.count + 1
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addCount.bind(this)}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+
+```
+<br/>
+
+
+> -  Class component: use arrow function
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0
+    };
+  }
+
+  addCount = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addCount}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
 ```
 <br/>
 
