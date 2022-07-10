@@ -180,6 +180,8 @@ console.log(avg(1, 3, 5, 7, 9));  // 5
 > - Related Reference : [[筆記] JavaScript ES6 中的展開運算子（spread operator）和其餘運算子（rest operator）](https://pjchender.blogspot.com/2017/01/es6-spread-operatorrest-operator.html)
 >   <br/>
 
+<br/>
+
 ### **What Is Destructuring Assignment?**
 
 > - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -235,7 +237,7 @@ console.log(arr);
 | ------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------ |
 |         | Array, string                                                            | Array                                                                                      | String                               |
 |         | Return a new array object selected from begin to end (end not included). | Changes the contents of an array by removing existing elements and/or adding new elements. | Splits a string object into an array |
-|         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    | ddd                                  |
+|         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    |                                  |
 |         | **NOT** changes the original array                                       | **CHANGES** the original array                                                             | **NOT** changes the original array   |
 
 ```
@@ -243,7 +245,7 @@ let arr = [1, 2, 3, 4, 5];
 
 // Slice
 console.log(arr.slice(0)) // [1, 2 ,3 , 4, 5]
-console.log( arr.slice(2, 4)) // [3, 4]
+console.log(arr.slice(2, 4)) // [3, 4]
 console.log(arr.slice(-2)) // [4, 5]
 
 // Splice
@@ -261,7 +263,7 @@ console.log(arr5) // [1, 2, 3]
 ```
 
 
-> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), ([Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
+> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), [Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
 
 <br/>
 
@@ -380,7 +382,7 @@ a = 20  // TypeError: Assignment to constant variable.
 
 ### **What Is Block Scope And Function Scope?**
 
-> - Block scope is everything inside a set of braces `{ a block scope here }`
+> - Block scope is everything inside a set of braces `{a block scope here}`
 > - A block scope is sometimes the same as a function scope.
 
 ```
@@ -642,7 +644,7 @@ console.log( obj.a ); // 123
 > - Control the sequence of function execute.
 
 ```
-window.setTimeout( function(){ ... }, 1000);
+window.setTimeout(function(){ ... }, 1000);
 ```
 
 <br/>
