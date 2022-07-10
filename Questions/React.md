@@ -190,7 +190,7 @@ const MyComponent = function () {
 
 ### **What Is The Difference Between Functional Components And Class Components?**
 
-**|  Functional Components | Class Components |
+|  Functional Components | Class Components |
 |---|---|
 | Calculates the internal state of the components | Stores info about component’s state change in memory |
 | Do not have the authority to change state | Have authority to change state |
