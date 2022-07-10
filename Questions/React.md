@@ -743,7 +743,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 ### **What Are Alternatives To Redux?**
-> - MobX, RxJs, apollo client + graphQL
+> - MobX, RxJs.
 
 <br/>
 
