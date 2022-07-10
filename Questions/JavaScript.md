@@ -1469,13 +1469,15 @@ a();
 
 ### **What Is Stack Overflow?**
 
+> - A stack overflow is a runtime error that happens when a program runs out of memory in the call stack.
+
 <br/>
 
 
 ### **What Is Callback/Event/Task Queue?**
 
 > -  This is where the `asynchronous code` gets pushed to, and waits for the execution.
->  - Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.
+> - Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.
 
 <br/>
 
