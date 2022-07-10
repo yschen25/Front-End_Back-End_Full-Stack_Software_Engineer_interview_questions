@@ -339,7 +339,7 @@ class YourName extends React.Component {
 ```
 <br/>
 
-### **When Use State ?**
+### **When Use State?**
 > - To store the data your current page needs in your controller-view.
 <br/>
 
@@ -399,7 +399,7 @@ class MyComponent extends React.Component {
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you `need to access props, state on the class`, then you would need to bind it.
 > - Related Reference : [why do you need to bind a function in a constructor
-](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?**](**https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?**](**https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?**so**urce=post_page---------------------------)
+](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?**so**urce=post_page---------------------------)
 
 <br/>
 
@@ -637,7 +637,7 @@ componentDidCatch(error, info) {
 <br/>
 
 
-### **Axios**
+### **What Is Axios?**
 > - To send HTTP requests from (client-side) JavaScript. <br/>
 (1) Make XMLHttpRequests from the browser <br/>
 (2) Make http requests from node.js <br/>
@@ -707,7 +707,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main)
 **(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
 **(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
 **(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
-**(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
+**(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
 **(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
 **(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
 **(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
@@ -727,13 +727,13 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 ### **What Are The Strengths And Weaknesses Of Redux?**
 
 > - **Strengths** : <br/>
-(1) **Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
-(2) **Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
-(3) **Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
-(4) **Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
+**(1) Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
+**(2) Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
+**(3) Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
+**(4) Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
 Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it. <br/>
-(5) **Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
-(6) **Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+**(5) Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
+**(6) Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
 > - **Weaknesses** : <br/>
@@ -836,7 +836,39 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - `Use state and props to manage components instead using refs`. (ref:18)
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
 > - Refs can't use in functional components, `only for class components`.
-> - Example : https://jsfiddle.net/yschen25/ewdtvn5b/9/
+
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.focus = this.focus.bind(this);
+  }
+
+  focus() {
+    this.refs.myInput.focus();
+  }
+
+  /* focus = () => this.textInput.focus(); */
+
+  render() {
+    return (
+      <div>
+        <h1>Refs</h1>
+        <input type="text" ref="myInput" />
+        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.focus}
+        />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+```
+
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 
 <br/>
@@ -900,16 +932,15 @@ const [count, addCount] = useState(0);
 (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
 (2.1) The first an anonymous callback function that houses your useEffect logic.
 
-```
-useEffect(() => {
-    console.log('This is like componentDidMount')
-    
-    return () => {
-      console.log('This is like componentWillUnmount') // clear something
-    };
-  });
-```
-<br/>
+	```
+	useEffect(() => {
+	    console.log('This is like componentDidMount')
+
+	    return () => {
+	      console.log('This is like componentWillUnmount') // clear something
+	    };
+	  });
+	```
  
 (2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
@@ -980,7 +1011,55 @@ useEffect(() => {
 (1) `Control by status or props`. <br/> 
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
 (3) Controls the values of input elements in a form using setState(). <br/> 
-(4) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
+(4) The input value can't not be control by user.
+
+```
+class MyForm extends React.Component {
+  render() {
+    return <input value="Hello"></input>;
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+
+```
+it needs to add onChange handler to listen to the input value.
+
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    // 利用 this.state 設定 input 預設值
+    this.state = { text: "Hello" };
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(e) {
+    this.setState({
+      // e.target 是觸發事件當前的 DOM
+      text: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <form>
+        <label>Text : </label>
+        {/* onChange 去監聽 input 值變化來更新 state*/}
+        <input
+          name="text"
+          value={this.state.text}
+          onChange={this.changeState}
+        />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+
+```
+
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
@@ -1050,6 +1129,8 @@ const content = posts.map((post) =>
     title={post.title} />
 );
 ```
+
+<br/>
 
 ### **Why Don't Recommend To Use Indexes As Keys?**
 > - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
@@ -1169,12 +1250,12 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 ### **How Is Routing in React Different From Conventional Routing?**
-| | React Routing | Conventional Routing |
-|---|---|---|
-| | Single HTML page | Each view is a new HTML file |
-| | User navigates multiple view in the same file | User navigates multiple files for each view |
-| | The page does not refresh since it's a single file | The page refreshes every time user navigates |
-| | Improved performance | Slower performance|
+| React Routing | Conventional Routing |
+|---|---|
+| Single HTML page | Each view is a new HTML file |
+| User navigates multiple view in the same file | User navigates multiple files for each view |
+| The page does not refresh since it's a single file | The page refreshes every time user navigates |
+| Improved performance | Slower performance|
 
 <br/>
 
