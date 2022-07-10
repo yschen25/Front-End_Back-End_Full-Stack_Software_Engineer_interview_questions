@@ -1,6 +1,6 @@
 # React Questions
 
-### **What And When Use React.js?**
+### **What And When To Use React.js?**
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and state changes` instead of building a simple web.
 > - Related Reference : [What is React?](**https://www.simplilearn.com/what-is-react-article)
@@ -35,7 +35,7 @@
 
 <br/>
 
-### **What IsWeakness Of React.js?**
+### **What Is Weakness Of React.js?**
 > - React focus on view, lacking of route, ajax, async promise, etc. <br/>
 > - Coding gets complex as it uses inline templating and JSX.
 
@@ -173,9 +173,9 @@ ReactDOM.render(<MyHeader />, document.getElementById('container'));
 
 ```
 const MyComponent = function () {
-		return (
-				<h1>Functional Component</h1>
-		);
+    return (
+	    <h1>Functional Component</h1>
+    );
 };
 ```
 <br/>
