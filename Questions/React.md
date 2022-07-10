@@ -319,7 +319,7 @@ ReactDOM.render(<SayMyName />, document.getElementById("container"));
 <br/>
 
 
-### ** What Is State ?**
+### **What Is State?**
 > - The state is a data structure that starts with a `default value` when a component mounts.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 ```
