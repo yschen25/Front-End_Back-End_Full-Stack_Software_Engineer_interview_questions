@@ -24,7 +24,7 @@
 <br/>
 
 
-### **What Is Strength React.js?**
+### **What Is The Strength Of React.js?**
 > - Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 > - It follows the `component based` approach which helps in building reusable UI components, it save the time and repeat working.  <br/>
 > - `Uni-directional data flow` make it becomes `easier to debug errors and know where a problem occurs` in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
@@ -35,7 +35,7 @@
 
 <br/>
 
-### **What Is Weakness Of React.js?**
+### **What Is The Weakness Of React.js?**
 > - React focus on view, lacking of route, ajax, async promise, etc. <br/>
 > - Coding gets complex as it uses inline templating and JSX.
 
