@@ -1061,7 +1061,7 @@ const content = posts.map((post) =>
 > - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
 
 > - Related Reference : [Why do I need Keys in React Lists?
-]**(https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
 <br/>
 
@@ -1125,7 +1125,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 
-### **Explain How React Rendering works?  **<br/>
+### **Explain How React Rendering works?**
 (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
 (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
 (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
