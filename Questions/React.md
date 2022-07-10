@@ -68,76 +68,74 @@
 ```
 // Return one element
 const JSX = (
-	<div>
-	  	<h1>Hello React!</h1>
-    		<p>Learning JSX</p>
-	</div>
-)
+  <div>
+    <h1>Hello React!</h1>
+    <p>Learning JSX</p>
+  </div>
+);
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
 
 // Self-closing tags
 class MyComponent extends React.Component {
   render() {
     return (
-      		<div>
-      			<h1>React</h1>
-			<br/>
-      			<p>self-closing tags</p>
-      		</div>
+      <div>
+        <h1>React</h1>
+        <br />
+        <p>self-closing tags</p>
+      </div>
     );
   }
 }
 
-ReactDOM.render(<MyComponent />, document.getElementById('container'));
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
-// Comments 
+// Comments
 /* This is a comment */
 // This is also a comment
 const JSX = (
-		<div>
-			<h1>Hello React!</h1>
-			<p>Learning Comment</p>
-			{/* I am a comment inside JSX!*/}
-		</div>
-)
+  <div>
+    <h1>Hello React!</h1>
+    <p>Learning Comment</p>
+    {/* I am a comment inside JSX!*/}
+  </div>
+);
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
 
-// Js in JSX 
-let text = 'React';
+// Js in JSX
+let text = "React";
 let number = 30;
 const JSX = (
-	<div>
-	  	<h1>Hello React!</h1>
-    		<p>Learing {text} for {number} days</p>
-	</div>
-)
+  <div>
+    <h1>Hello React!</h1>
+    <p>
+      Learing {text} for {number} days
+    </p>
+  </div>
+);
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
 
 // Ternary operator
 let i = -1;
-const JSX = (
-	<div>
-      		{i > 0 ? <div>Hello</div> : <div>React</div>}
-  	</div>
-);
+const JSX = <div>{i > 0 ? <div>Hello</div> : <div>React</div>}</div>;
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
 
 // CamelCase
 class MyHeader extends React.Component {
   render() {
     return (
-	      <div>
-		<h1 className='title'>React Style 1</h1>
-	      </div>
+      <div>
+        <h1 className="title">React Style 1</h1>
+      </div>
     );
   }
 }
 
-ReactDOM.render(<MyHeader />, document.getElementById('container'));
+ReactDOM.render(<MyHeader />, document.getElementById("container"));
 ```
 
 <br/>
@@ -173,10 +171,9 @@ ReactDOM.render(<MyHeader />, document.getElementById('container'));
 
 ```
 const MyComponent = function () {
-    return (
-	    <h1>Functional Component</h1>
-    );
+  return <h1>Functional Component</h1>;
 };
+
 ```
 <br/>
 
@@ -234,39 +231,30 @@ const MyComponent = function () {
 ```
 // Pass props via Functional Component (notice : use props.data)
 const User = (props) => {
-	return(
-		<p>Hello! {props.name}</p>
-	);
+  return <p>Hello! {props.name}</p>;
 };
 
-class Welcome extends React.Component{
-	render() {
-		 return(
-			<User name='KaKa'/>
-		)
-	}
+class Welcome extends React.Component {
+  render() {
+    return <User name="KaKa" />;
+  }
 }
 
 // Pass props via Class Component (notice : use this.props.data)
-class TempPassword extends React.Component{
-	constructor(props) {
-    	super(props);
-    }
-    
-    render() {
-       return(
-	      <h1>My password is : {this.props.temPwd}</h1>
-	     )
-      }
+class TempPassword extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <h1>My password is : {this.props.temPwd}</h1>;
+  }
 }
 
-class Password extends React.Component{
-
-    render() {
-	return(
-		<TempPassword temPwd='123' />   
-	)
-    }
+class Password extends React.Component {
+  render() {
+    return <TempPassword temPwd="123" />;
+  }
 }
 ```
 
@@ -298,18 +286,17 @@ class Password extends React.Component{
 > - The state is a data structure that starts with a `default value` when a component mounts.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 ```
-class YourName extends React.Component{
-	constructor(props) {
-	super(props);
-        this.state = {name : 'Ka Ka'}
-    }
-    
-    render() {
-	return (
-		 <p>My name is {this.state.name}</p>
-	);
-     }
-};
+class YourName extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "Ka Ka" };
+  }
+
+  render() {
+    return <p>My name is {this.state.name}</p>;
+  }
+}
+
 ```
 <br/>
 
@@ -322,25 +309,25 @@ class YourName extends React.Component{
 >- State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 ```
-class MyComponent extends React.Component{
-	constructor(props){
-	super(props);
-        this.state = {text : 'initial text'}
-        this.changeText = this.changeText.bind(this);
-    }
-    
-    changeText() {
-    		   this.setState({text : 'Love You 3000 times'})
-    }
-    
-    render(){
-    	return(
-		<div>
-		      <button onClick={this.changeText}>Click Me!</button>
-		      <h1>{this.state.text}</h1>
-		  </div>
-        )
-    }
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { text: "initial text" };
+    this.changeText = this.changeText.bind(this);
+  }
+
+  changeText() {
+    this.setState({ text: "Love You 3000 times" });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.changeText}>Click Me!</button>
+        <h1>{this.state.text}</h1>
+      </div>
+    );
+  }
 }
 ```
 
@@ -408,38 +395,39 @@ constructor(props) {
 > - Class component : Bind in render : https://jsfiddle.net/yschen25/otd36q24/
 ```
 addCount() {
-        this.setState({
-            count: this.state.count + 1
-        });
-    };
+    this.setState({
+      count: this.state.count + 1
+    });
+  }
 
-    render() {
-        return (
-            <div>
-                <button onClick={this.addCount.bind(this)}>Click Me!</button>
-                <h1>{this.state.count}</h1>
-            </div>
-         )
-     }
+render() {
+    return (
+      <div>
+        <button onClick={this.addCount.bind(this)}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
 ```
 <br/>
 
 
 > -  Class component : use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
 ```
-addCount = () => {
-    this.setState({ 
-        count: this.state.count + 1 
+addCount() {
+    this.setState({
+      count: this.state.count + 1
     });
-    
-    render() {
-    	return(
-             <div>
-	        <button onClick={this.addCount}>Click Me!</button>
-	        <h1>{this.state.count}</h1>
-             </div>
-          )
-      }
+  }
+
+render() {
+    return (
+      <div>
+        <button onClick={this.addCount}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
 ```
 <br/>
 
@@ -484,23 +472,23 @@ addCount = () => {
 (1) **constructor()** : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
 ```
-constructor(props){
-        super(props);
-        this.state = {
-            name: "ReactJS"
-        }
-        this.updateName = this.updateName.bind(this);
-    }
+constructor(props) {
+    super(props);
+    this.state = {
+      name: "ReactJS"
+    };
+    this.updateName = this.updateName.bind(this);
+}
 ```
 <br/>
 
 (2) **static getDerivedStateFromProps()** : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
 ```
- static getDerivedStateFromProps(props, state){
-        return {
-            name: props.name
-        }
-    }
+static getDerivedStateFromProps(props, state) {
+    return {
+      name: props.name
+    };
+}
 ```
 <br/>
 
@@ -509,7 +497,7 @@ Don't make API request, put any action that needs to occur only once in the life
 ```
 render() {
     return <div>My Component</div>;
-  }
+}
 ```
 <br/>
 
