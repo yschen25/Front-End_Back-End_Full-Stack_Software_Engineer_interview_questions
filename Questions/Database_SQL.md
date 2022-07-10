@@ -1,6 +1,6 @@
 # Database / SQL Questions
 
-### **What Is a Database Join Used For And What Are The Different Types Of Join? 
+### **What Is a Database Join Used For And What Are The Different Types Of Join?**
 > - Joining the tables makes us easy to query.
 > - inner join, outer join, left join, right join.
 
