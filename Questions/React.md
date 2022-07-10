@@ -972,7 +972,7 @@ useEffect(() => {
 
 3. useContext() :  <br/>
 (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4 <br/>
+(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
 
 4. useReducer() : lets you handle state updates using reducers without a Redux store.
 
