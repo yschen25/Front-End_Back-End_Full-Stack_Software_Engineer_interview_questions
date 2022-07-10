@@ -263,7 +263,7 @@ console.log(arr5) // [1, 2, 3]
 ```
 
 
-> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), ([Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
+> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), [Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
 
 <br/>
 
