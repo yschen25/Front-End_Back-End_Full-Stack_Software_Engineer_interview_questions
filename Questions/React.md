@@ -69,8 +69,8 @@
 // Return one element
 const JSX = (
 	<div>
-	  <h1>Hello React!</h1>
-    <p>Learning JSX</p>
+	  	<h1>Hello React!</h1>
+    		<p>Learning JSX</p>
 	</div>
 )
 
@@ -80,11 +80,11 @@ ReactDOM.render(JSX, document.getElementById('container'));
 class MyComponent extends React.Component {
   render() {
     return (
-      <div>
-      <h1>React</h1>
+      		<div>
+      			<h1>React</h1>
 			<br/>
-      <p>self-closing tags</p>
-      </div>
+      			<p>self-closing tags</p>
+      		</div>
     );
   }
 }
@@ -95,11 +95,11 @@ ReactDOM.render(<MyComponent />, document.getElementById('container'));
 /* This is a comment */
 // This is also a comment
 const JSX = (
-	<div>
-	  <h1>Hello React!</h1>
-    <p>Learning Comment</p>
-    {/* I am a comment inside JSX!*/}
-	</div>
+		<div>
+			<h1>Hello React!</h1>
+			<p>Learning Comment</p>
+			{/* I am a comment inside JSX!*/}
+		</div>
 )
 
 ReactDOM.render(JSX, document.getElementById('container'));
@@ -109,8 +109,8 @@ let text = 'React';
 let number = 30;
 const JSX = (
 	<div>
-	  <h1>Hello React!</h1>
-    <p>Learing {text} for {number} days</p>
+	  	<h1>Hello React!</h1>
+    		<p>Learing {text} for {number} days</p>
 	</div>
 )
 
@@ -120,8 +120,8 @@ ReactDOM.render(JSX, document.getElementById('container'));
 let i = -1;
 const JSX = (
 	<div>
-      	{ i > 0 ? <div>Hello</div> : <div>React</div>}
-  </div>
+      		{i > 0 ? <div>Hello</div> : <div>React</div>}
+  	</div>
 );
 
 ReactDOM.render(JSX, document.getElementById('container'));
@@ -130,9 +130,9 @@ ReactDOM.render(JSX, document.getElementById('container'));
 class MyHeader extends React.Component {
   render() {
     return (
-      <div>
-      <h1 className='title'>React Style 1</h1>
-      </div>
+	      <div>
+		<h1 className='title'>React Style 1</h1>
+	      </div>
     );
   }
 }
