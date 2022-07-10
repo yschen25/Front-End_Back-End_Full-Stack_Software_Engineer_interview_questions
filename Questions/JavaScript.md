@@ -180,6 +180,8 @@ console.log(avg(1, 3, 5, 7, 9));  // 5
 > - Related Reference : [[筆記] JavaScript ES6 中的展開運算子（spread operator）和其餘運算子（rest operator）](https://pjchender.blogspot.com/2017/01/es6-spread-operatorrest-operator.html)
 >   <br/>
 
+<br/>
+
 ### **What Is Destructuring Assignment?**
 
 > - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
