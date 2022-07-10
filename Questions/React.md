@@ -184,6 +184,7 @@ const MyComponent = function () {
 > - **Class Components** : <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
 (2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor, 
+(3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 ```
 class MyComponent extends React.Component {
   render() {
@@ -196,7 +197,6 @@ ReactDOM.render(
   document.getElementById("container")
 );
 ```
-(3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 
 <br/>
 
