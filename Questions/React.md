@@ -298,6 +298,8 @@ SayMyName.propTypes = {name: PropTypes.string};
 ReactDOM.render(<SayMyName />, document.getElementById("container"));
 ```
 
+<br/>
+
 > - DefaultProps : You can `define default values` for props by assigning defaultProps.
 ```
 const SayMyName = (props) => {
@@ -326,7 +328,7 @@ ReactDOM.render(<SayMyName />, document.getElementById("container"));
 class YourName extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "Ka Ka" };
+    this.state = {name: "Ka Ka"};
   }
 
   render() {
@@ -349,12 +351,12 @@ class YourName extends React.Component {
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { text: "initial text" };
+    this.state = {text: "initial text"};
     this.changeText = this.changeText.bind(this);
   }
 
   changeText() {
-    this.setState({ text: "Love You 3000 times" });
+    this.setState({text: "Love You 3000 times"});
   }
 
   render() {
@@ -579,7 +581,7 @@ The modification phase can be triggered using three methods :  <br/>
 (2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. (ref:22)
 ```
 shouldComponentUpdate(nextProps, nextState){
-    if(this.state.name === nextState.name) { return false; }
+    if(this.state.name === nextState.name) {return false;}
   }
 ```
 
@@ -591,7 +593,7 @@ shouldComponentUpdate(nextProps, nextState){
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
-          this.setState({ name: "Angular" })
+          this.setState({name: "Angular"})
       }
   }
 ```
@@ -610,7 +612,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 (1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. `You can update the state depending on the error`, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
-    return { error: error.message };
+    return {error: error.message};
   }
 ```
 
@@ -722,7 +724,8 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 <br/>
 
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
-<br/><br/>
+
+<br/>
 
 ### **What Are The Strengths And Weaknesses Of Redux?**
 
@@ -750,13 +753,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 ### **What is MobX?**
 > - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
 > - The state is mutable, meaning you can simply update the state with new values.
-
 > - Comes with much less boilerplate code in comparison to Redux, making MobX easier to learn and set up.
-
 > - Anything derived from the state without any further interaction is a derivation
 > - Actions are any piece of code that changes the state
 > - All derivations update automatically and atomically when the state changes
-
 > - Related Reference : [Redux vs. MobX: Which performs better?](**https://blog.logrocket.com/redux-vs-mobx/)
 
 <br/>
@@ -782,8 +782,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **What Is A Styled Component?**
->** - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
+### **What Is Styled Component?**
+> - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
 > - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
@@ -791,14 +791,14 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 ### **What Are The Strengths And Weaknesses Of Styled Components?**
 > - **Strength**
-> - **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
-> - **Painless Maintenance**: You don't have maintain mutiple CSS files.
-> - **Semantic Element**: You can know the meaning of the element by its name.
+(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
+(2) Painless Maintenance: You don't have maintain mutiple CSS files.
+(3) Semantic Element: You can know the meaning of the element by its name.
 
 > - **Weakness**
-> - Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug.
-> - Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props.
-> - Related Reference : [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
+(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug.
+(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props.
+(3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
 
@@ -863,20 +863,19 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
-(3) Example: 
 
 Before hook
 ```
 class ClickClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = {count: 0};
     this.click = this.click.bind(this);
   }
 
   click() {
     this.state.count++;
-    this.setState({ count: this.state.count });
+    this.setState({count: this.state.count});
   }
 
   render() {
@@ -903,7 +902,7 @@ const [count, addCount] = useState(0);
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
 
-① The first an anonymous callback function that houses your useEffect logic.
+(2.1) The first an anonymous callback function that houses your useEffect logic.
 ```
 useEffect(() => {
     console.log('This is like componentDidMount')
@@ -915,9 +914,9 @@ useEffect(() => {
 ```
 <br/>
  
-② The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
+(2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
-- Running every time. <br/>
+Running every time. <br/>
 ```
 useEffect(() => {
 	console.log('Runs every time');
@@ -926,7 +925,7 @@ useEffect(() => {
 
 <br/>
 
- - Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
+Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
 ```
 useEffect(() => {
 	console.log('This only runs once');
@@ -934,7 +933,7 @@ useEffect(() => {
 ```
 <br/>
 
- - Using effects when things change (componentDidUpdate) : 
+Using effects when things change (componentDidUpdate) : 
 ```
 useEffect(() => {
 	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
@@ -959,9 +958,7 @@ useEffect(() => {
 > - For a smaller project, use React Hooks instead of Redux <br/>
 (1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
 (2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity. 
-
 > - For a bigger project, use React Hooks and Redux in duck pattern  (combine reducer, action types, and action to one file)
-
 > - React Hooks can’t replace Redux, which one we need to use it depends on the project. <br/>
 (1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
 (2) Have the ability to use middleware to deal with some async tasks. <br/>
@@ -976,7 +973,7 @@ useEffect(() => {
 <br/>
 
 
-### **What Is The Difference Between React And React Native?**
+### **What Are The Differences Between React And React Native?**
 > - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
@@ -1032,7 +1029,7 @@ ReactDOM.render(<MyForm />, document.getElementById("container"));
 <br/><br/>
 
 ### **When Use Controlled Components Or Uncontrolled Components?**
-|** Functions | Controlled Components | Uncontrolled Components |
+|Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
 | Submit validation | O  | O  |
@@ -1067,7 +1064,7 @@ const content = posts.map((post) =>
 
 <br/>
 
-### **What Are Some Exceptions Where It Is Safe To Use Index As Key?
+### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
 > - If your `list is static` (no additions/re-ordering/removal to the list).
 
 <br/>
@@ -1110,7 +1107,7 @@ class MyComponent extends PureComponent{
    }
 }
 ```
-> - For Functional component react provides `React.memo HOC (Higher Order Component) (ref:20)`.
+> - For Functional component react provides `React.memo HOC (Higher Order Component)`.
 ```
 const MyComponent = React.memo(function MyComponent(props) {
    return '';
@@ -1171,7 +1168,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/><br/>
 
 ### **How Is Routing in React Different From Conventional Routing?**
-|** SN | React Routing | Conventional Routing |
+| | React Routing | Conventional Routing |
 |---|---|---|
 | | Single HTML page | Each view is a new HTML file |
 | | User navigates multiple view in the same file | User navigates multiple files for each view |
