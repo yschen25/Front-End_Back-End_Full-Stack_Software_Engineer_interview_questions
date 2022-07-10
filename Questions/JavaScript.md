@@ -237,7 +237,7 @@ console.log(arr);
 | ------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------ |
 |         | Array, string                                                            | Array                                                                                      | String                               |
 |         | Return a new array object selected from begin to end (end not included). | Changes the contents of an array by removing existing elements and/or adding new elements. | Splits a string object into an array |
-|         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    | ddd                                  |
+|         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    |                                  |
 |         | **NOT** changes the original array                                       | **CHANGES** the original array                                                             | **NOT** changes the original array   |
 
 ```
