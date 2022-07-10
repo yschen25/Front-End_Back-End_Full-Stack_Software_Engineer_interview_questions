@@ -894,7 +894,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
 
 ```
-// Before hook
+// Before using hook
 class ClickClass extends React.Component {
   constructor(props) {
     super(props);
@@ -921,8 +921,22 @@ ReactDOM.render(<ClickClass />, document.querySelector("#app"));
 ```
 
 ```
-// After hook 
-const [count, addCount] = useState(0);
+// After using hook 
+function ClickClass() {
+  const [count, addCount] = useState(0);
+
+  const click = () => {
+    addCount(count + 1);
+  };
+
+  return (
+    <div>
+      <label> You clicked {count} times!</label>
+      <input type="submit" value="Click" onClick={click} />
+    </div>
+  );
+}
+
 ```
 
 <br/>
