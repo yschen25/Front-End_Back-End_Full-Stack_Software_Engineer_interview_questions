@@ -371,7 +371,7 @@ class MyComponent extends React.Component {
 <br/>
 
 
-### **What Is The Difference Between Props And State?**
+### **What Are The Differences Between Props And State?**
 
 |  Conditions | State | Props |
 |---|---|---|
@@ -379,7 +379,7 @@ class MyComponent extends React.Component {
 | | Mutable | Immutable |
 | | Can be modified using setState() method | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
-| | Can only be used with class Components (ref:17.2) | Can be used with both class as well as functional components |
+| | Can only be used with class Components | Can be used with both class as well as functional components |
 
 <br/>
 
@@ -623,7 +623,7 @@ componentDidCatch(error, info) {
 <br/>
 
 ### **Why static getDerivedStateFromProps() Is Static?**
->** - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
+> - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
 
 <br/>
 
@@ -724,9 +724,9 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
 <br/><br/>
 
-12.2 What Are The Strengths And Weaknesses Of Redux?
+### **What Are The Strengths And Weaknesses Of Redux?**
 
-**> - **Strengths** : <br/>
+> - **Strengths** : <br/>
 (1) **Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
 (2) **Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
 (3) **Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
@@ -739,14 +739,16 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - **Weaknesses** : <br/>
 (1) No encapsulation. Any component can access the data which can cause security issues. <br/>
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
-<br/><br/>
 
-12.3 What Are Alternatives To Redux?
->** - MobX, RxJs, apollo client + graphQL
-<br/><br/>
+<br/>
+
+### **What Are Alternatives To Redux?**
+> - MobX, RxJs, apollo client + graphQL
+
+<br/>
 
 ### **What is MobX?**
->** - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
+> - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
 > - The state is mutable, meaning you can simply update the state with new values.
 
 > - Comes with much less boilerplate code in comparison to Redux, making MobX easier to learn and set up.
@@ -756,6 +758,8 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - All derivations update automatically and atomically when the state changes
 
 > - Related Reference : [Redux vs. MobX: Which performs better?](**https://blog.logrocket.com/redux-vs-mobx/)
+
+<br/>
 
 ### **What Is Redux Middleware?**
 <**p align="center">
@@ -783,7 +787,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **What Is Strength And Weakness Of Styled Components?**
+### **What Are The Strengths And Weaknesses Of Styled Components?**
 > - **Strength**
 > - **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
 > - **Painless Maintenance**: You don't have maintain mutiple CSS files.
@@ -803,7 +807,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-14.1 What Is An Enzyme?
+### **What Is An Enzyme?**
 > - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
 > - Enzyme only works with React.
 > - Enzyme must be paired with another test runner.
@@ -857,10 +861,40 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
-(3) Example : Before hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://codesandbox.io/s/reacthookusestate-u65hn)<br/>
+(3) Example: 
+
+Before hook
+```
+class ClickClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+    this.click = this.click.bind(this);
+  }
+
+  click() {
+    this.state.count++;
+    this.setState({ count: this.state.count });
+  }
+
+  render() {
+    return (
+      <div>
+        <label> You clicked {this.state.count} times!</label>
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<ClickClass />, document.querySelector("#app"));
+```
+
+After hook 
 ```
 const [count, addCount] = useState(0);
 ```
+
 <br/>
 
 2. useEffect() : <br/>
@@ -890,7 +924,7 @@ useEffect(() => {
 
 <br/>
 
- - Running an effect once (componentDidMount) : The key to running an effect once is to pass in an empty array. <br/>
+ - Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
 ```
 useEffect(() => {
 	console.log('This only runs once');
@@ -906,8 +940,6 @@ useEffect(() => {
 ```
 <br/>
 
-
-(3) Example : https://tinyurl.com/y6yb643h <br/><br/>
 
 3. useContext() :  <br/>
 (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
@@ -966,7 +998,33 @@ useEffect(() => {
 <br/>
 
 > - **Uncontrolled Components** :   <br/> 
-(1) `Doesn't control by status or props, use ref to control DOM` (https://jsfiddle.net/yschen25/o237p9Ld/).  <br/> 
+(1) `Doesn't control by status or props, use ref to control DOM`.
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.click = this.click.bind(this);
+  }
+
+  click(event) {
+    alert("click : " + this.refs.myInput.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <label>Text : </label>
+        <input defaultValue="Hello" ref="myInput" />
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
 (2) Allow set up the value by defaultValue.  <br/> 
 (3) Easy to use with third party library. 
 <br/><br/>
