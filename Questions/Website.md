@@ -1,4 +1,4 @@
-# Web Questions
+# Website Questions
 
 ### **What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?**
 
