@@ -55,14 +55,17 @@
 <p align="center">
 <img src="img/google.png" alt="sprite_image" title="sprite_image">
 </p>
+
 <br/>
 
 ### **What Does CSS Reset And CSS Normalize?**
 
 > - Every browser has its own default 'user agent' stylesheet, CSS reset and CSS normalize is use `to make it look consistent across browsers`.
 
-4.1 What Is The Difference Between CSS Reset And CSS Normalize?
-> - `CSS reset removes all built-in browser styling`, after assigning the values of margin padding and other attributes to 0. `CSS normalize keeps useful defaults` rather than unstyling everything and corrects some common bugs that are out of scope for             reset.css.
+### **What Is The Difference Between CSS Reset And CSS Normalize?**
+> - `CSS reset removes all built-in browser styling`, after assigning the values of margin padding and other attributes to 0. `CSS normalize keeps useful defaults` rather than unstyling everything and corrects some common bugs that are out of scope for reset.css.
+
+
 <br/>
 
 ### **What Is Float?**
@@ -70,21 +73,24 @@
 > - Float is a CSS positioning property, an element can be declared to be `outside the normal flow of elements`.<br/>
 > - There are float : left, right, none(is default), inherit(ie not suppoerted).<br/>
 > - I.g., By setting the 'float' property of an image to 'left', the image is moved to the left until the margin, padding or border of another block-level element is reached. The normal flow will wrap around on the right side. 
+> 
 <br/>
 
 ### **Why Should We Clear Float?**
 > - If there are one large box contain two small float boxes, it will cause the big one can't extend the height.<br/> 
 
-5.2 How To Clear Float? <br/>
+<br/>
+
+### **How To Clear Float?**
 > - Clear is the properity to clear the float. <br/>
 > - There are clear : left, right, both. <br/>
 > - Way to clear float : 
 ① Empty tag https://jsfiddle.net/yschen25/sandgpLx/ <br/>
 ② Overflow https://jsfiddle.net/yschen25/sLj6romh/ <br/>
 ③ CSS pseudo selector : after https://jsfiddle.net/yschen25/8mvqwgoy/ <br/>
-
 > - Related Reference : [All About Floats](https://css-tricks.com/all-about-floats/)
-<br/><br/>
+
+<br/>
 
 ### **What Is The Difference Between Em and Rem?**
 
@@ -96,8 +102,8 @@
 > ① Position : relative is positioned relative to its own position. <br/>
 > ② Position : absolute is positioned relative to its first positioned (not static) ancestor element. <br/>
 > ③ Position : fixed is positioned relative to the browser window.
-
 > - Example : https://jsfiddle.net/yschen25/gczL8p7k/13/
+
 <br/>
 
 ### **What Is A Box Model?**
@@ -111,7 +117,8 @@
 ② Padding : Clears an area around the content, The padding is transparent.<br/>
 ③ Border : A border that goes around the padding and content.<br/>
 ④ Margin - Clears an area outside the border, The margin is transparent.
-<br/><br/>
+
+<br/>
 
 ### **What Is Box-Sizing: Content-Box And Box-Sizing: Border-Box?**
 
@@ -135,31 +142,32 @@
 ### **How To Center An Element Horizontally And Vertically?**
 > - See the disscussion here [How To Center An Element Horizontally And Vertically](https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically).
 
-</br>
+<br/>
 
 ### **What Are New Features In CSS3?**
 
 > - Such as gradients, transform, transition, animation, box-sizing: content-box | border-box, flexbox, etc.
 > - Related Reference : [HTML5和CSS3特性一覽](https://blog.csdn.net/chandoudeyuyi/article/details/69206236).
-</br>
+> 
+<br/>
 
 ### **Introduction The CSS Selectors.**
 
 > - !important > Inline styles > ID Selectors > Class selectors > Element > *
 > - Related Reference :  [小事之 CSS 權重](https://ithelp.ithome.com.tw/articles/10196454), [Introduction to CSS selectors](https://www.creativebloq.com/css3/introduction-css-selectors-61515320)
 
-</br>
+<br/>
 
 ### **What Is Flexbox?**
 
 > - Related Reference :  [深入解析 CSS Flexbox](https://www.oxxostudio.tw/articles/201501/css-flexbox.html)
 
-</br>
+<br/>
 
 ### **What Is Media queries?**
 - We can set the condition for the @media and write the CSS inside the block, the CSS will take effect when the condition is true, we can use media to set the different layout for different width.
 
-</br>
+<br/>
 
 ### **How would you reload a cached CSS file that has changed since it was cached?**
 - Change the file name 

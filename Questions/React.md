@@ -24,7 +24,7 @@
 <br/>
 
 
-### **What Is Strength React.js?**
+### **What Are The Strengths Of React.js?**
 > - Ensures faster rendering with `virtual DOM`, which compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again.   <br/>
 > - It follows the `component based` approach which helps in building reusable UI components, it save the time and repeat working.  <br/>
 > - `Uni-directional data flow` make it becomes `easier to debug errors and know where a problem occurs` in an application at the moment in question. And even small changes made to the child structures will not affect their parents, that makes code stable.  <br/>
@@ -35,7 +35,7 @@
 
 <br/>
 
-### **What Is Weakness Of React.js?**
+### **What Are The Weaknesses Of React.js?**
 > - React focus on view, lacking of route, ajax, async promise, etc. <br/>
 > - Coding gets complex as it uses inline templating and JSX.
 
@@ -68,76 +68,79 @@
 ```
 // Return one element
 const JSX = (
-	<div>
-	  <h1>Hello React!</h1>
+  <div>
+    <h1>Hello React!</h1>
     <p>Learning JSX</p>
-	</div>
-)
+  </div>
+);
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
+
 
 // Self-closing tags
 class MyComponent extends React.Component {
   render() {
     return (
       <div>
-      <h1>React</h1>
-			<br/>
-      <p>self-closing tags</p>
+        <h1>React</h1>
+        <br />
+        <p>self-closing tags</p>
       </div>
     );
   }
 }
 
-ReactDOM.render(<MyComponent />, document.getElementById('container'));
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
-// Comments 
+
+// Comments
 /* This is a comment */
 // This is also a comment
 const JSX = (
-	<div>
-	  <h1>Hello React!</h1>
+  <div>
+    <h1>Hello React!</h1>
     <p>Learning Comment</p>
     {/* I am a comment inside JSX!*/}
-	</div>
-)
-
-ReactDOM.render(JSX, document.getElementById('container'));
-
-// Js in JSX 
-let text = 'React';
-let number = 30;
-const JSX = (
-	<div>
-	  <h1>Hello React!</h1>
-    <p>Learing {text} for {number} days</p>
-	</div>
-)
-
-ReactDOM.render(JSX, document.getElementById('container'));
-
-// Ternary operator
-let i = -1;
-const JSX = (
-	<div>
-      	{ i > 0 ? <div>Hello</div> : <div>React</div>}
   </div>
 );
 
-ReactDOM.render(JSX, document.getElementById('container'));
+ReactDOM.render(JSX, document.getElementById("container"));
+
+
+// Js in JSX
+let text = "React";
+let number = 30;
+const JSX = (
+  <div>
+    <h1>Hello React!</h1>
+    <p>
+      Learing {text} for {number} days
+    </p>
+  </div>
+);
+
+ReactDOM.render(JSX, document.getElementById("container"));
+
+
+// Ternary operator
+let i = -1;
+const JSX = <div>{i > 0 ? <div>Hello</div> : <div>React</div>}</div>;
+
+ReactDOM.render(JSX, document.getElementById("container"));
+
 
 // CamelCase
 class MyHeader extends React.Component {
   render() {
     return (
       <div>
-      <h1 className='title'>React Style 1</h1>
+        <h1 className="title">React Style 1</h1>
       </div>
     );
   }
 }
 
-ReactDOM.render(<MyHeader />, document.getElementById('container'));
+ReactDOM.render(<MyHeader />, document.getElementById("container"));
 ```
 
 <br/>
@@ -173,24 +176,34 @@ ReactDOM.render(<MyHeader />, document.getElementById('container'));
 
 ```
 const MyComponent = function () {
-		return (
-				<h1>Functional Component</h1>
-		);
+  return <h1>Functional Component</h1>;
 };
 ```
 <br/>
 
 > - **Class Components**: <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
-(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`  (ref:8). In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor, 
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
+```
+class MyComponent extends React.Component {
+  render() {
+    return <h1>{this.props.text}</h1>;
+  }
+}
+
+ReactDOM.render(
+  <MyComponent text="hey" />,
+  document.getElementById("container")
+);
+```
 
 <br/>
 
 
 ### **What Is The Difference Between Functional Components And Class Components?**
 
-**|  Functional Components | Class Components |
+|  Functional Components | Class Components |
 |---|---|
 | Calculates the internal state of the components | Stores info about component’s state change in memory |
 | Do not have the authority to change state | Have authority to change state |
@@ -202,7 +215,7 @@ const MyComponent = function () {
 
 ### **When Use Functional Components And Class Components?**
 
-**> - **Functional Components** :  <br/>
+> - **Functional Components** :  <br/>
 (1) Don't need to use lifecycle  <br/>
 (2) Don't need to use state  <br/>
 (3) `Create reusable components`  <br/>
@@ -234,40 +247,31 @@ const MyComponent = function () {
 ```
 // Pass props via Functional Component (notice : use props.data)
 const User = (props) => {
-		return(
-				<p>Hello! {props.name}</p>
-		);
+  return <p>Hello! {props.name}</p>;
 };
 
-class Welcome extends React.Component{
-
-		render(){
-				return(
-						<User name='KaKa'/>
-				)
-		}
+class Welcome extends React.Component {
+  render() {
+    return <User name="KaKa" />;
+  }
 }
+
 
 // Pass props via Class Component (notice : use this.props.data)
-class TempPassword extends React.Component{
-		constructor(props){
-    		super(props);
-    }
-    
-  	render(){
-    		return(
-        		<h1>My password is : {this.props.temPwd}</h1>
-        )
-    }
+class TempPassword extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <h1>My password is : {this.props.temPwd}</h1>;
+  }
 }
 
-class Password extends React.Component{
-
-    render(){
-    		return(
-     				<TempPassword temPwd='123' />   
-        )
-    }
+class Password extends React.Component {
+  render() {
+    return <TempPassword temPwd="123" />;
+  }
 }
 ```
 
@@ -282,8 +286,30 @@ class Password extends React.Component{
 <br/>
 
 ### **What Are PropTypes And DefaultProps?**
-> - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode, Example : https://jsfiddle.net/yschen25/oahjbq81/.
-> - DefaultProps : You can `define default values` for props by assigning defaultProps, Example : https://jsfiddle.net/yschen25/763g8Lqv/.
+> - PropTypes : A typechecking tool to `make sure the data is valid`, propTypes is only checked in development mode.
+```
+const SayMyName = (props) => {
+  return <p>My name is {props.name}</p>;
+};
+
+SayMyName.defaultProps = {name: "Default Name"};
+SayMyName.propTypes = {name: PropTypes.string};
+
+ReactDOM.render(<SayMyName />, document.getElementById("container"));
+```
+
+<br/>
+
+> - DefaultProps : You can `define default values` for props by assigning defaultProps.
+```
+const SayMyName = (props) => {
+  return <p>My name is {props.name}</p>;
+};
+
+SayMyName.defaultProps = {name: "Default Name"};
+
+ReactDOM.render(<SayMyName />, document.getElementById("container"));
+```
 
 <br/>
 
@@ -295,29 +321,25 @@ class Password extends React.Component{
 <br/>
 
 
-### ** What Is State ?**
+### **What Is State?**
 > - The state is a data structure that starts with a `default value` when a component mounts.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 ```
-class YourName extends React.Component{
-		constructor(props) {
-    		super(props);
-        
-        this.state = {
-    				name : 'Ka Ka'
-    		}
-    }
-    
-    render() {
-    		return (
-                <p>My name is {this.state.name}</p>
-        );
-    }
-};
+class YourName extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: "Ka Ka"};
+  }
+
+  render() {
+    return <p>My name is {this.state.name}</p>;
+  }
+}
+
 ```
 <br/>
 
-### **When Use State ?**
+### **When Use State?**
 > - To store the data your current page needs in your controller-view.
 <br/>
 
@@ -326,38 +348,32 @@ class YourName extends React.Component{
 >- State of a component can be updated using this.setState(), functional + hook useState().
 > - setState is asynchronous.
 ```
-class MyComponent extends React.Component{
-		constructor(props){
-    		super(props);
-        
-        this.state = {
-        		text : 'initial text'
-        }
-        
-        this.changeText = this.changeText.bind(this);
-    }
-    
-    changeText() {
-    		this.setState({
-        		text : 'Love You 3000 times'
-        })
-    }
-    
-    render(){
-    		return(
-        	<div>
-              <button onClick={this.changeText}>Click Me!</button>
-        	    <h1>{this.state.text}</h1>
-          </div>
-        )
-    }
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: "initial text"};
+    this.changeText = this.changeText.bind(this);
+  }
+
+  changeText() {
+    this.setState({text: "Love You 3000 times"});
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.changeText}>Click Me!</button>
+        <h1>{this.state.text}</h1>
+      </div>
+    );
+  }
 }
 ```
 
 <br/>
 
 
-### **What Is The Difference Between Props And State?**
+### **What Are The Differences Between Props And State?**
 
 |  Conditions | State | Props |
 |---|---|---|
@@ -365,7 +381,7 @@ class MyComponent extends React.Component{
 | | Mutable | Immutable |
 | | Can be modified using setState() method | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
-| | Can only be used with class Components (ref:17.2) | Can be used with both class as well as functional components |
+| | Can only be used with class Components | Can be used with both class as well as functional components |
 
 <br/>
 
@@ -383,73 +399,101 @@ class MyComponent extends React.Component{
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you `need to access props, state on the class`, then you would need to bind it.
 > - Related Reference : [why do you need to bind a function in a constructor
-](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?**](**https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?**](**https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?**so**urce=post_page---------------------------)
+](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?**so**urce=post_page---------------------------)
 
 <br/>
 
 
 ### **How To Bind The Function?**
-> - Class component : Bind in constructor : https://jsfiddle.net/yschen25/n8umkzx6/5/
+> - Class component : Bind in constructor
 
 ```
-constructor(props) {
-        super(props);
-        this.state = {count: 0};
-        this.addCount = this.addCount.bind(this);
-    }
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+    this.addCount = this.addCount.bind(this);
+  }
 
-    addCount() {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
-    
-    render() {
-    		return (
-		    <div>
-			<button onClick={this.addCount}>Click Me!</button>
-			<h1>{this.state.count}</h1>
-		    </div>
-        )
-    }
-```
-<br/>
-
-> - Class component : Bind in render : https://jsfiddle.net/yschen25/otd36q24/
-```
-addCount() {
-        this.setState({
-            count: this.state.count + 1
-        });
-    };
-
-    render() {
-        return (
-            <div>
-                <button onClick={this.addCount.bind(this)}>Click Me!</button>
-                <h1>{this.state.count}</h1>
-            </div>
-         )
-     }
-```
-<br/>
-
-
-> -  Class component : use arrow function : https://jsfiddle.net/yschen25/z6ckng0w/
-```
-addCount = () => {
-    this.setState({ 
-        count: this.state.count + 1 
+  addCount() {
+    this.setState({
+      count: this.state.count + 1
     });
-    
-    render() {
-    	return(
-             <div>
-	        <button onClick={this.addCount}>Click Me!</button>
-	        <h1>{this.state.count}</h1>
-             </div>
-          )
-      }
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addCount}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+
+```
+<br/>
+
+> - Class component : Bind in render
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+  }
+
+  addCount() {
+    this.setState({
+      count: this.state.count + 1
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addCount.bind(this)}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+
+```
+<br/>
+
+
+> -  Class component: use arrow function
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0
+    };
+  }
+
+  addCount = () => {
+    this.setState({
+      count: this.state.count + 1
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addCount}>Click Me!</button>
+        <h1>{this.state.count}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
 ```
 <br/>
 
@@ -494,23 +538,23 @@ addCount = () => {
 (1) **constructor()** : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
 Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
 ```
-constructor(props){
-        super(props);
-        this.state = {
-            name: "ReactJS"
-        }
-        this.updateName = this.updateName.bind(this);
-    }
+constructor(props) {
+    super(props);
+    this.state = {
+      name: "ReactJS"
+    };
+    this.updateName = this.updateName.bind(this);
+}
 ```
 <br/>
 
 (2) **static getDerivedStateFromProps()** : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
 ```
- static getDerivedStateFromProps(props, state){
-        return {
-            name: props.name
-        }
-    }
+static getDerivedStateFromProps(props, state) {
+    return {
+      name: props.name
+    };
+}
 ```
 <br/>
 
@@ -519,7 +563,7 @@ Don't make API request, put any action that needs to occur only once in the life
 ```
 render() {
     return <div>My Component</div>;
-  }
+}
 ```
 <br/>
 
@@ -537,7 +581,7 @@ The modification phase can be triggered using three methods :  <br/>
 (2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. (ref:22)
 ```
 shouldComponentUpdate(nextProps, nextState){
-    if(this.state.name === nextState.name) { return false; }
+    if(this.state.name === nextState.name) {return false;}
   }
 ```
 
@@ -549,7 +593,7 @@ shouldComponentUpdate(nextProps, nextState){
 ```
 componentDidUpdate(prevProps, prevState, snapshot) {
       if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
-          this.setState({ name: "Angular" })
+          this.setState({name: "Angular"})
       }
   }
 ```
@@ -568,7 +612,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
 (1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. `You can update the state depending on the error`, to be used anywhere in the component, possibly to show a fallback UI. 
 ```
 static getDerivedStateFromError(error) {
-    return { error: error.message };
+    return {error: error.message};
   }
 ```
 
@@ -581,22 +625,19 @@ componentDidCatch(error, info) {
 <br/>
 
 ### **Why static getDerivedStateFromProps() Is Static?**
->** - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
+> - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
 
 <br/>
 
 ### **Explain Error Boundaries?**
 > - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
 > - static getDerivedStateFromError(), componentDidCatch()
-
-<br/>
-
 > - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 
 <br/>
 
 
-### **Axios**
+### **What Is Axios?**
 > - To send HTTP requests from (client-side) JavaScript. <br/>
 (1) Make XMLHttpRequests from the browser <br/>
 (2) Make http requests from node.js <br/>
@@ -651,11 +692,11 @@ componentDidCatch(error, info) {
 </Provider>
 ```
 		
-(2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
-(2.1) **mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
-(2.2) **mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
-(2.3) **mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-(2.4) **options** : If specified, further `customizes the behavior` of the connector. 
+**(2) Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+**(2.1) mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
+**(2.2) mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
+**(2.3) mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
+**(2.4) options** : If specified, further `customizes the behavior` of the connector. 
 ```
 function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main);
 ```
@@ -663,13 +704,13 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main)
 
 **Store Methods** <br/>
 
-(1) **getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
-(2) **dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
-(3) **subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
-(4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
-(4.1) **reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
-(4.2) **preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
-(4.3) **enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
+**(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
+**(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
+**(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
+**(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
+**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
+**(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
+**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
@@ -680,51 +721,55 @@ let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 <br/>
 
 > - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
-<br/><br/>
 
-12.2 What Are The Strengths And Weaknesses Of Redux?
+<br/>
 
-**> - **Strengths** : <br/>
-(1) **Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
-(2) **Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
-(3) **Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
-(4) **Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
+### **What Are The Strengths And Weaknesses Of Redux?**
+
+> - **Strengths** : <br/>
+**(1) Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
+**(2) Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
+**(3) Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
+**(4) Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
 Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it. <br/>
-(5) **Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
-(6) **Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+**(5) Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
+**(6) Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
 > - **Weaknesses** : <br/>
 (1) No encapsulation. Any component can access the data which can cause security issues. <br/>
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
-<br/><br/>
 
-12.3 What Are Alternatives To Redux?
->** - MobX, RxJs, apollo client + graphQL
-<br/><br/>
+<br/>
+
+### **What Are Alternatives To Redux?**
+> - MobX, RxJs.
+
+<br/>
 
 ### **What is MobX?**
->** - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
+> - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
 > - The state is mutable, meaning you can simply update the state with new values.
-
 > - Comes with much less boilerplate code in comparison to Redux, making MobX easier to learn and set up.
-
 > - Anything derived from the state without any further interaction is a derivation
 > - Actions are any piece of code that changes the state
 > - All derivations update automatically and atomically when the state changes
-
 > - Related Reference : [Redux vs. MobX: Which performs better?](**https://blog.logrocket.com/redux-vs-mobx/)
 
+<br/>
+
 ### **What Is Redux Middleware?**
-<**p align="center">
+<p align="center">
 <img src="img/redux_middleware.png" alt="redux_middleware" title="redux_middleware" width="70%">
 </p>
 
 > - Redux middleware function `provides a medium to interact with dispatched action before they reach the reducer`, such as call async API, log. etc.
 > - When we send a action to reducer, this process works fine with synchronous change,  but if call an Action Creator that is fetching data from an API or some asynchronous action, that will has some problems.
 
-12.5. What Is React-Saga And React-Thunk?
->** - React-Saga : Sagas are implemented using Generator functions. To express the Saga logic, we yield plain JavaScript Objects from the Generator. We call those Objects Effects (put, call, etc.)
+<br/>
+
+### **What Is React-Saga And React-Thunk?**
+> - React-Saga : Sagas are implemented using Generator functions. To express the Saga logic, we yield plain JavaScript Objects from the Generator. We call those Objects Effects (put, call, etc.)
 > - React-Thunk : Thunk is a function which optionaly takes some parameters and returns another function, it takes dispatch and getState functions and both of these are supplied by Redux Thunk middleware.
 > - Differences :  <br/>
 (1) Thunks can never act in response to an action. Redux-Saga subscribes to the store and can trigger a saga to run or continue when a certain action is dispatched. <br/>
@@ -734,23 +779,23 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **What Is A Styled Component?**
->** - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
+### **What Is Styled Component?**
+> - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
 > - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
 
 
-### **What Is Strength And Weakness Of Styled Components?**
-> - **Strength**
-> - **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app.
-> - **Painless Maintenance**: You don't have maintain mutiple CSS files.
-> - **Semantic Element**: You can know the meaning of the element by its name.
+### **What Are The Strengths And Weaknesses Of Styled Components?**
+> - **Strength** </br>
+(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
+(2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
+(3) Semantic Element: You can know the meaning of the element by its name. </br>
 
-> - **Weakness**
-> - Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug.
-> - Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props.
-> - Related Reference : [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
+> - **Weakness** </br>
+(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
+(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
+(3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
 
@@ -761,7 +806,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-14.1 What Is An Enzyme?
+### **What Is An Enzyme?**
 > - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
 > - Enzyme only works with React.
 > - Enzyme must be paired with another test runner.
@@ -771,7 +816,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **Jest And Enzyme.**
+### **What Is Jest And Enzyme?**
 > - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
 > - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
 > - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
@@ -779,19 +824,51 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **React-testing-library/React-hooks-testing-library**
+### **What Is React-testing-library/React-hooks-testing-library?**
 > - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
 > - Install @testing-library/react-hooks to test hooks.
 
 <br/>
 
 
-### **Refs.**
+### **What Is Refs?**
 > - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
 > - `Use state and props to manage components instead using refs`. (ref:18)
 > - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
 > - Refs can't use in functional components, `only for class components`.
-> - Example : https://jsfiddle.net/yschen25/ewdtvn5b/9/
+
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.focus = this.focus.bind(this);
+  }
+
+  focus() {
+    this.refs.myInput.focus();
+  }
+
+  /* focus = () => this.textInput.focus(); */
+
+  render() {
+    return (
+      <div>
+        <h1>Refs</h1>
+        <input type="text" ref="myInput" />
+        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.focus}
+        />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+```
+
 > - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 
 <br/>
@@ -815,31 +892,73 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
-(3) Example : Before hook (https://jsfiddle.net/yschen25/8tp16wcy/), After hook (https://codesandbox.io/s/reacthookusestate-u65hn)<br/>
+
 ```
-const [count, addCount] = useState(0);
+// Before using hook
+class ClickClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 0};
+    this.click = this.click.bind(this);
+  }
+
+  click() {
+    this.state.count++;
+    this.setState({count: this.state.count});
+  }
+
+  render() {
+    return (
+      <div>
+        <label> You clicked {this.state.count} times!</label>
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<ClickClass />, document.querySelector("#app"));
 ```
+
+```
+// After using hook 
+function ClickClass() {
+  const [count, addCount] = useState(0);
+
+  const click = () => {
+    addCount(count + 1);
+  };
+
+  return (
+    <div>
+      <label> You clicked {count} times!</label>
+      <input type="submit" value="Click" onClick={click} />
+    </div>
+  );
+}
+
+```
+
 <br/>
 
 2. useEffect() : <br/>
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
+(2.1) The first an anonymous callback function that houses your useEffect logic.
 
-① The first an anonymous callback function that houses your useEffect logic.
-```
-useEffect(() => {
-    console.log('This is like componentDidMount')
-    
-    return () => {
-      console.log('This is like componentWillUnmount') // clear something
-    };
-  });
-```
-<br/>
+	```
+	useEffect(() => {
+	    console.log('This is like componentDidMount')
+
+	    return () => {
+	      console.log('This is like componentWillUnmount') // clear something
+	    };
+	  });
+	```
  
-② The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
+(2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
-- Running every time. <br/>
+Running every time. <br/>
 ```
 useEffect(() => {
 	console.log('Runs every time');
@@ -848,7 +967,7 @@ useEffect(() => {
 
 <br/>
 
- - Running an effect once (componentDidMount) : The key to running an effect once is to pass in an empty array. <br/>
+Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
 ```
 useEffect(() => {
 	console.log('This only runs once');
@@ -856,7 +975,7 @@ useEffect(() => {
 ```
 <br/>
 
- - Using effects when things change (componentDidUpdate) : 
+Using effects when things change (componentDidUpdate) : 
 ```
 useEffect(() => {
 	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
@@ -865,11 +984,9 @@ useEffect(() => {
 <br/>
 
 
-(3) Example : https://tinyurl.com/y6yb643h <br/><br/>
-
 3. useContext() :  <br/>
 (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. Example : https://codesandbox.io/s/reacthookusecontext-1v5p4 <br/>
+(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
 
 4. useReducer() : lets you handle state updates using reducers without a Redux store.
 
@@ -883,24 +1000,20 @@ useEffect(() => {
 > - For a smaller project, use React Hooks instead of Redux <br/>
 (1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
 (2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity. 
-
 > - For a bigger project, use React Hooks and Redux in duck pattern  (combine reducer, action types, and action to one file)
-
 > - React Hooks can’t replace Redux, which one we need to use it depends on the project. <br/>
 (1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
 (2) Have the ability to use middleware to deal with some async tasks. <br/>
 (3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
 (4) Higher-Order Components to compose in cross-cutting concerns that are shared by all or most of my application views, such as the Redux provider, a common layout provider, a configuration provider, authentication/authorization, i18n, and so on. <br/>
 (5) React also has its own hook. 
-
-
 > - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
 
 <br/>
 
 
-### **What Is The Difference Between React And React Native?**
+### **What Are The Differences Between React And React Native?**
 > - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
 > - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
 > - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
@@ -912,7 +1025,54 @@ useEffect(() => {
 (1) `Control by status or props`. <br/> 
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
 (3) Controls the values of input elements in a form using setState(). <br/> 
-(4) The input value can't not be control by user (https://jsfiddle.net/yschen25/xr2gb6w4/3/), it needs to add onChange handler to listen to the input value (https://jsfiddle.net/yschen25/gzx43por/).
+(4) The input value can't not be control by user.
+
+```
+class MyForm extends React.Component {
+  render() {
+    return <input value="Hello"></input>;
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
+<br/>
+
+It needs to add onChange handler to listen to the input value.
+
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: "Hello"};
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(e) {
+    this.setState({
+      text: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <form>
+        <label>Text : </label>
+        <input
+          name="text"
+          value={this.state.text}
+          onChange={this.changeState}
+        />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+
+```
+
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
@@ -924,13 +1084,39 @@ useEffect(() => {
 <br/>
 
 > - **Uncontrolled Components** :   <br/> 
-(1) `Doesn't control by status or props, use ref to control DOM` (https://jsfiddle.net/yschen25/o237p9Ld/).  <br/> 
+(1) `Doesn't control by status or props, use ref to control DOM`.
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.click = this.click.bind(this);
+  }
+
+  click(event) {
+    alert("click : " + this.refs.myInput.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <label>Text : </label>
+        <input defaultValue="Hello" ref="myInput" />
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
 (2) Allow set up the value by defaultValue.  <br/> 
 (3) Easy to use with third party library. 
 <br/><br/>
 
 ### **When Use Controlled Components Or Uncontrolled Components?**
-|** Functions | Controlled Components | Uncontrolled Components |
+|Functions | Controlled Components | Uncontrolled Components |
 |---|---|---|
 | One time submit | O  | O  |
 | Submit validation | O  | O  |
@@ -957,15 +1143,16 @@ const content = posts.map((post) =>
 );
 ```
 
+<br/>
+
 ### **Why Don't Recommend To Use Indexes As Keys?**
 > - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-
 > - Related Reference : [Why do I need Keys in React Lists?
-]**(https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
 <br/>
 
-### **What Are Some Exceptions Where It Is Safe To Use Index As Key?
+### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
 > - If your `list is static` (no additions/re-ordering/removal to the list).
 
 <br/>
@@ -999,6 +1186,8 @@ Hello = () => {
 }
 ```
 
+<br/>
+
 > - It increases performance because it `reduces the number of render operation` in the application.
 > - For class components react provides `React.PureComponent` base class.
 ```
@@ -1008,7 +1197,11 @@ class MyComponent extends PureComponent{
    }
 }
 ```
-> - For Functional component react provides `React.memo HOC (Higher Order Component) (ref:20)`.
+
+<br/>
+
+
+> - For Functional component react provides `React.memo HOC (Higher Order Component)`.
 ```
 const MyComponent = React.memo(function MyComponent(props) {
    return '';
@@ -1025,11 +1218,11 @@ const MyComponent = React.memo(function MyComponent(props) {
 <br/>
 
 
-### **Explain How React Rendering works?  **<br/>
-(1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
-(2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
-(3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
-(4) React then applies all the calculated changes to the DOM.
+### **Explain How React Rendering works?**
+> - (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
+> - (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
+> - (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
+> - (4) React then applies all the calculated changes to the DOM.
 > - Related Reference : [Complete Guide to React Rendering Behavior](https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/#react-redux-and-rendering-behavior)
 
 <br/>
@@ -1066,15 +1259,16 @@ const MyComponent = React.memo(function MyComponent(props) {
 ### **What Is A React Router?**
 > - Is a package which is used to create Routing.
 > - React Router, and dynamic, client-side routing, allows us to `build a SPA(single-page web application) with navigation without the page refreshing as the user navigates`.
-<br/><br/>
+> 
+<br/>
 
 ### **How Is Routing in React Different From Conventional Routing?**
-|** SN | React Routing | Conventional Routing |
-|---|---|---|
-| | Single HTML page | Each view is a new HTML file |
-| | User navigates multiple view in the same file | User navigates multiple files for each view |
-| | The page does not refresh since it's a single file | The page refreshes every time user navigates |
-| | Improved performance | Slower performance|
+| React Routing | Conventional Routing |
+|---|---|
+| Single HTML page | Each view is a new HTML file |
+| User navigates multiple view in the same file | User navigates multiple files for each view |
+| The page does not refresh since it's a single file | The page refreshes every time user navigates |
+| Improved performance | Slower performance|
 
 <br/>
 
@@ -1082,7 +1276,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 ### **What Is React Fiber?**
 > - The core of React algorithm. 
 > - The main goal of React Fiber is to ensure that there are `incremental rendering facilities for the virtual DOM`.
-<br/><br/>
+
+<br/>
 
 ### **What Are Fragments?**
 > - A common pattern in React is for a `component to return multiple elements`. Fragments let you group a list of children `without adding extra nodes to the DOM`.

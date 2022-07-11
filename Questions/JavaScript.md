@@ -488,7 +488,7 @@ test()
 
 ### **Explain What Is "this"?**
 
-> - The this keyword evaluates to the value of the ThisBinding of the current execution context, the `value of this is determined by how a function is called`.
+> - The this keyword refers to an object, the `value of this is determined by how a function is called`.
 
 <br/>
 
@@ -1199,7 +1199,7 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
 </p>
 
-> - `Promise is guarantee to do specfic things after resolved or rejected`, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
+> - `Promise is guarantee to do specfic things after an asynchronous action is resolved or rejected`, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
 
 ```
 const myPromise = new Promise((resolve, reject) => {

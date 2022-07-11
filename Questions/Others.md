@@ -19,7 +19,7 @@
 
 <br/>
 
-### **What Is Microservice architecture?**
+### **What Is Microservice Architecture?**
 <p align="center">
 <img src="img/microservices.png" alt="data_type" title="data_type" width="60%">
 </p>
