@@ -1,6 +1,6 @@
 # Web Questions
 
-### **What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?
+### **What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?**
 
 <table>
     <tr>
@@ -81,8 +81,9 @@
 <br/>
 
 > **Methods**
-> - **Web Application**: SPA. Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
-> - **Technology: React.**  <br/>
+> - **Web Application** <br/>
+> - SPA Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
+> - **Technology: React**  <br/>
 **(1) Router**: React-router + React.lazy. <br/>
 **(2) Virtual DOM**: dependency array of useEffect, key in the list. <br/>
 **(3) Proper components**: Pure component or shouldComponentUpdate.
@@ -193,7 +194,7 @@
 
 ### **How To Solve The Weakness Of SPA?**
 
-> - SSR, Server Side Rendering, `render the fist page with server side, the others with client side`. (ref:18)
+> - SSR, Server Side Rendering, `render the fist page with server side, the others with client side`.
 > - Related Reference : [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
 
 <br/>
@@ -258,7 +259,7 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 > - `GraphQL allow using one entry point to get all data`, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
 ```
-Serach：
+Search：
 
 {
     user(uid:1) {
@@ -310,17 +311,17 @@ then the user will has permission to view or manipulate corresponding informatio
 <img src="img/website_rendering_02.jpg" alt="website_rendering" title="website_rendering" width="70%">
 </p>
 
-> - 1. Start parsing HTML to DOM(Document Object Model) Tree and parsing CSS to CSSOM(CSS Object Model) Tree
-> - 2. Combine DOM and CSSOM to calculate html and style then generate render tree
-> - 3. Determine every element's layout (Reflow)
-> - 4. Paint the result on the screen (Repaint)
+> - (1) Start parsing HTML to DOM(Document Object Model) Tree and parsing CSS to CSSOM(CSS Object Model) Tree
+> - (2) Combine DOM and CSSOM to calculate html and style then generate render tree
+> - (3) Determine every element's layout (Reflow)
+> - (4) Paint the result on the screen (Repaint)
 > - Related Reference : [瀏覽器渲染過程與性能優化](https://sylvanassun.github.io/2017/10/03/2017-10-03-BrowserCriticalRenderingPath/), [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 
 <br/>
 
 ### **What Is Reflow And Repaint?**
-> - Reflow : It will reflow when `manipulate DOM (add, change, delete, etc.)`, `change CSS(width, position, etc.)`, `change size of browser`, etc. Change width → Reflow → Repaint.
-> - Repaint : It will repaint when `change style of element`. Change color → Repaint.
+> - **Reflow**: It will reflow when `manipulate DOM (add, change, delete, etc.)`, `change CSS(width, position, etc.)`, `change size of browser`, etc. Change width → Reflow → Repaint.
+> - **Repaint**: It will repaint when `change style of element`. Change color → Repaint.
 > - Related Reference : [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 
 <br/>
@@ -375,9 +376,8 @@ then the user will has permission to view or manipulate corresponding informatio
 
 
 ### **What happens when you click a link on a page?**
-- Browser gathers the information about the link and sends the request to a naming server. 
-
-The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
+> - Browser gathers the information about the link and sends the request to a naming server. 
+> - The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
 If the address is found, the IP address is sent to my browser. 
 The browser then contacts the web server that has the web page I requested. 
 The page is then sent to your browser.
