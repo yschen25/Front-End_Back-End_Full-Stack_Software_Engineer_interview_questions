@@ -1,6 +1,6 @@
 # React Questions
 
-### **What And When Use React.js?**
+### **What And When To Use React.js?**
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and state changes` instead of building a simple web.
 > - Related Reference : [What is React?](**https://www.simplilearn.com/what-is-react-article)
@@ -35,7 +35,7 @@
 
 <br/>
 
-### **What IsWeakness Of React.js?**
+### **What Is Weakness Of React.js?**
 > - React focus on view, lacking of route, ajax, async promise, etc. <br/>
 > - Coding gets complex as it uses inline templating and JSX.
 
@@ -167,7 +167,7 @@ ReactDOM.render(<MyHeader />, document.getElementById('container'));
 
 ### **What Are Functional Components (Stateless Components) And Class Components (Stateful Components)?**
 
-> - **Functional Components** : <br/>
+> - **Functional Components**: <br/>
 (1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
 (2) Functional components can have state when use hook. <br/>
 
@@ -180,7 +180,7 @@ const MyComponent = function () {
 ```
 <br/>
 
-> - **Class Components** : <br/>
+> - **Class Components**: <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
 (2) `Constructor is optional`, add the constructor when you `need to use state or bind function`  (ref:8). In this example, this.props works fine even without constructor, Example : https://jsfiddle.net/yschen25/2jcgbom0/ <br/>
 (3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
