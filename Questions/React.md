@@ -943,7 +943,7 @@ function ClickClass() {
 
 2. useEffect() : <br/>
 (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
-(2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`
+(2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
 (2.1) The first an anonymous callback function that houses your useEffect logic.
 
 	```
@@ -988,9 +988,93 @@ useEffect(() => {
 (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
 (2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
 
-4. useReducer() : lets you handle state updates using reducers without a Redux store.
 
-5. Custom React Hooks : <br/>
+4. useMemo() :  <br/>
+> - useMemo can help the performance of an application by “remembering” expensive functions and preventing a re-render every time there is a change in the application.
+
+```
+// It will re-render the Card component when clicking the button, but it's unnecessary
+const App = () => {
+    const [count, setCount] = useState(0);
+    return (
+        <div>
+            <button type="button" onClick={() => setCount(count+1)}>add</button>
+            <Card title="Happy Birthday" />
+        </div>
+    );
+};
+
+export default App;
+
+const Card = ({ title }) => {
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>This is content.</p>
+        </div>
+    );
+};
+
+export default Card;
+
+
+// To prevent the unnecessary re-render, add React.memo() or useMemo() ↓
+
+const Card = ({ title }) => {
+    return (
+        <div>
+            <h1>{title}</h1>
+            <p>This is content.</p>
+        </div>
+    );
+};
+
+export default React.memo(Card);
+
+```
+
+```
+// React using shallow compare, and the tags array is a non-primitive which will be assigned to different 
+const App = () => {
+    const [count, setCount] = useState(0);
+    const tags = ['happy', 'sad', 'madness'];
+    return (
+        <div>
+            <button type="button" onClick={() => setCount(count+1)}>add</button>
+            <Card title="Happy Birthday" tags={tags} />
+        </div>
+    );
+};
+
+export default App;
+
+// To prevent the unnecessary re-render, add React.memo() or useMemo() ↓
+
+const App = () => {
+    const [count, setCount] = useState(0);
+    const tags = useMemo(() => {
+        return ['happy', 'sad', 'madness'];
+    }, []);
+    return (
+        <div>
+            <button type="button" onClick={() => setCount(count+1)}>add</button>
+            <Card title="Happy Birthday" tags={tags} />
+        </div>
+    );
+};
+
+export default App;
+```
+
+
+5. useCallback() :  <br/>
+ > - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+
+ > - useCallback returns its function when the dependencies change while useMemo calls its function and returns the result.
+
+6. useReducer() : lets you handle state updates using reducers without a Redux store.
+
+7. Custom React Hooks : <br/>
 (1) Custom hooks allow you to create functionality that can be reused across different components.
 
 <br/>
@@ -1166,7 +1250,7 @@ const content = posts.map((post) =>
 <br/>
 
 ### **Describe Shallow Comparison In React?**
-> - Shallow compare works by checking if two values are equal in case of primitive types like string, numbers and in case of object it just checks the reference.
+> - Shallow compare works by checking `if two values are equal in case of primitive types` like string, numbers and in case of `object it just checks the reference`.
 > - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
 
 <br/>
@@ -1306,7 +1390,7 @@ class Columns extends React.Component {
   }
 }
 ```
-> - Related Reference : [React Fragment](https://www.fooish.com/reactjs/fragment.html)
+> - Related Reference: [React Fragment](https://www.fooish.com/reactjs/fragment.html)
 
 <br/>
 
@@ -1329,7 +1413,55 @@ then I push the tool to NPM platform, first week I got 300 download.
 
 
 ## **Have You Encountered Any Difficulties When You Write React?**
-> - At first I  dont used to use state to manipulate rendering DOM because jQuery doesn't has this concept
+> - At first I dont used to use state to manipulate rendering DOM because jQuery doesn't has this concept
+
+<br/>
+
+
+### **How Do You Use Redux?**
+> - For the states having longer lifecycle and/or shared by multiple components, I’ll use Redux to store those information. And for the smaller temporary states, I’ll use the local state in components like buttons
+
+<br/>
+
+
+### **What Situations Will Cause An Infinite Loop In React?**
+> - (1) Updating the state inside the render
+```
+function App() {
+  const [count, setCount] = useState(0);
+
+  setCount(1); // State updates → triggers re-render → state updates → triggers re-render → …
+
+  return ...
+}
+```
+
+
+> - (2) Use useEffect function does not contain any dependencies
+
+```
+function App() {
+  const [count, setCount] = useState(0); //initial value of this 
+  useEffect(() => {
+    setCount((count) => count + 1); //increment this Hook
+  }); //no dependency array.
+  return (
+    <div className="App">
+      <p> value of count: {count} </p>
+    </div>
+  );
+}
+```
+
+> - (3) React uses shallow comparison to check if the reference value of non-primitive types(function, array, object) has changed,
+since the reference value of the object changes on every render, 
+React re-runs useEffect  which caused the infinite loop.
+(3.1) Use useEffect function then using a function as a dependency - fix by using useCallback
+(3.2) Use useEffect function then using an array as a dependency - fix by using useRef
+(3.3) Use useEffect function passing an object as a dependency - fix by useMemo 
+
+> - Related Reference: [3 ways to cause an infinite loop in React](https://alexsidorenko.com/blog/react-infinite-loop/?fbclid=IwAR0pJEAEBcEFQLPUpK3miqXEVHwcgAoARonhlc8cGVxc-EDHEt_zt_VbuD0), [How to solve the React useEffect Hook’s infinite loop patterns](https://blog.logrocket.com/solve-react-useeffect-hook-infinite-loop-patterns/?fbclid=IwAR2BbDidBKd2qpoEj7qHykCiikl1rcVA8frDt2dQ8BNMZHMI9H8t6KwUZ2Q)
+
 
 <br/>
 
