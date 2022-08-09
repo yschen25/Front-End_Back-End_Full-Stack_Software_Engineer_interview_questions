@@ -1453,11 +1453,11 @@ function App() {
 }
 ```
 
-> - (3) React uses shallow comparison to check if the reference value of non-primitive types(function, array, object) has changed,
+> - (3) React uses shallow comparison to check if the reference value of non-primitive types(function, array, object) has changed, <br/>
 since the reference value of the object changes on every render, 
 React re-runs useEffect  which caused the infinite loop.
-(3.1) Use useEffect function then using a function as a dependency - fix by using useCallback
-(3.2) Use useEffect function then using an array as a dependency - fix by using useRef
+(3.1) Use useEffect function then using a function as a dependency - fix by using useCallback <br/>
+(3.2) Use useEffect function then using an array as a dependency - fix by using useRef <br/>
 (3.3) Use useEffect function passing an object as a dependency - fix by useMemo 
 
 > - Related Reference: [3 ways to cause an infinite loop in React](https://alexsidorenko.com/blog/react-infinite-loop/?fbclid=IwAR0pJEAEBcEFQLPUpK3miqXEVHwcgAoARonhlc8cGVxc-EDHEt_zt_VbuD0), [How to solve the React useEffect Hook’s infinite loop patterns](https://blog.logrocket.com/solve-react-useeffect-hook-infinite-loop-patterns/?fbclid=IwAR2BbDidBKd2qpoEj7qHykCiikl1rcVA8frDt2dQ8BNMZHMI9H8t6KwUZ2Q)
