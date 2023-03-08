@@ -839,7 +839,7 @@ returnedFunction("returnedFunction");
 > - **reduce()**: return a value by running the reducer across all elements of the array, leaving back original array unchanged.
 
 ```
-var people = [
+let people = [
   {
     name: 'Casper',
     like: 'Noodles',
@@ -863,28 +863,30 @@ var people = [
 ];
 
 // Map
-let map = people.map((item) => item.age + 10);
-console.log(map);
+let map = people.map((item) => item.age);
+console.log(map); // [18, 24, 1, 3]
 
 // Foreach
 people.forEach((item) => console.log (item.name + " likes " + item.like))
+// Casper likes Noodles
+// Wang likes Rice
+// Bobo likes Steak
+// Andy likes Fish
 
 // Filter
 let filter = people.filter((item) => item.age <= 3)
-console.log(filter)
+console.log(filter) // [{name: 'Bobo', like: 'Steak', age: 1}, {name: 'Andy', like: 'Fish', age: 3}]
 
 // Find
 let find = people.find((item) => item.age <= 3)
-console.log(find)
-
-// Get the ages from array first
-const agesArr = people.map((item) => item.age);
+console.log(find) // {name: 'Bobo', like: 'Steak', age: 1}
 
 // Reduce
+const agesArr = people.map((item) => item.age);
 const reduce = agesArr.reduce((accumulator, current) => accumulator + current
 );
 
-console.log(reduce);
+console.log(reduce); // 46
 
 ```
 
