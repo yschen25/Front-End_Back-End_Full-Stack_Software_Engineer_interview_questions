@@ -1230,7 +1230,7 @@ const content = posts.map((post) =>
 <br/>
 
 ### **Why Don't Recommend To Use Indexes As Keys?**
-> - Since it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
+> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
 > - Related Reference : [Why do I need Keys in React Lists?
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
