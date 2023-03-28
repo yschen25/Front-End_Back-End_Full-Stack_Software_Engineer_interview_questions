@@ -11,6 +11,24 @@
 
 <br/>
 
+### **What Is JSON (JavaScript Object Notation)?**
+> - JSON is basically an object represented in the form of a string.
+
+```
+// Parse JSON to object by JSON.parse()
+let obj = '{"gretting": "hello"}';
+let plainObj = JSON.parse(obj);
+console.log(plainObj); // {gretting: 'hello'}
+
+// Parse object to JSON by JSON.stringfy()
+let data = {"name": "Erika"};
+let jsonData = JSON.stringfy(data);
+console.log(jsonData); // '{"name": "Erika"}'
+
+```
+
+<br/>
+
 ### **Explain What Is Not Defined, Undefined, Empty and Null?**
 
 **Not Defined**
