@@ -203,6 +203,7 @@ console.log(avg(1, 3, 5, 7, 9));  // 5
 ### **What Is Destructuring Assignment?**
 
 > - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+> - Destructuring array or object preventing from changing original values.
 
 ```
 const [a, b] = [1, 2]; // a = 1, b = 2
