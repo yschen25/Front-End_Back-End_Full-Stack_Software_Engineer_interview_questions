@@ -157,7 +157,7 @@ console.log(d) // [5, 2, 3]
 
 ```
 let number = [1, 2, 3, 4, 5];
-console.log(Math.max(number));  // NaN
+console.log(Math.max(number));  // NaN. The Math.max() method doesn't allow you to pass in an array. If at least one of the arguments cannot be converted to a number, the result is NaN.
 
 // Using spread operator
 let number = [1, 2, 3, 4, 5];
@@ -172,6 +172,16 @@ console.log(Math.max(...number)); // 5
 > - It consists of three dots (...) which collects all remaining elements into an array.
 
 ```
+Example1:
+
+const getLength = (...num) => {
+     console.log(num.length) // 5
+}
+
+getLength(1, 2, 3, 4, 5);
+
+
+Example2:
 let avg = function(arr) {
   let sum = 0;
   for(let i = 0; i < arr.length; i++) {
