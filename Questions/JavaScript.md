@@ -1589,6 +1589,26 @@ console.log(recu(1)) // 10
 
 <br/>
 
+### **How To Convert Binary String To Number And Vice Versa?**
+> - parseInt(): convert binary string to number
+> - toString(): convert number to binary string
+
+```
+// Convert binary string to number
+let binaryStr = "1011";
+let num = parseInt(binaryStr, 2);
+console.log(num) // 11
+
+// Convert number to binary string
+let num = 34;
+let binaryStr = num.toString(2);
+console.log(binaryStr) // "100010"
+
+```
+
+<br/>
+
+
 # Customized javaScript Questions
 
 ### **Where Do You Use Async, Await and Promise?**
