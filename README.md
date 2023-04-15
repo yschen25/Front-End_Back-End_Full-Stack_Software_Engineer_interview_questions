@@ -1,24 +1,24 @@
 # Front-End / Back-End / Full-Stack / Software Engineer interview questions
 
-[HTML_Questions](Questions/HTML.md) 
+[HTML](Questions/HTML.md) 
 
-[CSS_Questions](Questions/CSS.md)
+[CSS](Questions/CSS.md)
 
-[JavaScript_Questions](Questions/JavaScript.md)
+[JavaScript](Questions/JavaScript.md)
 
-[React_Questions](Questions/React.md)
+[React](Questions/React.md)
 
-[Website_Questions](Questions/Website.md)
+[Website](Questions/Website.md)
 
-[Coding_Style_Principls_Strategy_Questions](Questions/Coding_Style_Principles_Strategy.md)
+[Coding_Style_Principls_Strategy](Questions/Coding_Style_Principles_Strategy.md)
 
-[Database_SQL_Questions](Questions/Database_SQL.md)
+[Database_SQL](Questions/Database_SQL.md)
 
 [Deployment](Questions/Deployment.md)
 
 [Security](Questions/Security.md)
 
-[Other_Questions](Questions/Others.md)
+[Others](Questions/Others.md)
 
 </br>
 
