@@ -124,7 +124,7 @@ console.log(d) // [5, 2, 3]
 
 **Call By Sharing**
 
-> - When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals(see example or reference)` to reassign a's value, b's value `will not change` when a's value changes.
+> - When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals` to reassign a's value, b's value `will not change` when a's value changes.
 > - Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html),
 >   [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 
