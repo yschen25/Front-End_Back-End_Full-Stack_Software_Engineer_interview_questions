@@ -35,34 +35,46 @@ console.log(jsonData); // '{"name": "Erika"}'
 
 > - Not defined means the variable doesn't exist.
 
+<br/>
+
 **Undefined**
 
 > - Undefined means a variable has been declared but has not yet been assigned a value.
-> - Boolean(undefined) = false
 > - Type of undefined = undefined
 
 ```
 let a;
 console.log(a);           // undefined
-console.log(Boolean(a));  // false
 console.log(typeof a);    // undefined
 ```
+
+<br/>
+
 
 **Empty**
 
 > - Empty is used to refer to a unique string with zero length.
-> - Boolean(" ") = false
+
+```
+let a = "";
+console.log(a);        // ''
+console.log(a.length); // 0
+
+let b = " ";
+console.log(b);         // ' '
+console.log(b.length);  // 1
+```
+
+<br/>
 
 **Null**
 
 > - Null is used to refer to nothing.
-> - Boolean(null) = false
 > - Type of null = object
 
 ```
 let a = null;
 console.log(a);           // null
-console.log(Boolean(a));  // false
 console.log(typeof a);    // object
 
 console.log(null == undefined);  // true
