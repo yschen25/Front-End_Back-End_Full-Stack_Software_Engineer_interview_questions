@@ -169,8 +169,8 @@ console.log(d) // [5, 2, 3]
 
 ```
 let number = [1, 2, 3, 4, 5];
-console.log(Math.max(number));  
-// NaN. 
+console.log(Math.max(number)); // NaN. 
+
 The Math.max() method doesn't allow you to pass in an array,
 if at least one of the arguments cannot be converted to a number, the result is NaN.
 
