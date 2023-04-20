@@ -106,8 +106,8 @@ var b = a;
 
 a.greeting = 'Hola';
 
-console.log(a) // Hola 
-console.log(b) // Hola  
+console.log(a.greeting) // Hola 
+console.log(b.greeting) // Hola  
 
 var c = [1, 2, 3];
 var d = c;
