@@ -264,33 +264,57 @@ console.log(arr); // [1, 2, 3, 4, 5]
 
 ### **Explain What Is The Difference Between slice(), splice() and split()?**
 
-| Methods | slice (start index, end index)                                           | splice (index, howmany, item1, ....., itemX)                                               | split (separator, howmany)           |
+| Methods | slice (start index, end index)                                           | splice (index, howmany, item1, ....., itemx)                                               | split (separator, howmany)           |
 | ------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------ |
 |         | Array, string                                                            | Array                                                                                      | String                               |
-|         | Return a new array object selected from begin to end (end not included). | Changes the contents of an array by removing existing elements and/or adding new elements. | Splits a string object into an array |
-|         | Starting at the given start argument, and ends at, but does not include  | The end doesn't include                                                                    |                                  |
+|         | Return a new array object | Changes the contents of an array by removing existing elements and/or adding new elements. | Splits a string object into an array |
+|         | - Starting at the given start argument, but the end doesn't include <br> - Negative value defines the position from the end of the array    | - Starting at the given start argument, but the end doesn't include <br> - Negative value defines the position from the end of the array                                                                 |                                  |
 |         | **NOT** changes the original array                                       | **CHANGES** the original array                                                             | **NOT** changes the original array   |
 
 ```
-let arr = [1, 2, 3, 4, 5];
+let arr1 = [1, 2, 3, 4, 5];
 
 // Slice
-console.log(arr.slice(0)) // [1, 2 ,3 , 4, 5]
-console.log(arr.slice(2, 4)) // [3, 4]
-console.log(arr.slice(-2)) // [4, 5]
+
+Example_1:
+console.log(arr1.slice(0)) // [1, 2, 3, 4, 5]
+
+Example_2:
+console.log(arr1.slice(2, 4)) // [3, 4]
+
+Example_3:
+console.log(arr1.slice(-2)) // [4, 5] 
 
 // Splice
+
+Example_1:
+// At position 1, remove 3 items: 
+let arr2 = [1, 2, 3, 4, 5];
+arr2.splice(1, 3);
+console.log(arr2); // [1, 5]
+
+Example_2:
+// At position 1, add 2 elements
 let arr3 = [1, 2, 3, 4, 5];
-arr3.splice(0, 3);
-console.log(arr3); [4, 5]
+arr3.splice(1, 2, 55, 66);
+console.log(arr3); // [1, 55, 66, 4, 5] 
 
+Example_3:
+// Negative index 
 let arr4 = [1, 2, 3, 4, 5];
-arr4.splice(2, 0, 55, 66);
-console.log(arr4); // [1, 2, 55, 66, 3, 4, 5] 
+arr4.splice(-2);
+console.log(arr4) // [1, 2, 3]
 
-let arr5 = [1, 2, 3, 4, 5];
-arr5.splice(-2);
-console.log(arr5) // [1, 2, 3]
+// Split
+
+Example_1:
+let str1 = "How are you";
+console.log(str1.split(" ")); // ['How', 'are', 'you']
+
+Example_2:
+let str2 = "adfgdfhgdfh";
+console.log(str2.split("")) // ['a', 'd', 'f', 'g', 'd', 'f', 'h', 'g', 'd', 'f', 'h']
+
 ```
 
 
