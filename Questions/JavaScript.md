@@ -275,7 +275,6 @@ console.log(arr); // [1, 2, 3, 4, 5]
 let arr1 = [1, 2, 3, 4, 5];
 
 // Slice
-
 Example_1:
 console.log(arr1.slice(0)) // [1, 2, 3, 4, 5]
 
@@ -286,7 +285,6 @@ Example_3:
 console.log(arr1.slice(-2)) // [4, 5] 
 
 // Splice
-
 Example_1:
 // At position 1, remove 3 items: 
 let arr2 = [1, 2, 3, 4, 5];
@@ -306,7 +304,6 @@ arr4.splice(-2);
 console.log(arr4) // [1, 2, 3]
 
 // Split
-
 Example_1:
 let str1 = "How are you";
 console.log(str1.split(" ")); // ['How', 'are', 'you']
