@@ -172,7 +172,6 @@ const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const arrCombined = [...arr1, ...arr2];
 console.log(arrCombined); // [1, 2, 3, 4, 5, 6]
-
 ```
 
 <br/>
@@ -195,13 +194,13 @@ Example2:
 
 let avg = function(...arr) {
   let sum = 0;
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum / arr.length;
 }
 
-console.log(avg(1, 3, 5, 7, 9));  // 5
+console.log(avg(1, 3, 5, 7, 9)); // 5
 
 ```
 
@@ -211,7 +210,6 @@ console.log(avg(1, 3, 5, 7, 9));  // 5
 const numbers = [1, 2, 3, 4, 5, 6];
 const [a, b, ...rest] = numbers;
 consol.log(a, b, rest); // 1, 2, [3, 4, 5, 6]
-
 ```
 
 <br/>
