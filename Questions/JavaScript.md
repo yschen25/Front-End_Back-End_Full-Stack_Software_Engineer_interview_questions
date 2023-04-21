@@ -168,15 +168,10 @@ console.log(d) // [5, 2, 3]
 > - It consists of three dots (...). The spread operator allows you to spread out elements of an iterable object such as an array, map, or set.
 
 ```
-let number = [1, 2, 3, 4, 5];
-console.log(Math.max(number)); // NaN. 
-
-The Math.max() method doesn't allow you to pass in an array,
-if at least one of the arguments cannot be converted to a number, the result is NaN.
-
-// Using spread operator
-let number = [1, 2, 3, 4, 5];
-console.log(Math.max(...number)); // 5
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arrCombined = [...arr1, ...arr2];
+console.log(arrCombined); // [1, 2, 3, 4, 5, 6]
 
 ```
 
@@ -197,17 +192,7 @@ getLength(1, 2, 3, 4, 5);
 
 
 Example2:
-let avg = function(arr) {
-  let sum = 0;
-  for(let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
-}
 
-console.log(avg(1, 3, 5, 7, 9));  // NaN
-
-// Using rest operator
 let avg = function(...arr) {
   let sum = 0;
   for(let i = 0; i < arr.length; i++) {
@@ -220,10 +205,18 @@ console.log(avg(1, 3, 5, 7, 9));  // 5
 
 ```
 
-> - Related Reference : [[筆記] JavaScript ES6 中的展開運算子（spread operator）和其餘運算子（rest operator）](https://pjchender.blogspot.com/2017/01/es6-spread-operatorrest-operator.html)
->   <br/>
+> - Rest opeator is often used in combination with destructuring.
+
+```
+const numbers = [1, 2, 3, 4, 5, 6];
+const [a, b, ...rest] = numbers;
+consol.log(a, b, rest); // 1, 2, [3, 4, 5, 6]
+
+```
 
 <br/>
+<br/>
+
 
 ### **What Is Destructuring Assignment?**
 
