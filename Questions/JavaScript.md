@@ -181,7 +181,7 @@ console.log(arrCombined); // [1, 2, 3, 4, 5, 6]
 > - It consists of three dots (...) which collects all remaining elements into an array.
 
 ```
-Example1:
+Example_1:
 
 const getLength = (...num) => {
      console.log(num.length) // 5
@@ -190,7 +190,7 @@ const getLength = (...num) => {
 getLength(1, 2, 3, 4, 5);
 
 
-Example2:
+Example_2:
 
 let avg = function(...arr) {
   let sum = 0;
@@ -201,18 +201,15 @@ let avg = function(...arr) {
 }
 
 console.log(avg(1, 3, 5, 7, 9)); // 5
-
 ```
 
 > - Rest opeator is often used in combination with destructuring.
 
 ```
 const numbers = [1, 2, 3, 4, 5, 6];
-const [a, b, ...rest] = numbers;
-consol.log(a, b, rest); // 1, 2, [3, 4, 5, 6]
+const [a, b, ...rest] = numbers; // a = 1, b = 2, c = [3, 4, 5, 6] 
 ```
 
-<br/>
 <br/>
 
 
@@ -236,7 +233,7 @@ const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
 
 <br/>
 
-### **Explain What Is The Difference Between push(), pop(), unshift(), shift()?**
+### **Explain What Are The Differences Between push(), pop(), unshift(), shift()?**
 
 | Methods | push()                                      | pop()                                          | unshift()                                         | shift()                                              |
 | ------- | ------------------------------------------- | ---------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------- |
@@ -245,23 +242,22 @@ const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
 
 ```
 let arr = [1, 2, 3, 4, 5];
-console.log(arr);
 
 // Push
-console.log(arr.push(6));
-console.log(arr);
+console.log(arr.push(6)); // 6 (length)
+console.log(arr); // [1, 2, 3, 4, 5, 6]
 
 // Pop
-console.log(arr.pop());
-console.log(arr);
+console.log(arr.pop()); // 6
+console.log(arr); // [1, 2, 3, 4, 5]
 
 // Unshift
-console.log(arr.unshift());
-console.log(arr);
+console.log(arr.unshift(6)); // 6 (length)
+console.log(arr); // [6, 1, 2, 3, 4, 5]
 
 // Shift
-console.log(arr.shift());
-console.log(arr);
+console.log(arr.shift()); // 6 
+console.log(arr); // [1, 2, 3, 4, 5]
 ```
 
 <br/>
