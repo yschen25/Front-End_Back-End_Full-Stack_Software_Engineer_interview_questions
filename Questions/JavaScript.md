@@ -1643,6 +1643,10 @@ console.log(binaryStr) // "100010"
 
 ### **What Are The Differences Between Library And Framework?**
 
+<p align="center">
+<img src="img/framework_library.png" alt="framework_library.png" title="framework_library.png" width="60%">
+</p>
+
 | Library | Framework |
 | ------- | ------- |
 |A set of assistance modules, objects, classes, functions, pre-written code, and so on. | Includes a variety of APIs, compilers, support applications, libraries, and so on. | 
