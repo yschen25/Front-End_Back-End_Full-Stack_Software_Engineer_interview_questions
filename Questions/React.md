@@ -146,7 +146,7 @@ ReactDOM.render(<MyHeader />, document.getElementById("container"));
 <br/>
 
 
-### **Why Can’t Browsers Read JSX?**
+### **Why Can’t The Browsers Read JSX?**
 > - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers like Babel` and then pass it to the browser.
 
 <br/>
@@ -392,7 +392,7 @@ class MyComponent extends React.Component {
 <br/>
 
 
-### **Why Can't Update State Directly?**
+### **Why Can't We Update State Directly?**
 > - React compares the previous state with the updated state to decide if the component needs to be re-rendered. Modifying the state directly will disturb this process. As a result the component will behave unexpectedly.
 
 <br/>
