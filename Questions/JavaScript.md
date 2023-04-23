@@ -1641,6 +1641,19 @@ console.log(binaryStr) // "100010"
 
 <br/>
 
+### **What Are The Differences Between Library And Framework?**
+
+| Library | Framework |
+| ------- | ------- |
+|A set of assistance modules, objects, classes, functions, pre-written code, and so on. | Includes a variety of APIs, compilers, support applications, libraries, and so on. | 
+| Can be easily substituted by another library. | Are tough to replace.| 
+| When we call a method from a library, we are in control. | Inversion of control, i.e. the framework calls us. | 
+| Since developing a library needs less code, performance and load time are improved. | The construction of a framework necessitates large amounts of code, which reduces performance and increases load time. | 
+| Libraries can be simply linked into existing programs to add specific functionality. | It is tough to incorporate a framework seamlessly into an existing project.| 
+
+> - Related Reference : [Difference Between Framework Vs Library](https://www.sencha.com/blog/difference-between-framework-vs-library-snc/)
+
+<br/>
 
 # Customized javaScript Questions
 
