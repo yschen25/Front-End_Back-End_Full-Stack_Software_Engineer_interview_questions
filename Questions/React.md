@@ -3,7 +3,7 @@
 ### **What And When To Use React.js?**
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and state changes` instead of building a simple web.
-> - Related Reference : [What is React?](**https://www.simplilearn.com/what-is-react-article)
+> - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
 
 <br/>
 
@@ -147,7 +147,7 @@ ReactDOM.render(<MyHeader />, document.getElementById("container"));
 
 
 ### **Why Can’t Browsers Read JSX?**
-> - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers` like Babel and then pass it to the browser.
+> - Browsers can only read JavaScript objects but `JSX in not a regular JavaScript object`. Thus to enable a browser to read JSX, first, we need to transform JSX file into a JavaScript object using `JSX transformers like Babel` and then pass it to the browser.
 
 <br/>
 
@@ -183,8 +183,7 @@ const MyComponent = function () {
 
 > - **Class Components**: <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
-(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor, 
-(3)  Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor,  
 ```
 class MyComponent extends React.Component {
   render() {
@@ -233,8 +232,8 @@ ReactDOM.render(
 
 
 ### **Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?**
-> - Make code simple
-> - Reduce using complicated lifecycle
+> - Functional component are much easier to read and test
+> - Preventing using complicated lifecycle
 
 <br/>
 
@@ -281,7 +280,7 @@ class Password extends React.Component {
 
 ### **When Use Props?**
 > - To `pass data & event handlers` down to your child components.
-> - If you just want to use props, not use state or bind function then you don't need to write constructor.
+> - For using class components, if you just want to use props, not use state or bind function then you don't need to write constructor.
 > - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 
 <br/>
@@ -315,9 +314,16 @@ ReactDOM.render(<SayMyName />, document.getElementById("container"));
 <br/>
 
 
+### **What Is Props Hell (Wrapper Hell)?**
+> - Complex applications built with class components easily run into wrapper hell. If you examine the application in the React Dev Tools, you will notice deeply nested components, This makes it very difficult to work with the components or debug them. 
+
+<br/>
+
+
 ### **How To Solve Props Hell (Wrapper Hell)?**
 > - Redux.
 > - Functional components + React hooks. 
+> - Higher-order function.
 
 <br/>
 
@@ -346,7 +352,7 @@ class YourName extends React.Component {
 
 
 ### **How To Change State?**
->- State of a component can be updated using this.setState(), functional + hook useState().
+> - State of a class components can be updated by using this.setState(), and functional components can be updated by using hook useState().
 > - setState is asynchronous.
 ```
 class MyComponent extends React.Component {
@@ -380,7 +386,7 @@ class MyComponent extends React.Component {
 |---|---|---|
 | | Internal | External |
 | | Mutable | Immutable |
-| | Can be modified using setState() method | Can't not be modified |
+| | Can be modified | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
 | | Can only be used with class Components | Can be used with both class as well as functional components |
 
