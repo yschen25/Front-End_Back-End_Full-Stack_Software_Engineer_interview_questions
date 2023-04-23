@@ -388,7 +388,6 @@ class MyComponent extends React.Component {
 | | Mutable | Immutable |
 | | Can be modified | Can't not be modified |
 | | Starts with a default value which is generally updated by event handlers | Passed as attributes from parent component to child component |
-| | Can only be used with class Components | Can be used with both class as well as functional components |
 
 <br/>
 
