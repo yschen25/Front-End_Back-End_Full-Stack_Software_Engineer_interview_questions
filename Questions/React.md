@@ -392,13 +392,13 @@ class MyComponent extends React.Component {
 <br/>
 
 
-### **Why Can't Update State Directly Without setState()?**
-> - setState() trigger re-rendering of the components. When we want to update state again and again we must need to setState otherwise it doesn't work correctly.
+### **Why Can't Update State Directly?**
+> - React compares the previous state with the updated state to decide if the component needs to be re-rendered. Modifying the state directly will disturb this process. As a result the component will behave unexpectedly.
 
 <br/>
 
 
-### **Why Should We Bind The Function?**
+### **Why Should We Bind The Function In The Class Components?**
 
 > - When you define a component using an ES6 class, a common pattern is for an event handler to be a method on the class. If we don't use bind method, the `this will refer to window scope`, and code within the class body's syntactic boundary is always executed in strict mode, then `will be undefined` when the function is actually called.
 > - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
@@ -411,7 +411,7 @@ class MyComponent extends React.Component {
 
 
 ### **How To Bind The Function?**
-> - Class component : Bind in constructor
+> - Class component: Bind in constructor
 
 ```
 class MyComponent extends React.Component {
@@ -442,7 +442,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 ```
 <br/>
 
-> - Class component : Bind in render
+> - Class component: Bind in render
 ```
 class MyComponent extends React.Component {
   constructor(props) {
@@ -501,10 +501,6 @@ class MyComponent extends React.Component {
 
 ReactDOM.render(<MyComponent />, document.getElementById("container"));
 ```
-<br/>
-
-
-> - Functional component + hook
 
 <br/>
 
