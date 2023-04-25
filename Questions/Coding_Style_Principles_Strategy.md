@@ -1,36 +1,10 @@
 # Coding Style / Principles / Strategy Questions
 
-### **Why Chose ESLint?**
-> - Compared to JSLint, JSHint, ESLint is easy to extend and allow users to customize rules, easy to know where the error is.
-
-<br/>
-
-### **What Are The Most Important Things You Think About During The Code Review?**
-> - Functional programming : focus on high order function and pure function, prevent side effect and mutable data. 
-> - Single responsibility : one function only responsible for one functionality. 
-> - Open-close : open to extension, close to modification. 
-> - DRY principle : Don’t repeat yourself.
-
-<br/>
-
-### **What is SOLID principle?**
-> - S = Single-responsibility principle (SRP)
-> - O = Open–closed principle (OCP)
-> - L = Liskov substitution principle (LSP)
-> - I = Interface segregation principle (ISP)
-> - D = Dependency inversion principle (DIP)
-
-<br/>
-
-### **What Does The Clean Code Mean To You?** 
-> - Testable, Readable, Maintainable.
-
-<br/>
-
-### **Do You Know TDD?** 
+### **Please Explain What Is TDD (Test Driven Development)?** 
 <p align="center">
 <img src="img/TDD.png" alt="TDD" title="TDD" width="40%">
 </p>
+
 <br/>
 
 > - TDD (Test Driven Development) : An approach to automated software testing that involves writing a failing test before writing the production code to make it pass.
@@ -46,13 +20,7 @@ The next step of TDD is to write only enough production code to fix the current 
 
 <br/>
 
-### **Do You Know DDD?** 
-> - DDD (Domain Driven Design) :  Focus on the core domain and domain logic.
-Base complex designs on models of the domain. Constantly collaborate with domain experts, in order to improve the application model and resolve any emerging domain-related issues.
-
-<br/>
-
-### **Why unit tests are important?**
+### **Why Writing Tests Are Important?**
  > - To test every function and procedure.
  > - To find early bugs and fix in the development cycle and to save costs.
  > - To help the developers to understand the code base and enable them to make changes quickly.
@@ -60,9 +28,36 @@ Base complex designs on models of the domain. Constantly collaborate with domain
 
 <br/>
 
-### **Functional, unit, integration, end-to-end (E2E)) testing?**
+### **Explain What Are Functional, Unit, Integration, E2E (End-To-End) Testing?**
 
-> - Functional testing : Testing the functions. 
-> - Unit testing : Testing an independent unit of behavior, such as a method (function) in a class.
-> - Integration testing : Combines mutiple components testings.
-> - End-to-End Testing : Mainly testing the whole working flow,  from the end user’s experience by simulating the real user scenario and validating the system under test and its components for integration and data integrity.
+> - Functional testing: Testing the functions. 
+> - Unit testing: Testing an independent unit of behavior, such as a method (function) in a class.
+> - Integration testing: Combines mutiple components testings.
+> - End-to-End Testing: Mainly testing the whole working flow,  from the end user’s experience by simulating the real user scenario and validating the system under test and its components for integration and data integrity.
+
+<br/>
+
+### **Explain What Is DDD?** 
+> - DDD (Domain Driven Design):  Focus on the core domain and domain logic.
+Base complex designs on models of the domain. Constantly collaborate with domain experts, in order to improve the application model and resolve any emerging domain-related issues.
+
+<br/>
+
+
+# Customized React Questions
+
+### **Why Choose ESLint?**
+> - Compared to JSLint, JSHint, ESLint is easy to extend and allow users to customize rules, easy to know where the error is.
+
+<br/>
+
+### **What Are The Important Things You Think About During The Code Review?**
+> - Functional programming : focus on high order function and pure function, prevent side effect and mutable data. 
+> - Single responsibility : one function only responsible for one functionality. 
+> - Open-close : open to extension, close to modification. 
+> - DRY principle : Don’t repeat yourself.
+
+<br/>
+
+### **What Does The Clean Code Mean To You?** 
+> - Testable, Readable, Maintainable.
