@@ -158,7 +158,7 @@
 
 > - Use the latest webpack version.
 > - Minimize the search scope.
-> - Use tool such as happypack, thread-loader, etc multiple threads to save building time,  because webpack only use single thread to run.
+> - Since webpack only use single thread so we can use tool such as happypack, thread-loader, etc., by runnung multiple threads to save building time.
 > - Set cacheDirectory to babel-loader
 > - Related Reference: [使用 happypack 提升 Webpack 项目构建速度](https://juejin.im/post/5c6e0c3a518825621f2a6f45), [提升構建速度的方法](https://zhuanlan.zhihu.com/p/59328293), [使用webpack4提升180%編譯速度](http://louiszhai.github.io/2019/01/04/webpack4/), [webpack-bundle-analyzer插件快速入門](https://juejin.im/post/5cb70649f265da03452bd2d9)
 
