@@ -9,11 +9,20 @@
 
 > - TDD (Test Driven Development) is an approach to automated software testing that involves `writing a failing test before writing the production code to make it pass`.
 > - Repeat the process below :  <br/>
-(1) `Add the tests.` Our first step is to create an end-to-end test describing the feature we want users to be able to do.  <br/>
-(2) `Run all tests.` The tests will fail (be "red") at first because we haven't yet implemented the functionality. <br/>
-(3) `Write the simplest code that passes the new tests.` To write only enough production code to fix the current error or test failure. <br/>
-(4) `All tests should now pass.` <br/>
-(5) `Refactor as needed.` Using tests after each refactor to ensure that functionality is preserved. <br/>
+(1) **Add the tests**: Our first step is to create an end-to-end test describing the feature we want users to be able to do.  <br/>
+(2) **Run all tests**: The tests will fail (be "red") at first because we haven't yet implemented the functionality. <br/>
+(3) **Write the simplest code that passes the new tests**: To write only enough production code to fix the current error or test failure. <br/>
+(4) **All tests should now pass** <br/>
+(5) **Refactor as needed.**: Using tests after each refactor to ensure that functionality is preserved. <br/>
+
+<br/>
+
+### **What Are The Advantages Of TDD**
+> - **Improved design of the system**: TDD forces you to think about exactly what you expect from scenario to scenario, which makes you more likely to cover all the bases.
+> - **Lower development costs and improved quality of code**: As you are specifically writing code to pass the tests in place, and refactoring at the end of each test; you ensure your code is clean and optimised without any extra pieces of code that you won't need.
+> - **Prevents bugs early on in the development process**: As you are adding to the functionality of your code as you go along, you ensure that each stage of the code is working as you progress. 
+> - **Very high test-coverage**
+> - Related Reference : [The Benefits of Test-Driven Development (TDD)]([https://www.simplilearn.com/what-is-react-article](https://northcoders.com/company/blog/the-benefits-of-test-driven-development-tdd))
 
 <br/>
 
@@ -34,9 +43,8 @@
 
 <br/>
 
-### **Explain What Is DDD?** 
-> - DDD (Domain Driven Design): Focus on the core domain and domain logic.
-Base complex designs on models of the domain. Constantly collaborate with domain experts, in order to improve the application model and resolve any emerging domain-related issues.
+### **Explain What Is DDD (Domain Driven Design)?** 
+> - Focus on the core domain and domain logic. Base complex designs on models of the domain. Constantly collaborate with domain experts, in order to improve the application model and resolve any emerging domain-related issues.
 
 <br/>
 
