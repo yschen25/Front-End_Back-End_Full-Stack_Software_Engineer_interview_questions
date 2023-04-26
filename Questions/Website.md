@@ -81,8 +81,7 @@
 <br/>
 
 > **Methods**: <br/>
-> - **Web Application:** SPA <br/>
-> - Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
+> - **Web Application:** SPA. Prevent user interact with the website causes render the whole page every time. First page use Server side render, Other pages use Client side render.
 > - **Technology:** React  <br/>
 **(1) Router**: React-router + React.lazy. <br/>
 **(2) Virtual DOM**: dependency array of useEffect, key in the list. <br/>
@@ -92,20 +91,20 @@
 
 > **For huge data:** <br/>
 **(1) Virtualize long lists**: React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes.  <br/>
-**(2) Use webStorage**: user id, record the search key and result that user used before, user setting: layout, lang.  <br/>
+**(2) Use webStorage**: Store such as user id, search key and result, user setting such as layout and lang on client side. <br/>
 **(3) Use Promise to make multiple calls**.  <br/>
-**(4) Service worker**: will first immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
+**(4) Service worker**: It will irst immediately return a cached response if it exists, and then in parallel query the network. Upon receiving the response from the network, the cached entry will be updated and the user interface will be updated automatically.
 
 <br/>
 
 > **For files:** <br/>
 **(1) Code splitting**: To solve the problem that js bundle size is too large, to divide to smaller chunks.  <br/>
-**(1.1) Dynamic Import**:  React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
+**(1.1) Dynamic Import**: React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
 **(1.2) Bundle third party files to one file**: CommonsChunkPlugin, By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. <br/>
 **(1.3) Preload, prefetch, prepender, async...files**: Use async, defer, prefetch, preload, preconnect, dns-preconnect, prerender tags.<br/>
 **(2) Contents**: Offer the different website content depends on user’s internet speed. <br/>
-**(3) Delete unused code**: remove spaces, commas, and other unnecessary characters.<br/>
-**(4) Minify CSS, JS, images**: use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files. <br/>
+**(3) Delete unused code**: Remove spaces, commas, and other unnecessary characters.<br/>
+**(4) Minify CSS, JS, images**: Use gzip for file compression, to reduce the size of your CSS, HTML, and JavaScript files. <br/>
 **(5) Images**: Proper image size and format, use jpg instead of png,  use webp  instead of jpg. <br/>
 **(6) Lazy load**: Like JS, CSS, images, 3rd party scripts such as Google Tag Manager, facebook pixel code. <br/>
 **(7) Eliminate render-blocking resources**: Not waiting website load the js, css resources then render the page.
@@ -113,12 +112,12 @@
  <br/>
  
 > **Others:**
-> - Reduce the HTTP request: use sprite images, combine files...etc.
+> - Reduce the HTTP requests: use sprite images, combine files...etc.
 > - Use CDN.
+> - Use Cache, for static resources use longer cache expiration.
 > - Reduce redirects.
 > - Stable server.
-> - Use Cache, for static resources use longer cache expiration.
-> - Optimize render web page
+> - Optimize render web page.
 > - Related Reference: [20 Ways to Speed Up Your Website](https://www.crazyegg.com/blog/speed-up-your-website/), [讓你的網頁加載時間降低到1s 內](https://www.jianshu.com/p/d857c3ff78d6)
 
 <br/>
