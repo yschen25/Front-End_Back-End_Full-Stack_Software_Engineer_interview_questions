@@ -188,17 +188,17 @@
 ### **What Are Pros And Cons Of SPA?**
 
 > **Pros**: 
-> - (1) SPA is fast, as most resources (HTML+CSS+Scripts) are only loaded once throughout the lifespan of the application. Only data is transmitted back and forth.
+> - (1) SPA is fast, as most resources (HTML + CSS + Scripts) are only loaded once throughout the lifespan of the application. Only data is transmitted back and forth.
 > - (2) SPA can cache any local storage effectively. An application sends only one request, store all data, then it can use this data and works even offline.
 > - (3) Using fewer servers for the same amount of traffic.
-> - (4) Improve user experiences'
+> - (4) Improve user experiences.
 > - It’s easier to make a mobile application because the developer can reuse the same backend code for web application and native mobile application.
 
 > **Cons**: 
-> - (1) Bad at SEO, but can be improved by SSR.
+> - (1) Some enginees don't support async crawling SPA hence it which can result in empty HTML and poor SEO performance, but it can be improved by SSR.
 > - (2) Additional problems with JavaScript arise because you have to make sure there are no memory leaks. Since the app can run for a long time 
 > - (3) It is slow to download because heavy client frameworks are required to be loaded to the client.
-> - (4) Compared to the “traditional” application, SPA is less secure. Due to Cross-Site Scripting (XSS), it enables attackers to inject client-side scripts into web application by other users. → WHY?
+> - (4) Compared to the “traditional” application, SPA is less secure. Due to Cross-Site Scripting (XSS), it enables attackers to inject client-side scripts into web application by other users.
 > - (5) One more disadvantage of JavaScript is that users simply can have it disabled on their devices, and then you need to think of additional ways of how they can access the information on your website or your app without JavaScript. 
 
 <br/>
@@ -254,16 +254,6 @@
 ### **What Is WebAPP?**
 > - A website app which doesn't need to download, you can open it with browser.
 > - Related Reference: [Native, Hybrid, Web App, Cross App](https://medium.com/@milkmidi/native-hybrid-web-app-cross-app%E5%93%AA%E4%B8%80%E5%80%8B%E6%98%AF%E9%96%8B%E7%99%BCapp%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%E5%91%A2-381e5529e47)
-
-<br/>
-
-
-### **What Is Gateway, API And API Gateway?**
-
-> - Gateway: An interface to receive and handle the request.
-> - API: A `Application Programming Interface` to let user manipulate to achieve what they want.
-> - API Gateway: A service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
-> - Related Reference: [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
 
 <br/>
 
