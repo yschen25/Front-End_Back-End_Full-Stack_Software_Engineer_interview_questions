@@ -123,6 +123,15 @@
 
 <br/>
 
+### **What Is The Async And Defer In Script Tag?**
+> - **Async**: `Continue loading other documents when loading script`, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
+> - **Defer**: `Load script after finishing loading other documents`, recommended use in every scripts.
+> - **Async + Defer**: load script asynchronous after loading other documents.
+> - Related Reference: [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
+
+<br/>
+
+
 ### **Explain The Meaning Of HTTP Status Code 200, 400, 403, 404, 500, 502.** 
 
 > - 200: Request success. <br/>
@@ -363,14 +372,6 @@ then the user will has permission to view or manipulate corresponding informatio
 > - (3) If the address is found, the IP address is sent to user's browser. 
 > - (4) Then the browser contacts the web server that has the web page which user requested. 
 > - (5) The page then sent to user's browser.
-
-<br/>
-
-### **What Is The Async And Defer In Script Tag?**
-> - **Async**: `Continue loading other documents when loading script`, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
-> - **Defer**: `Load script after finishing loading other documents`, recommended use in every scripts.
-> - **Async + Defer**: load script asynchronous after loading other documents.
-> - Related Reference: [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
 
 <br/>
 
