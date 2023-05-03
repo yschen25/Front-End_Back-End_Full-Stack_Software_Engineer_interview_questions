@@ -28,3 +28,13 @@
 > - Related Reference : [What are Microservices?](https://aws.amazon.com/microservices/)
 
 <br/>
+
+
+### **What Is Gateway, API And API Gateway?**
+
+> - Gateway: An interface to receive and handle the request.
+> - API: A `Application Programming Interface` to let user manipulate to achieve what they want.
+> - API Gateway: A service that makes it easy for developers to publish, maintain, monitor, secure, and operate APIs. 
+> - Related Reference: [Amazon API Gateway](https://aws.amazon.com/tw/api-gateway/features/), [什麼是 Amazon API Gateway？](https://docs.aws.amazon.com/zh_tw/apigateway/latest/developerguide/welcome.html)
+
+<br/>
