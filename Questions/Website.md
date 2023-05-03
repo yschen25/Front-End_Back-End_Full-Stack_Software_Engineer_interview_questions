@@ -1,6 +1,6 @@
 # Website Questions
 
-### **What Is The Difference Between Session, Cookie, Sessionstorage And Localstorage?**
+### **What Are The Difference Between Session, Cookie, Sessionstorage And Localstorage?**
 
 <table>
     <tr>
@@ -70,6 +70,7 @@
         <td>Shopping cart</td>
     </tr>
 </table>
+
 <br/>
 
 ### **How To Speed Up The Website?**
@@ -89,7 +90,7 @@
 
 <br/>
 
-> **For huge data:** <br/>
+> **For Huge Data:** <br/>
 **(1) Virtualize long lists**: React-window or vue-virtual-scroll-list. This technique only renders the list in your viewport, preventing creating unnecessary nodes.  <br/>
 **(2) Use webStorage**: Store such as user id, search key and result, user setting such as layout and lang on client side. <br/>
 **(3) Use Promise to make multiple calls**.  <br/>
@@ -97,7 +98,7 @@
 
 <br/>
 
-> **For files:** <br/>
+> **For Files:** <br/>
 **(1) Code splitting**: To solve the problem that js bundle size is too large, to divide to smaller chunks.  <br/>
 **(1.1) Dynamic Import**: React-router + React.lazy to load the specific resources when we change to that page, prevent some resources that we don’t need to download in the beginning. Big files: To load the files according to the timing or logic. <br/>
 **(1.2) Bundle third party files to one file**: CommonsChunkPlugin, By separating common modules from bundles, the resulting chunked file can be loaded once initially, and stored in cache for later use. <br/>
@@ -164,14 +165,6 @@
 
 <br/>
 
-### **What Is Graceful Degradation And Progressive Enhancement?**
-
-> - **Graceful Degradation**: Building the website so it provides a good level of user experience in `modern browsers first`, then fix the problem for other browsers. 
-> - **Progressive Enhancement**: Building the website to keep all functions work properly for `all the browsers`, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
-> - Use progressive enhancement will cost more time and manpower in the beginning, but easily to maintain. Use graceful degradation can make website online quickly. Choose which to use it depends on the requirements.
-> - Related Reference: [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
-
-<br/>
 
 ### **What Is SPA?**
 
@@ -183,16 +176,16 @@
 <br/>
 
 
-### **What Is SPA's Strength And Weakness?**
+### **What Are SPA's Pros And Cons?**
 
-> **Strength**: 
+> **Pros**: 
 > - (1) SPA is fast, as most resources (HTML+CSS+Scripts) are only loaded once throughout the lifespan of the application. Only data is transmitted back and forth.
 > - (2) SPA can cache any local storage effectively. An application sends only one request, store all data, then it can use this data and works even offline.
 > - (3) Using fewer servers for the same amount of traffic.
 > - (4) Improve user experiences'
 > - It’s easier to make a mobile application because the developer can reuse the same backend code for web application and native mobile application.
 
-> **Weakness**: 
+> **Cons**: 
 > - (1) Bad at SEO, but can be improved by SSR.
 > - (2) Additional problems with JavaScript arise because you have to make sure there are no memory leaks. Since the app can run for a long time 
 > - (3) It is slow to download because heavy client frameworks are required to be loaded to the client.
@@ -206,6 +199,20 @@
 
 > - SSR, Server Side Rendering, `render the fist page with server side, the others with client side`.
 > - Related Reference: [淺談SPA、SEO與SSR](https://juejin.im/entry/5bbbf852f265da0aea699497)
+
+<br/>
+
+### **What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?**
+
+|   | SSR (Server-side rendering) | CSR (Client-side rendering) |
+|---|---|---|
+| Rendering |It can basically be defined as doing the browser's work on the server. In connection requests to the server side, the server `returns the entire page content as a readable HTML response`. A readable content appears even when the `JavaScript codes are not executed`, but the page does not have the dynamics that the JavaScript codes provide. |Websites send very `little HTML response to connection requests`. This HTML response contains JavaScript codes that make up the content of the page. `Unless these JavaScript codes are executed, the website is a blank page`.|
+| SEO | `Good`, due to the `faster initial load time`, the HTML is available for the first time itself. | `Bad`, negative impact on SEO if there are any delays in API responses and rendering doesn’t happen correctly. CSR requires a `two-wave process for JS rendering and indexing` in a browser. |
+| Speed | Initial loading time is fast, browsing from page to page is often much slower. | Initial loading time is slow, but website is rendered faster after the initial load. |
+| Loading | Mainly on `server`. | Mainly on `browser`. |
+| Application | Main page which needs SEO. | Other pages which don't need SEO or update frequently. |
+
+> - Related Reference: [現代前端渲染機制: SSR vs. CSR](https://growingdna.com/ssr-versus-csr/), [Pros and Cons of Client-Side Rendering](https://www.pluralsight.com/guides/pros-and-cons-of-client-side-rendering), [Javascript SEO: What is SSR/CSR? Advantages and Disadvantages](https://zeo.org/blog/javascript-seo-what-is-ssr-csr-advantages-and-disadvantages/)
 
 <br/>
 
@@ -225,10 +232,6 @@
 > - Related Reference: [PWA 初體驗](https://hsiangfeng.github.io/pwa/20191017/2186080947/)
 
 <br/>
-
-
-### **How to choose to use MPA or SPA?**
-> - When you have a business or a personal website that needs a dynamic platform and small data volume, the single-page application is a good idea. It is also a great option if you are planning to develop a mobile app in the future, since, as we mentioned above, the backend API can be used for both the web and mobile apps.
 
 
 ### **What Is Webview?**
@@ -271,7 +274,7 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 <br/>
 
 
-### **What Is Strength And Weakness?**
+### **What Are Prons And Cons Of Rest API?**
 
 > - Strength: Simple and uniform Interface, cachable
 > - Weakness: Need to create multiple requests to get complex data 
@@ -279,7 +282,7 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 <br/>
 
 
-### **How To Solve Weakness Of Rest API?**
+### **How To Solve The Cons Of Rest API?**
 
 > - `GraphQL allow using one entry point to get all data`, doesn’t like restful api which needs to call multiple times to get enough data. And what your get is what you search, it also can reduce the requests.
 
@@ -323,7 +326,16 @@ then the user will has permission to view or manipulate corresponding informatio
 ### **What Is Web Accessibility?**
 
 > - To ensure everyone includes disables can use the website's function working normally.
-> - Use semantic element, properly tag, provide equivalent alternatives to image, audio and video, don't just use color to pass the information, consider about keyboard-only user.
+> - The ways: <br/>
+    (1) Semantic tags. <br/>
+    (2) Offer alt descriptions for button, images, audio and video. <br/>
+    (3) Set up proper title for website.  <br/>
+    (4) Use rem, em, etc. for text instead of using px.  <br/>
+    (5) Add noscript when user disable javaScript.  <br/>
+    (6) Add access key.  <br/>
+            - User able useing tap to browse whole website.  <br/>
+            - User able useing specfic key to jump to main area.  <br/>
+
 > - Related Reference: [我們都應該了解的無障礙網頁概念](https://designtongue.me/website-accessibility/)
 
 <br/>
@@ -345,42 +357,20 @@ then the user will has permission to view or manipulate corresponding informatio
 <br/>
 
 
-### **What Is Reflow And Repaint?**
-> - **Reflow**: It will reflow when `manipulate DOM (add, change, delete, etc.)`, `change CSS(width, position, etc.)`, `change size of browser`, etc. Change width → Reflow → Repaint.
-> - **Repaint**: It will repaint when `change style of element`. Change color → Repaint.
-> - Related Reference: [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
+### **What Happens When A User Click A Link On a Page?**
+> - Browser gathers the information about the link and sends the request to a naming server. 
+> - The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
+If the address is found, the IP address is sent to my browser. 
+The browser then contacts the web server that has the web page I requested. 
+The page is then sent to your browser.
 
 <br/>
-
-
-### **How To Optimize Render Web Page?**
-> - Combine multiple operations to one time.
-> - `Modify element's style by change class name` instead of changeing the style by css-in-js.
-> - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape from document flow to prevent affect other elements. 
-
-<br/>
-
 
 ### **What Is The Async And Defer In Script Tag?**
 > - **Async**: `Continue loading other documents when loading script`, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
 > - **Defer**: `Load script after finishing loading other documents`, recommended use in every scripts.
 > - **Async + Defer**: load script asynchronous after loading other documents.
 > - Related Reference: [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
-
-<br/>
-
-
-### **What Is SSR (Server-Side Rendering) And CSR (Client-Side Rendering)?**
-
-|   | SSR (Server-side rendering) | CSR (Client-side rendering) |
-|---|---|---|
-| Rendering |It can basically be defined as doing the browser's work on the server. In connection requests to the server side, the server `returns the entire page content as a readable HTML response`. A readable content appears even when the `JavaScript codes are not executed`, but the page does not have the dynamics that the JavaScript codes provide. |Websites send very `little HTML response to connection requests`. This HTML response contains JavaScript codes that make up the content of the page. `Unless these JavaScript codes are executed, the website is a blank page`.|
-| SEO | `Good`, due to the `faster initial load time`, the HTML is available for the first time itself. | `Bad`, negative impact on SEO if there are any delays in API responses and rendering doesn’t happen correctly. CSR requires a `two-wave process for JS rendering and indexing` in a browser. |
-| Speed | Initial loading time is fast, browsing from page to page is often much slower. | Initial loading time is slow, but website is rendered faster after the initial load. |
-| Loading | Mainly on `server`. | Mainly on `browser`. |
-| Application | Main page which needs SEO. | Other pages which don't need SEO or update frequently. |
-
-> - Related Reference: [現代前端渲染機制: SSR vs. CSR](https://growingdna.com/ssr-versus-csr/), [Pros and Cons of Client-Side Rendering](https://www.pluralsight.com/guides/pros-and-cons-of-client-side-rendering), [Javascript SEO: What is SSR/CSR? Advantages and Disadvantages](https://zeo.org/blog/javascript-seo-what-is-ssr-csr-advantages-and-disadvantages/)
 
 <br/>
 
@@ -401,11 +391,27 @@ then the user will has permission to view or manipulate corresponding informatio
 <br/>
 
 
-### **What happens when you click a link on a page?**
-> - Browser gathers the information about the link and sends the request to a naming server. 
-> - The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
-If the address is found, the IP address is sent to my browser. 
-The browser then contacts the web server that has the web page I requested. 
-The page is then sent to your browser.
+### **What Is Reflow And Repaint?**
+> - **Reflow**: It will reflow when `manipulate DOM (add, change, delete, etc.)`, `change CSS(width, position, etc.)`, `change size of browser`, etc. Change width → Reflow → Repaint.
+> - **Repaint**: It will repaint when `change style of element`. Change color → Repaint.
+> - Related Reference: [Reflow 及 Repaint 是什麼？](https://ithelp.ithome.com.tw/articles/10217427), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
+
+<br/>
+
+
+### **How To Optimize Render Web Page?**
+> - Combine multiple operations to one time.
+> - `Modify element's style by change class name` instead of changeing the style by css-in-js.
+> - Set the position to absolute or fixed to the element needs to reflow multiple times, the element will escape from document flow to prevent affect other elements. 
+
+<br/>
+
+
+### **What Is Graceful Degradation And Progressive Enhancement?**
+
+> - **Graceful Degradation**: Building the website so it provides a good level of user experience in `modern browsers first`, then fix the problem for other browsers. 
+> - **Progressive Enhancement**: Building the website to keep all functions work properly for `all the browsers`, then optimize the website to support the newer browser, let the basic functionality will work on older systems.
+> - Use progressive enhancement will cost more time and manpower in the beginning, but easily to maintain. Use graceful degradation can make website online quickly. Choose which to use it depends on the requirements.
+> - Related Reference: [認識優雅降級與漸進增強](http://augus-blog.logdown.com/posts/143403-graceful-degradation-and-progressive-enhancement)
 
 <br/>
