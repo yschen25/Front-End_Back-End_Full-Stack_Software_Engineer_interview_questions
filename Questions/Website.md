@@ -176,7 +176,7 @@
 <br/>
 
 
-### **What Are SPA's Pros And Cons?**
+### **What Are Pros And Cons Of SPA?**
 
 > **Pros**: 
 > - (1) SPA is fast, as most resources (HTML+CSS+Scripts) are only loaded once throughout the lifespan of the application. Only data is transmitted back and forth.
@@ -276,8 +276,8 @@ https://localhost:8080/myweb/deleteDogs/:dog_id --> DELETE /rest/api/dogs/:dog_i
 
 ### **What Are Prons And Cons Of Rest API?**
 
-> - Strength: Simple and uniform Interface, cachable
-> - Weakness: Need to create multiple requests to get complex data 
+> - Pros: Simple and uniform Interface, cachable
+> - Cons: Need to create multiple requests to get complex data 
 
 <br/>
 
@@ -348,21 +348,21 @@ then the user will has permission to view or manipulate corresponding informatio
 <img src="img/website_rendering_02.jpg" alt="website_rendering" title="website_rendering" width="70%">
 </p>
 
-> - (1) Start parsing HTML to DOM(Document Object Model) Tree and parsing CSS to CSSOM(CSS Object Model) Tree
-> - (2) Combine DOM and CSSOM to calculate html and style then generate render tree
-> - (3) Determine every element's layout (Reflow)
-> - (4) Paint the result on the screen (Repaint)
+> - (1) Start parsing HTML to DOM(Document Object Model) Tree and parsing CSS to CSSOM(CSS Object Model) Tree.
+> - (2) Combine DOM and CSSOM to calculate html and style then generate render tree.
+> - (3) Determine every element's layout (Reflow).
+> - (4) Paint the result on the screen (Repaint).
 > - Related Reference: [瀏覽器渲染過程與性能優化](https://sylvanassun.github.io/2017/10/03/2017-10-03-BrowserCriticalRenderingPath/), [從輸入網址列到渲染畫面，過程經歷了什麼事？](https://w3c.hexschool.com/blog/8d691e4f), [html網頁渲染的基本過程](https://www.itread01.com/content/1546714651.html)
 
 <br/>
 
 
 ### **What Happens When A User Click A Link On a Page?**
-> - Browser gathers the information about the link and sends the request to a naming server. 
-> - The naming server translates the link text into an IP address, the IP address will be used to identify a particular computer.
-If the address is found, the IP address is sent to my browser. 
-The browser then contacts the web server that has the web page I requested. 
-The page is then sent to your browser.
+> - (1) Browser gathers the information about the link and sends the request to a name server. 
+> - (2) The name server translates the link text into an IP address, the IP address will be used to identify a particular computer.
+> - (3) If the address is found, the IP address is sent to user's browser. 
+> - (4) Then the browser contacts the web server that has the web page which user requested. 
+> - (5) The page then sent to user's browser.
 
 <br/>
 
@@ -377,7 +377,7 @@ The page is then sent to your browser.
 
 ### **What Is HTTP Cache?**
 > - HTTP caching is a `process of temporarily storing web content and on a CDN server`.
-> - The first time a browser loads a web page, it stores the page resources in the HTTP Cache. The next time the browser hits that page, it can look in the cache for resources that were previously fetched and retrieve them from disk, often faster than it can download them from the network.
+> - The first time a browser loads a web page, it stores the page resources in the HTTP cache. The next time the browser hits that page, it can look in the cache for resources that were previously fetched and retrieve them from disk, often faster than it can download them from the network.
 > - Two main types of cache headers, `cache-control and expires`, define the caching characteristics for your resources.
 > - Related Reference: [HTTP Caching](https://developers.google.com/web/fundamentals/performance/get-started/httpcaching-6)
 
@@ -386,7 +386,7 @@ The page is then sent to your browser.
 
 ### **What Is The Purpose Of A CDN And What Benefits Does It Bring?**
 > - The primary purpose of CDN is to improve a website’s loading speed.
-> - This helps users around the world view the same high-quality content and also improve their site performance without slow loading times.
+> - This helps users around the world view the `same high-quality content and also improve their site performance without slow loading times`.
 
 <br/>
 
