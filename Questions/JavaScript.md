@@ -29,7 +29,7 @@ console.log(jsonData); // '{"name": "Erika"}'
 
 <br/>
 
-### **Explain What Is Not Defined, Undefined, Empty and Null?**
+### **What Is Not Defined, Undefined, Empty and Null?**
 
 **Not Defined**
 
@@ -85,7 +85,7 @@ console.log(null === undefined); // false
 
 <br/>
 
-### **Explain What Is Call By Value, Call By Reference And Call By Sharing?**
+### **What Is Call By Value, Call By Reference And Call By Sharing?**
 
 **Call By Value**
 
@@ -721,7 +721,7 @@ window.setTimeout(function() { ... }, 1000);
 
 <br/>
 
-### **Explain What Is Promise?**
+### **What Is Promise?**
 
 <p align="center">
 <img src="img/promise.png" alt="promise" title="promise" width="60%">
@@ -779,7 +779,7 @@ myPromise.then((message) => {
 
 <br/>
 
-### **Explain What Is Async/Await?**
+### **What Is Async/Await?**
 
 > - Async and Await is `syntax sugar for promises` in javaScript.
 > - Await ensures executing next step `after specific operations`.
@@ -967,34 +967,37 @@ returnedFunction("returnedFunction");
 
 <br/>
 
-### **What Is Event Bubbling And How To Stop It?**
 
-> - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
-> - (2)Using event.stopPropagation()
-> - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
+### **What Is Event Capturing and Event Bubbling?**
 
-<br/>
+<p align="center">
+<img src="img/event_capturing_bubbling.jpg" alt="event_capturing_bubbling" title="event_capturing_bubbling" width="60%">
+</p>
 
-### **What Is Event Capturing?**
-
-> - The event is first captured by the outermost element and propagated to the inner elements.
-> - If you click on < p >, then the sequence is: <br/>
->   (1) HTML → BODY → FORM → DIV (capturing phase, the first listener): <br/>
->   (2) P (target phase, triggers two times, as we’ve set two listeners: capturing and bubbling) <br/>
->   (3) DIV → FORM → BODY → HTML (bubbling phase, the second listener).
-
-```
-<form onclick="alert('form')">FORM
-  <div onclick="alert('div')">DIV
-    <p onclick="alert('p')">P
-    </p>
-  </div>
-</form>
-```
-
-> - Related Reference : [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
+> - Exapmle: [Event Bubbling and Capturing](https://codepen.io/PJCHENder/pen/oVPpQN) <br/>
+>   (1) Capturing phase – the event goes down to the element. <br/>
+>   (2) Target phase – the event reached the target element triggers two times, as we’ve set two listeners: capturing and bubbling). <br/>
+>   (3) Bubbling phase – the event bubbles up from the element. <br/>
+> - Using `stopPropagation()` when you have JavaScript running on the same event of nested elements. 
+> - Related Reference : [Event Flow: capture, target, and bubbling
+](http://www.java2s.com/Book/JavaScript/DOM/Event_Flow_capture_target_and_bubbling.htm), [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
 
 <br/>
+
+### **How To Stop Default Event?**
+
+> - Using `preventDefault()` to prevent default actions that browsers make when an event is triggered.
+> - Such as you may want to do some data validation, data checks, processing, configuring headers, and so on before sending the request to a URL.
+
+```
+const form = document.getElementById('form')
+
+form.addEventListener('submit', (event) => {
+   event.preventDefault();
+  
+  // process data and submit a request manually
+})
+
 
 ### **Explain What And When Use The map(), forEach(), filter(), find(), reduce()?**
 
