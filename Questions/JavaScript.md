@@ -1153,31 +1153,33 @@ function cat() {
 hamster(); // 1 hamster(s)
 hamster(); // 2 hamster(s)
 
-cat(); // 3 cat(s), Expect 1
-cat(); // 4 cat(s), Expect 2
-cat(); // 5 cat(s), Expect 3
+cat(); // 3 cat(s), but we expect 1 cat(s)
+cat(); // 4 cat(s), but we expect 2 cat(s)
+cat(); // 5 cat(s), but we expect 3 cat(s)
 
-hamster(); // 6 hamster(s),  Expect 3
+hamster(); // 6 hamster(s), but we expect 3 hamster(s)
 ```
+
+<br/>
 
 > - `Closure uses outer function returns the inner function (which we really want to execute) to let us have private variable without affected by environment`.
 
 
 ```
 function hamster() {
-	var count = 0; 
-	function countHamster() {
-    count += 1;
-    console.log(count + ' hamster(s)');
+    var count = 0; 
+    function countHamster() {
+    	count += 1;
+    	console.log(count + ' hamster(s)');
   }
   return countHamster;
 }
 
 function cat() {
-	var count = 0; 
-	function countCat() {
-    count += 1;
-    console.log(count + ' cat(s)');
+    var count = 0; 
+    function countCat() {
+    	count += 1;
+    	console.log(count + ' cat(s)');
   }
   return countCat;
 }
@@ -1193,8 +1195,9 @@ countCat(); // 2 cat(s)
 countCat(); // 3 cat(s)
 
 countHamster(); // 3 hamster(s)
-
 ```
+
+<br/>
 
 > - Improve code by using Anonymous And Arrow Function.
 
@@ -1228,33 +1231,33 @@ countCat(); // 3 cat(s)
 countHamster(); // 3 hamster(s);
 ```
 
+<br/>
 
 > - Even use the same outer function, variables don't disturb each other cause the excute environment is different. 
 
 ```
-function hamster(name) {
-	var count = 0; 
-  return () => {
-    count += 1;
-    console.log(count + ' ' + name)
+function animalCounter(name) {
+   var count = 0; 
+   return () => {
+      count += 1;
+      console.log(count + ' ' + name);
   }
 }
 
-const syrianHamster = hamster('Syrian Hamster(s)');
-const goldenHamster = hamster('Golden Hamster(s)');
-const whiteHamster = hamster('Dwarf Winter White Russian Hamster(s)');
+const hamsterCounter = animalCounter('hamster(s)');
+const catCounter = animalCounter('cat(s)');
+const dogCounter = animalCounter('dog(s)');
 
-syrianHamster(); // 1 Syrian Hamster(s)
-goldenHamster(); // 1 Golden Hamster(s)
-goldenHamster(); // 2 Golden Hamster(s)
-whiteHamster();  // 1 Dwarf Winter White Russian Hamster(s)
-syrianHamster(); // 2 Syrian Hamster(s)
-whiteHamster();  // 2 Dwarf Winter White Russian Hamster(s)
-whiteHamster();  // 3 Dwarf Winter White Russian Hamster(s)
-
+hamsterCounter(); // 1 hamster(s)
+catCounter();     // 1 cat(s)
+catCounter();     // 2 cat(s)
+dogCounter();     // 1 dog(s)
+dogCounter();     // 2 dog(s)
+dogCounter();     // 3 dog(s)
+hamsterCounter(); // 2 hamster(s)
 ```
 
-> - Sometimes use the new feature `Let` in ES6 can solve the problem.
+> - We can also use the `Let` to solve this problem.
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 
 <br/>
@@ -1274,10 +1277,10 @@ const minus = (z) => z - 10;
 let a = double(1);
 let b = square(a);
 
-console.log('Method 1', b) // 4
+console.log('Method 1', b); // 4
 
 // Method_2:
-console.log('Method 2', square(double(1))) // 4
+console.log('Method 2', square(double(1))); // 4
 
 // After implementing the funcution composition
 // For only 2 functions
@@ -1389,22 +1392,22 @@ a();
 
 
 ```
-console.log('start')
+console.log('start');
 
 setTimeout(() => {
-  console.log('setTimeout1')
+  console.log('setTimeout1');
 })
 Promise.resolve()
-  .then(()=> {
-    console.log('Promise1')
+  .then(() => {
+    console.log('Promise1');
   })
   .then(()=> {
-    console.log('Promise2')
+    console.log('Promise2');
   })
 setTimeout(() => {
-  console.log('setTimeout2')
+  console.log('setTimeout2');
 })
-console.log('end')
+console.log('end');
 
 // Result
 'start'
@@ -1455,7 +1458,6 @@ console.log('end')
 const add = (x, y) => x + y;
 
 console.log(add(2, 4)); // 6
-
 ```
 
 > - Impure Functions = Inconsistent Results
@@ -1465,7 +1467,7 @@ console.log(add(2, 4)); // 6
 // Impure Function
 let x = 2;
 
-const add = (y) =>  x += y;
+const add = (y) => x += y;
 
 console.log(add(4)); // 6
 console.log(add(4)); // 10
@@ -1488,8 +1490,7 @@ function recu(i) {
     return i;
 }
 
-console.log(recu(1)) // 10
-
+console.log(recu(1))l // 10
 ```
 
 <br/>
@@ -1540,8 +1541,8 @@ Person.prototype.log = function () {
 
 var nick = new Person('nick', 18);
 
-console.log(nick.__proto__ === Person.prototype) // true
-console.log(nick.prototype === undefined) // true
+console.log(nick.__proto__ === Person.prototype); // true
+console.log(nick.prototype === undefined);        // true
 ```
 
 > - Related Reference : [** proto ** VS. prototype in JavaScript
@@ -1571,12 +1572,12 @@ console.log(nick.prototype === undefined) // true
 // Convert binary string to number
 let binaryStr = "1011";
 let num = parseInt(binaryStr, 2);
-console.log(num) // 11
+console.log(num); // 11
 
 // Convert number to binary string
 let num = 34;
 let binaryStr = num.toString(2);
-console.log(binaryStr) // "100010"
+console.log(binaryStr); // "100010"
 
 ```
 
@@ -1684,8 +1685,5 @@ const myMap2 = <Type>(
 
 console.log(myMap2(arr, (x: number) => x + 1));
 ```
-
-
-<br/>
 
 <br/>
