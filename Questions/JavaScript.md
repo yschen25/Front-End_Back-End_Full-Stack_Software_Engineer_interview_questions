@@ -716,7 +716,7 @@ window.setTimeout(function() { ... }, 1000);
 ### **Why Do We Use Callback?**
 
 > - Callback functions allow us to do something with data at a later time. 
-> - But too much callback will cause callback hell, we can use promise to replace it.
+> - Too much callback will cause callback hell, we can use promise to replace it.
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 
 <br/>
@@ -771,27 +771,6 @@ myPromise.then((message) => {
 
 <br/>
 
-### **Explain What Is Async/Await?**
-
-> - Async and Await is `syntax sugar for promises` in javaScript.
-> - Await ensures executing next step `after specific operations`.
-> - An Await operand can `only be used inside an Async function`.
-> - The Async functions return a promise.
-
-```
-async function fetchData(){
-  await a();
-  .....       // Execute after a
-  await b();
-  .....       // Execute after b
-}
-
-fetchData();
-fetchData().then(() => {
-  .....       // Execute after fetchData
-});
-```
-
 ### **Explain What Is Asynchronous And Synchronous?**
 
 > - You execute something synchronously, you need to wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
@@ -800,10 +779,33 @@ fetchData().then(() => {
 
 <br/>
 
+### **Explain What Is Async/Await?**
+
+> - Async and Await is `syntax sugar for promises` in javaScript.
+> - Await ensures executing next step `after specific operations`.
+> - An Await operand can `only be used inside an Async function`.
+> - The Async functions return a promise.
+
+```
+async function fetchData() {
+  await a();
+  ......  // Execute after a
+  await b();
+  ......  // Execute after b
+}
+
+fetchData();
+
+fetchData().then(() => {
+  ...... // Execute after fetchData
+});
+```
+
+<br/>
 
 ### **What Is Expressions And Statement?**
 
-> - Expression : Any unit of code that can be evaluated to a value is an expression.
+> - Expression: Any unit of code that can be evaluated to a value is an expression.
 
 ```
 1;
@@ -812,7 +814,9 @@ fetchData().then(() => {
 10 > 9;
 ```
 
-> - Statements : A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc. JavaScript programs are actually a sequence of statements.
+<br/>
+
+> - Statements: A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc. JavaScript programs are actually a sequence of statements.
 
 ```
 if (expression)
@@ -831,19 +835,17 @@ else
 
 ```
 function statement(item) {
-    console.log('Function statement example'+ item);
+    console.log('Function statement example' + item);
 }
 ```
-
-<br/>
 
 (2) Function declarations are hoisted.
 
 ```
 callTest(); // 123
 
-function callTest(){
-	console.log(123);
+function callTest() {
+    console.log(123);
 }
 
 callTest(); // 123
@@ -861,56 +863,50 @@ var expression = function(item) {
   }
 ```
 
-<br/>
-
 (2) Function declarations are `not` hoisted.
 
 ```
 callTest(); // callTest is not a function
 
-var callTest = function(){
+var callTest = function() {
 	console.log(123);
 }
 
 callTest(); // 123
 ```
 
-<br/>
-
 > - [[筆記] 進一步談 JavaScript 中函式的建立 ─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 
 <br/>
 
-### **What Is IIFE(Immediately Invoked Function Expression)?**
+### **What Is IIFE (Immediately Invoked Function Expression)?**
 
 > - (pronounced 'iffy') Is a function `defined as an expression and executed immediately after creation`.
-> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression; the enclosing parenthesis at the end of IIFE are used to invoke functions.
+> - By wrapping our function in parenthesis, we tell the parser to parse our JavaScript as a function expression, the enclosing parenthesis at the end of IIFE are used to invoke functions.
 
 ```
-(function(){
+(function() {
     //...
 })();
 ```
 
 <br/>
 
-> - See the example : We can’t access the variable superSecret outside of the IIFE. All of the code within our IIFE stays within the private scope of our function. Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
+> - We can’t access the variable superSecret outside of the IIFE. All of the code within our IIFE stays within the private scope of our function. Is a good way at protecting the scope of your function and the variables within it, ensures that code inside IIFE does not interfere with other code or be interfered by another code so code is safe.
 
 ```
-(function(){
+(function() {
   var superSecret = 195;
 })()
-console.log(superSecret);
-//  Uncaught ReferenceError: superSecret is not defined
+console.log(superSecret); // Uncaught ReferenceError: superSecret is not defined
 ```
 
 <br/>
 
 
-### **Why Would You Just Create A Named Function And Invoke It? That Would Create The Same Result?**
+### **Why Don't Use A Named Function Then Invoke It? That Would Create The Same Result?**
 
-> - Yes, but with consequences : Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
-
+> - Yes, but with consequences: Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 
 <br/>
@@ -923,7 +919,6 @@ console.log(superSecret);
 >   (3) Can be assigned as a parameter. <br/>
 >   (4) Can be returned by another function. <br/>
 >   (5) Function have properties.
-
 > - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 
 <br/>
@@ -935,17 +930,17 @@ console.log(superSecret);
 (1) Takes one or more functions as arguments.
 
 ```
-/** Higher Order Function **/
-function higherOrderFunction (callback) {
-  console.log("higherOrderFunction...");
+// Higher Order Function
+function higherOrderFunctio(callback) {
+  console.log("higherOrderFunction");
   callback();
 }
 
-function callbackFunction () {
-  console.log("callbackFunction...");
+function callbackFunction() {
+  console.log("callbackFunction");
 }
 
-/** Callback Function */
+// Callback Function
 higherOrderFunction(callbackFunction);
 ```
 
@@ -954,33 +949,60 @@ higherOrderFunction(callbackFunction);
 (2) Returns a function as its result.
 
 ```
-/** Higher Order Function **/
-function higherOrderFunction () {
-  console.log("higherOrderFunction...");
+// Higher Order Function 
+function higherOrderFunction) {
+  console.log("higherOrderFunction");
   return function(arg1) {
     console.log(arg1 + "...");
   };
 }
 
-/** Returned Function **/
+// Returned Function
 var returnedFunction = higherOrderFunction();
 returnedFunction("returnedFunction");
 ```
-
-<br/>
 
 > - forEach(), map(), reduce(), filter(), etc. are HOFs. <br/>
 > - Related Reference : [JavaScript 什麼是 Higher Order Function？](https://matthung0807.blogspot.com/2019/05/javascript-higher-order-function.html)
 
 <br/>
 
+### **What Is Event Bubbling And How To Stop It?**
+
+> - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
+> - (2)Using event.stopPropagation()
+> - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
+
+<br/>
+
+### **What Is Event Capturing?**
+
+> - The event is first captured by the outermost element and propagated to the inner elements.
+> - If you click on < p >, then the sequence is: <br/>
+>   (1) HTML → BODY → FORM → DIV (capturing phase, the first listener): <br/>
+>   (2) P (target phase, triggers two times, as we’ve set two listeners: capturing and bubbling) <br/>
+>   (3) DIV → FORM → BODY → HTML (bubbling phase, the second listener).
+
+```
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P
+    </p>
+  </div>
+</form>
+```
+
+> - Related Reference : [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
+
+<br/>
+
 ### **Explain What And When Use The map(), forEach(), filter(), find(), reduce()?**
 
-> - **map()**: returns new array with transformed elements, leaving back original array unchanged.
-> - **forEach()**: like a for loop, but is more readable and intuitive. Use it when we want to perform a specific action for each element of an array.
-> - **filter()**: return an array which that match the criteria.
-> - **find()**: returns the first element in an array that satisfies a provided function.
-> - **reduce()**: return a value by running the reducer across all elements of the array, leaving back original array unchanged.
+> - **map()**: Returns new array with transformed elements, leaving back original array unchanged.
+> - **forEach()**: Like a for loop, but is more readable and intuitive. Use it when we want to perform a specific action for each element of an array.
+> - **filter()**: Return an array which that match the criteria.
+> - **find()**: Returns the first element in an array that satisfies a provided function.
+> - **reduce()**: Return a value by running the reducer across all elements of the array, leaving back original array unchanged.
 
 ```
 let people = [
@@ -1007,8 +1029,8 @@ let people = [
 ];
 
 // Map
-let map = people.map((item) => item.age);
-console.log(map); // [18, 24, 1, 3]
+let map = people.map((item) => item.age + 1);
+console.log(map); // [19, 25, 2, 4]
 
 // Foreach
 people.forEach((item) => console.log (item.name + " likes " + item.like))
@@ -1031,7 +1053,6 @@ const reduce = agesArr.reduce((accumulator, current) => accumulator + current
 );
 
 console.log(reduce); // 46
-
 ```
 
 <br/>
@@ -1045,77 +1066,6 @@ console.log(reduce); // 46
 |         | Ability to chain other methods         | Can't chain other methods                          |
 
 > - Related Reference : [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
-
-<br/>
-
-### **Write The Map By Yourself.**
-
-```
-const arr = [1, 2, 3];
-
-const myMap1 = (arr, func) => {
-  let newArr = [];
-  for(let i = 0; i < arr.length; i++) {
-    let result = func(arr[i])
-    newArr.push(result);
-  }
-  return newArr;
-}
-
-console.log(myMap1(arr, num => num + 1)); // [2, 3, 4]
-
-// Without using for loop
-const myMap2 = (oldArr, func, newArr = []) => {
-  if (oldArr.length === 0) {
-    return newArr;
-  } else {
-    let [val, ...rest] = oldArr;
-    let updateArr = [...newArr, func(val)];
-    return myMap2(rest, func, updateArr);
-  }
-}
-
-console.log(myMap2(arr, num => num + 1)); // [2, 3, 4]
-
-```
-
-> - Related Reference : [Javascript - Writing Map as a Recursive Function](https://dev.to/alexmercedcoder/javascript-writing-map-as-a-recursive-function-2854)
-
-<br>
-
-### **Write The Map By Yourself With TypeScript**
-
-```
-type MyFnType<Type> = (arg1: Type) => Type;
-
-const myMap1 = <Type>(arr: Type[], fn: MyFnType<Type>): Type[] => {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(fn(arr[i]));
-  }
-  return newArr;
-};
-
-console.log(myMap1(arr, (x: number) => x + 1));
-
-// Without using for loop
-const myMap2 = <Type>(
-  oldArr: Type[],
-  fn: MyFnType<Type>,
-  newArr: Type[] = []
-): Type[] => {
-  if (oldArr.length <= 0) {
-    return newArr;
-  } else {
-    const [val, ...rest] = oldArr;
-    newArr.push(fn(val));
-    return myMap2(rest, fn, newArr);
-  }
-};
-
-console.log(myMap2(arr, (x: number) => x + 1));
-```
-
 
 <br/>
 
@@ -1340,150 +1290,6 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 <br/>
 
 
-### **What Is Functional Programming (FP)?**
-
-> - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
-> - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
-
-<br/>
-
-### **What Are The Strengths Of Functional Programming?**
-
-> - Allows you to avoid confusing problems and errors in the code
-> - Easier to test and execute Unit testing and debug FP Code.
-> - Parallel processing and concurrency
-> - Hot code deployment and fault tolerance
-> - Offers better modularity with a shorter code
-> - Increased productivity of the developer
-> - Supports Nested Functions
-> - Functional Constructs like Lazy Map & Lists, etc.
-> - Allows effective use of Lambda Calculus
-
-<br/>
-
-### **What Is Pure Function And What Is Impure Function?**
-
-> - Pure Functions = Consistent Results
-> - The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
->   (1) Its return value is the same for the same arguments. <br/>
->   (2) Its evaluation has no side effects.
-
-```
-// Pure Function
-const add = (x, y) => x + y;
-
-console.log(add(2, 4)); // 6
-
-```
-
-> - Impure Functions = Inconsistent Results
-> - The second example returns nothing. It relies on shared state to do its job by incrementing a variable outside of its own scope. In the example : The first time results in 6, next time is 10 and so on.
-
-```
-// Impure Function
-let x = 2;
-
-const add = (y) =>  x += y;
-
-console.log(add(4)); // 6
-console.log(add(4)); // 10
-```
-
-> - Related Reference : [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
-
-<br/>
-
-### **What Is Event Bubbling And How To Stop It?**
-
-> - (1)The event first triggers on the innermost target element, and then triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object.<br/>
-> - (2)Using event.stopPropagation()
-> - Related Reference : [重新認識 JavaScript: Day 14 事件機制的原理](https://ithelp.ithome.com.tw/articles/10191970), [DOM 的事件傳遞機制：捕獲與冒泡](https://blog.techbridge.cc/2017/07/15/javascript-event-propagation/)
-
-<br/>
-
-### **What Is Event Capturing?**
-
-> - The event is first captured by the outermost element and propagated to the inner elements.
-> - If you click on < p >, then the sequence is: <br/>
->   (1) HTML → BODY → FORM → DIV (capturing phase, the first listener): <br/>
->   (2) P (target phase, triggers two times, as we’ve set two listeners: capturing and bubbling) <br/>
->   (3) DIV → FORM → BODY → HTML (bubbling phase, the second listener).
-
-```
-<form onclick="alert('form')">FORM
-  <div onclick="alert('div')">DIV
-    <p onclick="alert('p')">P
-    </p>
-  </div>
-</form>
-```
-
-> - Related Reference : [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
-
-<br/>
-
-### **What Is Prototype?**
-
-> - All JavaScript objects inherit properties and methods from a prototype.
-> - Prototype property allows you to `add new properties` to object constructors.
-
-```
-function Person(first, last, age, eyecolor) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eyecolor;
-}
-
-Person.prototype.nationality = "English";
-```
-
-> - Prototype property allows you to `add new methods` to object constructors.
-
-```
-function Person(first, last, age, eyecolor) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eyecolor;
-}
-
-Person.prototype.name = function() {
-  return this.firstName + " " + this.lastName;
-};
-```
-
-> - `prototype is a property of a Function object`. It is the prototype of objects constructed by that function.
-> - `__ proto __ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype`. Current standards provide an equivalent Object.getPrototypeOf(O) method.
-
-```
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
-
-Person.prototype.log = function () {
-  console.log(this.name + ', age:' + this.age);
-}
-
-var nick = new Person('nick', 18);
-
-console.log(nick.__proto__ === Person.prototype) // true
-console.log(nick.prototype === undefined) // true
-```
-
-> - Related Reference : [** proto ** VS. prototype in JavaScript
->   ](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
-
-<br/>
-
-### **What Is A Prototype Chain?**
-
-> - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
-> - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
-
-<br/>
-
 ### **What Is Stack?**
 
 <p align="center">
@@ -1610,6 +1416,61 @@ console.log('end')
 
 <br/>
 
+
+### **What Is Functional Programming (FP)?**
+
+> - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
+> - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
+
+<br/>
+
+
+### **What Are The Strengths Of Functional Programming?**
+
+> - Allows you to avoid confusing problems and errors in the code
+> - Easier to test and execute Unit testing and debug FP Code.
+> - Parallel processing and concurrency
+> - Hot code deployment and fault tolerance
+> - Offers better modularity with a shorter code
+> - Increased productivity of the developer
+> - Supports Nested Functions
+> - Functional Constructs like Lazy Map & Lists, etc.
+> - Allows effective use of Lambda Calculus
+
+<br/>
+
+### **What Is Pure Function And What Is Impure Function?**
+
+> - Pure Functions = Consistent Results
+> - The first example returns a value based on the given parameters, regardless of where/when you call it. <br/>
+>   (1) Its return value is the same for the same arguments. <br/>
+>   (2) Its evaluation has no side effects.
+
+```
+// Pure Function
+const add = (x, y) => x + y;
+
+console.log(add(2, 4)); // 6
+
+```
+
+> - Impure Functions = Inconsistent Results
+> - The second example returns nothing. It relies on shared state to do its job by incrementing a variable outside of its own scope. In the example : The first time results in 6, next time is 10 and so on.
+
+```
+// Impure Function
+let x = 2;
+
+const add = (y) =>  x += y;
+
+console.log(add(4)); // 6
+console.log(add(4)); // 10
+```
+
+> - Related Reference : [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
+
+<br/>
+
 ### **What Is Recursion?**
 
 > - Recursion is a process of calling itself. A function that calls itself is called a recursive function. A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.
@@ -1626,6 +1487,68 @@ function recu(i) {
 console.log(recu(1)) // 10
 
 ```
+
+<br/>
+
+### **What Is Prototype?**
+
+> - All JavaScript objects inherit properties and methods from a prototype.
+> - Prototype property allows you to `add new properties` to object constructors.
+
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.nationality = "English";
+```
+
+> - Prototype property allows you to `add new methods` to object constructors.
+
+```
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+```
+
+> - `prototype is a property of a Function object`. It is the prototype of objects constructed by that function.
+> - `__ proto __ (pronounced as dunder proto or double underscore proto) is internal property of an object, pointing to its prototype`. Current standards provide an equivalent Object.getPrototypeOf(O) method.
+
+```
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.log = function () {
+  console.log(this.name + ', age:' + this.age);
+}
+
+var nick = new Person('nick', 18);
+
+console.log(nick.__proto__ === Person.prototype) // true
+console.log(nick.prototype === undefined) // true
+```
+
+> - Related Reference : [** proto ** VS. prototype in JavaScript
+>   ](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
+
+<br/>
+
+### **What Is A Prototype Chain?**
+
+> - If you try to call a property on an object, JavaScript will go to the prototype object and look for it, until it finds it. If it doesn't find the specific property that you're looking for, it'll return undefined for you.
+> - Related Reference : [JavaScript Fundamentals: Prototype Chains](https://www.telerik.com/blogs/javascript-fundamentals-prototype-chains)
 
 <br/>
 
@@ -1687,5 +1610,78 @@ console.log(binaryStr) // "100010"
 
 > - JavaScript is very relaxed about the difference between strings and numbers.
 >   such as using string + number will be string, and using string will be number. It might cause the error code, but we can us TypeScript to prevent this simple error occurs.
+
+<br/>
+
+### **Write The Map By Yourself.**
+
+```
+const arr = [1, 2, 3];
+
+const myMap1 = (arr, func) => {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    let result = func(arr[i])
+    newArr.push(result);
+  }
+  return newArr;
+}
+
+console.log(myMap1(arr, num => num + 1)); // [2, 3, 4]
+
+// Without using for loop
+const myMap2 = (oldArr, func, newArr = []) => {
+  if (oldArr.length === 0) {
+    return newArr;
+  } else {
+    let [val, ...rest] = oldArr;
+    let updateArr = [...newArr, func(val)];
+    return myMap2(rest, func, updateArr);
+  }
+}
+
+console.log(myMap2(arr, num => num + 1)); // [2, 3, 4]
+
+```
+
+> - Related Reference : [Javascript - Writing Map as a Recursive Function](https://dev.to/alexmercedcoder/javascript-writing-map-as-a-recursive-function-2854)
+
+<br>
+
+### **Write The Map By Yourself With TypeScript**
+
+```
+type MyFnType<Type> = (arg1: Type) => Type;
+
+const myMap1 = <Type>(arr: Type[], fn: MyFnType<Type>): Type[] => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(fn(arr[i]));
+  }
+  return newArr;
+};
+
+console.log(myMap1(arr, (x: number) => x + 1));
+
+// Without using for loop
+const myMap2 = <Type>(
+  oldArr: Type[],
+  fn: MyFnType<Type>,
+  newArr: Type[] = []
+): Type[] => {
+  if (oldArr.length <= 0) {
+    return newArr;
+  } else {
+    const [val, ...rest] = oldArr;
+    newArr.push(fn(val));
+    return myMap2(rest, fn, newArr);
+  }
+};
+
+console.log(myMap2(arr, (x: number) => x + 1));
+```
+
+
+<br/>
 
 <br/>
