@@ -357,8 +357,8 @@ var a = 5;
 
 ```
 console.log(a) // function a(){}
-var a
-function a(){}
+var a;
+function a(){};
 ```
 
 > - JavaScript in `strict mode(use strict)` does `not allow variables to be used if they are not declared`. <br/>
@@ -369,15 +369,14 @@ function a(){}
 ### **What Is "Use strict"?**
 
 > - This strict context `prevents certain actions from being taken and throws more exceptions`.
-> - Using strict mode, don’t allow to use a variable without declaring it, Duplicating a parameter name is not allowed, etc.
-
+> - Using strict mode, don’t allow to use a variable without declaring it, duplicating a parameter name is not allowed, etc.
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 
 <br/>
 
 ### **What Is Let And Const?**
 
-> - `Let and Const is block scope`, `Var is function scope`. <br/>
+> - `Let and Const is block scope, Var is function scope`. <br/>
 
 ```
 function varFunction () {
@@ -400,32 +399,41 @@ varFunction();
 letFunction();
 ```
 
+<br/>
+
 > - Compare var and let in loop  
 
 ```
+// With var we have a function scope, and only one shared binding for all of we loop iteration
 for (var i = 0; i < 10; i++) {
   setTimeout(function () {
-    console.log('execute ' + i + ' times '); 
+    console.log('execute ' + i + ' times; '); 
   }, 10);
 }
 
-// execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times execute 10 times
+// execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times; execute 10 times;
 
+
+// With let we have a block scope and when used in the for loop we get a new binding for each iteration
 for (let i = 0; i < 10; i++) {
   setTimeout(function () {
-    console.log('execute ' + i + ' times ');
+    console.log('execute ' + i + ' times;');
   }, 10);
 }
 
-// execute 0 times execute 1 times execute 2 times execute 3 times execute 4 times execute 5 times execute 6 times execute 7 times execute 8 times execute 9 times
+// execute 0 times; execute 1 times; execute 2 times; execute 3 times; execute 4 times; execute 5 times; execute 6 times; execute 7 times; execute 8 times; execute 9 times;
 ```
+
+<br/>
 
 > - `Let is for declare variables`. <br/>
-> - `Const is for declare const variables`, need initialize in declaration, `can't reassignment`. <br/>
+> - `Const is for declare const variables`, need initialize in declaration, `can't reassignment`. 
+
+<br/>
 
 ```
-const a = 10
-a = 20  // TypeError: Assignment to constant variable.
+const a = 10;
+a = 20;  // TypeError: Assignment to constant variable.
 ```
 
 > - Related Reference : [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
