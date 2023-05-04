@@ -143,7 +143,7 @@ console.log(d) // [5, 2, 3]
 <br/>
 
 
-### **Explan What Is Shallow Copy And Deep Copy?**
+### **What Is Shallow Copy And Deep Copy?**
 
 <p align="center">
 <img src="img/shallow_deep_copy.png" alt="shallow_deep_copy" title="shallow_deep_copy">
@@ -233,7 +233,7 @@ const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
 
 <br/>
 
-### **Explain What Are The Differences Between push(), pop(), unshift(), shift()?**
+### **What Are The Differences Between push(), pop(), unshift(), shift()?**
 
 | Methods | push()                                      | pop()                                          | unshift()                                         | shift()                                              |
 | ------- | ------------------------------------------- | ---------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------- |
@@ -262,7 +262,7 @@ console.log(arr); // [1, 2, 3, 4, 5]
 
 <br/>
 
-### **Explain What Is The Difference Between slice(), splice() and split()?**
+### **What Are The Difference Between slice(), splice() and split()?**
 
 | Methods | slice (start index, end index)                                           | splice (index, howmany, item1, ....., itemx)                                               | split (separator, howmany)           |
 | ------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------ |
@@ -319,7 +319,7 @@ console.log(str2.split("")) // ['a', 'd', 'f', 'g', 'd', 'f', 'h', 'g', 'd', 'f'
 
 <br/>
 
-### **Explain What Is Hoisting?**
+### **What Is Hoisting?**
 
 > - Hoisting is JavaScript's default behavior of `moving declarations to the top`. <br/>
 
@@ -550,7 +550,7 @@ test();
 
 <br/>
 
-### **Explain What Is "this"?**
+### **What Is "this"?**
 
 > - The this keyword refers to an object, the `value of this is determined by how a function is called`.
 
@@ -695,14 +695,14 @@ console.log( obj.a ); // 123
 
 <br/>
 
-### **What Is Difference Between Bind(), Call() And Apply()?**
+### **What Are Differences Between Bind(), Call() And Apply()?**
 
 > - Bind() is when you want that function to later be called with a certain context, useful in events. Use call() or apply() when you want to invoke the function immediately, and modify the context.
 >   Fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments. The difference is that call() takes the function arguments separately, and apply() takes the function arguments in an array.
 
 <br/>
 
-### **Explain What Is Callbacks?**
+### **What Is Callbacks?**
 
 > - `Take a function as another function's parameter, called by another function`.
 > - Control the sequence of function execute.
@@ -716,7 +716,7 @@ window.setTimeout(function() { ... }, 1000);
 ### **Why Do We Use Callback?**
 
 > - Callback functions allow us to do something with data at a later time. 
-> - Too much callback will cause callback hell, we can use promise to replace it.
+> - Too much callback will cause callback hell, we can use promise to prevent it.
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 
 <br/>
@@ -975,16 +975,16 @@ returnedFunction("returnedFunction");
 </p>
 
 > - Exapmle: [Event Bubbling and Capturing](https://codepen.io/PJCHENder/pen/oVPpQN) <br/>
->   (1) Capturing phase – the event goes down to the element. <br/>
->   (2) Target phase – the event reached the target element triggers two times, as we’ve set two listeners: capturing and bubbling). <br/>
->   (3) Bubbling phase – the event bubbles up from the element. <br/>
+>   (1) **Capturing phase**: the event goes down to the element. <br/>
+>   (2) **Target phase**: the event reached the target element triggers two times, as we’ve set two listeners: capturing and bubbling). <br/>
+>   (3) **Bubbling phase**: the event bubbles up from the element. <br/>
 > - Using `stopPropagation()` when you have JavaScript running on the same event of nested elements. 
 > - Related Reference : [Event Flow: capture, target, and bubbling
 ](http://www.java2s.com/Book/JavaScript/DOM/Event_Flow_capture_target_and_bubbling.htm), [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
 
 <br/>
 
-### **How To Stop Default Event?**
+### **How To Prevent Default Event?**
 
 > - Using `preventDefault()` to prevent default actions that browsers make when an event is triggered.
 > - Such as you may want to do some data validation, data checks, processing, configuring headers, and so on before sending the request to a URL.
@@ -1063,7 +1063,7 @@ console.log(reduce); // 46
 <br/>
 
 
-### **What Is The Difference Between map(), forEach()?**
+### **What Are The Differences Between map(), forEach()?**
 
 | Methods | map()                                  | foEach()                                           |
 | ------- | -------------------------------------- | -------------------------------------------------- |
