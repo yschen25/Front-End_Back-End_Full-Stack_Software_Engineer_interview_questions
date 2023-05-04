@@ -990,14 +990,16 @@ returnedFunction("returnedFunction");
 > - Such as you may want to do some data validation, data checks, processing, configuring headers, and so on before sending the request to a URL.
 
 ```
-const form = document.getElementById('form')
+const form = document.getElementById('form');
 
 form.addEventListener('submit', (event) => {
    event.preventDefault();
   
   // process data and submit a request manually
 })
+```
 
+<br/>
 
 ### **Explain What And When Use The map(), forEach(), filter(), find(), reduce()?**
 
@@ -1036,7 +1038,7 @@ let map = people.map((item) => item.age + 1);
 console.log(map); // [19, 25, 2, 4]
 
 // Foreach
-people.forEach((item) => console.log (item.name + " likes " + item.like))
+people.forEach((item) => console.log(item.name + " likes " + item.like); )
 // Casper likes Noodles
 // Wang likes Rice
 // Bobo likes Steak
@@ -1044,7 +1046,7 @@ people.forEach((item) => console.log (item.name + " likes " + item.like))
 
 // Filter
 let filter = people.filter((item) => item.age <= 3)
-console.log(filter) // [{name: 'Bobo', like: 'Steak', age: 1}, {name: 'Andy', like: 'Fish', age: 3}]
+console.log(filter); // [{name: 'Bobo', like: 'Steak', age: 1}, {name: 'Andy', like: 'Fish', age: 3}]
 
 // Find
 let find = people.find((item) => item.age <= 3)
@@ -1060,7 +1062,8 @@ console.log(reduce); // 46
 
 <br/>
 
-### **Explain What Is The Difference Between map(), forEach()?**
+
+### **What Is The Difference Between map(), forEach()?**
 
 | Methods | map()                                  | foEach()                                           |
 | ------- | -------------------------------------- | -------------------------------------------------- |
@@ -1075,20 +1078,18 @@ console.log(reduce); // 46
 ### **What Is Set?**
 
 > - The set object lets you store unique values of any type, whether primitive values or object references.
-> - One of the set's method can check if a value is in a set object.
+> - Set `doesn't allow duplicate values`.
 
 ```
-
 let arr = [1, 2, 2, 3];
 
 // Check if a value is in a set object
-const mySet = new Set(arr)
-console.log(mySet(1)) // true
+const mySet = new Set(arr);
+console.log(mySet(1)); // true
 
-// Delete the duplicate value
+// Remove the duplicate value
 let arr2 = [...new Set(arr)];
-console.log(arr2) // [1, 2, 3]
-
+console.log(arr2); // [1, 2, 3]
 ```
 
 <br/>
