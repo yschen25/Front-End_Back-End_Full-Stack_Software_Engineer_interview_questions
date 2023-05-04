@@ -1099,16 +1099,16 @@ console.log(arr2); // [1, 2, 3]
 > - Currying is transforming a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
 
 ```
-// Before curring
+// Before currying
 function minusFunc(x, y) {
   return x + y;
 }
 
-console.log(1, 2) // 3
+console.log(1, 2); // 3
 
 
-// After curring
-// Syntax 1
+// After currying
+// Syntax_1:
 function minusFunc(x) {
   return function(y) {
     return x + y;
@@ -1116,24 +1116,24 @@ function minusFunc(x) {
 }
 
 const returnFunc = minusFunc(1);
-console.log(returnFunc); // Function
-console.log(returnFunc(2)); // 3
+console.log(returnFunc);      // Function
+console.log(returnFunc(2));   // 3
 console.log(minusFunc(1)(2)); // 3
 
-// Syntax 2
+// Syntax_2:
 const minusFunc = (x) => (y) => x - y;
 
 const retuernFunc = minusFunc(1);
-console.log(returnFunc); // Function
-console.log(retuernFunc(5)) // 3
-console.log(minusFunc(1)(5)) // 3
+console.log(returnFunc);      // Function
+console.log(retuernFunc(5));  // 3
+console.log(minusFunc(1)(5)); // 3
 ```
 
 <br/>
 
-### **Explain What Is Closure?**
+### **What Is Closure?**
 
-> - If we use the global variables in the wrong way, may cause some problems like :
+> - If we use the global variables in the wrong way, may cause some problems like:
 
 ```
 var count = 0; 
@@ -1270,13 +1270,13 @@ const square = (y) => y * y;
 const minus = (z) => z - 10;
 
 // Before implementing the funcution composition
-// Method 1
+// Method_1:
 let a = double(1);
 let b = square(a);
 
 console.log('Method 1', b) // 4
 
-// Method 2
+// Method_2:
 console.log('Method 2', square(double(1))) // 4
 
 // After implementing the funcution composition
