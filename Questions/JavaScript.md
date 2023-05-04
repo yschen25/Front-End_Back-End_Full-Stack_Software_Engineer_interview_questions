@@ -442,7 +442,7 @@ a = 20;  // TypeError: Assignment to constant variable.
 
 ### **What Is Block Scope And Function Scope?**
 
-> - Block scope is everything inside a set of braces `{a block scope here}`
+> - Block scope is everything inside a set of braces `{block scope here}`
 > - A block scope is sometimes the same as a function scope.
 
 ```
@@ -467,7 +467,6 @@ function foo() {
     console.log(b); // b is not defined
     console.log(c); // c is not defined
 }
-
 ```
 
 > - Related Reference : [let 與 const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
@@ -480,10 +479,10 @@ function foo() {
 **Local Scope**
 
 > - Variables `declared within a JavaScript function`, become `local` to the function.
-> - Local variables have Function scope: They can only be accessed from within the function.
+> - Local variables have Function scope: They can only be accessed within the function.
 
 ```
-// code here can NOT use carName
+// code here CAN NOT use carName
 
 function myFunction() {
   var carName = "Volvo";
@@ -492,6 +491,8 @@ function myFunction() {
 
 }
 ```
+
+<br/>
 
 **Global Scope**
 
@@ -516,10 +517,12 @@ function myFunction() {
 ```
 myFunction();
 
-// code here can use carName
+// code here also can use carName
 
 function myFunction() {
   carName = "Volvo";
+  
+  // code here can use carName
 }
 ```
 
@@ -527,19 +530,20 @@ function myFunction() {
 
 ### **Explain What Is TDZ (Temporal Dead Zone)?**
 
-> - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization` which declared with let or const.
+> - TDZ is short of `Temporal Dead Zone`. You will get error notification if you try to access a variable `after hoisting and before initialization which declared with let or const`.
 
 ```
 function test() {
     var a = 1; // Start varable c's TDZ
     var b = 2;
-    console.log(c) // Uncaught ReferenceError: Cannot access 'c' before initialization
+    console.log(c); // Uncaught ReferenceError: Cannot access 'c' before initialization
     if (a > 1) {
-      console.log(a)
+      console.log(a);
     }
     let c = 10 // End varable c's TDZ
 }
-test()
+
+test();
 ```
 
 > - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
@@ -704,18 +708,98 @@ console.log( obj.a ); // 123
 > - Control the sequence of function execute.
 
 ```
-window.setTimeout(function(){ ... }, 1000);
+window.setTimeout(function() { ... }, 1000);
 ```
 
 <br/>
 
 ### **Why Do We Use Callback?**
 
-> - Callback functions allow us to do something with data at a later time. But too much callback will cause callback hell, we can use promise to replace it.
-
+> - Callback functions allow us to do something with data at a later time. 
+> - But too much callback will cause callback hell, we can use promise to replace it.
 > - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 
 <br/>
+
+### **Explain What Is Promise?**
+
+<p align="center">
+<img src="img/promise.png" alt="promise" title="promise" width="60%">
+</p>
+
+> - `Promise is guarantee to do specfic things after an asynchronous action is resolved or rejected`, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
+
+```
+const myPromise = new Promise((resolve, reject) => {
+    // condition
+});
+```
+
+> - A promise starts in the `pending state which indicates that the promise hasn’t completed`, it ends with either success (resolve) or fail (reject) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
+>   (1) **Resolved** : The state of a promise representing a successful operation. <br/>
+>   (2) **Rejected** : The state of a promise representing a failed operation. <br/>
+>   (3) **Pending** : Initial state, before the promise succeeds or fails. <br/>
+
+```
+const myPromise = new Promise((resolve, reject) => {
+    let condition;
+
+    if(condition is met) {
+        resolve('Promise is resolved successfully.');
+    } else {
+        reject('Promise is rejected');
+    }
+});
+```
+
+> - How to deal with states : <br/>
+>   (1) **then()** : If the promise gets `resolved`, the then() method is called, then we can decide what to do with the resolved promise. then() accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
+>   (2) **catch()** : If the promise gets `rejected`, it will jump to the catch() method. <br/>
+>   (3) **finally()** : Execute the `same piece of code whether the promise is resolved or rejected`. <br/>
+>   (4) **all()** : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected. <br/>
+>   (5) Keep waiting : During pending.
+
+```
+myPromise.then((message) => {
+    console.log(message);
+}).catch((message) => {
+    console.log(message);
+});
+```
+
+> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
+
+<br/>
+
+### **Explain What Is Async/Await?**
+
+> - Async and Await is `syntax sugar for promises` in javaScript.
+> - Await ensures executing next step `after specific operations`.
+> - An Await operand can `only be used inside an Async function`.
+> - The Async functions return a promise.
+
+```
+async function fetchData(){
+  await a();
+  .....       // Execute after a
+  await b();
+  .....       // Execute after b
+}
+
+fetchData();
+fetchData().then(() => {
+  .....       // Execute after fetchData
+});
+```
+
+### **Explain What Is Asynchronous And Synchronous?**
+
+> - You execute something synchronously, you need to wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
+> - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
+>   ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
+
+<br/>
+
 
 ### **What Is Expressions And Statement?**
 
@@ -1255,84 +1339,6 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 
 <br/>
 
-### **Explain What Is Promise?**
-
-<p align="center">
-<img src="img/promise.png" alt="promise" title="promise" width="60%">
-</p>
-
-> - `Promise is guarantee to do specfic things after an asynchronous action is resolved or rejected`, one of the ways we can deal with asynchronous operations, prevent callback hell. It takes two parameters, one for success (resolve) and one for fail (reject) :
-
-```
-const myPromise = new Promise((resolve, reject) => {
-    // condition
-});
-```
-
-> - A promise starts in the `pending state which indicates that the promise hasn’t completed`, it ends with either success (resolve) or fail (reject) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
->   (1) **Resolved** : The state of a promise representing a successful operation. <br/>
->   (2) **Rejected** : The state of a promise representing a failed operation. <br/>
->   (3) **Pending** : Initial state, before the promise succeeds or fails. <br/>
-
-```
-const myPromise = new Promise((resolve, reject) => {
-    let condition;
-
-    if(condition is met) {
-        resolve('Promise is resolved successfully.');
-    } else {
-        reject('Promise is rejected');
-    }
-});
-```
-
-> - How to deal with states : <br/>
->   (1) **then()** : If the promise gets `resolved`, the then() method is called, then we can decide what to do with the resolved promise. then() accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
->   (2) **catch()** : If the promise gets `rejected`, it will jump to the catch() method. <br/>
->   (3) **finally()** : Execute the `same piece of code whether the promise is resolved or rejected`. <br/>
->   (4) **all()** : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected. <br/>
->   (5) Keep waiting : During pending.
-
-```
-myPromise.then((message) => {
-    console.log(message);
-}).catch((message) => {
-    console.log(message);
-});
-```
-
-> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
-
-<br/>
-
-### **Explain What Is Async/Await?**
-
-> - Async and Await is `syntax sugar for promises` in javaScript.
-> - Await ensures executing next step `after specific operations`.
-> - An Await operand can `only be used inside an Async function`.
-> - The Async functions return a promise.
-
-```
-async function fetchData(){
-  await a();
-  .....       // Execute after a
-  await b();
-  .....       // Execute after b
-}
-
-fetchData();
-fetchData().then(() => {
-  .....       // Execute after fetchData
-});
-```
-
-### **Explain What Is Asynchronous And Synchronous?**
-
-> - You execute something synchronously, you need to wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
-> - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
->   ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
-
-<br/>
 
 ### **What Is Functional Programming (FP)?**
 
