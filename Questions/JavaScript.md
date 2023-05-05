@@ -1199,7 +1199,7 @@ countHamster(); // 3 hamster(s)
 
 <br/>
 
-> - Improve code by using Anonymous And Arrow Function.
+> - Improve code by using anonymous and arrow function.
 
 ```
 function hamster() {
@@ -1257,7 +1257,7 @@ dogCounter();     // 3 dog(s)
 hamsterCounter(); // 2 hamster(s)
 ```
 
-> - We can also use the `Let` to solve this problem.
+> - We can also use the `let` to solve this problem.
 > - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 
 <br/>
@@ -1300,10 +1300,10 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 ### **What Is Stack?**
 
 <p align="center">
-<img src="img/stack.png" alt="event_loop" title="event_loop" width="40%">
+<img src="img/stack.png" alt="event_loop" title="event_loop" width="30%">
 </p>
 
-> - Stack is a linear data structure which follows a order LIFO(Last In First Out) in which the operations are performed.
+> - Stack is a data structure which follows a order `LIFO (Last In First Out)` in which the operations are performed.
 > - Related Reference : [解釋 Event Loop ( 上 ) --- Call Stack](https://ithelp.ithome.com.tw/articles/10260433)
 
 <br/>
@@ -1314,7 +1314,7 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 <img src="img/queue.png" alt="event_loop" title="event_loop" width="60%">
 </p>
 
-> - A Queue is a linear structure which follows a order FIFO(First In First Out) in which the operations are performed. 
+> - Queue is a data structure which follows a order `FIFO (First In First Out)` in which the operations are performed. 
 > - Related Reference : [解釋 Event Loop ( 下 ) --- Task Queue ( Callback Queue )](https://ithelp.ithome.com.tw/articles/10261593)
 
 <br/>
@@ -1322,7 +1322,8 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 
 ### **What Is Call Stack?**
 
-> - The call stack is what a program uses to keep track of method calls. The call stack is made up of stack frames
+> - The call stack is what a program uses to keep track of method calls. 
+> - The call stack is made up of stack frames.
 
 ```
 function a() {
@@ -1352,21 +1353,23 @@ a();
 
 ### **What Is Stack Overflow?**
 
-> - A stack overflow is a runtime error that happens when a program runs out of memory in the call stack.
+> - A stack overflow is a runtime error that happens `when a program runs out of memory in the call stack`.
 
 <br/>
 
 
 ### **What Is Callback/Event/Task Queue?**
 
-> -  This is where the `asynchronous code` gets pushed to, and waits for the execution.
-> - Deep down the task queue. The tasks are broken down further into `Marcotasks：setTimeout, setInterval, I/O, UI Rendering` and `Mircotasks：Promises, MutationObserver`. The `priority Mircotasks is higher than Marcotasks`.
+> - This is where the `asynchronous code` gets pushed to, and waits for the execution.
+> - The tasks are broken down further into `Macrotasks and Mircotasks`, and the `priority Mircotasks is higher than Macrotasks`. <br/>
+> (1) `Macrotasks: setTimeout, setInterval, I/O, UI Rendering`. <br/>
+> (2) `Mircotasks: Promises, MutationObserver`. <br/>
 
 <br/>
 
 ### **What Is Job Queue?**
 
-> - Apart from Callback Queue, reserved only for new Promise() functionality.
+> - Apart from callback queue, reserved only for new Promise() functionality.
 
 <br/>
 
@@ -1397,6 +1400,7 @@ console.log('start');
 setTimeout(() => {
   console.log('setTimeout1');
 })
+
 Promise.resolve()
   .then(() => {
     console.log('Promise1');
@@ -1407,6 +1411,7 @@ Promise.resolve()
 setTimeout(() => {
   console.log('setTimeout2');
 })
+
 console.log('end');
 
 // Result
@@ -1416,7 +1421,6 @@ console.log('end');
 'Promise2'
 'setTimeout1'
 'setTimeout2'
-
 ```
 
 > - Related Reference : [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[Understanding Event Loop, Call Stack, Event & Job Queue in Javascript](https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd),[JS底層學習筆記 - EventLoop](https://front-chef.coderbridge.io/2021/05/08/js-eventloop/), [JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
