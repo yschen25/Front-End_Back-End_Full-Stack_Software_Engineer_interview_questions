@@ -1499,6 +1499,25 @@ console.log(recu(1))l // 10
 
 <br/>
 
+### **What Is Try Catch, Throw And Throw new Error()?**
+
+> - Try Catch: Allow you user use website normarlly althhough the error occor. The Try statement lets you test a block of code for errors, the catch statement lets you handle the error. 
+> - Throw: It will terminate the further execution.
+> - Throw new Error(): The difference between throw and throw new Error() is the format {name: 'Error', message: 'String you pass in the constructor'}, you can also customize the information you want to debug such as transaction number.
+
+```
+try {
+      throw "I'm Erika";           // I'm Erika
+      throw Error("I'm Joe");      // Error: I'm Joe, if the above line exists then this line won't never show
+      throw new Error("I'm Ray");  // Error: I'm Ray, if the above two lines exist then this line won't never show
+      console.log("You'll never reach me if any above code line shows")
+} catch(e) {
+      console.log(e);
+}
+```
+
+<br/>
+
 ### **What Is Prototype?**
 
 > - All JavaScript objects inherit properties and methods from a prototype.
