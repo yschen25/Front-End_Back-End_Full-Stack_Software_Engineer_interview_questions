@@ -1501,7 +1501,7 @@ console.log(recu(1))l // 10
 
 ### **What Is Try Catch, Throw And Throw new Error()?**
 
-> - Try Catch: Allow you user use website normarlly althhough the error occor. The Try statement lets you test a block of code for errors, the catch statement lets you handle the error. 
+> - Try Catch: Can allow user to use website normarlly although the error occor. The Try statement lets you test a block of code for errors, the catch statement lets you handle the error. 
 > - Throw: It will terminate the further execution.
 > - Throw new Error(): The difference between throw and throw new Error() is the format {name: 'Error', message: 'String you pass in the constructor'}, you can also customize the information you want to debug such as transaction number.
 
