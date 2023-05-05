@@ -8,7 +8,7 @@
 ### **What Is Inner, Outer, Left And Right Joins**
 
 <p align="center">
-<img src="img/table_joins.jpg" alt="table_joins" title="table_joins" width="60%">
+<img src="img/table_joins.png" alt="table_joins" title="table_joins" width="60%">
 </p>
 
 > - **Inner Join**: Returns records that have matching values in both tables.
