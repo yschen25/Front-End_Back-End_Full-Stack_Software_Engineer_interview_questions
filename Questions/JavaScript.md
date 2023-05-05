@@ -1075,6 +1075,73 @@ console.log(reduce); // 46
 
 <br/>
 
+
+### **How To Iterate Object?**
+
+```
+let obj = { name : "Erika", age : 18 }
+
+// Object.keys(), Object.value() and Object.entries returns an array
+for (let key of Object.keys(obj)) {
+    console.log(key + ","); // name, age
+}
+
+for (let value of Object.values(obj)) {
+    console.log(value + ","); // Erika, 18
+}
+
+for (let [key, value] of Object.entries(obj)) {
+    console.log(key + " = " + value + ",");  // name = Erika, age = 18
+}
+
+// Use forEach
+Object.keys(obj).forEach((key) => console.log(key + ",")) // name, age
+Object.values(obj).forEach((val) => console.log(val + ",")) // Erika, 18
+
+Object.keys(obj).forEach((key) => console.log(key + " = " + obj[key] + ",")) // name = Erika, age = 18
+Object.entries(obj).forEach((item) => console.log(item[0] + " = " + item[1] + ","))  // name = Erika, age = 18
+Object.entries(obj).forEach(([key, value]) => console.log(key + " = " + value + ","))  // name = Erika, age = 18
+```
+
+<br/>
+
+
+### **How To Iterate Map?**
+
+```
+let map = new Map();
+let arr = ["Erika", "Joe", "Ray"];
+
+for (let i = 0; i < arr.length; i++) {
+    map.set(i, arr[i]);
+}
+
+for (let [key] of map) {
+    console.log(key + ",");  // 0, 1, 2
+}
+
+for (let [, val] of map) {
+    console.log(val + ",");  // Erika, Joe, Ray
+}
+
+for (let key of map.keys()) { 
+      console.log(key + ","); // 0, 1, 2
+}
+
+for (let val of map.values()) { 
+      console.log(val + ","); // Erika, Joe, Ray
+}
+
+for (let [key, value] of map) { 
+     console.log(key + " = " + value + ",");  // 0 = Erika, 1 = Joe, 2 = Ray
+}
+
+map.forEach((val, key) => console.log(key + " = " + val + ",")) // 0 = Erika, 1 = Joe, 2 = Ray
+```
+
+<br/>
+
+
 ### **What Is Set?**
 
 > - The set object lets you store unique values of any type, whether primitive values or object references.
