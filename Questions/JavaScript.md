@@ -1236,8 +1236,8 @@ hamster(); // 6 hamster(s), but we expect 3 hamster(s)
 function hamster() {
     var count = 0; 
     function countHamster() {
-    	count += 1;
-    	console.log(count + ' hamster(s)');
+      count += 1;
+      console.log(count + ' hamster(s)');
   }
   return countHamster;
 }
@@ -1245,8 +1245,8 @@ function hamster() {
 function cat() {
     var count = 0; 
     function countCat() {
-    	count += 1;
-    	console.log(count + ' cat(s)');
+      count += 1;
+      console.log(count + ' cat(s)');
   }
   return countCat;
 }
@@ -1271,7 +1271,7 @@ countHamster(); // 3 hamster(s)
 ```
 function hamster() {
   var count = 0; 
-  return () => {
+  return() => {
     count += 1;
     console.log(count + ' hamster(s)');
   }
@@ -1279,7 +1279,7 @@ function hamster() {
 
 function cat() {
   var count = 0; 
-  return () => {
+  return() => {
     count += 1;
     console.log(count + ' cat(s)');
   }
@@ -1305,7 +1305,7 @@ countHamster(); // 3 hamster(s);
 ```
 function animalCounter(name) {
    var count = 0; 
-   return () => {
+   return() => {
       count += 1;
       console.log(count + ' ' + name);
   }
