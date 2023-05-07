@@ -1096,7 +1096,6 @@ console.log(val); // 5
 // Destructuring Syntax
 const {num, str} = object;
 console.log(num, str); // 1 "Hello World"
-
 ```
 
 <br/>
