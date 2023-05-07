@@ -1075,11 +1075,38 @@ console.log(reduce); // 46
 
 <br/>
 
+### **How To Access Values On An Object?**
+
+```
+const object = {
+   "num": 1,
+   "str": "Hello World",
+   "obj": {
+      "x": 5
+   }
+};
+
+// Dot notation
+const val = object.obj.x;
+console.log(val); // 5
+
+// Bracket notation
+const val = object["obj"]["x"];
+console.log(val); // 5
+
+// Destructuring Syntax
+const {num, str} = object;
+console.log(num, str); // 1 "Hello World"
+
+```
+
+<br/>
+
 
 ### **How To Iterate Object?**
 
 ```
-let obj = { name : "Erika", age : 18 }
+let obj = {name : "Erika", age : 18}
 
 // Object.keys(), Object.value() and Object.entries returns an array
 for (let key of Object.keys(obj)) {
