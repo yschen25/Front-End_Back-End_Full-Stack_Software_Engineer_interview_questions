@@ -24,7 +24,6 @@ console.log(plainObj); // {gretting: 'hello'}
 let data = {"name": "Erika"};
 let jsonData = JSON.stringfy(data);
 console.log(jsonData); // '{"name": "Erika"}'
-
 ```
 
 <br/>
