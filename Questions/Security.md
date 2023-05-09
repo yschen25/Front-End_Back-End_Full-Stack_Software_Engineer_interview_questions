@@ -42,8 +42,8 @@ SELECT UserId, Name, Password FROM Users WHERE UserId = 105 OR 1=1;
 > - Filter input on arrival.
 > - Encode data on output 
 > - Use appropriate response headers.
-> - Follow the Content Security Policy
-> - Related Reference : [常見攻擊：XSS、SQL Injection
+> - Follow the content security policy
+> - Related Reference: [常見攻擊：XSS、SQL Injection
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html), [Cross Site Scripting (XSS)](https://www.synopsys.com/glossary/what-is-cross-site-scripting.html), [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
 
 <br/>
@@ -62,7 +62,7 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 ### **What Is CORS?**
 
 > - `A request from the orgin domain is different from the target domain` which violate the same-origin policy, for the security, usually fobidden cross domain access to prevent CSRF.
-> - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS
+> - `Cross Origin Resource Sharing` is a mechanism that allows : Get data from other domain outside our own domain. To be requested from another domain outside our own domain. There are three way to implement - Form Submit, JSONP and W3C - CORS.
 > - By building on top of the XMLHttpRequest object, CORS allows developers to work with the same idioms as same-domain requests.
 ```
 <? php
@@ -74,27 +74,27 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
  
 ?>
 ```
-> - Related Reference : [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
+> - Related Reference: [什麼是CORS？](https://sibevin.github.io/posts/2017-06-05-101518-note-cors), [什麼是CORS](https://ithelp.ithome.com.tw/articles/10204004)
 <br/>
 
 ### **How To Store The Password?**
-> - Recommended : "hashed and salted", Salting is simply the addition of a unique, random string of characters known only to the site to each password before it is hashed
-> - Not recommended : MD5, SHA1, SHA256
-> - Related Reference : [Passwords and hacking: the jargon of hashing, salting and SHA-2 explained](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
+> - Recommended: `hashed and salted`. Salting is simply the addition of a unique, random string of characters known only to the site to each password before it is hashed.
+> - Not recommended: MD5, SHA1, SHA256.
+> - Related Reference: [Passwords and hacking: the jargon of hashing, salting and SHA-2 explained](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
 
 <br/>
 
 
 ### **What Is CQRS?**
-> - CQRS (Command-Query Responsibility Segregation) : The update command should separate from query command
+> - CQRS (Command-Query Responsibility Segregation): The update command should separate from query command
 
 <br/>
 
 ### **What Is ACID?**
-> - A (Atomicity) : Atomicity means that you guarantee that either all the transaction succeeds or failure, we commit when transaction succeeds, and we roll back when the transaction failure.
-C (Consistency) : This ensures that all data will be consistent when execute transaction 
-I (Isolation) : All transactions will occur in isolation
-D (Durability) : Durability means that, once a transaction is committed, it will remain in the system – even if there’s a system crash
+> - **A (Atomicity)**: Atomicity means that you guarantee that either all the transaction succeeds or failure, we commit when transaction succeeds, and we roll back when the transaction failure.
+> - **C (Consistency)**: This ensures that all data will be consistent when execute transaction.
+> - **I (Isolation)**: All transactions will occur in isolation.
+> - **D (Durability)**: Durability means that, once a transaction is committed, it will remain in the system – even if there’s a system crash.
 
 <br/>
 
