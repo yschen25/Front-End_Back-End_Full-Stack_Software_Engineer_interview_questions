@@ -48,7 +48,7 @@
 > (3) Greater risk of  `single point of failures (SPOF) `. <br/>
 > (4) The overall cost is high.
 
-> - **Horizontal scaling**: <br/>
+> - **Horizontal scaling** <br/>
 > (1) Referred to as `scale out`, also known as `sharding`.  <br/>
 > (2) It allows you to scale by adding more servers into your pool of resources.  <br/>
  
