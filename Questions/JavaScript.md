@@ -1189,6 +1189,7 @@ console.log(arr2); // [1, 2, 3]
 ### **What Is Curry?**
 
 > - Currying is transforming a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.
+> - We can use currry to reuse function instead of creating function repeatedly.
 
 ```
 // Before currying
@@ -1210,6 +1211,7 @@ function minusFunc(x) {
 const returnFunc = minusFunc(1);
 console.log(returnFunc);      // Function
 console.log(returnFunc(2));   // 3
+console.log(returnFunc(5));   // 6
 console.log(minusFunc(1)(2)); // 3
 
 // Syntax_2:
@@ -1217,8 +1219,9 @@ const minusFunc = (x) => (y) => x - y;
 
 const retuernFunc = minusFunc(1);
 console.log(returnFunc);      // Function
-console.log(retuernFunc(5));  // 3
-console.log(minusFunc(1)(5)); // 3
+console.log(retuernFunc(2));  // -1
+console.log(retuernFunc(5));  // -4
+console.log(minusFunc(1)(5)); // -4
 ```
 
 <br/>
