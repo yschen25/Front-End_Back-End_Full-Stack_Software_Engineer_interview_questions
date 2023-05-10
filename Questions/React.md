@@ -57,6 +57,12 @@
 
 <br/>
 
+### **What Are The Differences Between React And React Native?**
+> - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
+> - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
+> - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
+
+<br/>
 
 ### **What Is JSX?**
 > - JSX stands for `JavaScript XML`.
@@ -196,6 +202,183 @@ ReactDOM.render(
   document.getElementById("container")
 );
 ```
+
+<br/>
+
+### **Why Do I Need To Use Keys In React Lists?**
+> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
+> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
+```
+const content = posts.map((post) =>
+  <Post
+    key={post.id}
+    id={post.id}
+    title={post.title} />
+);
+```
+
+<br/>
+
+### **Why Don't Recommend To Use Indexes As Keys?**
+> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
+> - Related Reference : [Why do I need Keys in React Lists?
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
+
+<br/>
+
+### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
+> - If your `list is static` (no additions/re-ordering/removal to the list).
+
+<br/>
+
+### **Explain The Controlled Components And Uncontrolled Components.**
+> - **Controlled Components** : <br/> 
+(1) `Control by status or props`. <br/> 
+(2) In most cases, we recommend using controlled components to implement forms.  <br/> 
+(3) Controls the values of input elements in a form using setState(). <br/> 
+(4) The input value can't not be control by user.
+
+```
+class MyForm extends React.Component {
+  render() {
+    return <input value="Hello"></input>;
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
+<br/>
+
+It needs to add onChange handler to listen to the input value.
+
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: "Hello"};
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(e) {
+    this.setState({
+      text: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <form>
+        <label>Text : </label>
+        <input
+          name="text"
+          value={this.state.text}
+          onChange={this.changeState}
+        />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+
+```
+
+
+| Elements | Attributes | Method | Callback value |
+|---|---|---|---|
+| ``<input type="text" />`` | value="string" | onChange | event.target.value | 
+| ``<input type="checkbox" />`` | checked={boolean}| onChange | event.target.checked | 
+| ``<input type="radio" />`` | checked={boolean} | onChange | event.target.checked | 
+| ``<textarea />`` | value="string" | onChange | event.target.value | 
+| ``<select />`` | value="option value" | onChange | event.target.value | 
+<br/>
+
+> - **Uncontrolled Components** :   <br/> 
+(1) `Doesn't control by status or props, use ref to control DOM`.
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.click = this.click.bind(this);
+  }
+
+  click(event) {
+    alert("click : " + this.refs.myInput.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <label>Text : </label>
+        <input defaultValue="Hello" ref="myInput" />
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
+(2) Allow set up the value by defaultValue.  <br/> 
+(3) Easy to use with third party library. 
+<br/><br/>
+
+### **When Use Controlled Components Or Uncontrolled Components?**
+|Functions | Controlled Components | Uncontrolled Components |
+|---|---|---|
+| One time submit | O  | O  |
+| Submit validation | O  | O  |
+| Instant validation | O  | X |
+| Fobidden buttons| O | X |
+| Formatted Input Value  | O | X |
+| Merge mutiple input value | O  | X |
+| Dynamic input value | O  | X |
+
+> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
+
+<br/>
+
+### **What Is Refs?**
+> - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
+> - `Use state and props to manage components instead using refs`. (ref:18)
+> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
+> - Refs can't use in functional components, `only for class components`.
+
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.focus = this.focus.bind(this);
+  }
+
+  focus() {
+    this.refs.myInput.focus();
+  }
+
+  /* focus = () => this.textInput.focus(); */
+
+  render() {
+    return (
+      <div>
+        <h1>Refs</h1>
+        <input type="text" ref="myInput" />
+        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.focus}
+        />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+```
+> - Related Reference: [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 
 <br/>
 
@@ -472,7 +655,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 <br/>
 
 
-> -  Class component: use arrow function
+> -  Class component: Use arrow function
 ```
 class MyComponent extends React.Component {
   constructor(props) {
@@ -507,7 +690,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
 ### **Why We Don't Need Bind Arrow Function?**
 > - Arrow function `does not have the this, arguments, super, new.target` in its context. So when you reference `this` inside an arrow function it `treat this as any other variable and look for its declaration in its scope first` and it can not find it so it `search the upper scope which is the this referring to the react component class` which what is required so we do not need to bind the this to the class.
-> - Related Reference : [Why we don't need to bind the arrow function in React?**](**https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
+> - Related Reference: [Why we don't need to bind the arrow function in React?**](**https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 
 <br/>
 
@@ -518,123 +701,14 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
 ### **How To Use Arrow Function In The Class Components?**
 > - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
-> - Related Reference : [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
-
-<br/>
-
-
-### **Explain The Life Cycle Of React.js (Name Lifecycle Methods and their purpose.)**
-
-<p align="center">
-<img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
-</p>
-
-> - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
- (1) **Mounting** : Means putting elements into the DOM. <br/>
- (2) **Updating** : A component is updated whenever there is a change in the component's state or props. <br/>
- (3) **Unmounting** : When a component is removed from the DOM. <br/>
- (4) (Error Handling) : Occurs javaScript errors. <br/>
-<br/>
-
-**Mounting** : <br/>
-(1) **constructor()** : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
-Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
-```
-constructor(props) {
-    super(props);
-    this.state = {
-      name: "ReactJS"
-    };
-    this.updateName = this.updateName.bind(this);
-}
-```
-<br/>
-
-(2) **static getDerivedStateFromProps()** : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
-```
-static getDerivedStateFromProps(props, state) {
-    return {
-      name: props.name
-    };
-}
-```
-<br/>
-
-(3) **render()** : The only required method in a component. It is responsible for rendering the JSX into the DOM. If using conditional rendering, some simple logic can be applied inside this method, such as a ternary operator or pure functions.  <br/><br/>
-Don't make API request, put any action that needs to occur only once in the lifetime of the component here and set the state here (Your app will be thrown into an infinite loop of rendering as this.setState will change the state and then call the render function which in turn will again set the state and so on).
-```
-render() {
-    return <div>My Component</div>;
-}
-```
-<br/>
-
-(4) **componentDidMount()** : When your `component is loaded in the DOM`, this method is executed. Therefore, it makes this an ideal place to perform any `API calls or make changes to the DOM`. After executing once, it is not triggered again for the duration of the component’s life. <br/>
-You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/><br/>
-
-**Updating** : <br/>
-The modification phase can be triggered using three methods :  <br/>
-> - Receiving new props  <br/>
-> - Calling setState() and updating the state  <br/>
-> - Using this.forceUpdate  <br/><br/>
-
-(1) **static getDerivedStateFromProps()** : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
-
-(2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. (ref:22)
-```
-shouldComponentUpdate(nextProps, nextState){
-    if(this.state.name === nextState.name) {return false;}
-  }
-```
-
-(3) **render()** : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
-
-(4) **getSnapshotBeforeUpdate()** : If you want to `do something before render` then can do it right here. This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
-
-(5) **componentDidUpdate()** : You can `do the samething as what did in componentDidMount()`. This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
-```
-componentDidUpdate(prevProps, prevState, snapshot) {
-      if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
-          this.setState({name: "Angular"})
-      }
-  }
-```
-<br/>
-
-**Unmounting** :  <br/>
-(1) **componentWillUnmount()** : This method is called `right before the component is unmounted from the DOM`. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to `clean up any subscriptions or events` in componentWillUnmount(), that you may have created earlier in componentDidMount.
-```
- componentWillUnmount(){
-      this.clearInterval(this.timer);
-  }
- ```
- <br/>
-
-**Error Handling** : <br/>
-(1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. `You can update the state depending on the error`, to be used anywhere in the component, possibly to show a fallback UI. 
-```
-static getDerivedStateFromError(error) {
-    return {error: error.message};
-  }
-```
-
-(2) **componentDidCatch()** : Error boundaries are components that can `catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI`. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
-```
-componentDidCatch(error, info) {
-    this.logError(error, info);
-  }
-```
-<br/>
-
-### **Why static getDerivedStateFromProps() Is Static?**
-> - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
+> - Related Reference: [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
 
 <br/>
 
 ### **Explain Error Boundaries?**
-> - Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
-> - static getDerivedStateFromError(), componentDidCatch()
-> - Related Reference : [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
+> - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
+> - static getDerivedStateFromError(), componentDidCatch().
+> - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
 
 <br/>
 
@@ -798,80 +872,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 (1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
 (2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
 (3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
-
-<br/>
-
-
-### **What Is Jest?**
->- A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
-
-<br/>
-
-
-### **What Is An Enzyme?**
-> - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
-> - Enzyme only works with React.
-> - Enzyme must be paired with another test runner.
-> - `Not support testing React hooks so far`.
-> - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
-
-<br/>
-
-
-### **What Is Jest And Enzyme?**
-> - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
-> - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
-> - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
-
-<br/>
-
-
-### **What Is React-testing-library/React-hooks-testing-library?**
-> - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
-> - Install @testing-library/react-hooks to test hooks.
-
-<br/>
-
-
-### **What Is Refs?**
-> - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
-> - `Use state and props to manage components instead using refs`. (ref:18)
-> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
-> - Refs can't use in functional components, `only for class components`.
-
-```
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.focus = this.focus.bind(this);
-  }
-
-  focus() {
-    this.refs.myInput.focus();
-  }
-
-  /* focus = () => this.textInput.focus(); */
-
-  render() {
-    return (
-      <div>
-        <h1>Refs</h1>
-        <input type="text" ref="myInput" />
-        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
-        <input
-          type="button"
-          value="Focus the text input"
-          onClick={this.focus}
-        />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<MyComponent />, document.getElementById("container"));
-```
-
-> - Related Reference : [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
 
 <br/>
 
@@ -1098,148 +1098,32 @@ export default App;
 
 <br/>
 
-
-### **What Are The Differences Between React And React Native?**
-> - `React.js is a javaScript library`, supporting both front-end web and being run on a server, for building user interfaces and web applications. It follows the concept of reusable components.
-> - `React Native is a mobile framework` that makes use of JavaScript engine available on the host, allowing you to build mobile applications for different platforms (iOS, Android, and Windows Mobile) in JavaScript that allows you to use ReactJS to build reusable components and communicate with native components.
-> - Both are open-sourced by Facebook follow the JSX syntax extension to JavaScript. Which compiles to React.createElement calls under the hood.
+### **What Is Jest?**
+>- A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
 
 <br/>
 
-### **Explain The Controlled Components And Uncontrolled Components.**
-> - **Controlled Components** : <br/> 
-(1) `Control by status or props`. <br/> 
-(2) In most cases, we recommend using controlled components to implement forms.  <br/> 
-(3) Controls the values of input elements in a form using setState(). <br/> 
-(4) The input value can't not be control by user.
-
-```
-class MyForm extends React.Component {
-  render() {
-    return <input value="Hello"></input>;
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-```
-
-<br/>
-
-It needs to add onChange handler to listen to the input value.
-
-```
-class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: "Hello"};
-    this.changeState = this.changeState.bind(this);
-  }
-
-  changeState(e) {
-    this.setState({
-      text: e.target.value
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <label>Text : </label>
-        <input
-          name="text"
-          value={this.state.text}
-          onChange={this.changeState}
-        />
-      </form>
-    );
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-
-```
-
-
-| Elements | Attributes | Method | Callback value |
-|---|---|---|---|
-| ``<input type="text" />`` | value="string" | onChange | event.target.value | 
-| ``<input type="checkbox" />`` | checked={boolean}| onChange | event.target.checked | 
-| ``<input type="radio" />`` | checked={boolean} | onChange | event.target.checked | 
-| ``<textarea />`` | value="string" | onChange | event.target.value | 
-| ``<select />`` | value="option value" | onChange | event.target.value | 
-<br/>
-
-> - **Uncontrolled Components** :   <br/> 
-(1) `Doesn't control by status or props, use ref to control DOM`.
-```
-class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.click = this.click.bind(this);
-  }
-
-  click(event) {
-    alert("click : " + this.refs.myInput.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div>
-        <label>Text : </label>
-        <input defaultValue="Hello" ref="myInput" />
-        <input type="submit" value="Click" onClick={this.click} />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-```
-
-(2) Allow set up the value by defaultValue.  <br/> 
-(3) Easy to use with third party library. 
-<br/><br/>
-
-### **When Use Controlled Components Or Uncontrolled Components?**
-|Functions | Controlled Components | Uncontrolled Components |
-|---|---|---|
-| One time submit | O  | O  |
-| Submit validation | O  | O  |
-| Instant validation | O  | X |
-| Fobidden buttons| O | X |
-| Formatted Input Value  | O | X |
-| Merge mutiple input value | O  | X |
-| Dynamic input value | O  | X |
-
-> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
+### **What Is An Enzyme?**
+> - Enzyme adds some great additional utility methods for `rendering, finding and interacting with elements`.
+> - Enzyme only works with React.
+> - Enzyme must be paired with another test runner.
+> - `Not support testing React hooks so far`.
+> - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 
 <br/>
 
 
-### **Why Do I Need To Use Keys In React Lists?**
-> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
-> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
-```
-const content = posts.map((post) =>
-  <Post
-    key={post.id}
-    id={post.id}
-    title={post.title} />
-);
-```
+### **What Is Jest And Enzyme?**
+> - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
+> - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
+> - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
 
 <br/>
 
-### **Why Don't Recommend To Use Indexes As Keys?**
-> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-> - Related Reference : [Why do I need Keys in React Lists?
-](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
-<br/>
-
-### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
-> - If your `list is static` (no additions/re-ordering/removal to the list).
+### **What Is React-testing-library/React-hooks-testing-library?**
+> - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
+> - Install @testing-library/react-hooks to test hooks.
 
 <br/>
 
@@ -1293,7 +1177,7 @@ const MyComponent = React.memo(function MyComponent(props) {
    return '';
 });
 ```
-> - Related Reference : [Pure Component in React.js](https://www.tutorialspoint.com/pure-component-in-react-js), [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b), [Pure Components in React](https://dev.to/sumitkharche/pure-components-in-react-57on),[React 性能優化那件大事，使用 memo、useCallback、useMemo](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-optimize-performance-using-memo-usecallback-usememo-a76b6b272df3)
+> - Related Reference: [Pure Component in React.js](https://www.tutorialspoint.com/pure-component-in-react-js), [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b), [Pure Components in React](https://dev.to/sumitkharche/pure-components-in-react-57on),[React 性能優化那件大事，使用 memo、useCallback、useMemo](https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-optimize-performance-using-memo-usecallback-usememo-a76b6b272df3)
 
 <br/>
 
@@ -1393,6 +1277,114 @@ class Columns extends React.Component {
 }
 ```
 > - Related Reference: [React Fragment](https://www.fooish.com/reactjs/fragment.html)
+
+<br/>
+
+### **Explain The Life Cycle Of React.js (Name Lifecycle Methods and their purpose.)**
+
+<p align="center">
+<img src="img/react_lifecycles.png" alt="react_lifecycles" title="react_lifecycles" width="auto">
+</p>
+
+> - Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. <br/>
+ (1) **Mounting** : Means putting elements into the DOM. <br/>
+ (2) **Updating** : A component is updated whenever there is a change in the component's state or props. <br/>
+ (3) **Unmounting** : When a component is removed from the DOM. <br/>
+ (4) (Error Handling) : Occurs javaScript errors. <br/>
+<br/>
+
+**Mounting** : <br/>
+(1) **constructor()** : The constructor is the first method executed and is called before mounting. This method is typically used for two reasons, `binding functions and setting the initial state`. Each can `only be used in class components`. If you do make use of a constructor, make sure to call super() with the props as an argument, otherwise 'props' will be undefined in the component. <br/><br/>
+Since we need to initialize state, this is the only place where we can directly define state without using setState(). You should also not use setState() in the constructor anyway to avoid unexpected behavior.
+```
+constructor(props) {
+    super(props);
+    this.state = {
+      name: "ReactJS"
+    };
+    this.updateName = this.updateName.bind(this);
+}
+```
+<br/>
+
+(2) **static getDerivedStateFromProps()** : Called `right before rendering the elements` in the DOM, and is `executed every time the component updates`, including the initial render. It is usually used to `set the initial state depending on the props` passed to the component.
+```
+static getDerivedStateFromProps(props, state) {
+    return {
+      name: props.name
+    };
+}
+```
+<br/>
+
+(3) **render()** : The only required method in a component. It is responsible for rendering the JSX into the DOM. If using conditional rendering, some simple logic can be applied inside this method, such as a ternary operator or pure functions.  <br/><br/>
+Don't make API request, put any action that needs to occur only once in the lifetime of the component here and set the state here (Your app will be thrown into an infinite loop of rendering as this.setState will change the state and then call the render function which in turn will again set the state and so on).
+```
+render() {
+    return <div>My Component</div>;
+}
+```
+<br/>
+
+(4) **componentDidMount()** : When your `component is loaded in the DOM`, this method is executed. Therefore, it makes this an ideal place to perform any `API calls or make changes to the DOM`. After executing once, it is not triggered again for the duration of the component’s life. <br/>
+You can use setState() here to modify the state, which is commonly done when data is fetched from a network request. However, if you need to set the state immediately and you don’t need to access the DOM, it is always a better idea to do that in the constructor. <br/><br/>
+
+**Updating** : <br/>
+The modification phase can be triggered using three methods :  <br/>
+> - Receiving new props  <br/>
+> - Calling setState() and updating the state  <br/>
+> - Using this.forceUpdate  <br/><br/>
+
+(1) **static getDerivedStateFromProps()** : This is the first method that is called when a component gets updated. This is still the natural place to set the state object based on the initial props. <br/>
+
+(2) **shouldComponentUpdate()** : This method is designed to `increase performance` in React applications. It accepts the previous state and previous props, which you can compare with the current state and props and using a conditional operator, return true or false depending on whether React `should update the component or not`. (ref:22)
+```
+shouldComponentUpdate(nextProps, nextState){
+    if(this.state.name === nextState.name) {return false;}
+  }
+```
+
+(3) **render()** : The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes. <br/>
+
+(4) **getSnapshotBeforeUpdate()** : If you want to `do something before render` then can do it right here. This is a new method recently introduced in React. It can be used as an alternative for the now deprecated componentWillUpdate(). In the getSnapshotBeforeUpdate() method you have access to the props and state before the update, meaning that even after the update, you can check what the values were before the update. If the getSnapshotBeforeUpdate() method is present, you should also include the componentDidUpdate() method, otherwise you will get an error. <br/>
+
+(5) **componentDidUpdate()** : You can `do the samething as what did in componentDidMount()`. This method is executed right after all the changes have been propagated to the DOM. Here, we have `access to the previous props, state and the value returned by getSnapshotBeforeUpdate()` also known as the snapshot. If we want to `modify the state` in this method, we must do so in a conditional statement. 
+```
+componentDidUpdate(prevProps, prevState, snapshot) {
+      if(prevState.name === "ReactJS" && this.state.name === "VueJS") {
+          this.setState({name: "Angular"})
+      }
+  }
+```
+<br/>
+
+**Unmounting** :  <br/>
+(1) **componentWillUnmount()** : This method is called `right before the component is unmounted from the DOM`. Here, you can call any last-minute actions or perform any clean-up required. You’ll need to make sure to `clean up any subscriptions or events` in componentWillUnmount(), that you may have created earlier in componentDidMount.
+```
+ componentWillUnmount(){
+      this.clearInterval(this.timer);
+  }
+ ```
+ <br/>
+
+**Error Handling** : <br/>
+(1) **static getDerivedStateFromError()** : When an error occurs, this method receives the error object. `You can update the state depending on the error`, to be used anywhere in the component, possibly to show a fallback UI. 
+```
+static getDerivedStateFromError(error) {
+    return {error: error.message};
+  }
+```
+
+(2) **componentDidCatch()** : Error boundaries are components that can `catch errors anywhere in component (including any children component they render), and log errors and/or display a fallback UI`. The componentDidCatch lifecycle hook is meant to catch errors during mounting, rendering and in other lifecycle methods.
+```
+componentDidCatch(error, info) {
+    this.logError(error, info);
+  }
+```
+<br/>
+
+### **Why static getDerivedStateFromProps() Is Static?**
+> - Discourage any side-effects during the render phase to prevent unsafe access of instance properties.
 
 <br/>
 
