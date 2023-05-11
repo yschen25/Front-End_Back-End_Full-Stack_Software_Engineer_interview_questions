@@ -799,7 +799,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 ### **How To Use Hook?**
 
-**useState** <br/>
+**useState()** <br/>
 > (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
 > (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
 
@@ -850,47 +850,57 @@ function ClickClass() {
 
 <br/>
 
-**useEffect** <br/>
+**useEffect()** <br/>
 > (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The effect hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 > (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
 > (2.1) The first an anonymous callback function that houses your useEffect logic.  <br/>
-> (2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. <br/>
+> (2.2) The second parameter is an array.  <br/>
+> (2.2.1) If we don't put array, then useEffect will run everytime.  <br/>
+> (2.2.2) If array is empty then useEffect will only run once.  <br/>
+> (2.2.3) If array is not empty and it changed then will trigger the useEffect`. <br/>
 
 ```
 useEffect(() => {
     console.log('This is like componentDidMount');
 
-    return () => {
+    return() => {
       console.log('This is like componentWillUnmount'); // clear something
     };
   });
+```
 
-// Running every time.
+```
+// Running every time
 useEffect(() => {
-	console.log('Runs every time');
+    console.log('Runs every time');
 });
+```
 
-// Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
+```
+// Running an effect once (componentDidMount)
 useEffect(() => {
-	console.log('This only runs once');
+   console.log('This only runs once');
 }, []);
+```
 
-// Using effects when things change (componentDidUpdate): 
+```
+// Using effects when things change (componentDidUpdate)
 useEffect(() => {
-	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
+    console.log('This is like componentDidUpdate, I will be triger whenever count state changes');
  }, [count]);
 ```
 
 <br/>
 
 
-**useContext**<br/>
+**useContext()**<br/>
 > (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
 > (2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
+> 
+<br/>
 
-
-**useMemo** <br/>
-> - useMemo can help the performance of an application by “remembering” expensive functions and preventing a re-render every time there is a change in the application.
+**useMemo()** <br/>
+> - useMemo can `help the performance of an application by remembering expensive functions` and `preventing a re-render every time there is a change in the application`.
 
 ```
 // It will re-render the Card component when clicking the button, but it's unnecessary
@@ -917,9 +927,7 @@ const Card = ({ title }) => {
 
 export default Card;
 
-
-// To prevent the unnecessary re-render, add React.memo() or useMemo() ↓
-
+// Use React.memo() to prevent the unnecessary re-render
 const Card = ({ title }) => {
     return (
         <div>
@@ -947,8 +955,7 @@ const App = () => {
 
 export default App;
 
-// To prevent the unnecessary re-render, add React.memo() or useMemo() ↓
-
+// Use useMemo() to prevent the unnecessary re-render
 const App = () => {
     const [count, setCount] = useState(0);
     const tags = useMemo(() => {
@@ -966,12 +973,16 @@ export default App;
 ```
 
 
-**useCallback** <br/>
+**useCallback()** <br/>
 > - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
 > - useCallback returns its function when the dependencies change while useMemo calls its function and returns the result.
+> 
+<br/>
 
-**useReducer**  <br/>
+**useReducer()**  <br/>
 > - lets you handle state updates using reducers without a Redux store.
+
+<br/>
 
 **Custom React Hooks** <br/>
 > - Custom hooks allow you to create functionality that can be reused across different components.
@@ -980,22 +991,26 @@ export default App;
 
 
 ### **Compare Redux And React Hooks.**
-> - For a smaller project, use React Hooks instead of Redux <br/>
-(1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
-(2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity. 
-> - For a bigger project, use React Hooks and Redux in duck pattern  (combine reducer, action types, and action to one file)
-> - React Hooks can’t replace Redux, which one we need to use it depends on the project. <br/>
-(1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
-(2) Have the ability to use middleware to deal with some async tasks. <br/>
-(3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
-(4) Higher-Order Components to compose in cross-cutting concerns that are shared by all or most of my application views, such as the Redux provider, a common layout provider, a configuration provider, authentication/authorization, i18n, and so on. <br/>
-(5) React also has its own hook. 
-> - Related Reference : [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
+**For a smaller project, use React hooks instead of Redux** <br/>
+> (1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
+> (2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity.  <br/>
+
+**For a bigger project, use React Hooks and Redux in duck pattern (combine reducer, action types, and action to one file).**
+
+ <br/>
+ 
+**React Hooks can’t replace Redux, which one we need to use it depends on the project.** <br/>
+> (1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
+> (2) Have the ability to use middleware to deal with some async tasks. <br/>
+> (3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
+> (4) Higher-Order Components to compose in cross-cutting concerns that are shared by all or most of my application views, such as the Redux provider, a common layout provider, a configuration provider, authentication/authorization, i18n, and so on. <br/>
+> (5) React also has its own hook. 
+> - Related Reference: [React | 為了與 Hooks 相遇 - Function Components 升級記](https://medium.com/enjoy-life-enjoy-coding/react-%E7%82%BA%E4%BA%86%E8%88%87-hooks-%E7%9B%B8%E9%81%87-function-components-%E5%8D%87%E7%B4%9A%E8%A8%98-86869d869a45), [React Hooks 學習筆記useState、useEffect
 ](https://medium.com/vita-for-one/react-hooks-%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-usestate-useeffect-usecontext-b11c33e69bea), [useEffect](https://ithelp.ithome.com.tw/articles/10215225), [React Hooks for Beginners - A Brain-Friendly Guide on useState and useEffect](https://www.freecodecamp.org/news/beginners-guide-to-using-react-hooks/), [Custom hook](https://ithelp.ithome.com.tw/articles/10224881), [How the useContext Hook Works](https://daveceddia.com/usecontext-hook/), [useContext Hook](https://segmentfault.com/a/1190000020111320)
 
 <br/>
 
-### **Why Do I Need To Use Keys In React Lists?**
+### **Why Do We Need To Use Keys In React Lists?**
 > - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
 > - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
 ```
@@ -1021,7 +1036,7 @@ const content = posts.map((post) =>
 
 <br/>
 
-### **Explain Error Boundaries?**
+### **What Are Error Boundaries?**
 > - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
 > - static getDerivedStateFromError(), componentDidCatch().
 > - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
@@ -1031,31 +1046,31 @@ const content = posts.map((post) =>
 
 ### **What Is Axios?**
 > - To send HTTP requests from (client-side) JavaScript. <br/>
-(1) Make XMLHttpRequests from the browser <br/>
-(2) Make http requests from node.js <br/>
-(3) Supports the Promise API <br/>
-(4) Intercept request and response <br/>
-(5) Transform request and response data <br/>
-(6) Cancel requests <br/>
-(7) Automatic transforms for JSON data <br/>
-(8) Client side support for protecting against XSRF
+(1) Make XMLHttpRequests from the browser. <br/>
+(2) Make http requests from node.js. <br/>
+(3) Supports the Promise API. <br/>
+(4) Intercept request and response. <br/>
+(5) Transform request and response data. <br/>
+(6) Cancel requests. <br/>
+(7) Automatic transforms for JSON data. <br/>
+(8) Client side support for protecting against XSRF.
 
 <br/>
 
 ### **What Is Styled Component?**
 > - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
-> - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
+> - Related Reference: [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
 
 
-### **What Are The Strengths And Weaknesses Of Styled Components?**
-> - **Strength** </br>
+### **What Are The Pros And Cons Of Styled Components?**
+**Pros** </br>
 (1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
 (2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
 (3) Semantic Element: You can know the meaning of the element by its name. </br>
 
-> - **Weakness** </br>
+**Cons** </br>
 (1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
 (2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
 (3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
@@ -1063,7 +1078,7 @@ const content = posts.map((post) =>
 <br/>
 
 ### **What Is Jest?**
->- A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
+> - A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
 
 <br/>
 
@@ -1072,7 +1087,7 @@ const content = posts.map((post) =>
 > - Enzyme only works with React.
 > - Enzyme must be paired with another test runner.
 > - `Not support testing React hooks so far`.
-> - Related Reference : [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
+> - Related Reference: [Jest | 經過測試，讓你的組件安全有把關 shallow render 篇 - feat.React, Enzyme](https://medium.com/enjoy-life-enjoy-coding/jest-%E7%B6%93%E9%81%8E%E6%B8%AC%E8%A9%A6-%E8%AE%93%E4%BD%A0%E7%9A%84%E7%B5%84%E4%BB%B6%E5%AE%89%E5%85%A8%E6%9C%89%E6%8A%8A%E9%97%9C-shallow-render-%E7%AF%87-feat-react-enzyme-be5ebbdf54a1)
 
 <br/>
 
@@ -1080,7 +1095,7 @@ const content = posts.map((post) =>
 ### **What Is Jest And Enzyme?**
 > - Both Jest and Enzyme are specifically designed to test React applications, Jest can be used with any other Javascript app but Enzyme only works with React.
 > - Jest can be used without Enzyme to render components and test with snapshots, Enzyme simply adds additional functionality.
-> - Related Reference : [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
+> - Related Reference: [Testing React with Jest and Enzyme](https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675)
 
 <br/>
 
@@ -1092,17 +1107,16 @@ const content = posts.map((post) =>
 <br/>
 
 
-
 ### **What Are Higher-Order Components (HOC)?**
 > - `Takes one or more components as arguments, and return a new upgraded component`. They are similar to higher-order functions(forEach(), map(), reduce(), filter()), which takes some functions as an argument and produce a new function.
 > - HOCs are commonly used to `enhance the reusability of particular components` in multiple modules or components.
-> - Related Reference : [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
+> - Related Reference: [Higher-Order Components In React](https://www.smashingmagazine.com/2020/06/higher-order-components-react/)
 
 <br/>
 
 ### **Describe Shallow Comparison In React?**
 > - Shallow compare works by checking `if two values are equal in case of primitive types` like string, numbers and in case of `object it just checks the reference`.
-> - Related Reference : [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
+> - Related Reference: [How does shallow compare work in react](https://stackoverflow.com/questions/36084515/how-does-shallow-compare-work-in-react)
 
 <br/>
 
@@ -1148,12 +1162,12 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How Many Ways You Can Conditionally Render In React?**
-> - If else statement , expression 
+> - If else statement , expression.
 
 <br/>
 
 
-### **Explain How React Rendering works?**
+### **How React Rendering works?**
 > - (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
 > - (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
 > - (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
@@ -1164,15 +1178,15 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How To Prevent Components From Re-Rendering?**
-> - Class component : shouldComponentUpdate(), React.PureComponent.
-> - Functional component : React.memo.
+> - Class component: shouldComponentUpdate(), React.PureComponent.
+> - Functional component: React.memo, useMemo().
 
 <br/>
 
 
 ### **What Would You Do If Your React Application Is Rendering Slowly?**
 > - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
-> - Use React.PureComponent or React.memo(), React.lazy, CDN, Use arrow function.
+> - Use React.PureComponent or React.memo(), useMemo(), React.lazy, CDN, Use arrow function.
 
 <br/>
 
