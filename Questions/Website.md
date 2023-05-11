@@ -124,7 +124,7 @@
 <br/>
 
 ### **What Is The Async And Defer In Script Tag?**
-> - **Async**: `Continue loading other documents when loading script`, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html)
+> - **Async**: `Continue loading other documents when loading script`, recommended use in single independent scripts such as ga, advertisement, etc. (It can't ensurance loading sequence, because when fininsh loading script, it will start to execute script and stop parsing html).
 > - **Defer**: `Load script after finishing loading other documents`, recommended use in every scripts.
 > - **Async + Defer**: load script asynchronous after loading other documents.
 > - Related Reference: [script tag 加上 async & defer 的功能及差異？](https://ithelp.ithome.com.tw/articles/10216858), [script 的新增屬性 defer, async](http://n.sfs.tw/content/index/10323)
@@ -159,7 +159,7 @@
 
 ### **What Is Webpack?**
 
-> - There are lots of preprocessors and frameworks, We may need to compile ES6, SCSS, webpack can help us compile preprocessors to the code which browser can understand then bundle it, we can also use webpack to minify or optimize code...etc., which makes work efficiently.
+> - There are lots of preprocessors and frameworks, We may need to compile ES6, SCSS, webpack can help us compile preprocessors to the code which browser can understand then bundle it, we can also use webpack to minify or optimize code, which makes work efficiently.
 > - Related Reference: [什麼是Webpack?](https://medium.com/i-am-mike/什麼是webpack-你需要webpack嗎-2d8f9658241d), [關於 Webpack](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/), [Webpack 初學者教學課程](https://neighborhood999.github.io/webpack-tutorial-gitbook/Part1/)
 
 <br/>
@@ -169,7 +169,7 @@
 > - Use the latest webpack version.
 > - Minimize the search scope.
 > - Since webpack only use single thread so we can use tool such as happypack, thread-loader, etc., by runnung multiple threads to save building time.
-> - Set cacheDirectory to babel-loader
+> - Set cacheDirectory to babel-loader.
 > - Related Reference: [使用 happypack 提升 Webpack 项目构建速度](https://juejin.im/post/5c6e0c3a518825621f2a6f45), [提升構建速度的方法](https://zhuanlan.zhihu.com/p/59328293), [使用webpack4提升180%編譯速度](http://louiszhai.github.io/2019/01/04/webpack4/), [webpack-bundle-analyzer插件快速入門](https://juejin.im/post/5cb70649f265da03452bd2d9)
 
 <br/>
