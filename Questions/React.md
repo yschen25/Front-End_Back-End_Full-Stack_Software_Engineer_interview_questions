@@ -534,8 +534,8 @@ ReactDOM.render(
 
 
 ### **Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?**
-> - Functional component are much easier to read and test.
-> - Preventing using complicated lifecycle.
+> - Functional component are much easier to read and test
+> - Preventing using complicated lifecycle
 
 <br/>
 
@@ -788,7 +788,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/>
 
-
 ### **What Is Hook?**
 >- Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
@@ -802,7 +801,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **How To Use Hook?**
+### **And How To Use Hook?**
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
@@ -1011,8 +1010,6 @@ export default App;
 
 <br/>
 
-
-
 ### **Why Do I Need To Use Keys In React Lists?**
 > - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
 > - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
@@ -1046,6 +1043,7 @@ const content = posts.map((post) =>
 
 <br/>
 
+
 ### **What Is Axios?**
 > - To send HTTP requests from (client-side) JavaScript. <br/>
 (1) Make XMLHttpRequests from the browser <br/>
@@ -1064,6 +1062,7 @@ const content = posts.map((post) =>
 > - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
 <br/>
+
 
 ### **What Are The Strengths And Weaknesses Of Styled Components?**
 > - **Strength** </br>
@@ -1106,6 +1105,7 @@ const content = posts.map((post) =>
 > - Install @testing-library/react-hooks to test hooks.
 
 <br/>
+
 
 
 ### **What Are Higher-Order Components (HOC)?**
@@ -1163,12 +1163,12 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How Many Ways You Can Conditionally Render In React?**
-> - If else statement , expression.
+> - If else statement , expression 
 
 <br/>
 
 
-### **How React Rendering works?**
+### **Explain How React Rendering works?**
 > - (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
 > - (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
 > - (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
@@ -1179,8 +1179,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How To Prevent Components From Re-Rendering?**
-> - Class component: shouldComponentUpdate(), React.PureComponent.
-> - Functional component: React.memo.
+> - Class component : shouldComponentUpdate(), React.PureComponent.
+> - Functional component : React.memo.
 
 <br/>
 
@@ -1199,9 +1199,9 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **Name Some Patterns And Usage Of React.**
-> - **Context-api pattern**: To pass data deeply throughout your app without having to manually pass props down through multiple levels
-> - **Render props**: For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
-> - **Presentation component pattern**: Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components.
+> - **Context-api pattern** : To pass data deeply throughout your app without having to manually pass props down through multiple levels
+> - **Render props** : For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
+> - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components.
 
 <br/>
 
@@ -1443,4 +1443,3 @@ React re-runs useEffect  which caused the infinite loop. <br/>
 ## **If now we don’t use React, how would you implement the same functionality as React?**
 
 <br/>
-
