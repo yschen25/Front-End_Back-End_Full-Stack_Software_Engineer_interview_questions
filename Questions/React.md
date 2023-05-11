@@ -252,7 +252,7 @@ ReactDOM.render(<SayMyName />, document.getElementById("container"));
 
 
 ### **What Is Props Hell (Wrapper Hell)?**
-> - Complex applications built with class components easily run into wrapper hell. If you examine the application in the React Dev Tools, you will notice deeply nested components, This makes it very difficult to work with the components or debug them. 
+> - Complex applications built with class components easily run into wrapper hell, it shows the deeply nested components which is very difficult to work with the components or debug them. 
 
 <br/>
 
@@ -266,7 +266,7 @@ ReactDOM.render(<SayMyName />, document.getElementById("container"));
 
 
 ### **What Is State?**
-> - React has another special built-in object called state, which allows components to create and manage their own data.
+> - React has another special `built-in object` called state, which allows components to `create and manage their own data`.
 > - A component’s state `can change over time`. whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes `determine the behavior of the component and how it will render`.  
 ```
 class YourName extends React.Component {
@@ -279,7 +279,6 @@ class YourName extends React.Component {
     return <p>My name is {this.state.name}</p>;
   }
 }
-
 ```
 <br/>
 
@@ -330,32 +329,18 @@ class MyComponent extends React.Component {
 
 
 ### **Why Can't We Update State Directly?**
-> - React compares the previous state with the updated state to decide if the component needs to be re-rendered. Modifying the state directly will disturb this process. As a result the component will behave unexpectedly.
+> - React `compares the previous state with the updated state to decide if the component needs to be re-rendered`. Modifying the state directly will disturb this process, as a result the component will behave unexpectedly.
 
 <br/>
 
 ### **Explain The Controlled Components And Uncontrolled Components.**
-> - **Controlled Components** : <br/> 
-(1) `Control by status or props`. <br/> 
+> - **Controlled Components**: <br/> 
+(1) The data transmission is two-directional, we can set the default for state, and we can also modify state when the input value changes.<br/> 
 (2) In most cases, we recommend using controlled components to implement forms.  <br/> 
-(3) Controls the values of input elements in a form using setState(). <br/> 
-(4) The input value can't not be control by user.
+(3) Such as input, textarea, select and checkbox.
 
 ```
-class MyForm extends React.Component {
-  render() {
-    return <input value="Hello"></input>;
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-```
-
-<br/>
-
-It needs to add onChange handler to listen to the input value.
-
-```
+// It needs to add onChange handler to listen to the input value
 class MyForm extends React.Component {
   constructor(props) {
     super(props);
@@ -384,9 +369,7 @@ class MyForm extends React.Component {
 }
 
 ReactDOM.render(<MyForm />, document.getElementById("container"));
-
 ```
-
 
 | Elements | Attributes | Method | Callback value |
 |---|---|---|---|
@@ -397,8 +380,10 @@ ReactDOM.render(<MyForm />, document.getElementById("container"));
 | ``<select />`` | value="option value" | onChange | event.target.value | 
 <br/>
 
-> - **Uncontrolled Components** :   <br/> 
-(1) `Doesn't control by status or props, use ref to control DOM`.
+> - **Uncontrolled Components**:   <br/> 
+(1) The data transmission is one-directional, we can't set the default for state, and we only use `refs` to get value. <br/> 
+(2) Such as file.
+
 ```
 class MyForm extends React.Component {
   constructor(props) {
@@ -425,9 +410,7 @@ class MyForm extends React.Component {
 ReactDOM.render(<MyForm />, document.getElementById("container"));
 ```
 
-(2) Allow set up the value by defaultValue.  <br/> 
-(3) Easy to use with third party library. 
-<br/><br/>
+<br/>
 
 ### **When Use Controlled Components Or Uncontrolled Components?**
 |Functions | Controlled Components | Uncontrolled Components |
@@ -440,14 +423,17 @@ ReactDOM.render(<MyForm />, document.getElementById("container"));
 | Merge mutiple input value | O  | X |
 | Dynamic input value | O  | X |
 
-> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
+> - Related Reference: [[筆記][React]受不受控的Component與Form表單](https://ithelp.ithome.com.tw/articles/10201356))
 
 <br/>
 
 ### **What Is Refs?**
 > - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
-> - `Use state and props to manage components instead using refs`. (ref:18)
-> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
+> - `Use state and props to manage components instead using refs`.
+> - Refs can be use in:  <br/> 
+> (1) Managing focus, text selection, or media playback.  <br/> 
+> (2)Triggering imperative animations.  <br/> 
+> (3)Integrating with third-party DOM libraries.  <br/> 
 > - Refs can't use in functional components, `only for class components`.
 
 ```
@@ -500,7 +486,7 @@ const MyComponent = function () {
 
 > - **Class Components**: <br/>
 (1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
-(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor,  
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor.  
 ```
 class MyComponent extends React.Component {
   render() {
@@ -530,19 +516,19 @@ ReactDOM.render(
 
 ### **When Use Functional Components And Class Components?**
 
-> - **Functional Components** :  <br/>
-(1) Don't need to use lifecycle  <br/>
-(2) Don't need to use state  <br/>
-(3) `Create reusable components`  <br/>
-(4) Only render UI
+> - **Functional Components**:  <br/>
+(1) Don't need to use lifecycle.  <br/>
+(2) Don't need to use state.  <br/>
+(3) `Create reusable components`.  <br/>
+(4) Only render UI.
 <br/>
 
-> - **Class Components** :  <br/>
-(1) Need to use lifecycle  <br/>
-(2) Need to use state  <br/>
-(3) Have to `receive data form user`  <br/>
-(4) Create interactive objects  <br/>
-(5) Render after change state
+> - **Class Components**:  <br/>
+(1) Need to use lifecycle.  <br/>
+(2) Need to use state.  <br/>
+(3) Have to `receive data form user`.  <br/>
+(4) Create interactive objects.  <br/>
+(5) Render after change state.
 
 <br/>
 
@@ -593,7 +579,6 @@ class MyComponent extends React.Component {
 }
 
 ReactDOM.render(<MyComponent />, document.getElementById("container"));
-
 ```
 <br/>
 
@@ -622,7 +607,6 @@ class MyComponent extends React.Component {
 }
 
 ReactDOM.render(<MyComponent />, document.getElementById("container"));
-
 ```
 <br/>
 
