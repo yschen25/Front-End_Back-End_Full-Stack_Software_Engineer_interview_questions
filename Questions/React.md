@@ -997,8 +997,6 @@ export default App;
 > (2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity.  <br/>
 
 > - **For a bigger project, use React Hooks and Redux in duck pattern (combine reducer, action types, and action to one file).**
-
- <br/>
  
 > - **React Hooks can’t replace Redux, which one we need to use it depends on the project.** <br/>
 > (1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
