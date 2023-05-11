@@ -15,7 +15,7 @@
 > - **Outer join**: Returns all records when there is a match in either left or right table.
 > - **Left join**: Returns all records from the left table, and the matched records from the right table.
 > - **Right join**: Returns all records from the right table, and the matched records from the left table.
-> - Related Reference : [SQL Joins](https://www.w3schools.com/sql/sql_join.asp)
+> - Related Reference: [SQL Joins](https://www.w3schools.com/sql/sql_join.asp)
 > 
 <br/>
 
@@ -45,7 +45,7 @@
 > - **Vertical scaling** <br/>
 > (1) Referred to as `scale up`.  <br/>
 > (2) Can add more power (CPU, RAM etc.) to the existing servers, but there are hardware limits. <br/>
-> (3) Greater risk of  `single point of failures (SPOF) `. <br/>
+> (3) Greater risk of `single point of failures (SPOF) `. <br/>
 > (4) The overall cost is high.
 
 > - **Horizontal scaling** <br/>
@@ -63,7 +63,7 @@
 
 > - **Horizontal partition (Sharding)**: Meaning the database table is split up by drawing a horizontal line between rows.
 > - **Vertical partition**: Where partitions are made between columns.
-> - Related Reference : [Sharding](https://igotanoffer.com/blogs/tech/sharding-system-design-interview)
+> - Related Reference: [Sharding](https://igotanoffer.com/blogs/tech/sharding-system-design-interview)
 
 <br/>
 
