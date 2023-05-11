@@ -671,13 +671,13 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 > - It is a `predictable state container` for JavaScript applications and is used for the `entire applications state management`, it can also `prevent props hell`.
 <br/>
 
-> - **List down three components of redux** :  <br/>
+> - **List down three components of redux** <br/>
 (1) **Action** – To describe the type of `event (type)` and `informations (payload)`. <br/>
 (2) **Store** – The core of redux, `the state of the entire application` is stored in an object / state tree within a single store. <br/>
 (3) **Reducer** – It is a place `receiving previousState and action to determine the new state`.
 <br/>
 
-> - **Redux interactive with users**： <br/>
+> - **Redux interactive with users** <br/>
 (1) User clicks components. <br/>
 (2) Components send the action to the `Action Creator` <br/>
 (3) `Action Creator` sends `Action` to `Store`. <br/>
@@ -685,42 +685,40 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 (5) `View` Re-render when gets the new state from `Store`.
 <br/>
 
-> - **Redux follows three principles** : <br/>
-**(1) Single source of truth** : The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application. <br/>
-**(2) State is read-only** : `The only way to change the state is to trigger an action`. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
-**(3) Changes are made with pure functions** : `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
+> - **Redux follows three principles** <br/>
+> (1) **Single source of truth**: The state of the entire application is `stored in an object / state tree within a single store`. The single state tree makes it easier to keep track of changes over time and debug or inspect the application. <br/>
+> (2) **State is read-only**: `The only way to change the state is to trigger an action`. An action is a plain JS object describing the change. Just like state is the minimal representation of data, the action is the minimal representation of the change to that data. <br/>
+> (3) **Changes are made with pure functions**: `The reducer must be pure`. Given the same arguments, it should calculate the next state and return it. No side effects. No API calls. No mutations. Just a calculation.
 <br/>
 
 ### **How To Use Redux?**
 
-**Combine with React-Redux** <br/>
-
-**(1) Provider** : The Provider makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level, with the entire app’s component tree inside of it. Normally, `you can’t use a connected component unless it is nested inside of a <Provider>`. <br/>
+> - **Combine with React-Redux**<br/>
+> (1) **Provider**: The Provider makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level, with the entire app’s component tree inside of it. Normally, `you can’t use a connected component unless it is nested inside of a <Provider>`. <br/>
 ```
 <Provider store={store}>
     <Main />
 </Provider>
 ```
 		
-**(2) Connect** : The connect() function `connects a React component to a Redux store`. <br/>
-**(2.1) mapStateToProps(state, [ownProps])** : As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
-**(2.2) mapDispatchToProps(dispatch, [ownProps])** : As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
-**(2.3) mergeProps(stateProps, dispatchProps, ownProps)** : It is a function which is used to select a slice of the props from state and dispatch. <br/>
-**(2.4) options** : If specified, further `customizes the behavior` of the connector. 
+> (2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+> (2.1) **mapStateToProps(state, [ownProps])**: As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
+> (2.2) **mapDispatchToProps(dispatch, [ownProps])**: As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
+> (2.3) **mergeProps(stateProps, dispatchProps, ownProps)**: It is a function which is used to select a slice of the props from state and dispatch. <br/>
+> (2.4) **options**: If specified, further `customizes the behavior` of the connector. 
 ```
 function connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(Main);
 ```
 <br/>
 
-**Store Methods** <br/>
-
-**(1) getState()** : Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
-**(2) dispatch(action)** : `Dispatches an action`. This is the only way to trigger a state change. <br/>
-**(3) subscribe(listener)** : Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
-**(4) createStore(reducer, [preloadedState], [enhancer])** <br/>
-**(4.1) reducer** : You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
-**(4.2) preloadedState** : `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
-**(4.3) enhancer** : You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
+> - **Store Methods**<br/>
+> (1) **getState()**: Returns the `current state tree` of your application. It is equal to the last value returned by the store's reducer. <br/>
+> (2) **dispatch(action)**: `Dispatches an action`. This is the only way to trigger a state change. <br/>
+> (3) **subscribe(listener)**: Adds a change listener. It will be called any time `an action is dispatched`, and some part of the state tree may potentially have changed. <br/>
+> (4) **createStore(reducer, [preloadedState], [enhancer])** <br/>
+> (4.1) **reducer**: You can put such as `combineReducers` => As your app grows more complex, you'll want to split your reducing function into separate functions, each managing independent parts of the state. The combineReducers helper function turns an object whose values are `different reducing functions into a single reducing function` you can pass to createStore. <br/>
+> (4.2) **preloadedState**: `The initial state`. You may optionally specify it to hydrate the state from the server in universal apps, or to restore a previously serialized user session. <br/>
+> (4.3) **enhancer**: You can put such as `applyMiddleware` => Middleware is the suggested way to `extend Redux with custom functionality`. The applyMiddleware combines mutiple middleware into a single function.
 
 ```
 const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoReducer});
@@ -728,25 +726,23 @@ const allReducers = combineReducers({textReducer, imageReducer, videoRed: videoR
 let store = createStore(allReducers, ,applyMiddleware(thunkMiddleware));
 ```
 
-<br/>
-
-> - Related Reference : [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
+> - Related Reference: [Redex 核心概念筆記](https://note.pcwu.net/2017/03/04/redux-intro/), [Redux 入門](https://www.twblogs.net/a/5bb2a4c02b71770e645e017b), [Redux 基礎概念](https://www.bookstack.cn/read/reactjs101-zh-tw/Ch07-react-redux-introduction.md), [Redux](https://redux.js.org/api/store), [React Redux](https://react-redux.js.org/api/provider)
 
 <br/>
 
-### **What Are The Strengths And Weaknesses Of Redux?**
+### **What Are The Pros And Cons Of Redux?**
 
-> - **Strengths** : <br/>
-**(1) Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
-**(2) Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
-**(3) Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
-**(4) Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
+> - **Pros** <br/>
+> (1) **Predictability of outcome** – Since there is always one source of truth, i.e. the store, there is no confusion about how to sync the current state with actions and other parts of the application. <br/>
+> (2) **Maintainability** – The code becomes easier to maintain with a predictable outcome and strict structure. <br/>
+> (3) **Server-side rendering** – You just need to pass the store created on the server, to the client side. This is very useful for initial render and provides a better user experience as it optimizes the application performance. <br/>
+> (4) **Developer tools** – From actions to state changes, developers can track everything going on in the application in real time. <br/>
 Community and ecosystem – Redux has a huge community behind it which makes it even more captivating to use. A large community of talented individuals contribute to the betterment of the library and develop various applications with it. <br/>
-**(5) Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
-**(6) Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
+> (5) **Ease of testing** – Redux’s code is mostly functions which are small, pure and isolated. This makes the code testable and independent. <br/>
+> (6) **Organization** – Redux is precise about how code should be organized, this makes the code more consistent and easier when a team works with it.
 <br/>
 
-> - **Weaknesses** : <br/>
+> - **Cons** <br/>
 (1) No encapsulation. Any component can access the data which can cause security issues. <br/>
 (2) As state is immutable in redux, the reducer updates the state by returning a new state every time which can cause excessive use of memory.
 
