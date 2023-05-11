@@ -3,7 +3,7 @@
 ### **What And When To Use React.js?**
 > - React is a `front-end JavaScript library` for building `user interfaces` which developed by Facebook, now Instagram, Netflix, Whatsapp, Uber, Dropbox, IMDB and Reddit, etc. also use React.js 
 > - React used to build a huge website which includes `complicated events and state changes` instead of building a simple web.
-> - Related Reference : [What is React?](https://www.simplilearn.com/what-is-react-article)
+> - Related Reference: [What is React?](https://www.simplilearn.com/what-is-react-article)
 
 <br/>
 
@@ -53,7 +53,7 @@
 | Data Binding | One-way data binding | Two-way data binding | Two-way data binding |
 | Author | Facebook | Former google employee | Google |
 | When Use | • Your project can accept reusable components.  <br/> • Your project’s front-end is not too complex.  <br/> • The performance and scalability are critical.  <br/> • You have tight deadlines.  <br/> | • Your project scope is on the `small side`.  <br/> • You need high performance.  <br/> • You have no skilled front-end developers but have team members with JavaScript knowledge.  <br/> • You `do not have much time` to learn a new technology.  <br/> | • You are about to develop a `very large and complex project`. <br/> • You need easy and reliable scalability. <br/> • You have Angular developers on your team. <br/>   • You can afford some time for learning TypeScript before the project starts |
-> - Related Reference : [Angular vs React vs Vue: Which Framework to Choose in 2020](https://www.codeinwp.com/blog/angular-vs-vue-vs-react/), [Angular vs React vs Vue](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e), [Angular vs. React vs. Vue.js – choosing a JavaScript framework for your project](https://relevant.software/blog/angular-vs-react-vs-vue-js-choosing-a-javascript-framework-for-your-project/)
+> - Related Reference: [Angular vs React vs Vue: Which Framework to Choose in 2020](https://www.codeinwp.com/blog/angular-vs-vue-vs-react/), [Angular vs React vs Vue](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e), [Angular vs. React vs. Vue.js – choosing a JavaScript framework for your project](https://relevant.software/blog/angular-vs-react-vs-vue-js-choosing-a-javascript-framework-for-your-project/)
 
 <br/>
 
@@ -69,7 +69,6 @@
 > - JSX is `not JavaScript nor HTML, is an XML/HTML like extension` to JavaScript.
 > - JSX as a syntax sugar for calling `React.createElement()`.
 > - Instead of putting JavaScript into HTML, JSX allows us to `put HTML into JavaScript`, then Babel will transform these expressions into actual JavaScript code. 
-> - Examples : <br/>
 
 ```
 // Return one element
@@ -218,7 +217,7 @@ class Password extends React.Component {
 ### **When Use Props?**
 > - To `pass data & event handlers` down to your child components.
 > - For using class components, if you just want to use props, not use state or bind function then you don't need to write constructor.
-> - Related Reference : [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
+> - Related Reference: [有無加上constructor的差異](https://github.com/kdchang/reactjs101/issues/28)
 
 <br/>
 
@@ -545,7 +544,7 @@ ReactDOM.render(
 > - This is `a way of saving the current value of this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
 > - Bind creates a new function that will force the this inside the function to be the parameter passed to bind().
 > - When you `need to access props, state on the class`, then you would need to bind it.
-> - Related Reference : [why do you need to bind a function in a constructor
+> - Related Reference: [why do you need to bind a function in a constructor
 ](https://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor), [Why and when do we need to bind functions and eventHandlers in React?](https://stackoverflow.com/questions/41113798/why-and-when-do-we-need-to-bind-functions-and-eventhandlers-in-react), [What is the use of the JavaScript 'bind' method?](https://stackoverflow.com/questions/2236747/what-is-the-use-of-the-javascript-bind-method), [進入Component的事件處理篇](https://ithelp.ithome.com.tw/articles/10200941), [React Binding Patterns: 5 Approaches for Handling 'this'](https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/?**so**urce=post_page---------------------------)
 
 <br/>
@@ -702,7 +701,7 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 </Provider>
 ```
 		
-> (2) **Connect** : The connect() function `connects a React component to a Redux store`. <br/>
+> (2) **Connect**: The connect() function `connects a React component to a Redux store`. <br/>
 > (2.1) **mapStateToProps(state, [ownProps])**: As the first argument passed in to connect, `mapStateToProps will be called any time the store is updated`. mapStateToProps is tranform state to the props which component needs. <br/>
 > (2.2) **mapDispatchToProps(dispatch, [ownProps])**: As the second argument passed in to connect, mapDispatchToProps is used for `dispatching actions to the store`. <br/>
 > (2.3) **mergeProps(stateProps, dispatchProps, ownProps)**: It is a function which is used to select a slice of the props from state and dispatch. <br/>
@@ -798,7 +797,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **And How To Use Hook?**
+### **How To Use Hook?**
 
 **useState** <br/>
 > (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
@@ -852,23 +851,20 @@ function ClickClass() {
 <br/>
 
 **useEffect** <br/>
-> (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+> (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The effect hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
 > (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
-> (2.1) The first an anonymous callback function that houses your useEffect logic.
-
-	```
-	useEffect(() => {
-	    console.log('This is like componentDidMount')
-
-	    return () => {
-	      console.log('This is like componentWillUnmount') // clear something
-	    };
-	  });
-	```
- 
-> (2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
+> (2.1) The first an anonymous callback function that houses your useEffect logic.  <br/>
+> (2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. <br/>
 
 ```
+useEffect(() => {
+    console.log('This is like componentDidMount');
+
+    return () => {
+      console.log('This is like componentWillUnmount'); // clear something
+    };
+  });
+
 // Running every time.
 useEffect(() => {
 	console.log('Runs every time');
@@ -878,14 +874,13 @@ useEffect(() => {
 useEffect(() => {
 	console.log('This only runs once');
 }, []);
-```
-<br/>
 
 // Using effects when things change (componentDidUpdate): 
 useEffect(() => {
 	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
  }, [count]);
 ```
+
 <br/>
 
 
