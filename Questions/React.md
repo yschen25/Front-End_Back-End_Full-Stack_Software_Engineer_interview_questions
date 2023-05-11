@@ -19,7 +19,7 @@
 
 
 ### **What Is The Meaning Of The Component-based Architecture Of React?**
-> - With the component-based system in place, all of the individual entities become completely reusable and independent of each other.
+> - With the component-based system in place, all of the individual entities become completely `reusable and independent of each other`.
 
 <br/>
 
@@ -171,252 +171,6 @@ ReactDOM.render(<MyHeader />, document.getElementById("container"));
 
 ### **How About Not Using Virtual DOM?**
 > - If you’re not using React.js (and JSX), your website will use HTML to update its DOM. This works fine for simple, static websites, but for dynamic websites that involve heavy user interaction it can become a problem, since `the entire DOM needs to reload every time` the user clicks a feature calling for a page refresh.
-
-<br/>
-
-### **What Are Functional Components (Stateless Components) And Class Components (Stateful Components)?**
-
-> - **Functional Components**: <br/>
-(1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
-(2) Functional components can have state when use hook. <br/>
-
-```
-const MyComponent = function () {
-  return <h1>Functional Component</h1>;
-};
-```
-<br/>
-
-> - **Class Components**: <br/>
-(1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
-(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor,  
-```
-class MyComponent extends React.Component {
-  render() {
-    return <h1>{this.props.text}</h1>;
-  }
-}
-
-ReactDOM.render(
-  <MyComponent text="hey" />,
-  document.getElementById("container")
-);
-```
-
-<br/>
-
-### **Why Do I Need To Use Keys In React Lists?**
-> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
-> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
-```
-const content = posts.map((post) =>
-  <Post
-    key={post.id}
-    id={post.id}
-    title={post.title} />
-);
-```
-
-<br/>
-
-### **Why Don't Recommend To Use Indexes As Keys?**
-> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-> - Related Reference : [Why do I need Keys in React Lists?
-](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
-
-<br/>
-
-### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
-> - If your `list is static` (no additions/re-ordering/removal to the list).
-
-<br/>
-
-### **Explain The Controlled Components And Uncontrolled Components.**
-> - **Controlled Components** : <br/> 
-(1) `Control by status or props`. <br/> 
-(2) In most cases, we recommend using controlled components to implement forms.  <br/> 
-(3) Controls the values of input elements in a form using setState(). <br/> 
-(4) The input value can't not be control by user.
-
-```
-class MyForm extends React.Component {
-  render() {
-    return <input value="Hello"></input>;
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-```
-
-<br/>
-
-It needs to add onChange handler to listen to the input value.
-
-```
-class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: "Hello"};
-    this.changeState = this.changeState.bind(this);
-  }
-
-  changeState(e) {
-    this.setState({
-      text: e.target.value
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <label>Text : </label>
-        <input
-          name="text"
-          value={this.state.text}
-          onChange={this.changeState}
-        />
-      </form>
-    );
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-
-```
-
-
-| Elements | Attributes | Method | Callback value |
-|---|---|---|---|
-| ``<input type="text" />`` | value="string" | onChange | event.target.value | 
-| ``<input type="checkbox" />`` | checked={boolean}| onChange | event.target.checked | 
-| ``<input type="radio" />`` | checked={boolean} | onChange | event.target.checked | 
-| ``<textarea />`` | value="string" | onChange | event.target.value | 
-| ``<select />`` | value="option value" | onChange | event.target.value | 
-<br/>
-
-> - **Uncontrolled Components** :   <br/> 
-(1) `Doesn't control by status or props, use ref to control DOM`.
-```
-class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.click = this.click.bind(this);
-  }
-
-  click(event) {
-    alert("click : " + this.refs.myInput.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div>
-        <label>Text : </label>
-        <input defaultValue="Hello" ref="myInput" />
-        <input type="submit" value="Click" onClick={this.click} />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<MyForm />, document.getElementById("container"));
-```
-
-(2) Allow set up the value by defaultValue.  <br/> 
-(3) Easy to use with third party library. 
-<br/><br/>
-
-### **When Use Controlled Components Or Uncontrolled Components?**
-|Functions | Controlled Components | Uncontrolled Components |
-|---|---|---|
-| One time submit | O  | O  |
-| Submit validation | O  | O  |
-| Instant validation | O  | X |
-| Fobidden buttons| O | X |
-| Formatted Input Value  | O | X |
-| Merge mutiple input value | O  | X |
-| Dynamic input value | O  | X |
-
-> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
-
-<br/>
-
-### **What Is Refs?**
-> - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
-> - `Use state and props to manage components instead using refs`. (ref:18)
-> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
-> - Refs can't use in functional components, `only for class components`.
-
-```
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.focus = this.focus.bind(this);
-  }
-
-  focus() {
-    this.refs.myInput.focus();
-  }
-
-  /* focus = () => this.textInput.focus(); */
-
-  render() {
-    return (
-      <div>
-        <h1>Refs</h1>
-        <input type="text" ref="myInput" />
-        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
-        <input
-          type="button"
-          value="Focus the text input"
-          onClick={this.focus}
-        />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<MyComponent />, document.getElementById("container"));
-```
-> - Related Reference: [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
-
-<br/>
-
-
-### **What Is The Difference Between Functional Components And Class Components?**
-
-|  Functional Components | Class Components |
-|---|---|
-| Calculates the internal state of the components | Stores info about component’s state change in memory |
-| Do not have the authority to change state | Have authority to change state |
-| Contains no knowledge of past, current and possible future state changes | Contains the knowledge of past, current and possible future changes in state |
-| They receive the props from the Class components and treat them as callback functions | Functional components notify them about the requirement of the state change, then they send down the props to them |
-
-<br/>
-
-
-### **When Use Functional Components And Class Components?**
-
-> - **Functional Components** :  <br/>
-(1) Don't need to use lifecycle  <br/>
-(2) Don't need to use state  <br/>
-(3) `Create reusable components`  <br/>
-(4) Only render UI
-<br/>
-
-> - **Class Components** :  <br/>
-(1) Need to use lifecycle  <br/>
-(2) Need to use state  <br/>
-(3) Have to `receive data form user`  <br/>
-(4) Create interactive objects  <br/>
-(5) Render after change state
-
-<br/>
-
-
-### **Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?**
-> - Functional component are much easier to read and test
-> - Preventing using complicated lifecycle
 
 <br/>
 
@@ -580,6 +334,224 @@ class MyComponent extends React.Component {
 
 <br/>
 
+### **Explain The Controlled Components And Uncontrolled Components.**
+> - **Controlled Components** : <br/> 
+(1) `Control by status or props`. <br/> 
+(2) In most cases, we recommend using controlled components to implement forms.  <br/> 
+(3) Controls the values of input elements in a form using setState(). <br/> 
+(4) The input value can't not be control by user.
+
+```
+class MyForm extends React.Component {
+  render() {
+    return <input value="Hello"></input>;
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
+<br/>
+
+It needs to add onChange handler to listen to the input value.
+
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: "Hello"};
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(e) {
+    this.setState({
+      text: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <form>
+        <label>Text : </label>
+        <input
+          name="text"
+          value={this.state.text}
+          onChange={this.changeState}
+        />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+
+```
+
+
+| Elements | Attributes | Method | Callback value |
+|---|---|---|---|
+| ``<input type="text" />`` | value="string" | onChange | event.target.value | 
+| ``<input type="checkbox" />`` | checked={boolean}| onChange | event.target.checked | 
+| ``<input type="radio" />`` | checked={boolean} | onChange | event.target.checked | 
+| ``<textarea />`` | value="string" | onChange | event.target.value | 
+| ``<select />`` | value="option value" | onChange | event.target.value | 
+<br/>
+
+> - **Uncontrolled Components** :   <br/> 
+(1) `Doesn't control by status or props, use ref to control DOM`.
+```
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.click = this.click.bind(this);
+  }
+
+  click(event) {
+    alert("click : " + this.refs.myInput.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <label>Text : </label>
+        <input defaultValue="Hello" ref="myInput" />
+        <input type="submit" value="Click" onClick={this.click} />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById("container"));
+```
+
+(2) Allow set up the value by defaultValue.  <br/> 
+(3) Easy to use with third party library. 
+<br/><br/>
+
+### **When Use Controlled Components Or Uncontrolled Components?**
+|Functions | Controlled Components | Uncontrolled Components |
+|---|---|---|
+| One time submit | O  | O  |
+| Submit validation | O  | O  |
+| Instant validation | O  | X |
+| Fobidden buttons| O | X |
+| Formatted Input Value  | O | X |
+| Merge mutiple input value | O  | X |
+| Dynamic input value | O  | X |
+
+> - Related Reference : [React 之受控组件和非受控组件](https://juejin.im/post/5b3507df51882574af2821ce), [受控組件與非受控組件](https://zhuanlan.zhihu.com/p/89223413), [受控組件和不受控組件的區別](https://blog.csdn.net/u010856177/article/details/103516618)
+
+<br/>
+
+### **What Is Refs?**
+> - Refs is the `short hand for References` in React. The ref is used to `return a reference to the element`. 
+> - `Use state and props to manage components instead using refs`. (ref:18)
+> - Refs can be use in 1) Managing focus, text selection, or media playback. 2)Triggering imperative animations. 3)Integrating with third-party DOM libraries. 
+> - Refs can't use in functional components, `only for class components`.
+
+```
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.focus = this.focus.bind(this);
+  }
+
+  focus() {
+    this.refs.myInput.focus();
+  }
+
+  /* focus = () => this.textInput.focus(); */
+
+  render() {
+    return (
+      <div>
+        <h1>Refs</h1>
+        <input type="text" ref="myInput" />
+        {/*  <input type="text" ref={ input => this.textInput = input } /> */}
+        <input
+          type="button"
+          value="Focus the text input"
+          onClick={this.focus}
+        />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("container"));
+```
+> - Related Reference: [React Ref使用方法解析](https://medium.com/@shihKai/react-ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E6%9E%90-9633e9989adc), [Ref 屬性 與 DOM 元素](https://medium.com/4cats-io/24hrs-react-101-b287ffad1070)
+
+<br/>
+
+### **What Are Functional Components (Stateless Components) And Class Components (Stateful Components)?**
+
+> - **Functional Components**: <br/>
+(1) These components `have no state` of their own and only contain a render method, so they are also called `Stateless components`. They may derive data from other components as props (properties). <br/>
+(2) Functional components can have state when use hook. <br/>
+
+```
+const MyComponent = function () {
+  return <h1>Functional Component</h1>;
+};
+```
+<br/>
+
+> - **Class Components**: <br/>
+(1) These components `can hold and manage their state` and have a separate render method for returning JSX on the screen. They are also called `Stateful components`, as they can have a state. <br/>
+(2) `Constructor is optional`, add the constructor when you `need to use state or bind function`. In this example, this.props works fine even without constructor,  
+```
+class MyComponent extends React.Component {
+  render() {
+    return <h1>{this.props.text}</h1>;
+  }
+}
+
+ReactDOM.render(
+  <MyComponent text="hey" />,
+  document.getElementById("container")
+);
+```
+
+<br/>
+
+### **What Is The Difference Between Functional Components And Class Components?**
+
+|  Functional Components | Class Components |
+|---|---|
+| Calculates the internal state of the components | Stores info about component’s state change in memory |
+| Do not have the authority to change state | Have authority to change state |
+| Contains no knowledge of past, current and possible future state changes | Contains the knowledge of past, current and possible future changes in state |
+| They receive the props from the Class components and treat them as callback functions | Functional components notify them about the requirement of the state change, then they send down the props to them |
+
+<br/>
+
+
+### **When Use Functional Components And Class Components?**
+
+> - **Functional Components** :  <br/>
+(1) Don't need to use lifecycle  <br/>
+(2) Don't need to use state  <br/>
+(3) `Create reusable components`  <br/>
+(4) Only render UI
+<br/>
+
+> - **Class Components** :  <br/>
+(1) Need to use lifecycle  <br/>
+(2) Need to use state  <br/>
+(3) Have to `receive data form user`  <br/>
+(4) Create interactive objects  <br/>
+(5) Render after change state
+
+<br/>
+
+
+### **Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?**
+> - Functional component are much easier to read and test
+> - Preventing using complicated lifecycle
+
+<br/>
 
 ### **Why Should We Bind The Function In The Class Components?**
 
@@ -705,27 +677,19 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
 <br/>
 
-### **Explain Error Boundaries?**
-> - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
-> - static getDerivedStateFromError(), componentDidCatch().
-> - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
+### **Why Do I Need To Use Keys In React Lists?**
+> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
+> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
+```
+const content = posts.map((post) =>
+  <Post
+    key={post.id}
+    id={post.id}
+    title={post.title} />
+);
+```
 
 <br/>
-
-
-### **What Is Axios?**
-> - To send HTTP requests from (client-side) JavaScript. <br/>
-(1) Make XMLHttpRequests from the browser <br/>
-(2) Make http requests from node.js <br/>
-(3) Supports the Promise API <br/>
-(4) Intercept request and response <br/>
-(5) Transform request and response data <br/>
-(6) Cancel requests <br/>
-(7) Automatic transforms for JSON data <br/>
-(8) Client side support for protecting against XSRF
-
-<br/>
-
 
 ### **What Is Redux?**
 <p align="center">
@@ -854,6 +818,38 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/>
 
+### **Why Don't Recommend To Use Indexes As Keys?**
+> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
+> - Related Reference : [Why do I need Keys in React Lists?
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
+
+<br/>
+
+### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
+> - If your `list is static` (no additions/re-ordering/removal to the list).
+
+<br/>
+
+### **Explain Error Boundaries?**
+> - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
+> - static getDerivedStateFromError(), componentDidCatch().
+> - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
+
+<br/>
+
+
+### **What Is Axios?**
+> - To send HTTP requests from (client-side) JavaScript. <br/>
+(1) Make XMLHttpRequests from the browser <br/>
+(2) Make http requests from node.js <br/>
+(3) Supports the Promise API <br/>
+(4) Intercept request and response <br/>
+(5) Transform request and response data <br/>
+(6) Cancel requests <br/>
+(7) Automatic transforms for JSON data <br/>
+(8) Client side support for protecting against XSRF
+
+<br/>
 
 ### **What Is Styled Component?**
 > - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
@@ -876,7 +872,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **Explain What Is Hook?**
+### **What Is Hook?**
 >- Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 
