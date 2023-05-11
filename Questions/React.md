@@ -972,6 +972,7 @@ const App = () => {
 export default App;
 ```
 
+<br/>
 
 **useCallback()** <br/>
 > - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
@@ -991,15 +992,15 @@ export default App;
 
 
 ### **Compare Redux And React Hooks.**
-**For a smaller project, use React hooks instead of Redux** <br/>
+> - **For a smaller project, use React hooks instead of Redux** <br/>
 > (1) If the application consists of a single view, don’t save or load state, the project structure is simple. <br/>
 > (2) Redux is another JavaScript library that adds to bundle size, increase loading time, add complexity.  <br/>
 
-**For a bigger project, use React Hooks and Redux in duck pattern (combine reducer, action types, and action to one file).**
+> - **For a bigger project, use React Hooks and Redux in duck pattern (combine reducer, action types, and action to one file).**
 
  <br/>
  
-**React Hooks can’t replace Redux, which one we need to use it depends on the project.** <br/>
+> - **React Hooks can’t replace Redux, which one we need to use it depends on the project.** <br/>
 > (1) Hooks weren’t created as a state management solution, Redux was. Redux keeps the single truth of the source. <br/>
 > (2) Have the ability to use middleware to deal with some async tasks. <br/>
 > (3) The separation between container and display components for better modularity, testability, and easier separation between effects and pure logic. <br/>
@@ -1065,12 +1066,12 @@ const content = posts.map((post) =>
 
 
 ### **What Are The Pros And Cons Of Styled Components?**
-**Pros** </br>
+> - **Pros** </br>
 (1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
 (2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
 (3) Semantic Element: You can know the meaning of the element by its name. </br>
 
-**Cons** </br>
+> - **Cons** </br>
 (1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
 (2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
 (3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
