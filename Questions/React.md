@@ -534,8 +534,8 @@ ReactDOM.render(
 
 
 ### **Why Recommend To Use Functional Components + Hook Instead Of Using Class Components?**
-> - Functional component are much easier to read and test
-> - Preventing using complicated lifecycle
+> - Functional component are much easier to read and test.
+> - Preventing using complicated lifecycle.
 
 <br/>
 
@@ -658,20 +658,6 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 ### **How To Use Arrow Function In The Class Components?**
 > - Install @babel/plugin-proposal-class-properties then we can use arrow function and don't need to bind this.
 > - Related Reference: [React | 那個在 Class Component 中的 Arrow function ](https://medium.com/enjoy-life-enjoy-coding/react-%E9%82%A3%E5%80%8B%E5%9C%A8-class-component-%E4%B8%AD%E7%9A%84-arrow-function-%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F-b5fa02db94a1)
-
-<br/>
-
-### **Why Do I Need To Use Keys In React Lists?**
-> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
-> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
-```
-const content = posts.map((post) =>
-  <Post
-    key={post.id}
-    id={post.id}
-    title={post.title} />
-);
-```
 
 <br/>
 
@@ -802,59 +788,6 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 <br/>
 
-### **Why Don't Recommend To Use Indexes As Keys?**
-> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-> - Related Reference : [Why do I need Keys in React Lists?
-](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
-
-<br/>
-
-### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
-> - If your `list is static` (no additions/re-ordering/removal to the list).
-
-<br/>
-
-### **Explain Error Boundaries?**
-> - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
-> - static getDerivedStateFromError(), componentDidCatch().
-> - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
-
-<br/>
-
-
-### **What Is Axios?**
-> - To send HTTP requests from (client-side) JavaScript. <br/>
-(1) Make XMLHttpRequests from the browser <br/>
-(2) Make http requests from node.js <br/>
-(3) Supports the Promise API <br/>
-(4) Intercept request and response <br/>
-(5) Transform request and response data <br/>
-(6) Cancel requests <br/>
-(7) Automatic transforms for JSON data <br/>
-(8) Client side support for protecting against XSRF
-
-<br/>
-
-### **What Is Styled Component?**
-> - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
-> - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
-
-<br/>
-
-
-### **What Are The Strengths And Weaknesses Of Styled Components?**
-> - **Strength** </br>
-(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
-(2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
-(3) Semantic Element: You can know the meaning of the element by its name. </br>
-
-> - **Weakness** </br>
-(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
-(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
-(3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
-
-<br/>
-
 
 ### **What Is Hook?**
 >- Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
@@ -869,7 +802,7 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 <br/>
 
 
-### **And How To Use Hook?**
+### **How To Use Hook?**
 
 1. useState() : <br/>
 (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
@@ -1078,6 +1011,73 @@ export default App;
 
 <br/>
 
+
+
+### **Why Do I Need To Use Keys In React Lists?**
+> - Keys help React `identify which items have changed, are added, or are removed` then only update that part without updating whole Lists.
+> - React `doesn't automatically pass they key like a prop`. If you wanted to use the key for some computation, you would need to pass it as another prop, like the example below.
+```
+const content = posts.map((post) =>
+  <Post
+    key={post.id}
+    id={post.id}
+    title={post.title} />
+);
+```
+
+<br/>
+
+### **Why React Don't Recommend To Use Indexes As Keys?**
+> - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
+> - Related Reference : [Why do I need Keys in React Lists?
+](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
+
+<br/>
+
+### **What Are Some Exceptions Where It Is Safe To Use Index As Key?**
+> - If your `list is static` (no additions/re-ordering/removal to the list).
+
+<br/>
+
+### **Explain Error Boundaries?**
+> - Error boundaries are React components that `catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed`.
+> - static getDerivedStateFromError(), componentDidCatch().
+> - Related Reference: [Understand React Lifecycle Methods](https://www.gistia.com/insights/understand-react-lifecycle-methods), [Understanding React Lifecycle Methods](https://medium.com/commutatus/understanding-react-lifecycle-methods-de0e33bf3319), [React 元件生命週期](https://www.fooish.com/reactjs/component-lifecycle.html), [React Life Cycle 生命週期更新版，父子元件執行順序](https://iandays.com/2018/07/27/reactlife/index.html), [React 16：Lifecycle Methods 新手包](https://5xruby.tw/posts/react-16-lifecycle-methods/)
+
+<br/>
+
+### **What Is Axios?**
+> - To send HTTP requests from (client-side) JavaScript. <br/>
+(1) Make XMLHttpRequests from the browser <br/>
+(2) Make http requests from node.js <br/>
+(3) Supports the Promise API <br/>
+(4) Intercept request and response <br/>
+(5) Transform request and response data <br/>
+(6) Cancel requests <br/>
+(7) Automatic transforms for JSON data <br/>
+(8) Client side support for protecting against XSRF
+
+<br/>
+
+### **What Is Styled Component?**
+> - Styled Components is a `CSS-in-JS library` that enables you to create React components with a given style very easily.
+> - Related Reference : [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
+
+<br/>
+
+### **What Are The Strengths And Weaknesses Of Styled Components?**
+> - **Strength** </br>
+(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
+(2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
+(3) Semantic Element: You can know the meaning of the element by its name. </br>
+
+> - **Weakness** </br>
+(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
+(2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
+(3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
+
+<br/>
+
 ### **What Is Jest?**
 >- A delightful JavaScript `testing Framework` which acts as a test runner, assertion library, and mocking library.
 
@@ -1163,12 +1163,12 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How Many Ways You Can Conditionally Render In React?**
-> - If else statement , expression 
+> - If else statement , expression.
 
 <br/>
 
 
-### **Explain How React Rendering works?**
+### **How React Rendering works?**
 > - (1) During the rendering process, React will start at the root of the component tree and loop downwards to find all components that have been flagged as needing updates. <br/>
 > - (2) JSX syntax will convert to React.createElement() calls as the JS is compiled and prepared for deployment. <br/>
 > - (3) After it has collected the render output from the entire component tree, React will diff the new tree of objects (frequently referred to as the "virtual DOM"), and collects a list of all the changes that need to be applied to make the real DOM look like the current desired output. <br/>
@@ -1179,8 +1179,8 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How To Prevent Components From Re-Rendering?**
-> - Class component : shouldComponentUpdate(), React.PureComponent.
-> - Functional component : React.memo.
+> - Class component: shouldComponentUpdate(), React.PureComponent.
+> - Functional component: React.memo.
 
 <br/>
 
@@ -1199,9 +1199,9 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **Name Some Patterns And Usage Of React.**
-> - **Context-api pattern** : To pass data deeply throughout your app without having to manually pass props down through multiple levels
-> - **Render props** : For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
-> - **Presentation component pattern** : Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components.
+> - **Context-api pattern**: To pass data deeply throughout your app without having to manually pass props down through multiple levels
+> - **Render props**: For creating components that take functions as children and is a way for us to create a component that provides some kind of data to a child component.
+> - **Presentation component pattern**: Presentational Component Patterns can best be described as patterns that are primarily concerned with how things look. The primary function of a presentational component is to display data. They rarely handle state and are best written as stateless functional components.
 
 <br/>
 
