@@ -1,6 +1,6 @@
 # Security
 
-### **List Some Security Vulnerabilities You Know.**
+### **List The Security Vulnerabilities.**
 > - SQL Injection.
 > - Cross-Site Scripting (XSS).
 > - Cross-Site Request Forgery (CSRF).
@@ -31,18 +31,18 @@ SELECT UserId, Name, Password FROM Users WHERE UserId = 105 OR 1=1;
 
 ### **What Is XSS?**
 > - Cross site scripting (XSS) is an attack which `injects malicious executable scripts into the code of a trusted application or website`.
-> - There are three types of XSS : <br/>
-(1) **Reflected XSS** : where the malicious script comes `from the current HTTP request`. <br/>
-(2) **Stored XSS** : where the malicious script comes from the `website's database`, such as someone enter the script on message board. <br/>
-(3) **DOM-based XSS** : where the vulnerability exists in client-side code rather than server-side code,. usually by `writing the data back to the DOM`.
+> - There are three types of XSS: <br/>
+(1) **Reflected XSS**: where the malicious script comes `from the current HTTP request`. <br/>
+(2) **Stored XSS**: where the malicious script comes from the `website's database`, such as someone enter the script on message board. <br/>
+(3) **DOM-based XSS**: where the vulnerability exists in client-side code rather than server-side code,. usually by `writing the data back to the DOM`.
 
 <br/>
 
 ### **How To Prevent XSS?**
 > - Filter input on arrival.
-> - Encode data on output 
+> - Encode data on output.
 > - Use appropriate response headers.
-> - Follow the content security policy
+> - Follow the content security policy.
 > - Related Reference: [常見攻擊：XSS、SQL Injection
 SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.html), [Cross Site Scripting (XSS)](https://www.synopsys.com/glossary/what-is-cross-site-scripting.html), [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
 
@@ -55,7 +55,7 @@ SQL Injection](https://yakimhsu.com/project/project_w12_Info_Security-XSS_SQL.ht
 
 > - Cross-Site Request Forgery (CSRF) is an attack that `forces an end user to execute unwanted actions` on a web application in which they’re currently authenticated.
 > - If you login website A then visit a dangerous website B, and click the btn on website B, send a request to website A however website A's session or cookie doesn't expired, website A will accept the request from user then execute it.
-> - Related Reference : [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
+> - Related Reference: [讓我們來談談 CSRF](https://blog.techbridge.cc/2017/02/25/csrf-introduction/), [常見攻擊：CSRF](https://yakimhsu.com/project/project_w12_Info_Security-CSRF.html)
 
 <br/>
 
