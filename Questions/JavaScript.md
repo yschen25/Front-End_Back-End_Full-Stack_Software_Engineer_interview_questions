@@ -6,8 +6,8 @@
 <img src="img/data_type.png" alt="data_type" title="data_type" width="60%">
 </p>
 
-> - Primitive Types : string, number, boolean, undefined, null, symbol.
-> - Non-Primitive(Object) Types : array, object, function, date, regx.
+> - **Primitive Types**: string, number, boolean, undefined, null, symbol.
+> - **Non-Primitive(Object) Types**: array, object, function, date, regx.
 
 <br/>
 
@@ -39,7 +39,7 @@ console.log(jsonData); // '{"name": "Erika"}'
 **Undefined**
 
 > - Undefined means a variable has been declared but has not yet been assigned a value.
-> - Type of undefined = undefined
+> - Type of undefined = undefined.
 
 ```
 let a;
@@ -69,7 +69,7 @@ console.log(b.length);  // 1
 **Null**
 
 > - Null is used to refer to nothing.
-> - Type of null = object
+> - Type of null = object.
 
 ```
 let a = null;
@@ -80,7 +80,7 @@ console.log(null == undefined);  // true
 console.log(null === undefined); // false
 ```
 
-> - Related Reference : [Javascript 中 undefined 和 null 的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript 中 undefined 和 null 的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
+> - Related Reference: [Javascript 中 undefined 和 null 的差異](https://medium.com/harry-xies-blog/javascript%E4%B8%ADundefined%E5%92%8Cnull%E7%9A%84%E5%B7%AE%E5%88%A5-1f48e9be5e02), [JavaScript 中 undefined 和 null 的區別是什麼](https://m.html.cn/qa/javascript/10504.html)
 
 <br/>
 
@@ -110,7 +110,7 @@ a = 3;
 <img src="img/call_by_reference.png" alt="call_by_reference" title="call_by_reference" width="60%">
 </p>
 
-> - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b `doesn't have own memory` location, a and b will has same memory location, b's value `will change` when a's value changes. (Ref : Shallow copy)
+> - When you declare a `non-primitive(objects) type(array, object, function, date, regx) variable` a and b, it will has own memory location and store it's own value in it, then assign b equal to a, b `doesn't have own memory` location, a and b will has same memory location, b's value `will change` when a's value changes.
 ```
 var a = {greeting:'Hello'};
 var b = a;
@@ -136,7 +136,7 @@ console.log(d) // [5, 2, 3]
 **Call By Sharing**
 
 > - When you declare non-primitive(objects) type(array, object, function, date, regx) variable a and b, assign b equal to a, but use `Array Literals or Object Literals` to reassign a's value, b's value `will not change` when a's value changes.
-> - Related Reference : [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html),
+> - Related Reference: [談談 JavaScript 中 by reference 和 by value 的重要觀念](https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html),
 >   [你不可不知的 JavaScript 二三事](https://ithelp.ithome.com.tw/articles/10209104)
 
 <br/>
@@ -158,7 +158,7 @@ console.log(d) // [5, 2, 3]
 
 > - `Duplicates everything`. If b is a deep copy of a, a and b has it's own memory location, b `will not change` it's value when changes a.
 > - Method => javaScript : JSON.parse(JSON.stringify(object)) (not for function), jQuery : $.extend, lodash : \_.cloneDeep
-> - Related Reference : [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/), [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/), [The Spread Operator: Deep and Shallow Copies](https://medium.com/@kevinlai76/the-spread-operator-deep-and-shallow-copies-d193ac9b58bf), [How to Deep Clone an Array in JavaScript](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig)
+> - Related Reference: [關於 JS 中的淺拷貝和深拷貝](https://larry850806.github.io/2016/09/20/shallow-vs-deep-copy/), [JS-淺拷貝(Shallow Copy) VS 深拷貝(Deep Copy)](https://kanboo.github.io/2018/01/27/JS-ShallowCopy-DeepCopy/), [The Spread Operator: Deep and Shallow Copies](https://medium.com/@kevinlai76/the-spread-operator-deep-and-shallow-copies-d193ac9b58bf), [How to Deep Clone an Array in JavaScript](https://dev.to/samanthaming/how-to-deep-clone-an-array-in-javascript-3cig)
 
 <br/>
 
@@ -227,7 +227,7 @@ const [a, ...b] = [1, 2, 3]; // a = 1, b = [2, 3]
 const [a, b, ...c] = [1, 2, 3, 4, 5]; // a = 1, b = 2, c = [3, 4, 5]
 ```
 
-> - Related Reference : [解構賦值](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/destructuring.html)
+> - Related Reference: [解構賦值](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/destructuring.html)
 >   <br/>
 
 <br/>
@@ -314,7 +314,7 @@ console.log(str2.split("")) // ['a', 'd', 'f', 'g', 'd', 'f', 'h', 'g', 'd', 'f'
 ```
 
 
-> - Related Reference : [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), [Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
+> - Related Reference: [JavaScript slice()、splice()、split() 傻傻分不清](https://medium.com/@bebebobohaha/slice-splice-split-%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85-46d9c8992729), [Slice、Splice、Split 的區別](https://chupai.github.io/posts/2007/js_slice_splice_split/)
 
 <br/>
 
@@ -369,7 +369,7 @@ function a(){};
 
 > - This strict context `prevents certain actions from being taken and throws more exceptions`.
 > - Using strict mode, don’t allow to use a variable without declaring it, duplicating a parameter name is not allowed, etc.
-> - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
+> - Related Reference: [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 
 <br/>
 
@@ -435,7 +435,7 @@ const a = 10;
 a = 20;  // TypeError: Assignment to constant variable.
 ```
 
-> - Related Reference : [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
+> - Related Reference: [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 <br/>
 
 
@@ -468,7 +468,7 @@ function foo() {
 }
 ```
 
-> - Related Reference : [let 與 const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
+> - Related Reference: [let 與 const](https://ithelp.ithome.com.tw/articles/10185142), [ES6 開始的新生活 let, const](https://wcc723.github.io/javascript/2017/12/20/javascript-es6-let-const/)
 
 <br/>
 
@@ -545,7 +545,7 @@ function test() {
 test();
 ```
 
-> - Related Reference : [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
+> - Related Reference: [我知道你懂 hoisting，可是你了解到多深？](https://blog.techbridge.cc/2018/11/10/javascript-hoisting/)
 
 <br/>
 
@@ -600,8 +600,8 @@ var obj = {
   foo: func
 };
 
-func();       // undefined
-obj.foo();    // 2
+func();     // undefined
+obj.foo();  // 2
 ```
 
 <br/>
@@ -690,7 +690,7 @@ var obj = new foo(123);
 console.log( obj.a ); // 123
 ```
 
-> - Related Reference : [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
+> - Related Reference: [JavaScript 的 this 到底是誰？](https://wcc723.github.io/javascript/2017/12/12/javascript-this/), [What's THIS in JavaScript ? [上]](https://kuro.tw/posts/2017/10/12/What-is-THIS-in-JavaScript-%E4%B8%8A/), [What's THIS in JavaScript ? [中]](https://kuro.tw/posts/2017/10/17/What-s-THIS-in-JavaScript-%E4%B8%AD/), [What's THIS in JavaScript ? [下]](https://kuro.tw/posts/2017/10/20/What-is-THIS-in-JavaScript-%E4%B8%8B/)
 
 <br/>
 
@@ -716,7 +716,7 @@ window.setTimeout(function() { ... }, 1000);
 
 > - Callback functions allow us to do something with data at a later time. 
 > - Too much callback will cause callback hell, we can use promise to prevent it.
-> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
+> - Related Reference: [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739)
 
 <br/>
 
@@ -735,9 +735,9 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - A promise starts in the `pending state which indicates that the promise hasn’t completed`, it ends with either success (resolve) or fail (reject) state, and the value won't be change when the states of promise parse to resolve or reject : <br/>
->   (1) **Resolved** : The state of a promise representing a successful operation. <br/>
->   (2) **Rejected** : The state of a promise representing a failed operation. <br/>
->   (3) **Pending** : Initial state, before the promise succeeds or fails. <br/>
+>   (1) **Resolved**: The state of a promise representing a successful operation. <br/>
+>   (2) **Rejected**: The state of a promise representing a failed operation. <br/>
+>   (3) **Pending**: Initial state, before the promise succeeds or fails. <br/>
 
 ```
 const myPromise = new Promise((resolve, reject) => {
@@ -752,10 +752,10 @@ const myPromise = new Promise((resolve, reject) => {
 ```
 
 > - How to deal with states : <br/>
->   (1) **then()** : If the promise gets `resolved`, the then() method is called, then we can decide what to do with the resolved promise. then() accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
->   (2) **catch()** : If the promise gets `rejected`, it will jump to the catch() method. <br/>
->   (3) **finally()** : Execute the `same piece of code whether the promise is resolved or rejected`. <br/>
->   (4) **all()** : Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected. <br/>
+>   (1) **then()**: If the promise gets `resolved`, the then() method is called, then we can decide what to do with the resolved promise. then() accepts two function arguments, the first handler supplied to it will be called if the promise is resolved, The second one will be called if the promise is rejected. <br/>
+>   (2) **catch()**: If the promise gets `rejected`, it will jump to the catch() method. <br/>
+>   (3) **finally()**: Execute the `same piece of code whether the promise is resolved or rejected`. <br/>
+>   (4) **all()**: Creates a new promise that will be resolved when all of promises are resolved. If any of the promises are rejected, the returned promise will be rejected immediately and will provide the value of the promise that was rejected. <br/>
 >   (5) Keep waiting : During pending.
 
 ```
@@ -766,14 +766,14 @@ myPromise.then((message) => {
 });
 ```
 
-> - Related Reference : [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
+> - Related Reference: [Promise (1)](https://ithelp.ithome.com.tw/articles/10197427), [Promise (2)](https://ithelp.ithome.com.tw/articles/10197529), [JavaScript Promise Tutorial: Resolve, Reject, and Chaining in JS and ES6](https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/), [The Definitive Guide to the JavaScript Promises](https://www.javascripttutorial.net/es6/javascript-promises/), [Promises](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises/cheatsheet)
 
 <br/>
 
 ### **Explain What Is Asynchronous And Synchronous?**
 
 > - You execute something synchronously, you need to wait for it to finish before moving on to another task. When you execute something asynchronously, you can move on to another task before it finishes.
-> - Related Reference : [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
+> - Related Reference: [簡單理解 JavaScript Async 和 Await](https://www.oxxostudio.tw/articles/201908/js-async-await.html), [Async-Await](https://www.codecademy.com/learn/introduction-to-javascript/modules/asynch-js/cheatsheet), [認識同步與非同步 — Callback + Promise + Async/Await
 >   ](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E8%AA%8D%E8%AD%98%E5%90%8C%E6%AD%A5%E8%88%87%E9%9D%9E%E5%90%8C%E6%AD%A5-callback-promise-async-await-640ea491ea64)
 
 <br/>
@@ -874,7 +874,7 @@ var callTest = function() {
 callTest(); // 123
 ```
 
-> - [[筆記] 進一步談 JavaScript 中函式的建立 ─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
+> - Related Reference: [[筆記] 進一步談 JavaScript 中函式的建立 ─function statements and function expressions](https://pjchender.blogspot.com/2016/03/javascriptfunction-statements-and.html)
 
 <br/>
 
@@ -906,7 +906,7 @@ console.log(superSecret); // Uncaught ReferenceError: superSecret is not defined
 ### **Why Don't Use A Named Function Then Invoke It? That Would Create The Same Result?**
 
 > - Yes, but with consequences: Creating a named function pollutes the global name space. It also means the named function is hanging around also readily available, `it could accidentally be invoked again`. `IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications`.
-> - Related Reference : [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
+> - Related Reference: [重新認識 JavaScript: Day 18 Callback Function 與 IIFE](https://ithelp.ithome.com.tw/articles/10192739), [JavaScript: What the heck is an Immediately-Invoked Function Expression?](https://codeburst.io/javascript-what-the-heck-is-an-immediately-invoked-function-expression-a0ed32b66c18)
 
 <br/>
 
@@ -918,7 +918,7 @@ console.log(superSecret); // Uncaught ReferenceError: superSecret is not defined
 >   (3) Can be assigned as a parameter. <br/>
 >   (4) Can be returned by another function. <br/>
 >   (5) Function have properties.
-> - Related Reference : [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
+> - Related Reference: [[筆記] JavaScript 中函式就是一種物件 ─ 談談 first class function（一等公民函式）](https://pjchender.blogspot.com/2016/03/javascriptfunctionobjects.html)
 
 <br/>
 
@@ -962,7 +962,7 @@ returnedFunction("returnedFunction");
 ```
 
 > - forEach(), map(), reduce(), filter(), etc. are HOFs. <br/>
-> - Related Reference : [JavaScript 什麼是 Higher Order Function？](https://matthung0807.blogspot.com/2019/05/javascript-higher-order-function.html)
+> - Related Reference: [JavaScript 什麼是 Higher Order Function？](https://matthung0807.blogspot.com/2019/05/javascript-higher-order-function.html)
 
 <br/>
 
@@ -978,7 +978,7 @@ returnedFunction("returnedFunction");
 >   (2) **Target phase**: the event reached the target element triggers two times, as we’ve set two listeners: capturing and bubbling). <br/>
 >   (3) **Bubbling phase**: the event bubbles up from the element. <br/>
 > - Using `stopPropagation()` when you have JavaScript running on the same event of nested elements. 
-> - Related Reference : [Event Flow: capture, target, and bubbling
+> - Related Reference: [Event Flow: capture, target, and bubbling
 ](http://www.java2s.com/Book/JavaScript/DOM/Event_Flow_capture_target_and_bubbling.htm), [Event Capturing and Bubbling](https://pjchender.github.io/2017/10/03/js-event-capturing-and-bubbling/), [瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/)
 
 <br/>
@@ -1070,7 +1070,7 @@ console.log(reduce); // 46
 |         | **DOES NOT** change the original array |                                                    |
 |         | Ability to chain other methods         | Can't chain other methods                          |
 
-> - Related Reference : [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
+> - Related Reference: [The Differences Between forEach() and map() that Every Developer Should Know](https://www.freecodecamp.org/news/4-main-differences-between-foreach-and-map/)
 
 <br/>
 
@@ -1353,7 +1353,7 @@ hamsterCounter(); // 2 hamster(s)
 ```
 
 > - We can also use the `let` to solve this problem.
-> - Related Reference : [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
+> - Related Reference: [深入淺出瞭解 JavaScript 閉包（closure）](https://pjchender.blogspot.com/2017/05/javascript-closure.html)
 
 <br/>
 
@@ -1387,7 +1387,7 @@ const compose = (...fcs) => x => fcs.reduceRight((val, fc) => fc(val), x);
 console.log('Function composition for mutiple functions', compose(minus, square, double)(1)); // -6
 ```
 
-> - Related Reference : [Function composition in JavaScript](https://www.educative.io/edpresso/function-composition-in-javascript), [Master the JavaScript Interview: What is Function Composition?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0), [Write better JavaScript, function composition with pipe and compose](https://itnext.io/write-better-javascript-function-composition-with-pipe-and-compose-93cc39ab16ee)
+> - Related Reference: [Function composition in JavaScript](https://www.educative.io/edpresso/function-composition-in-javascript), [Master the JavaScript Interview: What is Function Composition?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-function-composition-20dfb109a1a0), [Write better JavaScript, function composition with pipe and compose](https://itnext.io/write-better-javascript-function-composition-with-pipe-and-compose-93cc39ab16ee)
 
 <br/>
 
@@ -1399,7 +1399,7 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 </p>
 
 > - Stack is a data structure which follows a order `LIFO (Last In First Out)` in which the operations are performed.
-> - Related Reference : [解釋 Event Loop ( 上 ) --- Call Stack](https://ithelp.ithome.com.tw/articles/10260433)
+> - Related Reference: [解釋 Event Loop ( 上 ) --- Call Stack](https://ithelp.ithome.com.tw/articles/10260433)
 
 <br/>
 
@@ -1410,7 +1410,7 @@ console.log('Function composition for mutiple functions', compose(minus, square,
 </p>
 
 > - Queue is a data structure which follows a order `FIFO (First In First Out)` in which the operations are performed. 
-> - Related Reference : [解釋 Event Loop ( 下 ) --- Task Queue ( Callback Queue )](https://ithelp.ithome.com.tw/articles/10261593)
+> - Related Reference: [解釋 Event Loop ( 下 ) --- Task Queue ( Callback Queue )](https://ithelp.ithome.com.tw/articles/10261593)
 
 <br/>
 
@@ -1476,15 +1476,14 @@ a();
 </p>
 
 #### You should know before reading about event loop
-> - **Process** : A process can have anywhere from just one thread to many threads.
-> - **Threaded** : A thread is the unit of execution within a process.
+> - **Process**: A process can have anywhere from just one thread to many threads.
+> - **Threaded**: A thread is the unit of execution within a process.
 ``single thread means it can only do one thing at the same time``.
-> - **Runtime** : Where your program will be executed. It determines what global objects your program can access and it can also impact how it runs. This article covers the two JavaScript runtime environments: <br/>
+> - **Runtime**: Where your program will be executed. It determines what global objects your program can access and it can also impact how it runs. This article covers the two JavaScript runtime environments: <br/>
 (1) The runtime environment of a browser (like Chrome, or Firefox). <br/>
 (2) The Node runtime environment.
-> - **Web APIs** : The Web APIs are provided by the web browser that gives additional functionality to the V8 engine, like the DOM, AJAX, setTimeout and much more.
-> - **Heap** : It's not a data structure here, this is where all the memory allocation happens for your variables, that you have defined in your program.
-
+> - **Web APIs**: The Web APIs are provided by the web browser that gives additional functionality to the V8 engine, like the DOM, AJAX, setTimeout and much more.
+> - **Heap**: It's not a data structure here, this is where all the memory allocation happens for your variables, that you have defined in your program.
 > - JavaScript is a `single-threaded` programming language which can run at various `runtime`, once your browser starts processing too many tasks in the call stack, it may stop being responsive for a long time, even block the UI thread, and the user can't click around, scroll the page, and so on. 
 > - In order to run the make sure `every process isolated and avoid a web page with infinite loops or heavy processing to block your entire browser when using web APIs`, the `event loop` continuous monitoing the `call stack and the callback queue`. If the call stack is empty, it will take the first event from the queue and will push it to the call stack, which effectively runs it.
 
@@ -1518,7 +1517,7 @@ console.log('end');
 'setTimeout2'
 ```
 
-> - Related Reference : [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[Understanding Event Loop, Call Stack, Event & Job Queue in Javascript](https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd),[JS底層學習筆記 - EventLoop](https://front-chef.coderbridge.io/2021/05/08/js-eventloop/), [JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
+> - Related Reference: [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf), [How JavaScript works: Event loop and the rise of Async programming + 5 ways to better coding with async/await](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5),[Understanding Event Loop, Call Stack, Event & Job Queue in Javascript](https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd),[JS底層學習筆記 - EventLoop](https://front-chef.coderbridge.io/2021/05/08/js-eventloop/), [JavaScript 深入淺出 Microtasks & Marcotask](https://shawnlin0201.github.io/JavaScript/JavaScript-Microtasks-Marcotask/)
 
 <br/>
 
@@ -1526,7 +1525,7 @@ console.log('end');
 ### **What Is Functional Programming (FP)?**
 
 > - Functional programming empazies on pure, higher order functions, take function as first class, voiding mutating data and side effect.
-> - Related Reference : [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
+> - Related Reference: [What is Functional Programming?](https://www.guru99.com/functional-programming-tutorial.html#1)
 
 <br/>
 
@@ -1572,7 +1571,7 @@ console.log(add(4)); // 6
 console.log(add(4)); // 10
 ```
 
-> - Related Reference : [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
+> - Related Reference: [What Is a Pure Function in JavaScript?](https://www.freecodecamp.org/news/what-is-a-pure-function-in-javascript-acb887375dfe/)
 
 <br/>
 
@@ -1663,7 +1662,7 @@ console.log(nick.__proto__ === Person.prototype); // true
 console.log(nick.prototype === undefined);        // true
 ```
 
-> - Related Reference : [** proto ** VS. prototype in JavaScript
+> - Related Reference: [** proto ** VS. prototype in JavaScript
 >   ](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript), [該來理解 JavaScript 的原型鍊了](https://blog.techbridge.cc/2017/04/22/javascript-prototype/)
 
 <br/>
@@ -1678,7 +1677,7 @@ console.log(nick.prototype === undefined);        // true
 ### **What Is Delegate?**
 
 > - Event delegation allows you to `avoid adding event listeners to specific nodes, instead, the event listener is added to one parent.` That event listener analyzes bubbled events to find a match on child elements.
-> - Related Reference : [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
+> - Related Reference: [[教學] 瀏覽器事件：Event Bubbling, Event Capturing 及 Event Delegation](https://shubo.io/event-bubbling-event-capturing-event-delegation/), [What is DOM Event delegation?](https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation)
 
 <br/>
 
@@ -1715,7 +1714,7 @@ console.log(binaryStr); // "100010"
 | Since developing a library needs less code, performance and load time are improved. | The construction of a framework necessitates large amounts of code, which reduces performance and increases load time. | 
 | Libraries can be simply linked into existing programs to add specific functionality. | It is tough to incorporate a framework seamlessly into an existing project.| 
 
-> - Related Reference : [Difference Between Framework Vs Library](https://www.sencha.com/blog/difference-between-framework-vs-library-snc/)
+> - Related Reference: [Difference Between Framework Vs Library](https://www.sencha.com/blog/difference-between-framework-vs-library-snc/)
 
 <br/>
 
@@ -1767,7 +1766,7 @@ console.log(myMap2(arr, num => num + 1)); // [2, 3, 4]
 
 ```
 
-> - Related Reference : [Javascript - Writing Map as a Recursive Function](https://dev.to/alexmercedcoder/javascript-writing-map-as-a-recursive-function-2854)
+> - Related Reference: [Javascript - Writing Map as a Recursive Function](https://dev.to/alexmercedcoder/javascript-writing-map-as-a-recursive-function-2854)
 
 <br>
 
