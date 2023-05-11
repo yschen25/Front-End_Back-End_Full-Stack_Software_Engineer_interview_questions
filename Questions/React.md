@@ -672,17 +672,17 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 <br/>
 
 > - **List down three components of redux** <br/>
-(1) **Action** – To describe the type of `event (type)` and `informations (payload)`. <br/>
-(2) **Store** – The core of redux, `the state of the entire application` is stored in an object / state tree within a single store. <br/>
-(3) **Reducer** – It is a place `receiving previousState and action to determine the new state`.
+> (1) **Action** – To describe the type of `event (type)` and `informations (payload)`. <br/>
+> (2) **Store** – The core of redux, `the state of the entire application` is stored in an object / state tree within a single store. <br/>
+> (3) **Reducer** – It is a place `receiving previousState and action to determine the new state`.
 <br/>
 
 > - **Redux interactive with users** <br/>
-(1) User clicks components. <br/>
-(2) Components send the action to the `Action Creator` <br/>
-(3) `Action Creator` sends `Action` to `Store`. <br/>
-(4) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
-(5) `View` Re-render when gets the new state from `Store`.
+> (1) User clicks components. <br/>
+> (2) Components send the action to the `Action Creator`. <br/>
+> (3) `Action Creator` sends `Action` to `Store`. <br/>
+> (4) `Store` calls `Reducer` with `previousState and action` to get the new state. <br/>
+> (5) `View` Re-render when gets the new state from `Store`.
 <br/>
 
 > - **Redux follows three principles** <br/>
@@ -693,8 +693,9 @@ ReactDOM.render(<MyComponent />, document.getElementById("container"));
 
 ### **How To Use Redux?**
 
-> - **Combine with React-Redux**<br/>
+> - **Combine with React-Redux** <br/>
 > (1) **Provider**: The Provider makes the Redux store available to any nested components that have been wrapped in the connect() function. Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level, with the entire app’s component tree inside of it. Normally, `you can’t use a connected component unless it is nested inside of a <Provider>`. <br/>
+
 ```
 <Provider store={store}>
     <Main />
@@ -757,10 +758,10 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 > - MobX allows multiple stores. You can logically separate stores so all of the application’s state is not in one store, such as UI state and one or more for the domain state
 > - The state is mutable, meaning you can simply update the state with new values.
 > - Comes with much less boilerplate code in comparison to Redux, making MobX easier to learn and set up.
-> - Anything derived from the state without any further interaction is a derivation
-> - Actions are any piece of code that changes the state
-> - All derivations update automatically and atomically when the state changes
-> - Related Reference : [Redux vs. MobX: Which performs better?](**https://blog.logrocket.com/redux-vs-mobx/)
+> - Anything derived from the state without any further interaction is a derivation.
+> - Actions are any piece of code that changes the state.
+> - All derivations update automatically and atomically when the state changes.
+> - Related Reference: [Redux vs. MobX: Which performs better?](https://blog.logrocket.com/redux-vs-mobx/)
 
 <br/>
 
@@ -770,22 +771,22 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 </p>
 
 > - Redux middleware function `provides a medium to interact with dispatched action before they reach the reducer`, such as call async API, log. etc.
-> - When we send a action to reducer, this process works fine with synchronous change,  but if call an Action Creator that is fetching data from an API or some asynchronous action, that will has some problems.
+> - When we send a action to reducer, this process works fine with synchronous change, but if call an Action Creator that is fetching data from an API or some asynchronous action, that will has some problems.
 
 <br/>
 
 ### **What Is React-Saga And React-Thunk?**
-> - React-Saga : Sagas are implemented using Generator functions. To express the Saga logic, we yield plain JavaScript Objects from the Generator. We call those Objects Effects (put, call, etc.)
-> - React-Thunk : Thunk is a function which optionaly takes some parameters and returns another function, it takes dispatch and getState functions and both of these are supplied by Redux Thunk middleware.
-> - Differences :  <br/>
+> - **React-Saga**: Sagas are implemented using Generator functions. To express the Saga logic, we yield plain JavaScript Objects from the Generator. We call those Objects Effects (put, call, etc.)
+> - **React-Thunk**: Thunk is a function which optionaly takes some parameters and returns another function, it takes dispatch and getState functions and both of these are supplied by Redux Thunk middleware.
+> - **Differences**  <br/>
 (1) Thunks can never act in response to an action. Redux-Saga subscribes to the store and can trigger a saga to run or continue when a certain action is dispatched. <br/>
 (2) Redux Saga a lot of built-in features, which Redux Thunk lacks. For example, you can throttle requests, debounce or cancel them and handle race conditions.
-> - Related Reference : [Redux-Thunk vs. Redux-Saga](https://decembersoft.com/posts/redux-thunk-vs-redux-saga/)
+> - Related Reference: [Redux-Thunk vs. Redux-Saga](https://decembersoft.com/posts/redux-thunk-vs-redux-saga/)
 
 <br/>
 
 ### **What Is Hook?**
->- Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
+> - Hooks are in-built functions that allow React developers to `use state and lifecycle methods inside functional components`. If you write a functional component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing functional component.
 > - Hooks don’t work inside classes.
 
 <br/>
@@ -799,9 +800,9 @@ Community and ecosystem – Redux has a huge community behind it which makes it 
 
 ### **And How To Use Hook?**
 
-1. useState() : <br/>
-(1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
-(2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
+**useState** <br/>
+> (1) Allows React developers to update, handle and manipulate state inside functional components without converting it to a class component. <br/>
+> (2) Receives an initial state as an argument and then returns, by making use of array destructuring in JavaScript, the two variables in the array can be named what. The first variable is the `actual state`, while the second variable is a function that is `for updating the state` by providing a new state.  <br/>
 
 ```
 // Before using hook
@@ -846,15 +847,14 @@ function ClickClass() {
     </div>
   );
 }
-
 ```
 
 <br/>
 
-2. useEffect() : <br/>
-(1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
-(2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
-(2.1) The first an anonymous callback function that houses your useEffect logic.
+**useEffect** <br/>
+> (1) Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects, The Effect Hook lets you `perform side effects in functional components`, you can think of useEffect hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined. <br/>
+> (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
+> (2.1) The first an anonymous callback function that houses your useEffect logic.
 
 	```
 	useEffect(() => {
@@ -866,27 +866,22 @@ function ClickClass() {
 	  });
 	```
  
-(2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
+> (2.2) The useEffect() hook takes a second parameter, an array, containing the list of things that will cause the useEffect hook to run. When changed, it will trigger the effect hook. 
 
-Running every time. <br/>
 ```
+// Running every time.
 useEffect(() => {
 	console.log('Runs every time');
 });
-```
 
-<br/>
-
-Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
-```
+// Running an effect once (componentDidMount): The key to running an effect once is to pass in an empty array. <br/>
 useEffect(() => {
 	console.log('This only runs once');
 }, []);
 ```
 <br/>
 
-Using effects when things change (componentDidUpdate) : 
-```
+// Using effects when things change (componentDidUpdate): 
 useEffect(() => {
 	console.log('This is like componentDidUpdate, I will be triger whenever count state changes')
  }, [count]);
@@ -894,12 +889,12 @@ useEffect(() => {
 <br/>
 
 
-3. useContext() :  <br/>
-(1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-(2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
+**useContext**<br/>
+> (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
+> (2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
 
 
-4. useMemo() :  <br/>
+**useMemo** <br/>
 > - useMemo can help the performance of an application by “remembering” expensive functions and preventing a re-render every time there is a change in the application.
 
 ```
@@ -940,7 +935,6 @@ const Card = ({ title }) => {
 };
 
 export default React.memo(Card);
-
 ```
 
 ```
@@ -977,15 +971,15 @@ export default App;
 ```
 
 
-5. useCallback() :  <br/>
- > - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+**useCallback** <br/>
+> - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+> - useCallback returns its function when the dependencies change while useMemo calls its function and returns the result.
 
- > - useCallback returns its function when the dependencies change while useMemo calls its function and returns the result.
+**useReducer**  <br/>
+> - lets you handle state updates using reducers without a Redux store.
 
-6. useReducer() : lets you handle state updates using reducers without a Redux store.
-
-7. Custom React Hooks : <br/>
-(1) Custom hooks allow you to create functionality that can be reused across different components.
+**Custom React Hooks** <br/>
+> - Custom hooks allow you to create functionality that can be reused across different components.
 
 <br/>
 
