@@ -855,9 +855,9 @@ function ClickClass() {
 > (2) There are two arguments that are passed to useEffect(), `useEffect(callback, array)`  <br/>
 > (2.1) The first an anonymous callback function that houses your useEffect logic.  <br/>
 > (2.2) The second parameter is an array.  <br/>
-> (2.2.1) If we don't put array, then useEffect will run everytime.  <br/>
-> (2.2.2) If array is empty then useEffect will only run once.  <br/>
-> (2.2.3) If array is not empty and it changed then will trigger the useEffect`. <br/>
+> (2.2.1) `If we don't put array, then useEffect will run everytime.`  <br/>
+> (2.2.2) `If array is empty then useEffect will only run once.`  <br/>
+> (2.2.3) `If array is not empty and it changed then will trigger the useEffect`. <br/>
 
 ```
 useEffect(() => {
@@ -866,7 +866,7 @@ useEffect(() => {
     return() => {
       console.log('This is like componentWillUnmount'); // clear something
     };
-  });
+});
 ```
 
 ```
@@ -945,6 +945,7 @@ export default React.memo(Card);
 const App = () => {
     const [count, setCount] = useState(0);
     const tags = ['happy', 'sad', 'madness'];
+    
     return (
         <div>
             <button type="button" onClick={() => setCount(count+1)}>add</button>
@@ -961,6 +962,7 @@ const App = () => {
     const tags = useMemo(() => {
         return ['happy', 'sad', 'madness'];
     }, []);
+    
     return (
         <div>
             <button type="button" onClick={() => setCount(count+1)}>add</button>
@@ -981,7 +983,7 @@ export default App;
 <br/>
 
 **useReducer()**  <br/>
-> - lets you handle state updates using reducers without a Redux store.
+> - Let you handle state updates using reducers without a Redux store.
 
 <br/>
 
@@ -1017,7 +1019,8 @@ const content = posts.map((post) =>
   <Post
     key={post.id}
     id={post.id}
-    title={post.title} />
+    title={post.title} 
+   />
 );
 ```
 
@@ -1025,7 +1028,7 @@ const content = posts.map((post) =>
 
 ### **Why React Don't Recommend To Use Indexes As Keys?**
 > - Since the order of items may change, then it could `impact performance negatively and could lead to some unstable component behaviour` such like rerender the whole list during the change.
-> - Related Reference : [Why do I need Keys in React Lists?
+> - Related Reference: [Why do I need Keys in React Lists?
 ](https://medium.com/@adhithiravi/why-do-i-need-keys-in-react-lists-dbb522188bbb), [List key 的使用](https://note.pcwu.net/2017/03/23/react-array-key/)
 
 <br/>
@@ -1065,12 +1068,12 @@ const content = posts.map((post) =>
 
 ### **What Are The Pros And Cons Of Styled Components?**
 > - **Pros** </br>
-(1) Dynamic Styling: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
-(2) Painless Maintenance: You don't have maintain mutiple CSS files. </br>
-(3) Semantic Element: You can know the meaning of the element by its name. </br>
+(1) **Dynamic Styling**: It allows you to use React.js `props` that we can pass to components in styled-components `to create dynamic styling` for our app. </br>
+(2) **Painless Maintenance**: You don't have maintain mutiple CSS files. </br>
+(3) **Semantic Element**: You can know the meaning of the element by its name. </br>
 
 > - **Cons** </br>
-(1) Styled Component rendered in the browser have randomly generated classname(built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
+(1) Styled Component rendered in the browser have randomly generated classname (built-in CSS module system. This is great for solving the problem of classnames conflict) leads hard to debug. </br>
 (2) Solving the problem with installing babel-plugin-macros or add className in styled component's attribute then pass it as props. </br>
 (3) Related Reference: [How to Build A Debuggable Styled Component](https://www.freecodecamp.org/news/how-to-build-a-debuggable-styled-component-10f7e4fbea2/), [利用 Styled System 建立一個更好的 UI 元件庫](https://cythilya.github.io/2019/11/30/build-a-better-ui-component-library-with-styled-system/), [Styled-component](https://ithelp.ithome.com.tw/articles/10215800)
 
@@ -1100,7 +1103,7 @@ const content = posts.map((post) =>
 
 
 ### **What Is React-testing-library/React-hooks-testing-library?**
-> - React Testing Library it's a `alternative to Enzyme`, it `support to test hook`.
+> - React Testing Library it's a `alternative to Enzyme, it support to test hook`.
 > - Install @testing-library/react-hooks to test hooks.
 
 <br/>
@@ -1177,15 +1180,15 @@ const MyComponent = React.memo(function MyComponent(props) {
 
 
 ### **How To Prevent Components From Re-Rendering?**
-> - Class component: shouldComponentUpdate(), React.PureComponent.
-> - Functional component: React.memo, useMemo().
+> - **Class component**: shouldComponentUpdate(), React.PureComponent.
+> - **Functional component**: React.memo, useMemo().
 
 <br/>
 
 
 ### **What Would You Do If Your React Application Is Rendering Slowly?**
-> - The cause of slow rendering in React is mostly beacuse of the number of re-render poperations, which are sometimes unnecessary.
-> - Use React.PureComponent or React.memo(), useMemo(), React.lazy, CDN, Use arrow function.
+> - The cause of slow rendering in React is mostly beacuse of the `numbers of re-render poperations`, which are sometimes unnecessary.
+> - Use React.PureComponent, React.memo(), useMemo(), React.lazy, CDN, arrow function., etc.
 
 <br/>
 
@@ -1207,7 +1210,7 @@ const MyComponent = React.memo(function MyComponent(props) {
 ### **What Is A React Router?**
 > - Is a package which is used to create Routing.
 > - React Router, and dynamic, client-side routing, allows us to `build a SPA(single-page web application) with navigation without the page refreshing as the user navigates`.
-> 
+
 <br/>
 
 ### **How Is Routing in React Different From Conventional Routing?**
