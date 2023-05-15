@@ -894,9 +894,51 @@ useEffect(() => {
 
 
 **useContext()**<br/>
-> (1) The React Context API is a simple, easy-to-understand alternative to "prop-drilling" up and down your component tree. Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
-> (2) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
-> 
+> (1) Instead of passing local data around and through several layers of components, it takes a step back to create global state, which is extremely useful for data that needs to be shared across components. <br/>
+> (2) We can use `lifting state up or global state` when we need to pass props to sibliing components, however it might cause prop drilling, then we can solve it with useContext().  <br/>
+> (3) React’s Context API, it’s a way to `pass data deeply throughout your app without having to manually pass props down through multiple levels`. It can be a `good alternative to tools like Redux`. <br/>
+
+```
+//  Use useContext to get the value of ThemeContext Provider
+const App = (props) => {
+ const [ dark, setDark ] = useState("isDarkMode");
+
+  return (  
+    <>
+       <ThemeContext.Provider value={dark}>
+          <Layout_A/>
+          <Layout_B/>
+        </ThemeContext.Provider>
+    </>
+  );
+};
+
+export default App;
+
+```
+
+```
+const Layout_A = () =>{
+   const darkTheme = useContext(ThemeContext)
+   return(
+       <p>{darkTheme}</p>
+   )
+}
+
+export default Layout_A;
+```
+
+```
+const Layout_B = () =>{
+   const darkTheme = useContext(ThemeContext)
+   return(<p>{darkTheme}</p>)
+}
+
+export default Layout_B;
+```
+> - Related Reference: [React Hook - useContext](https://n-d.tw/post/227?fbclid=IwAR0UA9vppboq_mqFghAIfzgKBpvACRI3-NEHD_Exha548auoeWyxGQxHYsw)
+
+
 <br/>
 
 **useMemo()** <br/>
@@ -979,11 +1021,12 @@ export default App;
 **useCallback()** <br/>
 > - The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
 > - useCallback returns its function when the dependencies change while useMemo calls its function and returns the result.
-> 
+
 <br/>
 
 **useReducer()**  <br/>
-> - Let you handle state updates using reducers without a Redux store.
+> - useReducer() is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+> - An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.
 
 <br/>
 
