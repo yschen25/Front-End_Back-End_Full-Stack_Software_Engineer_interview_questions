@@ -25,7 +25,12 @@ SELECT UserId, Name, Password FROM Users WHERE UserId = 105 OR 1=1;
 <br/>
 
 ### **How To Prevent SQL Injection?**
-> - Using SQL parameters.
+> - **Input validation & sanitation**: Detect and filter out malicious code from user inputs.
+> - **Use of prepared statements**: The use of prepared statements with variable binding (also known as parameterized queries) should be the first line of defense for mitigating SQL injections.
+> - **Enforcing least privilege**: To ensure the security of data environments, administrators must minimize the privileges assigned to each database account. 
+> - **Use Allowlists, Not Blocklists**: Don’t filter user input based on blocklists. If possible, verify and filter user input using strict allowlists only. Allowlists are an ideal way to prevent a serious SQL injection.
+> - **Use constructed stored procedures**: Stored procedures can also be set up to accept user input, reducing the burden of validating user input within the application.
+> - **Continuous Scanning and Penetration Testing**: Continuous web application scanning involves regularly running automated vulnerability scanning tools to identify and assess any potential vulnerabilities in a system.
 
 <br/>
 
