@@ -1,12 +1,12 @@
 # Deployment Questions
 
 ### **What Is CI (Continuous Integration)?**
-> - CI is a way to merge all developers' copies of code into a code base frequently. Isolated changes are tested and integrated quickly with unit and integration tests. Continuous integration gives a development team specific feedback on changes or additions to the code base. If a bug is introduced, the code tests in CI should reveal it before the code moves closer to release. CI and continuous delivery enable an organization to have automated testing and staging processes, which then further enable developers to decide when and how often to deploy their code into production.
+> - A software development practice in which developers regularly merge their code changes into a shared repository. CI helps to ensure the codebase is always stable and there are no conflicts between different branches of code.
 
 <br/>
 
 ### **What Is CD (Continuous Delivery)?**
-> - CD is an approach for software delivery in which development teams produce and test code in short but continuous cycles, usually with high degrees of automation, to improve software quality. 
+> - An approach for software delivery in which development teams produce and test code in short but continuous cycles, usually with high degrees of automation, to improve software quality. 
 
 <br/>
 
