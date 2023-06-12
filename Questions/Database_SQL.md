@@ -72,6 +72,13 @@
 
 <br/>
 
+### **What Is CAP Theorem?**
+
+> - The CAP Theorem for distributed computing was published by Eric Brewer. This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:  <br/>   (1) **Consistency**: all nodes see the same data even at the same time with concurrent updates)  <br/>
+(2) **Availability**: a guarantee that every request receives a response about whether it was successful or failed)  <br/>
+(3) **Partition tolerance**: the system continues to operate despite arbitrary message loss or failure of part of the system)
+
+<br/>
 
 ### **What Is A Database Index And How Is It Useful?**
 > - Index is created by using a few database columns.
