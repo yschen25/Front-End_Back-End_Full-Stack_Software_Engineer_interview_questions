@@ -96,13 +96,7 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 <br/>
 
-### **What Is ACID?**
-> - **A (Atomicity)**: Atomicity means that you guarantee that either all the transaction succeeds or failure, we commit when transaction succeeds, and we roll back when the transaction failure.
-> - **C (Consistency)**: This ensures that all data will be consistent when execute transaction.
-> - **I (Isolation)**: All transactions will occur in isolation.
-> - **D (Durability)**: Durability means that, once a transaction is committed, it will remain in the system – even if there’s a system crash.
 
-<br/>
 
 ### **What Is Locking?**
 > - Use locking when multiple users are accessing data at the same time to protected resources such as tables, data rows, etc. For the concurrency and  isolation purpose.
