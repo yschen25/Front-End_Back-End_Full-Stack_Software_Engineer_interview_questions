@@ -35,3 +35,12 @@
 > - Accessibility refers to the user's ability to access the system. If the user is unable to access the application, it will be assumed that the application is unavailable. High availability means that the application will always be available without interruption.
 
 <br/>
+
+
+### **What Is Containerization?** 
+> -Containerization is a type of virtualization strategy that was invented as an alternative method to traditional hypervisor-based virtualization. During the containerization process, the operating system is used concurrently by different containers, so it does not need to be cloned for each virtual machine.
+
+
+
+
+
