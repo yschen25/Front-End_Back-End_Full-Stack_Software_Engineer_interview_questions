@@ -48,6 +48,14 @@
 
 <br/>
 
+### **What Are The DRY And DIE Principles?**
+
+> - **DRY principle (Don't Repeat Yourself)**: Duplicated code can cause maintenance problems as multiple changes must be made. 
+> - **DIE (Duplication Is Evil)**: Similar to the DRY principle, goes one step further and states that even small amounts of duplication should be avoided.
+
+
+<br/>
+
 
 # Customized React Questions
 
