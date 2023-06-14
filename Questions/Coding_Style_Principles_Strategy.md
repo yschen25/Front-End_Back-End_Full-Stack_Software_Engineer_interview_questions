@@ -53,6 +53,12 @@
 > - **DRY principle (Don't Repeat Yourself)**: Duplicated code can cause maintenance problems as multiple changes must be made. 
 > - **DIE (Duplication Is Evil)**: Similar to the DRY principle, goes one step further and states that even small amounts of duplication should be avoided.
 
+<br/>
+
+### **What Is The Difference Between An Acceptance Test And A Functional Test?**
+> - **Acceptance testing**: This is a `validation activity`. Often developers are faced with questions, they built the right thing and or will it satisfy the needs of the client. With an acceptance test, you can determine if a product solves the problems for which it was designed. This can best be done by the user, for instance, performing their tasks that the software assists with.
+
+> - **Functional testing**: This is a `verification activity`. Developers also often have questions about whether they have built the product correctly and meet their business requirements. The functional test helps to answer these questions. It can be used to determine if the product works the way the developers think it does not.
 
 <br/>
 
@@ -74,3 +80,4 @@
 
 ### **What Does The Clean Code Mean To You?** 
 > - Testable, Readable, Maintainable.
+
