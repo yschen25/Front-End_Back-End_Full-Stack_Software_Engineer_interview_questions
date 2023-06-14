@@ -29,3 +29,9 @@
 > - **D (Durability)**: Durability means that, once a transaction is committed, it will remain in the system – even if there’s a system crash.
 
 <br/>
+
+
+### **What Does High Availability (HA) Mean?**
+> - Accessibility refers to the user's ability to access the system. If the user is unable to access the application, it will be assumed that the application is unavailable. High availability means that the application will always be available without interruption.
+
+<br/>
