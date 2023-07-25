@@ -1,5 +1,9 @@
 # Front-End / Back-End / Full-Stack / Software Engineer interview questions
 
+蒐集在國外面試時有被問到的問題，那根據技術更新有些問題可能會過時，但我盡量更新。
+
+<br/>
+
 [HTML](Questions/HTML.md) 
 
 [CSS](Questions/CSS.md)
@@ -20,8 +24,4 @@
 
 [Others](Questions/Others.md)
 
-</br>
 
-## Author
-[Yi-Shiuan Chen](https://www.linkedin.com/in/yschen25) <br/>
-yschen25@gmail.com
