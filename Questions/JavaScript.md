@@ -177,7 +177,7 @@ console.log(arrCombined); // [1, 2, 3, 4, 5, 6]
 
 ### **What Is Rest Operator?**
 
-> - It consists of three dots (...) which collects all remaining elements into an array.
+> - It consists of three dots (...) which collect all remaining elements into an array.
 
 ```
 Example_1:
@@ -1183,6 +1183,21 @@ console.log(mySet(1)); // true
 let arr2 = [...new Set(arr)];
 console.log(arr2); // [1, 2, 3]
 ```
+
+<br/>
+
+### **How To Iterate Set?**
+
+```
+let arr = [1, 2, 3, 4, 2, 3, 3];
+let set = new Set(arr);
+
+for (let val of set) console.log(val) // 1, 2, 3, 4
+
+set.forEach(val => console.log(val)) // 1, 2, 3, 4
+```
+
+
 
 <br/>
 
